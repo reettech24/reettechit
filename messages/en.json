@@ -1,0 +1,53 @@
+{
+    "metadata": {
+        "title": "Reet Technologies",
+        "description": "We build future-ready web and mobile applications."
+    },
+    "header": {
+        "reet": "Reet",
+        "technology": "technology",
+        "companyTagline": "Building Future-Ready Applications",
+        "home": "Home",
+        "services": "Services",
+        "ourExpertise": "Our Expertise",
+        "industries": "Industries",
+        "ourProducts": "Our Products",
+        "aboutUs": "About Us",
+        "careers": "Careers",
+        "contact": "Contact Us",
+        "language": "Language"
+    },
+    "footer": {
+        "reet": "Reet",
+        "technology": "technology",
+        "companyDescription": "Reet Technologies is a software development company that specializes in building high-quality web and mobile applications.",
+        "quickLinks": "Quick Links",
+        "about": "About",
+        "careers": "Careers",
+        "services": "Services",
+        "contact": "Contact Us",
+        "followUs": "Follow Us",
+        "rightsReserved": "All Rights Reserved."
+    },
+    "hero": {
+        "headline1": "Building Future-Ready Web and Mobile Applications",
+        "headline2": "Empowering Digital Transformation with Programming",
+        "headline3": "Innovative Solutions for Web and Mobile",
+        "headline4": "Engineering the Future of Software",
+        "subtext": "Reet Technologies specializes in developing fast, secure, and scalable web and mobile applications.",
+        "cta1": "Get a Free Quote",
+        "cta2": "View Our Work"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "description": "Feel free to reach out to us for any inquiries."
+    },
+    "about": {
+        "title": "About Reet Technologies",
+        "description": "We are a software company focused on creating next-generation digital experiences."
+    },
+    "notFound": {
+        "message": "Sorry, the page you're looking for doesn't exist.",
+        "backHome": "Go back home"
+    }
+}

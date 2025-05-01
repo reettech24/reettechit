@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
+  /* 🌗 Light Theme Colors */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
+
+  --color-primary: #1f267e; /* Royal Blue */
+  --color-accent: #a17cf2; /* Purple Gradient */
+  --color-gold: #d4af37; /* Rich Gold */
+  --color-mint: #d6f5f2; /* Soft Mint */
+  --color-dark: #0a0a0a; /* Near Black */
+  --color-light: #f5f5fa; /* Almost White */
+
+  /* Fonts */
+  /* Fonts */
+  --font-sans: "Geist", "Inter", "Poppins", "DM Sans", "Space Grotesk",
+    "Helvetica Neue", "Segoe UI", "Open Sans", "Work Sans", "Manrope", "Ubuntu",
+    sans-serif;
+
+  --font-serif: "Playfair Display", "Merriweather", "EB Garamond",
+    "Libre Baskerville", "Georgia", "Cormorant Garamond", "Tinos", "Lora",
+    "PT Serif", "Noto Serif", serif;
+
+  --font-mono: "Geist Mono", "Fira Code", "JetBrains Mono", "Roboto Mono",
+    "Source Code Pro", "IBM Plex Mono", "Courier New", "Oxygen Mono",
+    "Ubuntu Mono", "Inconsolata", monospace;
 }
 
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f5f5fa;
+
+    --color-primary: #a17cf2; 
+    --color-accent: #d4af37; 
+    --color-gold: #ffd700;
+    --color-mint: #243c5a;
+    --color-light: #1f267e;
+    --color-dark: #d6f5f2;
+  }
+} */
+
+/* 🌐 Tailwind Theme Inline Mapping (optional) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-gold: var(--color-gold);
+  --color-mint: var(--color-mint);
+  --color-light: var(--color-light);
+  --color-dark: var(--color-dark);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base Styles */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Utility examples */
+.text-primary {
+  color: var(--color-primary);
+}
+.bg-gold {
+  background-color: var(--color-gold);
+}
+.border-accent {
+  border-color: var(--color-accent);
 }

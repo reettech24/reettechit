@@ -2,287 +2,277 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter, Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+
 import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
   Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
 } from "@headlessui/react";
-
-import { Bars3Icon } from "@heroicons/react/24/outline";
 import {
+  Bars3Icon,
   ChevronDownIcon,
-  HeartIcon as HeartSolid,
-} from "@heroicons/react/20/solid";
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 
-const navigation = [
-  // { name: "Home", href: "/", current: true },
-  // { name: "Services", href: "/Services", current: false },
-  { name: "About", href: "/about", current: false },
-  // { name: "Industies", href: "/industies", current: false },
-  // { name: "Contact Us", href: "/contact-us", current: false },
+const locales = [
+  { code: "en", label: "English" },
+  { code: "jp", label: "日本語" },
+  { code: "ar", label: "العربية" },
 ];
+
 export const Header = () => {
+  const t = useTranslations("header");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const currentLocale = useLocale();
+
   return (
-    <header className=" bg-white backdrop-blur-xl text-black sticky top-0 z-20 items-center place-content-center self-center place-items-center">
+    <header className="sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
       <nav
+        className="mx-auto max-w-full flex items-center justify-between px-6 py-4 lg:px-12"
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between pr-6 py-2 lg:px-0 lg:py-3"
       >
-        <div className="flex lg:flex-1">
-          {/* <Link href={""} className="text-black uppercase text-2xl">
-            Puneeta Ranjan
-          </Link> */}
+        {/* Logo */}
+        <div className="flex items-center gap-3">
           <Image
-            alt=""
-            src="/logo.png"
-            width={100}
-            height={0}
-            className=" w-50"
+            src="/reetlogo.png"
+            alt="Reet Technologies Logo"
+            width={40}
+            height={40}
+            className="w-16 h-auto"
           />
+          <span className="text-white font-semibold text-xl uppercase leading-tight">
+            {t("reet")} <br /> {t("technology")}
+          </span>
         </div>
 
-        <div className="flex lg:hidden">
+        {/* Mobile Toggle */}
+        <div className="lg:hidden">
           <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-white hover:text-blue-400 transition"
           >
-            <span className="sr-only">Open menu</span>
-            <Bars3Icon className="h-8 w-8" />
+            {mobileMenuOpen ? (
+              <XMarkIcon className="h-8 w-8" />
+            ) : (
+              <Bars3Icon className="h-8 w-8" />
+            )}
           </button>
         </div>
 
-        <PopoverGroup className="hidden lg:block lg:gap-x-8 text-lg font-medium">
-          {/* <Link href={""} className="text-black uppercase">
-            home
-          </Link> */}
+        {/* Desktop Menu */}
+        <PopoverGroup className="hidden lg:flex gap-x-8 text-white font-medium text-lg">
+          {/* Home */}
+          <Link href="/" className="hover:text-blue-300 transition">
+            {t("home")}
+          </Link>
 
-          <Popover className="relative flex items-center gap-x-10 text-black focus:outline-none">
-            <PopoverButton className="flex items-center gap-x-1 text-black focus:outline-none  ">
-              Services
+          {/* Services */}
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
+              {t("services")}
               <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute top-12  z-10 mt-3 md:w-[80vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-4 py-4">
-                {/* {premiumservices.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex flex-row items-center justify-center gap-y-4 rounded-xl py-6 px-3 bg-emerald-900 text-white hover:text-black shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-white/80"
-                >
-             
-                  <div className="flex flex-col items-center justify-center cursor-pointer">
-                    <Link
-                      href={item.href}
-                      className="text-xl  font-semibold text-center transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                    <p className="mt-2 text-center text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))} */}
-              </div>
-
-              <div className="grid grid-cols-2 divide-x divide-gray-200 bg-white/50 backdrop-blur-sm">
-                {/* {callsToAction.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center text-black hover:text-white justify-center gap-x-3 p-4 text-xl font-semibold  hover:bg-black transition-colors duration-200"
-                >
-                  <item.icon
-                    aria-hidden="true"
-                    className="w-8 h-8 text text-white group-hover:text-indigo-500 transition-colors duration-200"
-                  />
-                  {item.name}
-                </Link>
-              ))} */}
-              </div>
-            </PopoverPanel>
-            <PopoverButton className="flex items-center gap-x-1 text-black focus:outline-none  ">
-              Industies
-              <ChevronDownIcon className="h-5 w-5" />
-            </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute top-12  z-10 mt-3 md:w-[80vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-4 py-4">
-                {/* {premiumservices.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex flex-row items-center justify-center gap-y-4 rounded-xl py-6 px-3 bg-emerald-900 text-white hover:text-black shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-white/80"
-                >
-             
-                  <div className="flex flex-col items-center justify-center cursor-pointer">
-                    <Link
-                      href={item.href}
-                      className="text-xl  font-semibold text-center transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                    <p className="mt-2 text-center text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))} */}
-              </div>
-
-              <div className="grid grid-cols-2 divide-x divide-gray-200 bg-white/50 backdrop-blur-sm">
-                {/* {callsToAction.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center text-black hover:text-white justify-center gap-x-3 p-4 text-xl font-semibold  hover:bg-black transition-colors duration-200"
-                >
-                  <item.icon
-                    aria-hidden="true"
-                    className="w-8 h-8 text text-white group-hover:text-indigo-500 transition-colors duration-200"
-                  />
-                  {item.name}
-                </Link>
-              ))} */}
-              </div>
-            </PopoverPanel>
-            <PopoverButton className="flex items-center gap-x-1 text-black focus:outline-none  ">
-              Our Company
-              <ChevronDownIcon className="h-5 w-5" />
-            </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute top-12  z-10 mt-3 md:w-[80vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-4 py-4">
-                {/* {premiumservices.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex flex-row items-center justify-center gap-y-4 rounded-xl py-6 px-3 bg-emerald-900 text-white hover:text-black shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-white/80"
-                >
-             
-                  <div className="flex flex-col items-center justify-center cursor-pointer">
-                    <Link
-                      href={item.href}
-                      className="text-xl  font-semibold text-center transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                    <p className="mt-2 text-center text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))} */}
-              </div>
-
-              <div className="grid grid-cols-2 divide-x divide-gray-200 bg-white/50 backdrop-blur-sm">
-                {/* {callsToAction.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center text-black hover:text-white justify-center gap-x-3 p-4 text-xl font-semibold  hover:bg-black transition-colors duration-200"
-                >
-                  <item.icon
-                    aria-hidden="true"
-                    className="w-8 h-8 text text-white group-hover:text-indigo-500 transition-colors duration-200"
-                  />
-                  {item.name}
-                </Link>
-              ))} */}
-              </div>
-            </PopoverPanel>
-            <PopoverButton className="flex items-center gap-x-1 text-black focus:outline-none  ">
-              Careers
-              <ChevronDownIcon className="h-5 w-5" />
-            </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute top-12  z-10 mt-3 md:w-[80vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-4 py-4">
-                {/* {premiumservices.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex flex-row items-center justify-center gap-y-4 rounded-xl py-6 px-3 bg-emerald-900 text-white hover:text-black shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-white/80"
-                >
-             
-                  <div className="flex flex-col items-center justify-center cursor-pointer">
-                    <Link
-                      href={item.href}
-                      className="text-xl  font-semibold text-center transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                    <p className="mt-2 text-center text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))} */}
-              </div>
-
-              <div className="grid grid-cols-2 divide-x divide-gray-200 bg-white/50 backdrop-blur-sm">
-                {/* {callsToAction.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center text-black hover:text-white justify-center gap-x-3 p-4 text-xl font-semibold  hover:bg-black transition-colors duration-200"
-                >
-                  <item.icon
-                    aria-hidden="true"
-                    className="w-8 h-8 text text-white group-hover:text-indigo-500 transition-colors duration-200"
-                  />
-                  {item.name}
-                </Link>
-              ))} */}
-              </div>
-            </PopoverPanel>
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-black"
-              >
-                {item.name}
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
+              <div className="font-semibold text-white mb-1">Our Expertise</div>
+              <Link href="/pages/services/consulting" className="block">
+                Next Gen Consulting
               </Link>
-            ))}
+              <Link href="/pages/services/brand" className="block">
+                Brand Portfolio Management
+              </Link>
+              <Link href="/pages/services/rnd" className="block">
+                Research & Development
+              </Link>
+              <Link href="/pages/services/business-setup" className="block">
+                Business Establishment
+              </Link>
+              <Link href="/pages/services/project" className="block">
+                Project Management
+              </Link>
+              <Link href="/pages/services/it-consulting" className="block">
+                Business & IT Consulting
+              </Link>
+              <Link href="/pages/services/software-dev" className="block">
+                Software Development
+              </Link>
+
+              <div className="font-semibold text-white mt-4">Our Solutions</div>
+              <Link
+                href="/pages/solutions/digital-transformation"
+                className="block"
+              >
+                Digital Transformation
+              </Link>
+              <Link href="/pages/solutions/crm-erp" className="block">
+                CRM & ERP
+              </Link>
+              <Link href="/pages/solutions/web-mobile" className="block">
+                Web & Mobile Apps
+              </Link>
+              <Link href="/pages/solutions/ai-ml" className="block">
+                AI & ML
+              </Link>
+              <Link href="/pages/solutions/marketing" className="block">
+                Digital Marketing
+              </Link>
+              <Link href="/pages/solutions/high-end-web" className="block">
+                High-End Web Dev
+              </Link>
+              <Link href="/pages/solutions/ar-vr" className="block">
+                AR & VR
+              </Link>
+              <Link href="/pages/solutions/cyber-security" className="block">
+                Cyber Security
+              </Link>
+            </PopoverPanel>
+          </Popover>
+
+          {/* Industries */}
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
+              {t("industries")} <ChevronDownIcon className="h-5 w-5" />
+            </PopoverButton>
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
+              <Link href="/pages/industries/retail" className="block">
+                Retail & E-commerce
+              </Link>
+              <Link href="/pages/industries/real-estate" className="block">
+                Real Estate
+              </Link>
+              <Link href="/pages/industries/manufacturing" className="block">
+                Manufacturing
+              </Link>
+              <Link href="/pages/industries/education" className="block">
+                Education
+              </Link>
+              <Link href="/pages/industries/bfsi" className="block">
+                BFSI
+              </Link>
+              <Link href="/pages/industries/healthcare" className="block">
+                Health Care
+              </Link>
+              <Link href="/pages/industries/logistics" className="block">
+                Logistics
+              </Link>
+              <Link href="/pages/industries/automotive" className="block">
+                Automotive
+              </Link>
+            </PopoverPanel>
+          </Popover>
+
+          {/* Our Products */}
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
+              {t("ourProducts")}
+              <ChevronDownIcon className="h-5 w-5" />
+            </PopoverButton>
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
+              <Link href="/pages/products/nexus-india" className="block">
+                Nexus India App
+              </Link>
+              <Link href="/pages/products/nexus-online" className="block">
+                Nexus Online Management
+              </Link>
+            </PopoverPanel>
+          </Popover>
+
+          {/* About Us */}
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
+              {t("aboutUs")} <ChevronDownIcon className="h-5 w-5" />
+            </PopoverButton>
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
+              <Link
+                href="/pages/about/who-we-are"
+                className="block hover:text-blue-300"
+              >
+                Who We Are
+              </Link>
+              <Link
+                href="/pages/about/focus"
+                className="block hover:text-blue-300"
+              >
+                Our Focus
+              </Link>
+              <Link
+                href="/pages/about/team"
+                className="block hover:text-blue-300"
+              >
+                Our Team
+              </Link>
+            </PopoverPanel>
+          </Popover>
+
+          {/* Career Courses */}
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
+              {t("careers")} <ChevronDownIcon className="h-5 w-5" />
+            </PopoverButton>
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
+              <Link href="/pages/careers/courses" className="block">
+                Student Courses
+              </Link>
+              <Link href="/pages/careers/jobs" className="block">
+                Jobs & Hiring
+              </Link>
+            </PopoverPanel>
+          </Popover>
+
+          {/* Collaborate */}
+          {/* <Popover className="relative">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition">
+              Collaborate <ChevronDownIcon className="h-5 w-5" />
+            </PopoverButton>
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
+              <Link href="/pages/collaborate/channel-partner" className="block">Channel Partner</Link>
+              <Link href="/pages/collaborate/tech-partner" className="block">Tech Partnership</Link>
+              <Link href="/pages/collaborate/company-partner" className="block">Company Partnership</Link>
+              <Link href="/pages/collaborate/outsourcing" className="block">Outsourcing</Link>
+            </PopoverPanel>
+          </Popover> */}
+
+          {/* Contact */}
+          <Link
+            href="/pages/contact"
+            className="hover:text-blue-300 transition"
+          >
+            {t("contact")}
+          </Link>
+
+          {/* Language Switcher */}
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition">
+              🌐 <ChevronDownIcon className="h-5 w-5" />
+            </PopoverButton>
+            <PopoverPanel className="absolute right-0 top-15 w-40 p-4 bg-white/10 backdrop-blur-xl rounded-xl text-sm text-white/80 space-y-2 z-40">
+              {locales.map(({ code, label }) => (
+                <Link
+                  key={code}
+                  href={pathname}
+                  locale={code}
+                  className={`block w-full text-left hover:text-blue-300 ${
+                    currentLocale === code ? "font-bold" : ""
+                  }`}
+                >
+                  {label}
+                </Link>
+              ))}
+            </PopoverPanel>
           </Popover>
         </PopoverGroup>
-
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-6">
-        <Link href="/wishlist" className="hover:text-emerald-200">
-          <HeartIcon className="h-6 w-6" />
-        </Link>
-        <Link href="/cart" className="hover:text-emerald-200">
-          <ShoppingCartIcon className="h-6 w-6" />
-        </Link>
-        <Link href="/profile" className="hover:text-emerald-200">
-          <UserIcon className="h-6 w-6" />
-        </Link>
-      </div> */}
-
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            key={item.name}
-            href="/bookyourEvent"
-            className=" text-black text-center text-xl uppercase"
-          >
-            Store
-          </Link>
-        </div> */}
       </nav>
+
+      {/* Mobile Nav placeholder */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden px-6 py-4 bg-black/80 backdrop-blur-xl text-white space-y-4">
+          <p className="text-sm text-white/70">Mobile menu coming soon...</p>
+        </div>
+      )}
     </header>
   );
 };

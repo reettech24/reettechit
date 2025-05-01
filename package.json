@@ -11,8 +11,10 @@
   "dependencies": {
     "@headlessui/react": "^2.2.1",
     "@heroicons/react": "^2.2.0",
+    "framer-motion": "^12.9.2",
     "lucide-react": "^0.487.0",
     "next": "15.2.4",
+    "next-intl": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

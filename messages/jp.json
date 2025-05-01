@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "リート・テクノロジーズ",
+    "description": "私たちは将来に備えたアプリケーションを開発しています。"
+  },
+  "header": {
+    "reet": "リート",
+    "technology": "テクノロジーズ",
+    "companyTagline": "未来志向のアプリケーションを構築する",
+    "home": "ホーム",
+    "services": "サービス",
+    "ourExpertise": "専門分野",
+    "industries": "業界",
+    "ourProducts": "製品",
+    "aboutUs": "会社概要",
+    "careers": "キャリア",
+    "contact": "お問い合わせ",
+    "language": "言語"
+  },
+  "footer": {
+    "reet": "リート",
+    "technology": "テクノロジーズ",
+    "companyDescription": "Reet Technologiesは、高品質なウェブおよびモバイルアプリケーションの開発を専門とするソフトウェア開発会社です。",
+    "quickLinks": "クイックリンク",
+    "about": "会社概要",
+    "careers": "キャリア",
+    "services": "サービス",
+    "contact": "お問い合わせ",
+    "followUs": "フォローする",
+    "rightsReserved": "全著作権所有。"
+  },
+  "hero": {
+    "headline1": "将来に備えたWebとモバイルアプリの構築",
+    "headline2": "プログラミングによるデジタル変革の推進",
+    "headline3": "革新的なWebおよびモバイルソリューション",
+    "headline4": "ソフトウェアの未来を設計する",
+    "subtext": "Reet Technologiesは、高速・安全・拡張可能なアプリケーションの開発を専門としています。",
+    "cta1": "無料見積もり",
+    "cta2": "実績を見る"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "description": "ご不明点がありましたら、お気軽にお問い合わせください。"
+  },
+  "about": {
+    "title": "Reet Technologiesについて",
+    "description": "次世代のデジタル体験を創造するソフトウェア企業です。"
+  },
+  "notFound": {
+    "message": "お探しのページは見つかりませんでした。",
+    "backHome": "ホームに戻る"
+  }
+}

@@ -1,44 +1,61 @@
 'use client';
-import React from 'react';
-import Image from 'next/image';
-import { Button } from '@/components/ui/Button'; // Optional: use your design system
+
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const Hero = () => {
+  const t = useTranslations('hero');
+
+  const keys = ['headline1', 'headline2', 'headline3', 'headline4'];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % keys.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center bg-gradient-to-br from-white to-gray-50 overflow-hidden px-6 md:px-16">
-      {/* Background Orb/Effect */}
-      <div className="absolute -top-10 -right-10 w-[500px] h-[500px] bg-gradient-to-br from-purple-100 via-white to-blue-100 rounded-full opacity-30 blur-3xl z-0" />
+    <section className=" w-full min-h-screen overflow-hidden bg-black text-white flex items-center px-6 md:px-12 lg:px-28">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/bg-video.mp4" type="video/mp4" />
+      </video>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
-        {/* Left Side */}
-        <div className="flex-1 text-center md:text-left max-w-xl space-y-6">
-          <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
-            Building Future-Ready <br />
-            <span className="text-blue-600">Web & Mobile Apps</span>
-          </h1>
-          <p className="text-gray-600 text-lg">
-            Reet Technologies is a software development company that specializes in building high-quality web and mobile applications tailored to your business needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
-              Get a Free Quote
-            </button>
-            <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-              View Our Work
-            </button>
-          </div>
-        </div>
+      <div className="absolute inset-0 bg-black/70 z-0" />
 
-        {/* Right Side */}
-        <div className="flex-1 relative w-full">
-          <Image
-            src="/illu2.png" // Replace with your custom futuristic graphic
-            alt="Tech Illustration"
-            width={800}
-            height={800}
-            className="w-full h-auto object-contain"
-            priority
-          />
+      <div className="items-center z-0 max-w-6xl min-h-fit space-y-8">
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={keys[index]}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight lg:h-32 z-0"
+          >
+            {t(keys[index])}
+          </motion.h1>
+        </AnimatePresence>
+
+        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
+          {t('subtext')}
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
+            {t('cta1')}
+          </button>
+          <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+            {t('cta2')}
+          </button>
         </div>
       </div>
     </section>

@@ -1,67 +1,69 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter } from "lucide-react"; // Importing icons from lucide-react
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/20/solid"; // Heroicons for contact info
+import { Facebook, Instagram, Twitter } from "lucide-react";
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/20/solid";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+  const t = useTranslations("footer");
+
   return (
     <footer className="bg-white text-gray-800 py-10 border-t">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div className="mx-auto max-w-full px-6 grid md:grid-cols-3 gap-6 py-4 lg:px-12">
         {/* Left Section - Brand & About */}
         <div>
-          {/* <h2 className="text-2xl font-bold">Puneeta Ranjan</h2> */}
-          <Image
-            alt=""
-            src="/logo.png"
-            width={100}
-            height={100}
-            className=" w-60"
-          />
-
-          <p className="text-sm mt-2">
-            Reet Technologies is a software development company that specializes
-            in building high-quality web and mobile applications.
-          </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/reetlogo.png"
+              alt="Reet Technologies Logo"
+              width={40}
+              height={40}
+              className="w-24 h-auto"
+            />
+            <span className="text-black font-semibold text-2xl uppercase leading-tight">
+              {t("reet")} <br /> {t("technology")}
+            </span>
+          </div>
+          <p className="text-sm mt-2">{t("companyDescription")}</p>
         </div>
 
         {/* Middle Section - Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold">Quick Links</h3>
+          <h3 className="text-lg font-semibold">{t("quickLinks")}</h3>
           <ul className="mt-2 space-y-2">
             <li>
-              <a href="/about" className="hover:text-gray-600">
-                About
-              </a>
-            </li>
-            {/* <li><a href="/paintings" className="hover:text-gray-600">Painting Categories</a></li>
-            <li><a href="/past-shows" className="hover:text-gray-600">Past Shows</a></li> */}
-            {/* <li><a href="/media" className="hover:text-gray-600">Media</a></li> */}
-            <li>
-              <a href="/media" className="hover:text-gray-600">
-                Careers
+              <a href="/pages/about" className="hover:text-gray-600">
+                {t("about")}
               </a>
             </li>
             <li>
-              <a href="/blogs" className="hover:text-gray-600">
-                Services
+              <a href="/pages/careers" className="hover:text-gray-600">
+                {t("careers")}
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-gray-600">
-                Contact Us
+              <a href="/pages/services" className="hover:text-gray-600">
+                {t("services")}
+              </a>
+            </li>
+            <li>
+              <a href="/pages/contact" className="hover:text-gray-600">
+                {t("contact")}
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Right Section - Contact & Social Media */}
+        {/* Right Section - Contact & Social */}
         <div>
-          <h3 className="text-lg font-semibold">Contact</h3>
+          <h3 className="text-lg font-semibold">{t("contact")}</h3>
           <div className="mt-2 space-y-2">
             <p className="flex items-center">
               <EnvelopeIcon className="h-5 w-5 mr-2 text-gray-600" />
               <a
-                href="mailto:info@puneetaranjan.com"
+                href="mailto:work@reettechit.com"
                 className="hover:text-gray-600"
               >
                 work@reettechit.com
@@ -77,7 +79,7 @@ export const Footer = () => {
             </p>
           </div>
 
-          <h3 className="text-lg font-semibold mt-4">Follow Us</h3>
+          <h3 className="text-lg font-semibold mt-4">{t("followUs")}</h3>
           <div className="flex space-x-4 mt-2">
             <a href="#" className="text-gray-600 hover:text-gray-800">
               <Facebook size={24} />
@@ -94,7 +96,7 @@ export const Footer = () => {
 
       {/* Bottom Section */}
       <div className="text-center text-sm text-gray-500 mt-6 border-t pt-4">
-        © {new Date().getFullYear()} Reet Technologies. All Rights Reserved.
+        © {new Date().getFullYear()} Reet Technologies. {t("rightsReserved")}
       </div>
     </footer>
   );
