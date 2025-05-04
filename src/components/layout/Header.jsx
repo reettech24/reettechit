@@ -52,16 +52,38 @@ export const Header = () => {
 
         {/* Mobile Toggle */}
         <div className="lg:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-white hover:text-blue-400 transition"
-          >
-            {mobileMenuOpen ? (
-              <XMarkIcon className="h-8 w-8" />
-            ) : (
-              <Bars3Icon className="h-8 w-8" />
-            )}
-          </button>
+          <div className="flex items-center gap-4">
+            <Popover className="relative">
+              <PopoverButton className="flex items-center hover:text-blue-300 transition">
+                🌐 <ChevronDownIcon className="h-5 w-5 text-white" />
+              </PopoverButton>
+              <PopoverPanel className="absolute right-0 top-15 w-40 p-4 bg-white/10 backdrop-blur-xl rounded-xl text-sm text-white/80 space-y-2 z-40">
+                {locales.map(({ code, label }) => (
+                  <Link
+                    key={code}
+                    href={pathname}
+                    locale={code}
+                    className={`block w-full text-left hover:text-blue-300 ${
+                      currentLocale === code ? "font-bold" : ""
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </PopoverPanel>
+            </Popover>
+
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-white hover:text-blue-400 transition"
+            >
+              {mobileMenuOpen ? (
+                <XMarkIcon className="h-8 w-8" />
+              ) : (
+                <Bars3Icon className="h-8 w-8" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Desktop Menu */}
@@ -79,10 +101,8 @@ export const Header = () => {
             </PopoverButton>
             <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
               <div className="font-semibold text-white mb-1">Our Expertise</div>
-             
 
               <div className="font-semibold text-white mt-4">Our Solutions</div>
-       
             </PopoverPanel>
           </Popover>
 

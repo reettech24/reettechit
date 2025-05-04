@@ -36,7 +36,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="relative w-full bg-[#f0f0f0] py-30 mx-0 text-center overflow-hidden px-4 lg:px-0">
+    <section className="relative w-full bg-[#070B2A] py-30 mx-0 text-center overflow-hidden px-4 lg:px-0">
       <div className="max-w-7xl mx-auto relative">
         <Swiper
           modules={[Navigation, Autoplay]}
@@ -50,25 +50,31 @@ export default function TestimonialSection() {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="flex flex-col items-center">
-                <div className="relative w-24 h-24 mb-4">
-                  <div className="w-24 h-24 rounded-full bg-white shadow-xl flex items-center justify-center text-teal-500 text-4xl">
-                    &ldquo;
+              <div className="group">
+                <div className="bg-white group-hover:bg-[#070B2A] group-hover:text-white transition-colors duration-300 text-center shadow-lg p-8 lg:p-6 max-w-2xl mx-auto">
+                  <div className="relative w-24 h-24 mb-4 mx-auto">
+                    <div className="w-24 h-24 rounded-full bg-[#070B2A] group-hover:bg-white shadow-xl flex items-center justify-center text-teal-500 text-4xl transition-colors duration-300">
+                      &ldquo;
+                    </div>
                   </div>
+                  <h3 className="text-lg font-semibold uppercase tracking-widest group-hover:text-white transition-colors">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 group-hover:text-gray-300 mb-6 transition-colors">
+                    ({item.role})
+                  </p>
+                  <p className="text-sm lg:text-lg max-w-2xl text-gray-800 group-hover:text-white transition-colors">
+                    {item.text}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold uppercase tracking-widest">
-                  {item.name}
-                </h3>
-                <p className="text-sm text-gray-500 mb-6">({item.role})</p>
-                <p className="text-lg max-w-2xl text-gray-800">{item.text}</p>
               </div>
             </SwiperSlide>
           ))}
 
-          <button className="swiper-button-prev absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-[#f0f0f0]   rounded-full z-10 flex items-center justify-center shadow-md">
+          <button className="swiper-button-prev absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full z-10 flex items-center justify-center ">
             <ChevronLeftIcon className="h-6 w-6" />
           </button>
-          <button className="swiper-button-next absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-[#f0f0f0]   rounded-full z-10 flex items-center justify-center shadow-md">
+          <button className="swiper-button-next absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full z-10 flex items-center justify-center ">
             <ChevronRightIcon className="h-6 w-6" />
           </button>
         </Swiper>

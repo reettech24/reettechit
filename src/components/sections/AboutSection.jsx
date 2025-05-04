@@ -50,7 +50,7 @@ export default function AboutSection() {
 
       {/* Right Content */}
       <div>
-        <p className="text-blue-600 uppercase text-sm font-semibold mb-2 tracking-wider">
+        <p className="text-blue-600 uppercase text-lg font-semibold mb-2 tracking-wider">
           About Reet Technologies
         </p>
         <h2 className="text-4xl lg:text-5xl font-bold leading-snug mb-6">

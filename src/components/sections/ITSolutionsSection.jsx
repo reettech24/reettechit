@@ -62,7 +62,7 @@ export default function ITSolutionsSection() {
     <>
       <section className="bg-[#070B2A] w-full py-16 text-white text-center">
         <div className=" mb-20 py-8 px-6 text-white text-center">
-          <p className="text-sm text-teal-400 uppercase mb-2 tracking-widest">
+          <p className="text-lg text-teal-400 uppercase mb-2 tracking-widest">
             service it solutions
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-12">
@@ -133,7 +133,7 @@ export default function ITSolutionsSection() {
               <div>
                 <h2 className="text-5xl font-bold text-white/80">10+</h2>
                 <p className="uppercase tracking-wide text-sm text-white">
-                  Experience
+                  Years Experience
                 </p>
               </div>
               <div>
@@ -168,7 +168,7 @@ export default function ITSolutionsSection() {
 
           {/* Right side content */}
           <div className="text-left space-y-6 px-8 lg:px-0">
-            <p className="text-sm font-semibold text-teal-400">
+            <p className="text-lg font-semibold capitalize text-teal-400">
               service <span className="italic text-white">it solutions</span>
             </p>
             <h2 className="text-4xl md:text-5xl font-bold leading-snug">
