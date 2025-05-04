@@ -1,11 +1,11 @@
 {
     "metadata": {
         "title": "Reet Technologies",
-        "description": "We build future-ready web and mobile applications."
+        "description": "where Ideas meet execution."
     },
     "header": {
         "reet": "Reet",
-        "technology": "technology",
+        "technologies": "technologies",
         "companyTagline": "Building Future-Ready Applications",
         "home": "Home",
         "services": "Services",

@@ -46,7 +46,7 @@ export const Header = () => {
             className="w-16 h-auto"
           />
           <span className="text-white font-semibold text-xl uppercase leading-tight">
-            {t("reet")} <br /> {t("technology")}
+            {t("reet")} <br /> {t("technologies")}
           </span>
         </div>
 
@@ -79,56 +79,10 @@ export const Header = () => {
             </PopoverButton>
             <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
               <div className="font-semibold text-white mb-1">Our Expertise</div>
-              <Link href="/pages/services/consulting" className="block">
-                Next Gen Consulting
-              </Link>
-              <Link href="/pages/services/brand" className="block">
-                Brand Portfolio Management
-              </Link>
-              <Link href="/pages/services/rnd" className="block">
-                Research & Development
-              </Link>
-              <Link href="/pages/services/business-setup" className="block">
-                Business Establishment
-              </Link>
-              <Link href="/pages/services/project" className="block">
-                Project Management
-              </Link>
-              <Link href="/pages/services/it-consulting" className="block">
-                Business & IT Consulting
-              </Link>
-              <Link href="/pages/services/software-dev" className="block">
-                Software Development
-              </Link>
+             
 
               <div className="font-semibold text-white mt-4">Our Solutions</div>
-              <Link
-                href="/pages/solutions/digital-transformation"
-                className="block"
-              >
-                Digital Transformation
-              </Link>
-              <Link href="/pages/solutions/crm-erp" className="block">
-                CRM & ERP
-              </Link>
-              <Link href="/pages/solutions/web-mobile" className="block">
-                Web & Mobile Apps
-              </Link>
-              <Link href="/pages/solutions/ai-ml" className="block">
-                AI & ML
-              </Link>
-              <Link href="/pages/solutions/marketing" className="block">
-                Digital Marketing
-              </Link>
-              <Link href="/pages/solutions/high-end-web" className="block">
-                High-End Web Dev
-              </Link>
-              <Link href="/pages/solutions/ar-vr" className="block">
-                AR & VR
-              </Link>
-              <Link href="/pages/solutions/cyber-security" className="block">
-                Cyber Security
-              </Link>
+       
             </PopoverPanel>
           </Popover>
 
