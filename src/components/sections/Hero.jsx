@@ -31,7 +31,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-black/70 z-0" />
 
-      <div className="items-center z-0 max-w-6xl min-h-fit space-y-8">
+      <div className="items-center pt-70 lg:pt-80 z-0 max-w-6xl min-h-fit space-y-8">
         <AnimatePresence mode="wait">
           <motion.h1
             key={keys[index]}
@@ -39,17 +39,17 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight lg:h-32 z-0"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight lg:h-32 z-0"
           >
             {t(keys[index])}
           </motion.h1>
         </AnimatePresence>
 
-        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
+        <p className="text-sm sm:text-xl text-gray-300 max-w-2xl">
           {t('subtext')}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <div className="flex flex-col sm:flex-row gap-4 pt-2 text-md lg:text-lg">
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
             {t('cta1')}
           </button>

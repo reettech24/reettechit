@@ -17,6 +17,7 @@ import {
   ChevronDownIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "lucide-react";
 
 const locales = [
   { code: "en", label: "English" },
@@ -31,7 +32,7 @@ export const Header = () => {
   const currentLocale = useLocale();
 
   return (
-    <header className="sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
       <nav
         className="mx-auto max-w-full flex items-center justify-between px-6 py-4 lg:px-12"
         aria-label="Global"
@@ -93,16 +94,109 @@ export const Header = () => {
             {t("home")}
           </Link>
 
-          {/* Services */}
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
+          <Popover className="relative group">
+            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none cursor-pointer">
               {t("services")}
               <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
-              <div className="font-semibold text-white mb-1">Our Expertise</div>
 
-              <div className="font-semibold text-white mt-4">Our Solutions</div>
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-72 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-4 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
+              {/* Our Expertise */}
+              <div className="relative group/exp">
+                <div className="w-full text-left font-semibold text-white hover:text-blue-300 flex justify-between items-center cursor-pointer">
+                  Our Expertise <ChevronRightIcon className="w-4 h-4" />
+                </div>
+                <div className="absolute left-full top-0 z-40 ml-4 w-72 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-white/90 invisible opacity-0 group-hover/exp:visible group-hover/exp:opacity-100 transition-all duration-300">
+                  <Link
+                    href="/pages/services/next-gen-consulting"
+                    className="block"
+                  >
+                    Next Generation Consulting
+                  </Link>
+                  <Link
+                    href="/pages/services/brand-portfolio"
+                    className="block"
+                  >
+                    Brand Portfolio Management
+                  </Link>
+                  <Link
+                    href="/pages/services/research-development"
+                    className="block"
+                  >
+                    Research & Development
+                  </Link>
+                  <Link
+                    href="/pages/services/business-establishment"
+                    className="block"
+                  >
+                    Business Establishment
+                  </Link>
+                  <Link
+                    href="/pages/services/project-management"
+                    className="block"
+                  >
+                    Project Management
+                  </Link>
+                  <Link
+                    href="/pages/services/business-it-consulting"
+                    className="block"
+                  >
+                    Business & IT Consulting
+                  </Link>
+                  <Link
+                    href="/pages/services/software-development"
+                    className="block"
+                  >
+                    Software Development
+                  </Link>
+                </div>
+              </div>
+
+              {/* Our Solutions */}
+              <div className="relative group/sol">
+                <div className="w-full text-left font-semibold text-white hover:text-blue-300 flex justify-between items-center cursor-pointer">
+                  Our Solutions <ChevronRightIcon className="w-4 h-4" />
+                </div>
+                <div className="absolute left-full top-0 z-40 ml-4 w-72 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-white/90 invisible opacity-0 group-hover/sol:visible group-hover/sol:opacity-100 transition-all duration-300">
+                  <Link
+                    href="/pages/services/digital-transformation"
+                    className="block"
+                  >
+                    Digital Transformation
+                  </Link>
+                  <Link href="/pages/services/crm-erp" className="block">
+                    CRM & ERP Solutions
+                  </Link>
+                  <Link href="/pages/services/mobile-web" className="block">
+                    Mobile & Web Applications
+                  </Link>
+                  <Link href="/pages/services/ai-ml" className="block">
+                    AI & ML
+                  </Link>
+                  <Link
+                    href="/pages/services/digital-marketing"
+                    className="block"
+                  >
+                    Digital Marketing
+                  </Link>
+                  <Link href="/pages/services/high-end-web" className="block">
+                    High End Website Development
+                  </Link>
+                  <Link href="/pages/services/ar-vr" className="block">
+                    AR & VR Solutions
+                  </Link>
+                  <Link href="/pages/services/cyber-security" className="block">
+                    Cyber Security
+                  </Link>
+                </div>
+              </div>
+
+              <Link
+                href="/pages/services"
+                className="block font-semibold text-white"
+              >
+                Our Services & Solutions
+              </Link>
             </PopoverPanel>
           </Popover>
 
@@ -154,17 +248,13 @@ export const Header = () => {
               </Link>
             </PopoverPanel>
           </Popover>
-
           {/* About Us */}
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {t("aboutUs")} <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
             <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
-              <Link
-                href="/pages/about/who-we-are"
-                className="block hover:text-blue-300"
-              >
+              <Link href="/pages/about" className="block hover:text-blue-300">
                 Who We Are
               </Link>
               <Link
@@ -181,7 +271,6 @@ export const Header = () => {
               </Link>
             </PopoverPanel>
           </Popover>
-
           {/* Career Courses */}
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
@@ -196,20 +285,6 @@ export const Header = () => {
               </Link>
             </PopoverPanel>
           </Popover>
-
-          {/* Collaborate */}
-          {/* <Popover className="relative">
-            <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition">
-              Collaborate <ChevronDownIcon className="h-5 w-5" />
-            </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-white/10 backdrop-blur-xl p-4 rounded-xl space-y-2 text-sm text-white/90">
-              <Link href="/pages/collaborate/channel-partner" className="block">Channel Partner</Link>
-              <Link href="/pages/collaborate/tech-partner" className="block">Tech Partnership</Link>
-              <Link href="/pages/collaborate/company-partner" className="block">Company Partnership</Link>
-              <Link href="/pages/collaborate/outsourcing" className="block">Outsourcing</Link>
-            </PopoverPanel>
-          </Popover> */}
-
           {/* Contact */}
           <Link
             href="/pages/contact"
@@ -217,7 +292,6 @@ export const Header = () => {
           >
             {t("contact")}
           </Link>
-
           {/* Language Switcher */}
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition">
