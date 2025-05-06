@@ -4,6 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import { Play } from "lucide-react";
 import Accordion from "@/components/ui/Accordion";
+import ProjectShowcase from "@/components/sections/ProjectsSection";
+import TestimonialSection from "@/components/sections/TestimonialSection";
+import ContactUsSection from "@/components/sections/ContactUsSection";
 
 const accordionData = {
   "Next Generation Consulting": {
@@ -14,8 +17,8 @@ const accordionData = {
     bulletPoints: [
       "Accelerate digital adaptation",
       "Leverage cutting-edge frameworks",
-      "Foster innovation culture"
-    ]
+      "Foster innovation culture",
+    ],
   },
   "Brand Portfolio Management": {
     heading: "Brand Portfolio Management",
@@ -25,8 +28,8 @@ const accordionData = {
     bulletPoints: [
       "Unified brand voice",
       "Insight-driven segmentation",
-      "Strategic alignment"
-    ]
+      "Strategic alignment",
+    ],
   },
   "Project Management": {
     heading: "Project Management",
@@ -36,8 +39,8 @@ const accordionData = {
     bulletPoints: [
       "Agile frameworks",
       "Milestone tracking",
-      "Effort optimization"
-    ]
+      "Effort optimization",
+    ],
   },
   "Business & IT Consulting": {
     heading: "Business & IT Consulting",
@@ -47,8 +50,8 @@ const accordionData = {
     bulletPoints: [
       "Bridge business goals with tech capabilities",
       "Accelerate digital transformation",
-      "Optimize IT investments and risk mitigation"
-    ]
+      "Optimize IT investments and risk mitigation",
+    ],
   },
   "Software Development": {
     heading: "Software Development",
@@ -58,8 +61,8 @@ const accordionData = {
     bulletPoints: [
       "Robust architecture",
       "Scalable deployments",
-      "Cloud-native practices"
-    ]
+      "Cloud-native practices",
+    ],
   },
   "Digital Transformation": {
     heading: "Digital Transformation",
@@ -69,8 +72,8 @@ const accordionData = {
     bulletPoints: [
       "Customer-centric workflows",
       "AI-powered decisioning",
-      "Process automation"
-    ]
+      "Process automation",
+    ],
   },
   "CRM & ERP Solutions": {
     heading: "CRM & ERP Solutions",
@@ -80,17 +83,19 @@ const accordionData = {
     bulletPoints: [
       "Centralized operations",
       "Scalable integrations",
-      "Workflow automation"
-    ]
-  }
+      "Workflow automation",
+    ],
+  },
 };
 
 export default function page() {
-  const [selectedService, setSelectedService] = useState("Business & IT Consulting");
+  const [selectedService, setSelectedService] = useState(
+    "Business & IT Consulting"
+  );
   const content = accordionData[selectedService];
 
   return (
-    <div>
+    <div className="bg-[#f0f0f0]">
       {/* Top Banner */}
       <section
         className="bg-[#070B2A] text-white py-52 text-center bg-cover bg-center relative"
@@ -117,7 +122,9 @@ export default function page() {
               key={idx}
               onClick={() => setSelectedService(service)}
               className={`cursor-pointer p-4 flex justify-between items-center rounded shadow-sm ${
-                selectedService === service ? "bg-[#070B2A] text-white" : "bg-gray-100 text-black hover:bg-teal-50"
+                selectedService === service
+                  ? "bg-[#070B2A] text-white"
+                  : "bg-gray-100 text-black hover:bg-teal-50"
               }`}
             >
               <span>{service}</span>
@@ -186,20 +193,25 @@ export default function page() {
             items={[
               {
                 title: `How does ${content.heading} benefit my business?`,
-                content: "We bring strategic insight and executional capabilities tailored to your goals."
+                content:
+                  "We bring strategic insight and executional capabilities tailored to your goals.",
               },
               {
                 title: `What tools do you use in ${content.heading}?`,
-                content: "We use industry-standard frameworks and modern technologies aligned with global trends."
+                content:
+                  "We use industry-standard frameworks and modern technologies aligned with global trends.",
               },
               {
                 title: `How do I get started with ${content.heading}?`,
-                content: "Schedule a consultation and we'll take it from there."
-              }
+                content:
+                  "Schedule a consultation and we'll take it from there.",
+              },
             ]}
           />
         </main>
       </section>
+      <ProjectShowcase />
+      <TestimonialSection />
     </div>
   );
 }

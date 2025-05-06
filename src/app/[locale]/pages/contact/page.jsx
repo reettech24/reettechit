@@ -51,7 +51,7 @@ export default function page() {
 
             <div className="mt-8 relative w-full h-64 rounded-md overflow-hidden shadow-md">
               <Image
-                src="/contact-lady.jpg"
+                src="/illu.png"
                 alt="Contact support"
                 fill
                 className="object-cover"

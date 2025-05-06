@@ -2,24 +2,31 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import ProjectShowcase from '@/components/sections/ProjectsSection';
+import TestimonialSection from '@/components/sections/TestimonialSection';
+import AboutSection from '@/components/sections/AboutSection';
 
 export default function AboutPage() {
   const t = useTranslations('about');
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-500 to-purple-700 px-6 text-center text-white">
-      <div className="max-w-3xl space-y-">
-        <h1 className="text-4xl sm:text-5xl font-extrabold">{t('title')}</h1>
-        <p className="text-lg sm:text-xl text-white/90">{t('description')}</p>
-
-        <Image
-          src="/illu2.png"
-          alt="About Reet Technologies"
-          width={600}
-          height={400}
-          className="rounded-xl shadow-lg mx-auto mt-8"
-        />
+    <div className="bg-[#f0f0f0]">
+    {/* Top Banner */}
+    <section
+      className="bg-[#070B2A] text-white py-52 text-center bg-cover bg-center relative"
+      style={{ backgroundImage: "url('/breadcrumb.jpg')" }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="relative z-10">
+        <h1 className="text-4xl md:text-5xl font-bold mb-2">
+          About US
+        </h1>
+        <p className="text-sm text-white/70">Home / Who We Are</p>
       </div>
-    </div>
+    </section>
+    <AboutSection />
+    <ProjectShowcase />
+    <TestimonialSection />
+  </div>
   );
 }
