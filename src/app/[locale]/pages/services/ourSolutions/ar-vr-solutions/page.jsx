@@ -1,12 +1,233 @@
-import ContactUsSection from '@/components/sections/ContactUsSection'
-import TestimonialSection from '@/components/sections/TestimonialSection'
-import React from 'react'
+"use client";
+
+import ContactUsSection from "@/components/sections/ContactUsSection";
+import TestimonialSection from "@/components/sections/TestimonialSection";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
+import React from "react";
+import VRSection from "@/components/sections/VRSection";
 
 export default function page() {
   return (
     <>
-    <TestimonialSection />
-    <ContactUsSection />
+      {/* Hero Section */}
+      <section className="relative bg-[url('/arvr-hero.jpg')] bg-cover bg-center py-52 text-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 to-black/30 z-0"></div>
+        <motion.div
+          className="relative z-10 text-center px-6"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+            AR & VR Solutions
+          </h1>
+          <p className="text-white/70 text-lg">
+            Step into the Future with Immersive Technology
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Immersive VR Background Effect */}
+      <section className="relative overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+        >
+          <source src="/vr-immersive-background.mp4" type="video/mp4" />
+        </video>
+        <div className="relative py-24 px-6 lg:px-20 z-10 text-center">
+          <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
+            Feel the Immersion
+          </h2>
+          <p className="text-gray-800 text-lg max-w-3xl mx-auto">
+            Whether it's navigating a virtual property, performing surgery
+            simulations, or training your workforce, our immersive tech brings
+            you as close to reality as it gets.
+          </p>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="bg-white py-24 px-6 lg:px-20">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
+            Unlock a New Dimension of Experience
+          </h2>
+          <p className="text-gray-700 text-lg">
+            Our Augmented and Virtual Reality services help brands revolutionize
+            customer engagement, learning, operations, and beyond through
+            immersive digital environments.
+          </p>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-24 px-6 lg:px-20 bg-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
+            Industries We Serve
+          </h2>
+          <p className="text-gray-600 mb-10">
+            Tailored AR/VR solutions across a wide spectrum of sectors.
+          </p>
+          <div className="grid md:grid-cols-3 gap-10 text-left">
+            {[
+              "Healthcare",
+              "Real Estate",
+              "Education",
+              "E-commerce",
+              "Manufacturing",
+              "Entertainment",
+            ].map((sector, i) => (
+              <div
+                key={i}
+                className="bg-gradient-to-br from-[#F9FAFB] to-[#E2E8F0] p-6 rounded-xl shadow hover:shadow-xl transition"
+              >
+                <h3 className="text-xl font-semibold text-[#070B2A] mb-2">
+                  {sector}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Enhance {sector.toLowerCase()} experiences using interactive
+                  3D environments and simulations.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="bg-[#070B2A] text-white py-24 px-6 lg:px-20">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-10">Our Tech Stack</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Unity 3D",
+              "Unreal Engine",
+              "WebXR",
+              "ARKit & ARCore",
+              "Vuforia",
+              "Three.js",
+            ].map((tech, index) => (
+              <div
+                key={index}
+                className="bg-[#10163A] p-6 rounded-xl shadow-md"
+              >
+                <h3 className="text-xl font-semibold">{tech}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section with Glassmorphism & 3D Tilt */}
+      <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] py-24 px-6 lg:px-20">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-[#070B2A] mb-12">
+            Why Choose AR/VR?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10 text-left">
+            {[
+              {
+                icon: "/icons/engagement.svg",
+                title: "Enhanced Engagement",
+                desc: "Deliver memorable, interactive experiences for your audience.",
+              },
+              {
+                icon: "/icons/training.svg",
+                title: "Immersive Training",
+                desc: "Simulate real-world environments for effective employee training.",
+              },
+              {
+                icon: "/icons/innovation.svg",
+                title: "Brand Innovation",
+                desc: "Position your brand as a futuristic leader with cutting-edge tech.",
+              },
+            ].map((item, i) => (
+              <Tilt
+                key={i}
+                glareEnable={true}
+                glareMaxOpacity={0.45}
+                className="glare-wrapper"
+              >
+                <motion.div
+                  className="backdrop-blur-xl bg-white/30 p-8 rounded-2xl shadow-lg border border-white/20 hover:scale-105 transition-transform"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: i * 0.2 }}
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={40}
+                    height={40}
+                    className="mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-[#070B2A] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </motion.div>
+              </Tilt>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section with Glassmorphism & 3D Tilt */}
+      <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] py-24 px-0 lg:px-0">
+        <VRSection />
+      </section>
+
+      {/* Why Us */}
+      <section className="bg-white py-24 px-6 lg:px-20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <Image
+            src="/arvr-showcase.jpg"
+            alt="AR VR Showcase"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-xl"
+          />
+          <div>
+            <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
+              Why Work With Us?
+            </h2>
+            <ul className="space-y-4 text-gray-700 text-base">
+              <li>✔️ Creative storyboarding & experience mapping</li>
+              <li>✔️ Multi-platform support (Mobile, Web, Wearables)</li>
+              <li>✔️ Deep understanding of interactive UI/UX</li>
+              <li>✔️ Post-launch support & optimization</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    
+
+      {/* CTA */}
+      <section className="bg-gradient-to-r from-[#070B2A] to-[#1E1E3F] text-white text-center py-20 px-6">
+        <h2 className="text-4xl font-bold mb-4">
+          Let’s Build the Future Together
+        </h2>
+        <p className="mb-8 text-white/70">
+          From ideation to deployment, we bring your immersive vision to life.
+        </p>
+        <a
+          href="#contact"
+          className="inline-block px-8 py-3 rounded-full bg-white text-[#070B2A] font-semibold hover:bg-gray-200 transition"
+        >
+          Get in Touch
+        </a>
+      </section>
+
+      {/* Contact */}
+      <ContactUsSection />
     </>
-  )
+  );
 }

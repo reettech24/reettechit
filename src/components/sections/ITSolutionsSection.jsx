@@ -3,11 +3,23 @@
 import {
   ArrowUpRightIcon,
   CloudIcon,
-  DevicePhoneMobileIcon,
+
   ServerIcon,
   PuzzlePieceIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
+
+import {
+  SparklesIcon,
+  Cog6ToothIcon,
+  DevicePhoneMobileIcon,
+  CpuChipIcon,
+  MegaphoneIcon,
+  GlobeAltIcon,
+  CubeTransparentIcon,
+  ShieldCheckIcon,
+} from "@heroicons/react/24/outline";
+
 import Image from "next/image";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
@@ -19,41 +31,61 @@ import "swiper/css/pagination";
 
 const services = [
   {
-    title: "Clouds",
-    subtitle: "Backup Services",
-    description:
-      "Secure your data with scalable and reliable cloud backup solutions.",
-    icon: CloudIcon,
+    title: "Digital",
+    subtitle: "Transformation",
+    description: "Accelerate your business with innovative digital solutions.",
+    icon: SparklesIcon,
+    letter: "D",
+  },
+  {
+    title: "CRM &",
+    subtitle: "ERP Solutions",
+    description: "Streamline operations with custom CRM and ERP platforms.",
+    icon: Cog6ToothIcon,
     letter: "C",
   },
   {
-    title: "Mobile and",
-    subtitle: "Remote Networking",
-    description:
-      "Stay connected with seamless mobile and remote access setups.",
+    title: "Mobile & Web",
+    subtitle: "Applications",
+    description: "Engaging, high-performance mobile and web app development.",
     icon: DevicePhoneMobileIcon,
     letter: "M",
   },
   {
-    title: "Data Backup",
-    subtitle: "and Restoration",
-    description: "Protect and restore your critical data effortlessly.",
-    icon: ServerIcon,
-    letter: "D",
+    title: "AI &",
+    subtitle: "Machine Learning",
+    description: "Unlock intelligent automation with cutting-edge AI/ML.",
+    icon: CpuChipIcon,
+    letter: "A",
   },
   {
-    title: "Product",
-    subtitle: "development",
-    description: "Innovative product development from concept to deployment.",
-    icon: PuzzlePieceIcon,
-    letter: "P",
+    title: "Digital",
+    subtitle: "Marketing",
+    description: "Maximize reach and ROI through strategic digital campaigns.",
+    icon: MegaphoneIcon,
+    letter: "M",
   },
   {
-    title: "Voice Over",
-    subtitle: "Internet Protocol",
-    description: "Crystal-clear VOIP services for modern communication.",
-    icon: PhoneIcon,
-    letter: "V",
+    title: "High-End Website",
+    subtitle: "Development",
+    description: "Craft pixel-perfect, enterprise-grade websites that convert.",
+    icon: GlobeAltIcon,
+    letter: "H",
+  },
+  {
+    title: "AR & VR",
+    subtitle: "Solutions",
+    description: "Immersive augmented and virtual reality experiences.",
+    icon: CubeTransparentIcon,
+    letter: "A",
+  },
+  {
+    title: "Cyber",
+    subtitle: "Security",
+    description:
+      "Protect your assets with comprehensive cyber defense solutions.",
+    icon: ShieldCheckIcon,
+    letter: "S",
   },
 ];
 
@@ -62,15 +94,15 @@ export default function ITSolutionsSection() {
     <>
       <section className="bg-[#070B2A] w-full py-16 text-white text-center">
         <div className=" mb-20 py-8 px-6 text-white text-center">
-          <p className="text-lg text-teal-400 uppercase mb-2 tracking-widest">
-            service it solutions
+          <p className="text-lg text-yellow-400 uppercase mb-2 tracking-widest">
+            Our Services
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-12">
             All Professional{" "}
-            <span className="text-teal-400 underline decoration-4">
-              REET Solutions
+            <span className="text-yellow-400 underline decoration-4">
+              REET Services
             </span>{" "}
-            & Services
+            & Solutions
           </h2>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -168,12 +200,12 @@ export default function ITSolutionsSection() {
 
           {/* Right side content */}
           <div className="text-left space-y-6 px-8 lg:px-0">
-            <p className="text-lg font-semibold capitalize text-teal-400">
+            <p className="text-lg font-semibold capitalize text-yellow-400">
               service <span className="italic text-white">it solutions</span>
             </p>
             <h2 className="text-4xl md:text-5xl font-bold leading-snug">
               Your Business{" "}
-              <span className="underline decoration-teal-400 decoration-4">
+              <span className="underline decoration-yellow-400 decoration-4">
                 Progress Matters
               </span>
             </h2>

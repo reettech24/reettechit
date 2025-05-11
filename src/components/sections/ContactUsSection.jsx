@@ -9,7 +9,7 @@ export default function ContactUsSection() {
       {/* Top Banner Section */}
 
       {/* Info + Form Section */}
-      <section className="py-20 px-6 lg:px-20 bg-white">
+      <section className="py-20 px-6 lg:px-20 bg-[#070B2A]">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left Info Card */}
           <div>
@@ -18,14 +18,15 @@ export default function ContactUsSection() {
                 <h4 className="flex items-center gap-2 text-lg font-semibold">
                   <Phone className="w-5 h-5" /> Call Us 7/24
                 </h4>
-                <p className="ml-7 text-xl font-bold mt-1">+91 123-456-7890</p>
+                <p className="ml-7 text-xl font-bold mt-1">+91 797-290-5758</p>
               </div>
               <hr className="border-white/20" />
               <div>
                 <h4 className="flex items-center gap-2 text-lg font-semibold">
                   <Mail className="w-5 h-5" /> Make a Quote
                 </h4>
-                <p className="ml-7 mt-1 font-medium">support@reettechit.com</p>
+                <p className="ml-7 mt-1 font-medium">sales@reettechit.com</p>
+                <p className="ml-7 mt-1 font-medium">reettech24@gmail.com</p>
               </div>
               <hr className="border-white/20" />
               <div>
@@ -33,7 +34,7 @@ export default function ContactUsSection() {
                   <MapPin className="w-5 h-5" /> Location
                 </h4>
                 <p className="ml-7 mt-1 font-medium">
-                  Hinjewadi Phase 1, Pune, Maharashtra
+                 Dattanagar Road, Ambegaon Katraj Pune, Maharashtra 411046
                 </p>
               </div>
             </div>
@@ -55,10 +56,10 @@ export default function ContactUsSection() {
 
           {/* Right Form */}
           <div>
-            <h3 className="text-3xl font-bold text-[#070B2A] mb-6">
+            <h3 className="text-3xl font-bold text-white uppercase mb-6">
               Get In Touch
             </h3>
-            <form className="space-y-4">
+            <form className="space-y-4 text-white">
               <input
                 type="text"
                 placeholder="Full Name"
@@ -81,7 +82,7 @@ export default function ContactUsSection() {
               ></textarea>
               <button
                 type="submit"
-                className="bg-[#2244f8] text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"
+                className="bg-yellow-400 text-[#070B2A] px-6 py-3 rounded-md hover:bg-yellow-500 transition"
               >
                 Send Message
               </button>

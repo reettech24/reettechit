@@ -12,7 +12,7 @@ const accordionData = {
   "Next Generation Consulting": {
     heading: "Next Generation Consulting",
     description:
-      "Tailored strategies for future-ready enterprises through innovation and transformation.",
+      "Businesses want innovation at the heart of their operations in the quickly changing digital market, not just traditional strategies. By combining data-driven insights, flexible business models, and future tech solutions, Reet Technologies provides next-generation consulting services in Pune that will keep your company ahead of the curve. We produce faster, smarter, and highly scalable results than traditional consulting by combining AI, automation, sustainability, and agile techniques.In addition to offering advice, our top technology consulting firm in Pune gives you the tools you need to take the lead in the future.",
     videoTitle: "Why Consulting Matters",
     bulletPoints: [
       "Accelerate digital adaptation",
@@ -153,13 +153,13 @@ export default function page() {
 
         {/* Content */}
         <main className="md:col-span-2 space-y-6">
-          <Image
+          {/* <Image
             src="/websitedevelopment.webp"
             alt="ML"
             width={1000}
             height={300}
             className="h-[200px] object-cover rounded-lg shadow"
-          />
+          /> */}
           <h2 className="text-2xl font-bold">{content.heading}</h2>
           <p className="text-gray-600">{content.description}</p>
 

@@ -8,50 +8,27 @@ import "swiper/css/navigation";
 
 const projects = [
   {
-    category: "Technology",
-    title: "AI Solutions",
-    image: "/test.jpg",
+    category: "Dimple chemicals",
+    title: "CRM Development",
+    image: "/Instagram.jpeg",
   },
   {
-    category: "Solutions",
-    title: "Design Solutions",
-    image: "/test.jpg",
+    category: "TAW Designs & architects",
+    title: "Website Development",
+    image: "/logo3.png",
   },
   {
-    category: "Technology",
-    title: "Software Development",
-    image: "/test.jpg",
+    category: "Puneeta's creative studio",
+    title: "Creative website studio",
+    image: "/softwaredevelopment.jpeg",
   },
   {
-    category: "Technology",
-    title: "AI Solutions",
-    image: "/test.jpg",
+    category: "KRA",
+    title: "Auction Management",
+    image: "/AI.jpeg",
   },
-  {
-    category: "Solutions",
-    title: "Design Solutions",
-    image: "/test.jpg",
-  },
-  {
-    category: "Technology",
-    title: "Software Development",
-    image: "/test.jpg",
-  },
-  {
-    category: "Technology",
-    title: "AI Solutions",
-    image: "/test.jpg",
-  },
-  {
-    category: "Solutions",
-    title: "Design Solutions",
-    image: "/test.jpg",
-  },
-  {
-    category: "Technology",
-    title: "Software Development",
-    image: "/test.jpg",
-  },
+  
+  
 ];
 
 export default function ProjectShowcase() {

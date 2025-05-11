@@ -15,7 +15,7 @@ export default function AboutSection() {
       <div className="relative flex flex-col items-center">
         <div className="relative z-10">
           <Image
-            src="/test.jpg"
+            src="/aboutsectionintro.jpg"
             alt="Business Woman"
             width={500}
             height={400}
@@ -38,7 +38,7 @@ export default function AboutSection() {
           alt="Support Agent"
           width={250}
           height={200}
-          className="hidden lg:block mt-[-150px] ml-100 shadow-xl relative z-20"
+          className="hidden lg:block w-64 h-84 object-cover  mt-[-150px] ml-100 shadow-xl relative z-20"
         />
 
         {/* Badge */}
@@ -65,7 +65,7 @@ export default function AboutSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           <div className="flex items-start gap-4">
-            <div className="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center">
+            <div className="w-14 h-14 bg-[#070B2A] text-white rounded-full flex items-center justify-center">
               <PuzzlePieceIcon className="w-6 h-6" />
             </div>
             <div>
@@ -77,7 +77,7 @@ export default function AboutSection() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center">
+            <div className="w-14 h-14 bg-[#070B2A] text-white rounded-full flex items-center justify-center">
               <ChartBarIcon className="w-6 h-6" />
             </div>
             <div>
@@ -92,7 +92,7 @@ export default function AboutSection() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 border-t pt-6">
           <a
             href="#"
-            className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-blue-700 transition"
+            className="bg-[#070B2A] text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-blue-700 transition"
           >
             Explore More →
           </a>

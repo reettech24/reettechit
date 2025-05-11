@@ -26,10 +26,10 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/bg-video.mp4" type="video/mp4" />
+        <source src="/Reet_Banner_Video.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-black/70 z-0" />
+      <div className="absolute inset-0 bg-black/5 z-0" />
 
       <div className="items-center pt-70 lg:pt-80 z-0 max-w-6xl min-h-fit space-y-8">
         <AnimatePresence mode="wait">

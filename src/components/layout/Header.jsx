@@ -69,46 +69,46 @@ const Solutions = [
     name: "Digital Transformation",
     description:
       "End-to-end transformation of business models through digital tech.",
-    href: "/pages/services/digital-transformation",
+    href: "/pages/services/ourSolutions/digital-transformation",
   },
   {
     name: "CRM & ERP Solutions",
     description:
       "Integrated systems to streamline customer and resource management.",
-    href: "/pages/services/crm-erp",
+    href: "/pages/services/ourSolutions/crm-erp-solution",
   },
   {
     name: "Mobile & Web Applications",
     description: "Scalable, cross-platform mobile and web app development.",
-    href: "/pages/services/mobile-web",
+    href: "/pages/services/ourSolutions/mobile-and-web-application",
   },
   {
     name: "AI & ML",
     description:
       "Advanced AI models and machine learning for smart automation.",
-    href: "/pages/services/ai-ml",
+    href: "/pages/services/ourSolutions/ai-ml",
   },
   {
     name: "Digital Marketing",
     description: "Performance-driven SEO, social, and ad strategies.",
-    href: "/pages/services/digital-marketing",
+    href: "/pages/services/ourSolutions/digital-marketing",
   },
-  {
-    name: "High End Website Development",
-    description: "Bespoke, high-performance websites with modern UX/UI.",
-    href: "/pages/services/high-end-web",
-  },
+  // {
+  //   name: "High End Website Development",
+  //   description: "Bespoke, high-performance websites with modern UX/UI.",
+  //   href: "/pages/services/high-end-web",
+  // },
   {
     name: "AR & VR Solutions",
     description:
       "Immersive augmented and virtual reality solutions for enterprises.",
-    href: "/pages/services/ar-vr",
+    href: "/pages/services/ourSolutions/ar-vr-solutions",
   },
-  {
-    name: "Cyber Security",
-    description: "Comprehensive security audits and cyber defense systems.",
-    href: "/pages/services/cyber-security",
-  },
+  // {
+  //   name: "Cyber Security",
+  //   description: "Comprehensive security audits and cyber defense systems.",
+  //   href: "/pages/services/cyber-security",
+  // },
 ];
 
 const Industries = [
@@ -358,24 +358,24 @@ export const Header = () => {
                   >
                     Digital Marketing
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/pages/services/ourSolutions/high-end-website-development"
                     className="block"
                   >
                     High End Website Development
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/pages/services/ourSolutions/ar-vr-solutions"
                     className="block"
                   >
                     AR & VR Solutions
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/pages/services/ourSolutions/cyber-security"
                     className="block"
                   >
                     Cyber Security
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
