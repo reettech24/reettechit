@@ -34,33 +34,33 @@ const Enterprise = [
   {
     name: "Brand Portfolio Management",
     description: "Strategic development and management of brand ecosystems.",
-    href: "/pages/services/brand-portfolio",
+    href: "/pages/services/ourEnterprise/brandPortfolioManagement",
   },
   {
     name: "Research & Development",
     description: "Data-driven innovation and product evolution frameworks.",
-    href: "/pages/services/research-development",
+    href: "/pages/services/ourEnterprise/researchAndDevelopment",
   },
   {
     name: "Business Establishment",
     description:
       "From market entry to legal setup, launch your business smoothly.",
-    href: "/pages/services/business-establishment",
+    href: "/pages/services/ourEnterprise/businessEstablishment",
   },
   {
     name: "Project Management",
     description: "Agile execution and control for diverse digital projects.",
-    href: "/pages/services/project-management",
+    href: "/pages/services/ourEnterprise/projectManagement",
   },
   {
     name: "Business & IT Consulting",
     description: "Aligning IT systems with strategic business goals.",
-    href: "/pages/services/business-it-consulting",
+    href: "/pages/services/ourEnterprise/businessAndItConsulting",
   },
   {
     name: "Software Development",
     description: "Custom software tailored to your business needs.",
-    href: "/pages/services/software-development",
+    href: "/pages/services/ourEnterprise/softwareDevelopment",
   },
 ];
 
