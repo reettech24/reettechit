@@ -114,11 +114,11 @@ const Solutions = [
 const Industries = [
   {
     name: "Retail & E-commerce",
-    href: "/pages/industries/retail",
+    href: "/pages/industries/retail-E-commerce",
   },
   {
     name: "Real Estate",
-    href: "/pages/industries/real-estate",
+    href: "/pages/industries/real-Estate",
   },
   {
     name: "Manufacturing",
@@ -134,7 +134,7 @@ const Industries = [
   },
   {
     name: "Health Care",
-    href: "/pages/industries/healthcare",
+    href: "/pages/industries/health-care",
   },
   {
     name: "Logistics",
@@ -153,7 +153,7 @@ const Products = [
   },
   {
     name: "Nexus Online Management",
-    href: "/pages/products/nexus-online",
+    href: "/pages/products/nexus-online-management",
   },
 ];
 
@@ -164,11 +164,11 @@ const AboutUs = [
   },
   {
     name: "Our Focus",
-    href: "/pages/about/focus",
+    href: "/pages/about/ourFocus",
   },
   {
     name: "Our Team",
-    href: "/pages/about/team",
+    href: "/pages/about/ourTeam",
   },
 ];
 
@@ -179,7 +179,7 @@ const Careers = [
   },
   {
     name: "Jobs & Hiring",
-    href: "/pages/careers/jobs",
+    href: "/pages/careers/jobs-hiring",
   },
 ];
 

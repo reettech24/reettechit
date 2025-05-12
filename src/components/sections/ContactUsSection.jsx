@@ -10,7 +10,7 @@ export default function ContactUsSection() {
 
       {/* Info + Form Section */}
       <section className="py-20 px-6 lg:px-20 bg-[#070B2A]">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-5 lg:mb-3">
           {/* Left Info Card */}
           <div>
             <div className=" relative w-full h-fit overflow-hidden shadow-md">
@@ -68,7 +68,7 @@ export default function ContactUsSection() {
             </form>
           </div>
         </div>
-        <div className="grid grid-cols-3 bg-[#2244f8] text-white p-8 space-y-6">
+        <div className="grid lg:grid-cols-3 bg-[#2244f8] text-white p-8 space-y-6">
           <div>
             <h4 className="flex items-center gap-2 text-lg font-semibold">
               <Phone className="w-5 h-5" /> Call Us 7/24
