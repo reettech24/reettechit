@@ -44,14 +44,14 @@ export default function TestimonialSection() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
-          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           loop={true}
           className="relative max-w-4xl mx-auto"
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="group">
-                <div className="bg-white group-hover:bg-[#070B2A] group-hover:text-white transition-colors duration-300 text-center shadow-lg p-8 lg:p-6 max-w-2xl mx-auto">
+                <div className="bg-white group-hover:bg-transparent group-hover:text-white transition-colors duration-300 text-center shadow-lg p-8 lg:p-6 max-w-2xl mx-auto">
                   <div className="relative w-24 h-24 mb-4 mx-auto">
                     <div className="w-24 h-24 rounded-full bg-[#070B2A] group-hover:bg-white shadow-xl flex items-center justify-center text-teal-500 text-4xl transition-colors duration-300">
                       &ldquo;
@@ -78,6 +78,10 @@ export default function TestimonialSection() {
             <ChevronRightIcon className="h-6 w-6" />
           </button>
         </Swiper>
+      </div>
+
+      <div className="absolute -top-40 opacity-20">
+        <img src="/smoke.png" alt="Nexus India Logo" className="" />
       </div>
 
       {/* Decorative avatars */}

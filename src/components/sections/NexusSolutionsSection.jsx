@@ -30,64 +30,84 @@ export default function NexusSolutionsSection() {
         </motion.p>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto grid gap-10 md:grid-cols-2">
-
-      <div className="absolute inset-0 bg-black/10 bg-opacity-90 z-0" />
+      <div className="relative z-10 max-w-6xl mx-auto grid gap-20 md:grid-cols-2">
 
         {/* Nexus India */}
-        <motion.div
-          whileHover={{ scale: 1.03 }}
-          className="bg-white p-8 shadow-2xl transition-all duration-300"
-           style={{ backgroundImage: "url('/nexusindiaimage.jpeg')" }}
-        >
-          <div className="flex items-center gap-4 mb-5">
-            {/* <img src="/nexusindialogo.jpg" alt="Nexus India Icon" className="w-52 h-20" /> */}
-            <h3 className="text-2xl font-bold text-white">Nexus India</h3>
-          </div>
-          <p className="text-white mb-4">
-            A powerful digital initiative tailored to support India's small and medium-sized businesses.
-          </p>
-          <ul className="list-disc list-inside text-white mb-6 space-y-1">
-            <li>Affordable tech solutions for SMEs</li>
-            <li>Localized tools for e-commerce & logistics</li>
-            <li>Easy onboarding and support</li>
-            <li>Scalable to meet future growth</li>
-          </ul>
-          <a
-            href="/products/nexus-india"
-            className="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition shadow"
+        <div className="relative flex flex-col items-center">
+          {/* Floating Logo */}
+          {/* <div className="absolute -top-14 z-20 bg-white rounded-full p-3 shadow-xl">
+            <img src="/nexusindialogo.png" alt="Nexus India Logo" className="w-24 h-24 object-contain" />
+          </div> */}
+
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            className="relative bg-white shadow-2xl transition-all duration-300 overflow-hidden w-full pt-16"
+            style={{
+              backgroundImage: "url('/nexusindiaimage.jpeg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
           >
-            Learn More
-          </a>
-        </motion.div>
+            <div className="absolute inset-0 bg-black/60 z-0" />
+            <div className="relative z-10 p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Nexus India</h3>
+              <p className="text-white mb-4">
+                A powerful digital initiative tailored to support India's small and medium-sized businesses.
+              </p>
+              <ul className="list-disc list-inside text-white mb-6 space-y-1">
+                <li>Affordable tech solutions for SMEs</li>
+                <li>Localized tools for e-commerce & logistics</li>
+                <li>Easy onboarding and support</li>
+                <li>Scalable to meet future growth</li>
+              </ul>
+              <a
+                href="/products/nexus-india"
+                className="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 font-medium transition shadow"
+              >
+                Learn More
+              </a>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Nexus Online Management */}
-        <motion.div
-          whileHover={{ scale: 1.03 }}
-          className="bg-white p-8 shadow-2xl transition-all duration-300 object-cover"
-           style={{ backgroundImage: "url('/design.jpeg')" }}
+        <div className="relative flex flex-col items-center">
+          {/* Floating Logo */}
+          {/* <div className="absolute -top-14 z-20 bg-white rounded-full p-3 shadow-xl">
+            <img src="/nexusindiaimage.jpeg" alt="Management Logo" className="w-20 h-20 object-contain" />
+          </div> */}
 
-        >
-          <div className="flex items-center gap-4 mb-5">
-            {/* <img src="/icons/management.svg" alt="Management Icon" className="w-12 h-12" /> */}
-            <h3 className="text-2xl font-bold text-white">Nexus Online Management</h3>
-          </div>
-          <p className="text-white mb-4">
-            Your all-in-one dashboard to manage operations, customers, and teams with ease.
-          </p>
-          <ul className="list-disc list-inside text-white mb-6 space-y-1">
-            <li>Smart dashboards & real-time analytics</li>
-            <li>Role-based user access and permissions</li>
-            <li>Centralized data and project tools</li>
-            <li>Custom integrations with APIs</li>
-          </ul>
-          <a
-            href="/products/nexus-online-management"
-            className="inline-block px-6 py-3 text-white bg-green-600 hover:bg-green-700 rounded-lg font-medium transition shadow"
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            className="relative bg-white shadow-2xl transition-all duration-300 overflow-hidden w-full pt-16"
+            style={{
+              backgroundImage: "url('/design.jpeg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
           >
-            Explore Platform
-          </a>
-        </motion.div>
+            <div className="absolute inset-0 bg-black/60 z-0" />
+            <div className="relative z-10 p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Nexus Online Management</h3>
+              <p className="text-white mb-4">
+                Your all-in-one dashboard to manage operations, customers, and teams with ease.
+              </p>
+              <ul className="list-disc list-inside text-white mb-6 space-y-1">
+                <li>Smart dashboards & real-time analytics</li>
+                <li>Role-based user access and permissions</li>
+                <li>Centralized data and project tools</li>
+                <li>Custom integrations with APIs</li>
+              </ul>
+              <a
+                href="/products/nexus-online-management"
+                className="inline-block px-6 py-3 text-white bg-green-600 hover:bg-green-700 font-medium transition shadow"
+              >
+                Explore Platform
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
       </div>
     </section>
   );

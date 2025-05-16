@@ -10,7 +10,7 @@ import {
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#f0f0f0] text-gray-800 py-20 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="bg-[#f0f0f0] text-gray-800 py-20 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden">
       {/* Left Images */}
       <div className="relative flex flex-col items-center">
         <div className="relative z-10">
@@ -46,10 +46,18 @@ export default function AboutSection() {
           <UserGroupIcon className="w-6 h-6 text-blue-600" />
           <span className="font-bold text-lg">6,561+</span>
         </div>
+
+        <div className="absolute -top-20 -left-20">
+          <img src="/left-shape.png" alt="Nexus India Logo" className=" h-96" />
+        </div>
       </div>
 
       {/* Right Content */}
-      <div>
+      <div className=" relative">
+        <div className="absolute -top-110 -right-60">
+          <img src="/element.png" alt="Nexus India Logo" className=" h-96" />
+        </div>
+
         <p className="text-blue-600 uppercase text-lg font-semibold mb-2 tracking-wider">
           About Reet Technologies
         </p>
@@ -110,6 +118,10 @@ export default function AboutSection() {
               <p className="text-sm text-gray-500">CEO, Founder</p>
             </div>
           </div>
+        </div>
+
+        <div className="absolute -bottom-70 -right-20">
+          <img src="/right-shape.png" alt="Nexus India Logo" className="" />
         </div>
       </div>
     </section>

@@ -34,7 +34,15 @@ export default function ContactUsSection() {
           </div>
 
           {/* Right Form */}
-          <div className="self-center">
+          <div className=" relative self-center">
+
+             <div className="absolute -top-40 right-0">
+            <img
+              src="/footer-shape-1.png"
+              alt="Nexus India Logo"
+              className=""
+            />
+          </div>
             <h3 className="text-3xl font-bold text-white uppercase mb-6">
               Get In Touch
             </h3>

@@ -3,7 +3,6 @@
 import {
   ArrowUpRightIcon,
   CloudIcon,
-
   ServerIcon,
   PuzzlePieceIcon,
   PhoneIcon,
@@ -92,8 +91,8 @@ const services = [
 export default function ITSolutionsSection() {
   return (
     <>
-      <section className="bg-[#070B2A] w-full py-16 text-white text-center">
-        <div className=" mb-20 py-8 px-6 text-white text-center">
+      <section className="bg-[#070B2A] w-full py-16 text-white text-center overflow-hidden">
+        <div className=" relative mb-20 py-8 px-6 text-white text-center">
           <p className="text-lg text-yellow-400 uppercase mb-2 tracking-widest">
             Our Services
           </p>
@@ -104,6 +103,14 @@ export default function ITSolutionsSection() {
             </span>{" "}
             & Solutions
           </h2>
+
+          <div className="absolute -top-20 right-0">
+            <img
+              src="/line-element.png"
+              alt="Nexus India Logo"
+              className=" w[600px] h[800px]"
+            />
+          </div>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -160,6 +167,8 @@ export default function ITSolutionsSection() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl justify-center mx-auto gap-10 items-center py-8 text-white text-center">
           {/* Left side stats and sphere */}
+
+          
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
             <div className="flex flex-col space-y-16 text-center lg:text-left">
               <div>
@@ -198,8 +207,10 @@ export default function ITSolutionsSection() {
             </div>
           </div>
 
+         
+
           {/* Right side content */}
-          <div className="text-left space-y-6 px-8 lg:px-0">
+          <div className=" relative text-left space-y-6 px-8 lg:px-0">
             <p className="text-lg font-semibold capitalize text-yellow-400">
               service <span className="italic text-white">it solutions</span>
             </p>
@@ -233,6 +244,10 @@ export default function ITSolutionsSection() {
               Tell Us How Can We Help
               <span className="absolute bottom-0 right-0 w-5 h-5 bg-teal-400 rounded-tl-full group-hover:scale-110 transition-transform" />
             </button>
+
+            <div className="absolute -top-50 -right-30">
+              <img src="/mask-shape.png" alt="Nexus India Logo" className="" />
+            </div>
           </div>
         </div>
       </section>
