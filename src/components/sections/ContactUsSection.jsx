@@ -50,26 +50,26 @@ export default function ContactUsSection() {
               <input
                 type="text"
                 placeholder="Full Name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
               <input
                 type="text"
                 placeholder="Subject"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
               <textarea
                 rows={5}
                 placeholder="Message"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               ></textarea>
               <button
                 type="submit"
-                className="bg-yellow-400 text-[#070B2A] px-6 py-3 rounded-md hover:bg-yellow-500 transition"
+                className="bg-yellow-400 text-[#070B2A] px-6 py-3  hover:bg-yellow-500 transition"
               >
                 Send Message
               </button>
