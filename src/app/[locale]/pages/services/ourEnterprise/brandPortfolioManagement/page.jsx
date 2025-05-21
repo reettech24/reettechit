@@ -8,19 +8,21 @@ export default function page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-40 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Brand Portfolio Management
-        </h1>
-        <p className="text-xl max-w-3xl mx-auto">
-          Strategically managing your brand family to maximize reach, resonance,
-          and revenue.
-        </p>
-        <img
-          src="https://unsplash.com/photo-1581093588401-7f7c93049a07"
-          alt="Brand Portfolio"
-          className="mx-auto mt-10 rounded-xl shadow-lg max-w-xl"
-        />
+
+      <section
+        className="bg-[#070B2A] text-white py-52 text-center bg-cover bg-center relative"
+        style={{ backgroundImage: "url('/bpm2.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70" />
+        <div className="relative z-10">
+          <h1 className="text-5xl font-extrabold mb-6">
+            Brand Portfolio Management
+          </h1>
+          <p className="text-2xl max-w-3xl mx-auto">
+            Strategically managing your brand family to maximize reach,
+            resonance, and revenue.
+          </p>
+        </div>
       </section>
 
       {/* Services Section */}
@@ -56,7 +58,7 @@ export default function page() {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition"
+              className="bg-gray-50 p-6 shadow hover:shadow-lg transition"
             >
               <img src={item.img} alt={item.title} className="w-12 h-12 mb-4" />
               <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -67,16 +69,16 @@ export default function page() {
       </section>
 
       {/* Case Study Section */}
-      <section className="bg-gray-100 py-16 px-6">
+      <section className="bg-[#070B2A] text-white py-16 px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Real Impact We've Delivered</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 shadow">
             <img
               src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df"
               alt="Case Study"
-              className="rounded mb-4"
+              className=" mb-4"
             />
             <h3 className="text-xl font-bold">Repositioning Legacy Brands</h3>
             <p className="text-gray-600 mt-2">
@@ -85,11 +87,11 @@ export default function page() {
               within one year.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white p-6 shadow">
             <img
               src="https://images.unsplash.com/photo-1743385779347-1549dabf1320?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Case Study"
-              className="rounded mb-4"
+              className=" mb-4"
             />
             <h3 className="text-xl font-bold">M&A Brand Integration</h3>
             <p className="text-gray-600 mt-2">
@@ -125,29 +127,33 @@ export default function page() {
               "Execute with precision while measuring brand performance.",
             ],
           ].map(([title, desc], i) => (
-            <div key={i} className="bg-white p-6 rounded-lg shadow">
+            <div key={i} className="bg-gray-800 text-white p-6 shadow">
               <h3 className="font-semibold text-lg">{title}</h3>
-              <p className="text-gray-600 mt-2">{desc}</p>
+              <p className=" text-white/60 mt-2">{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-white py-16 px-6">
+      <section className="bg-[#070B2A] text-white py-16 px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Why Partner With Us?</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-          <div className="bg-gray-50 p-6 rounded-xl shadow">
-            <h4 className="font-semibold text-lg">Strategic Thinkers</h4>
+          <div className="bg-gray-50 p-6 shadow">
+            <h4 className="font-semibold text-lg text-black">
+              Strategic Thinkers
+            </h4>
             <p className="text-gray-600 mt-2">
               Our brand consultants are strategists who blend creativity with
               data to make informed decisions.
             </p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-xl shadow">
-            <h4 className="font-semibold text-lg">Proven Portfolio Models</h4>
+          <div className="bg-gray-50 p-6 shadow">
+            <h4 className="font-semibold text-lg text-black">
+              Proven Portfolio Models
+            </h4>
             <p className="text-gray-600 mt-2">
               We leverage frameworks used by Fortune 500 companies to structure
               and grow brand portfolios efficiently.

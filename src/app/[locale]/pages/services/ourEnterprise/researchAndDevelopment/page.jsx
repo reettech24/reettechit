@@ -4,6 +4,7 @@ import React from "react";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 
+
 export default function page() {
   const focusAreas = [
     {
@@ -64,13 +65,17 @@ export default function page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-black text-white py-40 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-tr from-purple-700/30 to-indigo-900/50 mix-blend-overlay"></div>
-        <div className="max-w-5xl mx-auto relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-4">
+
+      <section
+        className="bg-[#070B2A] text-white py-52 text-center bg-cover bg-center relative"
+        style={{ backgroundImage: "url('/graduation.jpeg')" }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70" />
+        <div className="relative z-10">
+          <h1 className="text-5xl font-extrabold mb-6">
             Innovation Through Research & Development
           </h1>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+          <p className="text-2xl max-w-3xl mx-auto">
             We don’t just follow trends — we create them. Our R&D team uncovers
             market truths and transforms them into actionable, brand-shaping
             strategies.
@@ -86,9 +91,16 @@ export default function page() {
               Why Invest in R&D?
             </h2>
             <p className="text-gray-600 mb-4">
-              In today’s hypercompetitive landscape, innovation isn’t
-              optional—it’s survival. Our R&D process bridges creativity with
-              analytics to build strategies that outperform and endure.
+              At Reet Technologies, innovation is at the core of everything we
+              do. Our Research & Development (R&D) Services empower businesses
+              to explore new ideas, develop cutting-edge solutions, and stay
+              ahead in a rapidly evolving digital landscape.
+            </p>
+            <p className="text-gray-600 mb-4">
+              We work closely with your team to identify opportunities,
+              experiment with technologies, and create prototypes that lead to
+              real-world impact. From product innovation to process improvement,
+              our R&D solutions are designed to turn vision into value.
             </p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               <li>Uncover unmet consumer needs before your competitors do</li>
@@ -98,7 +110,7 @@ export default function page() {
             </ul>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="/design.jpeg"
             alt="R&D Illustration"
             className="shadow-lg"
           />
@@ -106,23 +118,25 @@ export default function page() {
       </section>
 
       {/* Focus Areas */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-14">
-            Core R&D Focus Areas
+            Core Research & Development Focus Areas
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {focusAreas.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-6 shadow hover:shadow-xl transition duration-300"
+                className="bg-white p-6 shadow hover:shadow-xl transition duration-300"
               >
                 <img
                   src={item.icon}
                   alt={item.title}
                   className="w-12 h-12 mb-4"
                 />
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-black">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
@@ -131,15 +145,17 @@ export default function page() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#070B2A] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-12">Our R&D Journey</h2>
           <div className="relative border-l-2 border-indigo-500 pl-6 space-y-10">
             {timeline.map((item, index) => (
               <div key={index} className="relative">
                 <div className="absolute -left-4 top-0 w-4 h-4 bg-indigo-500 rounded-full"></div>
-                <h4 className="text-lg font-semibold">{item.year}</h4>
-                <p className="text-gray-600">{item.event}</p>
+                <h4 className="text-lg font-semibold text-white">
+                  {item.year}
+                </h4>
+                <p className=" text-white/80">{item.event}</p>
               </div>
             ))}
           </div>
@@ -175,9 +191,6 @@ export default function page() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <TestimonialSection />
-
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-indigo-800 to-purple-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
@@ -185,9 +198,9 @@ export default function page() {
             Let’s Research the Future Together
           </h2>
           <p className="text-lg mb-6">
-            Partner with our team to craft intelligent, insight-backed
-            strategies. Whether you're an enterprise or a startup—we’re ready to
-            innovate with you.
+            Whether you're a startup looking to disrupt or an enterprise aiming
+            to evolve, Reet Technologies delivers the research and innovation
+            power to make it happen.
           </p>
           <a
             href="/contact"
@@ -197,6 +210,9 @@ export default function page() {
           </a>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialSection />
 
       {/* Contact Us */}
       <ContactUsSection />

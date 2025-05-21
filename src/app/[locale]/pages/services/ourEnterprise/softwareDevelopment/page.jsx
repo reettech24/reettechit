@@ -6,18 +6,18 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
+
       <section
-        className="bg-[#070B2A] text-white py-52 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/breadcrumb.jpg')" }}
+        className="bg-[#070B2A] text-white py-42 text-center bg-cover bg-center relative"
+        style={{ backgroundImage: "url('/AboutUs.jpeg')" }}
       >
-        <div className="absolute inset-0 bg-[#070B2A] opacity-70"></div>
+        <div className="absolute inset-0 bg-black opacity-70" />
         <div className="relative z-10">
-          <div className="text-4xl md:text-5xl font-bold mb-3">
-            Software Development
-          </div>
-          <div className="text-sm text-white/70">
-            Home / Services / Our Enterprise / Software Development
-          </div>
+          <h1 className="text-5xl font-extrabold mb-6">Software Development</h1>
+          <p className="text-2xl max-w-3xl mx-auto">
+            Building secure, scalable software solutions that empower your
+            business to grow, innovate, and lead in your industry.
+          </p>
         </div>
       </section>
 
@@ -34,7 +34,7 @@ export default function Page() {
       </section>
 
       {/* What We Build */}
-      <section className="py-16 px-6 bg-gray-50 w-full">
+      <section className="py-16 px-6 bg-[#070B2A] text-white w-full">
         <div className="max-w-6xl mx-auto text-center">
           <div className="text-2xl font-bold mb-10">Solutions We Develop</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -72,14 +72,16 @@ export default function Page() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition"
+                className="bg-white p-6 shadow-md shadow-black text-center hover:shadow-lg transition"
               >
                 <img
                   src={item.icon}
                   alt={item.title}
                   className="w-12 h-12 mx-auto mb-4"
                 />
-                <div className="font-semibold text-lg">{item.title}</div>
+                <div className="font-semibold text-lg text-black">
+                  {item.title}
+                </div>
                 <p className="text-sm text-gray-600 mt-2">{item.desc}</p>
               </div>
             ))}
@@ -87,22 +89,35 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 px-6 max-w-5xl mx-auto text-center">
-        <div className="text-2xl font-bold mb-10">Why Partner With Us?</div>
-        <ul className="space-y-4 text-gray-700 text-lg">
-          <li>
-            ✅ Proven track record with 100+ successful software deployments
-          </li>
-          <li>✅ Agile, DevOps & CI/CD expertise for rapid delivery</li>
-          <li>✅ 100% custom development — no templates, no shortcuts</li>
-          <li>✅ Dedicated project manager and full-stack team</li>
-          <li>✅ Post-launch support and continuous optimization</li>
-        </ul>
+      <section className="py-20 px-6 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          {/* Left Image */}
+          <div className="flex-1">
+            <img
+              src="/digitaltransformation.jpeg" // Replace with your actual image path
+              alt="Why Partner With Us"
+              className="w-full h-120 shadow-lg object-cover"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="text-2xl font-bold mb-6">Why Partner With Us?</div>
+            <ul className="space-y-4 text-gray-700 text-md">
+              <li>
+                ✅ Proven track record with 100+ successful software deployments
+              </li>
+              <li>✅ Agile, DevOps & CI/CD expertise for rapid delivery</li>
+              <li>✅ 100% custom development — no templates, no shortcuts</li>
+              <li>✅ Dedicated project manager and full-stack team</li>
+              <li>✅ Post-launch support and continuous optimization</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* Development Process */}
-      <section className="py-20 px-6 bg-gray-100 w-full">
+      <section className="py-20 px-6 bg-[#070B2A] text-white w-full">
         <div className="max-w-5xl mx-auto text-center">
           <div className="text-2xl font-bold mb-10">
             Our Development Process
@@ -123,7 +138,7 @@ export default function Page() {
                 "Go live with monitoring, support, and iteration.",
               ],
             ].map(([title, desc], idx) => (
-              <div key={idx} className="bg-white p-5 rounded-xl shadow">
+              <div key={idx} className="bg-white p-5 shadow shadow-black">
                 <div className="text-lg font-medium mb-2">{title}</div>
                 <div>{desc}</div>
               </div>
@@ -133,7 +148,7 @@ export default function Page() {
       </section>
 
       {/* Industries Served */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
+      <section className="py-20  px-6 max-w-6xl mx-auto">
         <div className="text-2xl font-bold text-center mb-10">
           Industries We Serve
         </div>
@@ -156,7 +171,7 @@ export default function Page() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
+      <section className="py-20 bg-[#070B2A] text-white px-6 mx-auto">
         <div className="text-2xl font-bold text-center mb-10">
           Technologies We Use
         </div>
@@ -166,7 +181,6 @@ export default function Page() {
             "nodejs",
             "nextjs",
             "python",
-            "django",
             "aws",
             "docker",
             "mongodb",
@@ -215,7 +229,7 @@ export default function Page() {
       </section>
 
       {/* Stats Grid */}
-      <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+      <section className="py-20 px-6 bg-[#070B2A] text-white mx-auto text-center">
         <div className="text-2xl font-bold mb-12">Proven Results</div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-blue-900">
           {[
