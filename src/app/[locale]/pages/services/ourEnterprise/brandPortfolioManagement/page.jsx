@@ -141,20 +141,20 @@ export default function page() {
           <h2 className="text-3xl font-bold">Why Partner With Us?</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-          <div className="bg-gray-50 p-6 shadow">
-            <h4 className="font-semibold text-lg text-black">
+          <div className="bg-gray-800 p-6 shadow">
+            <h4 className="font-semibold text-lg text-white">
               Strategic Thinkers
             </h4>
-            <p className="text-gray-600 mt-2">
+            <p className="text-white/80 mt-2">
               Our brand consultants are strategists who blend creativity with
               data to make informed decisions.
             </p>
           </div>
-          <div className="bg-gray-50 p-6 shadow">
-            <h4 className="font-semibold text-lg text-black">
+          <div className="bg-gray-800 p-6 shadow">
+            <h4 className="font-semibold text-lg text-white">
               Proven Portfolio Models
             </h4>
-            <p className="text-gray-600 mt-2">
+            <p className="text-white/80 mt-2">
               We leverage frameworks used by Fortune 500 companies to structure
               and grow brand portfolios efficiently.
             </p>

@@ -50,6 +50,8 @@ export default function AboutSection() {
         <div className="absolute -top-20 -left-20">
           <img src="/left-shape.png" alt="Nexus India Logo" className=" h-96" />
         </div>
+
+       
       </div>
 
       {/* Right Content */}

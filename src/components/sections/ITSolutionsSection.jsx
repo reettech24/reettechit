@@ -248,6 +248,8 @@ export default function ITSolutionsSection() {
             <div className="absolute -top-50 -right-30">
               <img src="/mask-shape.png" alt="Nexus India Logo" className="" />
             </div>
+            
+            
           </div>
         </div>
       </section>

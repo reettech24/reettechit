@@ -169,20 +169,20 @@ export default function page() {
             Our Impact in Action
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-white p-6 rounded-xl shadow border-l-4 border-purple-600">
-              <h4 className="text-xl font-semibold mb-2">
+            <div className="bg-gray-800 p-6 rounded-xl shadow border-l-4 border-purple-600">
+              <h4 className="text-xl font-semibold mb-2 text-white">
                 Predictive AI for Fashion
               </h4>
-              <p className="text-gray-700">
+              <p className="text-white/60">
                 We built a fashion AI model that projected micro-trends 3 months
                 in advance, resulting in a 28% sales uplift during key seasons.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow border-l-4 border-indigo-600">
-              <h4 className="text-xl font-semibold mb-2">
+            <div className="bg-gray-800 p-6 rounded-xl shadow border-l-4 border-indigo-600">
+              <h4 className="text-xl font-semibold mb-2 text-white">
                 Green Branding for FMCG
               </h4>
-              <p className="text-gray-700">
+              <p className="text-white/60">
                 Our sustainability research helped a leading food brand redesign
                 their packaging, leading to a 40% positive sentiment boost.
               </p>
