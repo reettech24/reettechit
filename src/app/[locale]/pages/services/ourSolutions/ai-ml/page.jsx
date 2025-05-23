@@ -4,7 +4,7 @@ import React from "react";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 
 export default function AiMlSolutionsPage() {
   return (
@@ -26,6 +26,48 @@ export default function AiMlSolutionsPage() {
             solutions empower your organization to evolve faster and smarter.
           </p>
         </motion.div>
+      </section>
+
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <Image
+            src="/photos/crm1.jpg"
+            alt="CRM ERP Overview"
+            width={600}
+            height={400}
+            className="w-full"
+          />
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#070B2A]">
+              AI, ML & Data-Driven Solutions in Pune Boost Business
+              Intelligence, Decision-Making & Operational Speed with AI
+              Solutions in Pune
+            </h2>
+            <p className="text-base sm:text-lg text-gray-700 mb-6">
+              Looking for AI and machine learning services in Pune that drive
+              real business value? At Reet Technologies, we specialize in
+              delivering advanced AI-powered and data-driven solutions that
+              transform your data into smart, actionable insights. Whether
+              you're a small business or a large enterprise, our tailored AI and
+              ML services make it easier to automate processes, enhance
+              decision-making, and accelerate growth.
+            </p>
+            <p className="text-base sm:text-lg text-gray-700 mb-6">
+              Our machine learning experts in Pune build intelligent algorithms
+              that help predict customer behavior, detect anomalies, personalize
+              experiences, and automate repetitive tasks. From sales forecasting
+              to inventory management, our ML models adapt and evolve as your
+              business grows.
+            </p>
+            <ul className="space-y-4 text-gray-600 text-base">
+              <li>✅ Predictive analytics for accurate forecasting</li>
+              <li>✅ Customized UI/UX design for your audience</li>
+              <li>✅ Real-time data classification and clustering</li>
+              <li>✅ Pattern recognition for improved strategy</li>
+              <li>✅ Scalable machine learning deployment</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* Features Section */}
@@ -65,7 +107,7 @@ export default function AiMlSolutionsPage() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:scale-[1.03] transition-transform duration-300"
+              className="bg-gray-800 p-8 shadow-lg border border-gray-700 hover:scale-[1.03] transition-transform duration-300"
             >
               <div className="text-4xl mb-4">{item.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -76,9 +118,9 @@ export default function AiMlSolutionsPage() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="bg-gray-50 py-20 px-6 text-center">
+      <section className="bg-[#070B2A] text-white py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
             Industries We Serve
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-gray-800">
@@ -94,7 +136,7 @@ export default function AiMlSolutionsPage() {
             ].map((industry, i) => (
               <div
                 key={i}
-                className="bg-white hover:bg-indigo-50 p-6 rounded-xl shadow border border-gray-200 transition"
+                className="bg-white hover:bg-indigo-50 p-6 shadow border border-gray-200 transition"
               >
                 <p className="font-medium">{industry}</p>
               </div>
@@ -104,27 +146,36 @@ export default function AiMlSolutionsPage() {
       </section>
 
       {/* How We Work */}
-      <section className="bg-indigo-900 text-white py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">
-            How We Build AI Solutions
-          </h2>
-          <ol className="space-y-6 text-left max-w-3xl mx-auto">
-            {[
-              "1. Discovery & Business Understanding",
-              "2. Data Collection & Preprocessing",
-              "3. Model Development & Testing",
-              "4. Integration with Your Existing Systems",
-              "5. Monitoring, Tuning & Maintenance",
-            ].map((step, i) => (
-              <li
-                key={i}
-                className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:bg-indigo-400"
-              >
-                {step}
-              </li>
-            ))}
-          </ol>
+      <section className="bg-indigo-900 py-16 sm:py-20 px-4 sm:px-6 lg:px-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <Image
+            src="/photos/crm1.jpg"
+            alt="CRM ERP Overview"
+            width={600}
+            height={400}
+            className="w-full"
+          />
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+              How We Build AI Solutions
+            </h2>
+            <ol className="space-y-6 text-left max-w-3xl mx-auto">
+              {[
+                "1. Discovery & Business Understanding",
+                "2. Data Collection & Preprocessing",
+                "3. Model Development & Testing",
+                "4. Integration with Your Existing Systems",
+                "5. Monitoring, Tuning & Maintenance",
+              ].map((step, i) => (
+                <li
+                  key={i}
+                  className="relative text-white/80 pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:bg-indigo-400"
+                >
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -149,18 +200,18 @@ export default function AiMlSolutionsPage() {
           </div>
           <div>
             <img
-              src="/images/ai-case-study.png"
+              src="/photos/crm1.jpg"
               alt="Case Study"
-              className="rounded-xl shadow-md"
+              className=" shadow-md"
             />
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-gray-100 py-20 px-6 text-center">
+      <section className="bg-[#070B2A] text-white py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
             Why Choose Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -183,7 +234,7 @@ export default function AiMlSolutionsPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+                className="bg-white p-8 shadow-md hover:shadow-lg transition"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -195,7 +246,7 @@ export default function AiMlSolutionsPage() {
       </section>
 
       {/* Technologies We Use */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-10">
             Technologies We Use
@@ -243,7 +294,7 @@ export default function AiMlSolutionsPage() {
                   "Increased sales by 30% during festive seasons via ML-driven pricing.",
               },
             ].map((story, i) => (
-              <div key={i} className="bg-indigo-800 p-6 rounded-xl shadow">
+              <div key={i} className="bg-indigo-800 p-6 shadow">
                 <h3 className="text-xl font-semibold mb-2">{story.name}</h3>
                 <p className="text-indigo-100">{story.result}</p>
               </div>
@@ -253,7 +304,7 @@ export default function AiMlSolutionsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Frequently Asked Questions
@@ -273,9 +324,9 @@ export default function AiMlSolutionsPage() {
                 a: "Absolutely. We specialize in seamless API and system integrations.",
               },
             ].map((item, i) => (
-              <div key={i} className="border border-gray-200 p-6 rounded-lg">
+              <div key={i} className="border border-gray-200 p-6 ">
                 <h4 className="text-lg font-semibold mb-2">{item.q}</h4>
-                <p className="text-gray-700">{item.a}</p>
+                <p className="text-white/80">{item.a}</p>
               </div>
             ))}
           </div>

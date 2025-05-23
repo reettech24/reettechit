@@ -12,7 +12,7 @@ export default function page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-[url('/arvr-hero.jpg')] bg-cover bg-center py-52 text-white">
+      <section className="relative bg-[url('/vr.jpeg')] bg-cover bg-center py-80 h-screen text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 to-black/30 z-0"></div>
         <motion.div
           className="relative z-10 text-center px-6"
@@ -31,15 +31,15 @@ export default function page() {
 
       {/* Immersive VR Background Effect */}
       <section className="relative overflow-hidden">
-        <video
+        {/* <video
           autoPlay
           muted
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-20"
         >
-          <source src="/vr-immersive-background.mp4" type="video/mp4" />
-        </video>
+          <source src="/bg-video.mp4" type="video/mp4" />
+        </video> */}
         <div className="relative py-24 px-6 lg:px-20 z-10 text-center">
           <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
             Feel the Immersion
@@ -53,12 +53,16 @@ export default function page() {
       </section>
 
       {/* Intro Section */}
-      <section className="bg-white py-24 px-6 lg:px-20">
+      <section className=" relative bg-[#070B2A] text-white py-24 px-6 lg:px-20">
+        <div className="absolute -top-20 -left-20 ">
+          <img src="/left-shape.png" alt="Nexus India Logo" className=" h-96" />
+        </div>
+
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Unlock a New Dimension of Experience
           </h2>
-          <p className="text-gray-700 text-lg">
+          <p className="text-white/80 text-lg">
             Our Augmented and Virtual Reality services help brands revolutionize
             customer engagement, learning, operations, and beyond through
             immersive digital environments.
@@ -67,12 +71,12 @@ export default function page() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-24 px-6 lg:px-20 bg-white">
+      <section className=" relative overflow-hidden py-24 px-6 lg:px-20 bg-[#070B2A] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Industries We Serve
           </h2>
-          <p className="text-gray-600 mb-10">
+          <p className="text-white/60 mb-10">
             Tailored AR/VR solutions across a wide spectrum of sectors.
           </p>
           <div className="grid md:grid-cols-3 gap-10 text-left">
@@ -86,17 +90,21 @@ export default function page() {
             ].map((sector, i) => (
               <div
                 key={i}
-                className="bg-gradient-to-br from-[#F9FAFB] to-[#E2E8F0] p-6 rounded-xl shadow hover:shadow-xl transition"
+                className="bg-gray-800 p-6  shadow hover:shadow-xl transition"
               >
-                <h3 className="text-xl font-semibold text-[#070B2A] mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {sector}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-white/80 text-sm">
                   Enhance {sector.toLowerCase()} experiences using interactive
                   3D environments and simulations.
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
+            <img src="/p1.png" alt="Nexus India Logo" className="" />
           </div>
         </div>
       </section>
@@ -126,9 +134,9 @@ export default function page() {
       </section>
 
       {/* Benefits Section with Glassmorphism & 3D Tilt */}
-      <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] py-24 px-6 lg:px-20">
+      <section className="  bg-[#070B2A] text-white py-24 px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#070B2A] mb-12">
+          <h2 className="text-4xl font-bold text-white mb-12">
             Why Choose AR/VR?
           </h2>
           <div className="grid md:grid-cols-3 gap-10 text-left">
@@ -156,7 +164,7 @@ export default function page() {
                 className="glare-wrapper"
               >
                 <motion.div
-                  className="backdrop-blur-xl bg-white/30 p-8 rounded-2xl shadow-lg border border-white/20 hover:scale-105 transition-transform"
+                  className="backdrop-blur-xl bg-gray-900 p-8 shadow-lg border border-white/20 hover:scale-105 transition-transform"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: i * 0.2 }}
@@ -168,10 +176,10 @@ export default function page() {
                     height={40}
                     className="mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-[#070B2A] mb-2">
+                  <h3 className="text-xl font-semibold text-white mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                  <p className="text-white/70 text-sm">{item.desc}</p>
                 </motion.div>
               </Tilt>
             ))}
@@ -180,7 +188,7 @@ export default function page() {
       </section>
 
       {/* Benefits Section with Glassmorphism & 3D Tilt */}
-      <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] py-24 px-0 lg:px-0">
+      <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] py-24 px-0 lg:p-0">
         <VRSection />
       </section>
 
@@ -188,11 +196,11 @@ export default function page() {
       <section className="bg-white py-24 px-6 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <Image
-            src="/arvr-showcase.jpg"
+            src="/about2.jpeg"
             alt="AR VR Showcase"
             width={600}
             height={400}
-            className="rounded-lg shadow-xl"
+            className=" shadow-xl"
           />
           <div>
             <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
@@ -207,8 +215,6 @@ export default function page() {
           </div>
         </div>
       </section>
-
-    
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-[#070B2A] to-[#1E1E3F] text-white text-center py-20 px-6">
