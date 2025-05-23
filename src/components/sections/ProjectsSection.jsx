@@ -10,7 +10,7 @@ const projects = [
   {
     category: "Dimple chemicals",
     title: "CRM Development",
-    image: "/Instagram.jpeg",
+    image: "/DC1.jpg",
   },
   {
     category: "TAW Designs & architects",
@@ -27,6 +27,7 @@ const projects = [
     title: "Auction Management",
     image: "/AI.jpeg",
   },
+ 
   
   
 ];
