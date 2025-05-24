@@ -39,19 +39,9 @@ export default function AiMlSolutionsPage() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#070B2A]">
-              AI, ML & Data-Driven Solutions in Pune Boost Business
-              Intelligence, Decision-Making & Operational Speed with AI
-              Solutions in Pune
+              AI, ML & Data-Driven Solutions 
             </h2>
-            <p className="text-base sm:text-lg text-gray-700 mb-6">
-              Looking for AI and machine learning services in Pune that drive
-              real business value? At Reet Technologies, we specialize in
-              delivering advanced AI-powered and data-driven solutions that
-              transform your data into smart, actionable insights. Whether
-              you're a small business or a large enterprise, our tailored AI and
-              ML services make it easier to automate processes, enhance
-              decision-making, and accelerate growth.
-            </p>
+         
             <p className="text-base sm:text-lg text-gray-700 mb-6">
               Our machine learning experts in Pune build intelligent algorithms
               that help predict customer behavior, detect anomalies, personalize

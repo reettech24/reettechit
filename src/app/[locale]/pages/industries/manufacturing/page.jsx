@@ -10,7 +10,8 @@ export default function page() {
       {/* Hero Banner */}
       <section
         className="bg-[#0B1F3A] text-white py-48 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/manufacturing-hero.jpg')" }}
+             style={{ backgroundImage: "url('/banners/manufact.jpg')" }}
+
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10">
@@ -28,7 +29,7 @@ export default function page() {
       </section>
 
       {/* Key Solutions */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="relative overflow-hidden bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-12">Solutions We Offer</h3>
           <div className="grid md:grid-cols-3 gap-10">
@@ -49,10 +50,10 @@ export default function page() {
                 icon: '/icons/maintenance.svg',
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition">
+              <div key={i} className="bg-gray-800 p-6 shadow text-center hover:shadow-lg transition">
                 <img src={item.icon} alt={item.title} className="w-12 h-12 mx-auto mb-4" />
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <h4 className="font-semibold text-lg mb-2 text-white">{item.title}</h4>
+                <p className="text-white/80 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -60,18 +61,18 @@ export default function page() {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 relative overflow-hidden bg-[#070B2A] text-white ">
         <div className="max-w-5xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-6">Case Study: 30% Productivity Increase</h3>
-          <p className="text-gray-700 mb-4">
+          <h3 className="text-2xl font-bold mb-6 text-white">Case Study: 30% Productivity Increase</h3>
+          <p className="text-white/80 mb-4">
             Learn how a mid-sized manufacturing plant automated its production line and saw measurable improvements in output and quality.
           </p>
-          <a
+          {/* <a
             href="/case-studies/manufacturing-efficiency"
             className="inline-block mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
           >
             Read Full Case Study
-          </a>
+          </a> */}
         </div>
       </section>
 
