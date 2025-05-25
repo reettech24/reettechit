@@ -9,8 +9,8 @@ export default function page() {
     <>
       {/* Hero Banner */}
       <section
-        className="bg-[#081C3A] text-white py-48 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/logistics-hero.jpg')" }}
+        className="bg-[#081C3A] text-white py-56 text-center bg-cover bg-center relative"
+        style={{ backgroundImage: "url('/banners/logistics2.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10">
@@ -29,9 +29,9 @@ export default function page() {
       </section>
 
       {/* Solutions Section */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="relative bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-12">Our Digital Solutions for Logistics</h3>
+          <h3 className="text-2xl font-bold text-center mb-12 text-white">Our Digital Solutions for Logistics</h3>
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
@@ -50,10 +50,10 @@ export default function page() {
                 icon: '/icons/visibility.svg',
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition">
+              <div key={i} className="bg-gray-800 p-6 shadow text-center hover:shadow-lg transition">
                 <img src={item.icon} alt={item.title} className="w-12 h-12 mx-auto mb-4" />
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <h4 className="font-semibold text-lg mb-2 text-white">{item.title}</h4>
+                <p className="text-white/80 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -71,8 +71,8 @@ export default function page() {
               'Real-Time Customer Updates',
               'Improved Driver Safety',
             ].map((benefit, i) => (
-              <div key={i} className="p-4 rounded-xl bg-blue-50 shadow-sm">
-                <p className="font-medium text-gray-800">{benefit}</p>
+              <div key={i} className="p-4 bg-gray-900 shadow-sm">
+                <p className="font-medium text-white/80">{benefit}</p>
               </div>
             ))}
           </div>
@@ -97,9 +97,9 @@ export default function page() {
       </section>
 
       {/* Emerging Trends */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 relative bg-[#070B2A] text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-10">Logistics Trends to Watch</h3>
+          <h3 className="text-2xl font-bold mb-10 text-white">Logistics Trends to Watch</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -115,9 +115,9 @@ export default function page() {
                 desc: 'Real-time virtual supply chains enable better forecasting and planning.',
               },
             ].map((trend, i) => (
-              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow">
-                <h4 className="text-lg font-semibold mb-2">{trend.title}</h4>
-                <p className="text-sm text-gray-600">{trend.desc}</p>
+              <div key={i} className="bg-gray-800 p-6 shadow">
+                <h4 className="text-lg font-semibold mb-2 text-white">{trend.title}</h4>
+                <p className="text-sm text-white/80">{trend.desc}</p>
               </div>
             ))}
           </div>
@@ -127,10 +127,10 @@ export default function page() {
       
 
        {/* Technology Stack */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 relative bg-[#070B2A] text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4">Built with Powerful Technologies</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-10">
+          <h3 className="text-2xl font-bold mb-4 text-white">Built with Powerful Technologies</h3>
+          <p className="text-white/80 max-w-2xl mx-auto mb-10">
             We leverage cutting-edge tools and platforms to deliver logistics solutions that scale efficiently and securely.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -144,10 +144,13 @@ export default function page() {
             ))}
           </div>
         </div>
+         <div className="absolute -bottom-90 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
       {/* Client Logo Wall */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-10">Trusted by Industry Leaders</h3>
           <div className="flex flex-wrap justify-center items-center gap-10">
@@ -161,7 +164,7 @@ export default function page() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Expert Insight (Thought Leadership) */}
       <section className="py-20 bg-[#081C3A] text-white text-center px-6">
@@ -180,7 +183,7 @@ export default function page() {
         <h3 className="text-3xl font-bold mb-4">Let’s Drive Your Logistics Into the Future</h3>
         <p className="mb-6 text-white/90">From local distribution to global shipping, our tools empower logistics transformation at every level.</p>
         <a
-          href="/contact"
+          href="/pages/contact"
           className="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition"
         >
           Start Your Digital Journey

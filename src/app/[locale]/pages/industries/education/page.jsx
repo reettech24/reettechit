@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import ContactUsSection from "@/components/sections/ContactUsSection";
@@ -10,7 +10,7 @@ export default function page() {
       {/* Hero Section */}
       <section
         className="bg-[#0D1B2A] text-white py-48 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/education-banner.jpg')" }}
+        style={{ backgroundImage: "url('/banners/education1.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-60" />
         <div className="relative z-10">
@@ -30,15 +30,19 @@ export default function page() {
           Modernizing Learning for a Digital Era
         </h2>
         <p className="text-gray-700">
-          From K-12 schools to higher education and professional training,
-          digital transformation is reshaping how we teach, learn, and grow. Our
-          solutions help academic institutions enhance accessibility,
-          collaboration, and personalized learning with the power of technology.
+          Our Learning Management System (LMS) solutions simplify the
+          educational process with intuitive and user-friendly software. Easily
+          manage student records, financial transactions, electronic data, and
+          more with our comprehensive and efficient solutions.
         </p>
       </section>
 
       {/* Features Grid */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="bg-[#070B2A] relative overflow-hidden text-white py-20 px-6">
+        <div className="absolute -bottom-90 right-0 opacity-10 w-screen">
+          <img src="/p2.png" alt="Nexus India Logo" className="" />
+        </div>
+
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
           {[
             {
@@ -68,17 +72,20 @@ export default function page() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+              className="bg-gray-800 p-6 shadow hover:shadow-lg transition"
             >
-              <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-              <p className="text-gray-600">{item.desc}</p>
+              <h4 className="text-xl font-semibold mb-2 text-white">
+                {item.title}
+              </h4>
+              <p className="text-white/80">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Digital Learning Flow */}
-      <section className="bg-white py-20 px-6">
+      <section className=" relative bg-[#070B2A] text-white py-20 px-6">
+        x
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-10">
             Digital Learning Experience Journey
@@ -99,6 +106,9 @@ export default function page() {
               </li>
             ))}
           </ol>
+        </div>
+        <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -128,7 +138,7 @@ export default function page() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#070B2A] relative overflow-hidden text-white">
         <div className="max-w-5xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-10">Use Cases</h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -146,9 +156,11 @@ export default function page() {
                 desc: "Microlearning + certification-based modules for employees.",
               },
             ].map((item, i) => (
-              <div key={i} className="bg-gray-100 p-6 rounded-xl shadow-sm">
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-600">{item.desc}</p>
+              <div key={i} className="bg-gray-800 p-6 shadow-sm">
+                <h4 className="font-semibold text-lg mb-2 text-white">
+                  {item.title}
+                </h4>
+                <p className="text-white/80">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -156,7 +168,7 @@ export default function page() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-gray-50 py-20 px-6 text-center">
+      <section className="bg-[#070B2A] relative overflow-hidden text-white py-20 px-6 text-center">
         <h2 className="text-2xl font-bold mb-10">
           Why Choose Us for Education Transformation?
         </h2>
@@ -169,38 +181,17 @@ export default function page() {
           ].map((feature, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+              className="bg-gray-800 p-6 shadow hover:shadow-lg transition"
             >
-              <h4 className="text-lg font-semibold text-blue-900 mb-2">
+              <h4 className="text-lg font-semibold text-blue-500 mb-2">
                 {feature}
               </h4>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-white/80">
                 We ensure our education systems are built for performance,
                 reach, and trust.
               </p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Partner Logos */}
-      <section className="py-16 bg-white">
-        <div className="text-center mb-10">
-          <h3 className="text-xl font-bold">
-            Trusted by Institutions Across the Globe
-          </h3>
-        </div>
-        <div className="flex justify-center gap-10 flex-wrap px-6">
-          {["/logo1.png", "/logo2.png", "/logo3.png", "/logo4.png"].map(
-            (src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`Partner ${i + 1}`}
-                className="h-12 grayscale hover:grayscale-0 transition"
-              />
-            )
-          )}
         </div>
       </section>
 
@@ -225,9 +216,11 @@ export default function page() {
                 desc: "Serve coaching centers with tools for scheduling, testing, and certification.",
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow">
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-700">{item.desc}</p>
+              <div key={i} className="bg-gray-900 p-6 shadow">
+                <h4 className="font-semibold text-lg mb-2 text-white">
+                  {item.title}
+                </h4>
+                <p className=" text-white/80">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -257,10 +250,12 @@ export default function page() {
             <a
               key={i}
               href={blog.link}
-              className="block bg-gray-100 p-6 rounded-xl hover:shadow-lg transition"
+              className="block bg-gray-900 p-6 hover:shadow-lg transition"
             >
-              <h4 className="font-semibold text-lg mb-2">{blog.title}</h4>
-              <p className="text-sm text-blue-700">Read More →</p>
+              <h4 className="font-semibold text-lg mb-2 text-white">
+                {blog.title}
+              </h4>
+              {/* <p className="text-sm text-white/80">Read More →</p> */}
             </a>
           ))}
         </div>
@@ -274,12 +269,14 @@ export default function page() {
           platform, we help you scale with innovation and impact.
         </p>
         <a
-          href="/contact"
+          href="/pages/contact"
           className="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition"
         >
           Talk to Us
         </a>
       </section>
+
+      <TestimonialSection />
 
       <ContactUsSection />
     </>

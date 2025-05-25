@@ -9,8 +9,8 @@ export default function page() {
     <>
       {/* Hero Section */}
       <section
-        className="bg-[#0D1B2A] text-white py-48 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/bfsi-banner.jpg')" }}
+        className="bg-[#0D1B2A] text-white py-56 text-center bg-cover bg-center relative"
+        style={{ backgroundImage: "url('/banners/bfsi.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10">
@@ -32,7 +32,7 @@ export default function page() {
       </section>
 
       {/* Feature Grid */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {[
             { title: 'Omnichannel Experience', desc: 'Unified experiences across mobile, web & branches.' },
@@ -42,16 +42,16 @@ export default function page() {
             { title: 'Cloud-Native Infra', desc: 'Scale with confidence using cloud-powered systems.' },
             { title: 'Regulatory Readiness', desc: 'Stay ahead with compliance automation tools.' },
           ].map((item, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-              <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-              <p className="text-gray-600">{item.desc}</p>
+            <div key={idx} className="bg-gray-800 p-6 shadow hover:shadow-lg transition">
+              <h4 className="text-xl font-semibold mb-2 text-white">{item.title}</h4>
+              <p className="text-white/80">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Digital Transformation Timeline */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-[#070B2A] relative overflow-hidden text-white  py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-10">Your Digital Transformation Journey</h3>
           <ol className="relative border-l border-gray-300 space-y-10 text-left">
@@ -68,6 +68,10 @@ export default function page() {
               </li>
             ))}
           </ol>
+        </div>
+
+        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -103,9 +107,9 @@ export default function page() {
       </section>
 
       {/* Use Case Scenarios */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 relative bg-[#070B2A] text-white">
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-10">Use Cases in BFSI Digital Transformation</h3>
+          <h3 className="text-2xl font-bold text-center mb-10 text-white">Use Cases in BFSI Digital Transformation</h3>
           <div className="space-y-8">
             {[
               {
@@ -121,9 +125,9 @@ export default function page() {
                 desc: 'Integrated identity systems for customer profiling, fraud prevention, and compliance.',
               },
             ].map((useCase, index) => (
-              <div key={index} className="bg-gray-100 p-6 rounded-lg">
-                <h4 className="font-semibold text-xl mb-2">{useCase.heading}</h4>
-                <p className="text-gray-700">{useCase.desc}</p>
+              <div key={index} className="bg-gray-800 p-6">
+                <h4 className="font-semibold text-xl mb-2 text-white">{useCase.heading}</h4>
+                <p className="text-white/80">{useCase.desc}</p>
               </div>
             ))}
           </div>
@@ -150,12 +154,12 @@ export default function page() {
                 desc: 'How AI is redefining fraud mitigation in the financial world.',
               },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-                <a href="#" className="text-blue-600 text-sm font-medium mt-3 inline-block">
+              <div key={i} className="bg-gray-900 p-6 shadow hover:shadow-lg transition">
+                <h4 className="font-semibold text-lg mb-2 text-white">{item.title}</h4>
+                <p className="text-white/80 text-sm">{item.desc}</p>
+                {/* <a href="#" className="text-blue-600 text-sm font-medium mt-3 inline-block">
                   Read More →
-                </a>
+                </a> */}
               </div>
             ))}
           </div>
@@ -169,14 +173,14 @@ export default function page() {
           Let us help you build secure, customer-centric, and future-proof digital platforms.
         </p>
         <a
-          href="/contact"
+          href="/pages/contact"
           className="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition"
         >
           Get a Consultation
         </a>
       </section>
 
-    
+    <TestimonialSection />
       <ContactUsSection />
     </>
   );
