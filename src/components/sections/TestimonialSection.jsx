@@ -80,8 +80,8 @@ export default function TestimonialSection() {
         </Swiper>
       </div>
 
-      <div className="absolute -top-40 opacity-20">
-        <img src="/smoke.png" alt="Nexus India Logo" className="" />
+      <div className="absolute top-0   opacity-20">
+        <img src="/p1.png" alt="Nexus India Logo" className="" />
       </div>
 
       {/* Decorative avatars */}

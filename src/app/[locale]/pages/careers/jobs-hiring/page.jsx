@@ -32,9 +32,9 @@ export default function Page() {
       </section>
 
       {/* Job Openings */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="relative bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-12">
+          <h3 className="text-4xl font-bold text-center mb-12 text-white">
             Current Job Openings
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -72,11 +72,13 @@ export default function Page() {
             ].map((job, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition"
+                className="bg-gray-800 p-6 shadow hover:shadow-xl transition"
               >
-                <h4 className="text-xl font-semibold mb-2">{job.title}</h4>
-                <p className="text-sm text-gray-600 mb-3">{job.desc}</p>
-                <div className="flex justify-between text-sm text-gray-500">
+                <h4 className="text-xl font-semibold mb-2 text-white">
+                  {job.title}
+                </h4>
+                <p className="text-sm text-white/80 mb-3">{job.desc}</p>
+                <div className="flex justify-between text-sm text-whaite/60">
                   <span>{job.location}</span>
                   <span>{job.type}</span>
                 </div>
@@ -84,27 +86,35 @@ export default function Page() {
             ))}
           </div>
         </div>
+
+        <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
       {/* Life at Company */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 relative overflow-hidden bg-[#070B2A] text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4">Life at [Company Name]</h3>
-          <p className="text-gray-600 mb-10">
+          <h3 className="text-3xl font-bold mb-4 text-white">
+            Life at Reet Technologies
+          </h3>
+          <p className="text-white/80 mb-10">
             We’re more than just coworkers—we’re a community.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            {["culture1.jpg", "culture2.jpg", "culture3.jpg"].map(
-              (img, idx) => (
-                <img
-                  key={idx}
-                  src={`/${img}`}
-                  alt="Life at Company"
-                  className="rounded-xl object-cover h-64 w-full shadow-md"
-                />
-              )
-            )}
+            {["logo3.png", "logo3.png", "logo3.png"].map((img, idx) => (
+              <img
+                key={idx}
+                src={`/${img}`}
+                alt="Life at Company"
+                className=" object-cover h-64 w-full shadow-md z-10"
+              />
+            ))}
           </div>
+        </div>
+
+        <div className="absolute -bottom-0 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -112,42 +122,38 @@ export default function Page() {
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold">Why Work With Us?</h3>
-          <p className="text-gray-600 max-w-3xl mx-auto mt-2">
+          <p className="text-black max-w-3xl mx-auto mt-2">
             More than just a job — it’s a journey of learning, impact, and
             collaboration.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div>
+          <div className=" bg-gray-900 p-6 shadow-sm">
             <img
-              src="/icons/growth.png"
-              className="w-12 mx-auto mb-3"
+              src="/logo3.png"
+              className="w-40 mx-auto mb-3"
               alt="Career Growth"
             />
-            <h4 className="font-semibold">Career Growth</h4>
-            <p className="text-sm text-gray-600 mt-2">
+            <h4 className="font-semibold text-white">Career Growth</h4>
+            <p className="text-sm text-white/80 mt-2">
               We invest in your learning, skills, and professional development.
             </p>
           </div>
-          <div>
+          <div className=" bg-gray-900 p-6 shadow-sm">
             <img
-              src="/icons/flexible.png"
-              className="w-12 mx-auto mb-3"
+              src="/logo3.png"
+              className="w-40 mx-auto mb-3"
               alt="Flexibility"
             />
-            <h4 className="font-semibold">Flexible Work</h4>
-            <p className="text-sm text-gray-600 mt-2">
+            <h4 className="font-semibold text-white">Flexible Work</h4>
+            <p className="text-sm text-white/80 mt-2">
               Remote-friendly culture with work-life balance built in.
             </p>
           </div>
-          <div>
-            <img
-              src="/icons/diversity.png"
-              className="w-12 mx-auto mb-3"
-              alt="Culture"
-            />
-            <h4 className="font-semibold">Inclusive Culture</h4>
-            <p className="text-sm text-gray-600 mt-2">
+          <div className=" bg-gray-900 p-6 shadow-sm">
+            <img src="/logo3.png" className="w-40 mx-auto mb-3" alt="Culture" />
+            <h4 className="font-semibold text-white">Inclusive Culture</h4>
+            <p className="text-sm text-white/80 mt-2">
               We value diversity, transparency, and honest collaboration.
             </p>
           </div>
@@ -155,9 +161,11 @@ export default function Page() {
       </section>
 
       {/* Perks & Benefits */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="relative bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-6">Perks & Benefits</h3>
+          <h3 className="text-2xl font-bold mb-6 text-white">
+            Perks & Benefits
+          </h3>
           <div className="grid md:grid-cols-3 gap-10 text-left">
             {[
               {
@@ -191,13 +199,18 @@ export default function Page() {
                 desc: "Celebrate wins and outstanding contributions regularly.",
               },
             ].map((perk, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow-sm">
+              <div key={idx} className="bg-gray-800 p-6 shadow-sm">
                 <div className="text-3xl mb-3">{perk.icon}</div>
-                <h4 className="font-semibold text-lg mb-1">{perk.title}</h4>
-                <p className="text-sm text-gray-600">{perk.desc}</p>
+                <h4 className="font-semibold text-lg mb-1 text-white">
+                  {perk.title}
+                </h4>
+                <p className="text-sm text-white/80">{perk.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+        <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -206,15 +219,16 @@ export default function Page() {
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-6">Employee Spotlight</h3>
           <blockquote className="italic text-gray-700 mb-4">
-            "Joining [Company] has been a transformative experience—supportive
-            team, meaningful projects, and constant growth!"
+            "Joining Reet Technologies has been a transformative
+            experience—supportive team, meaningful projects, and constant
+            growth!"
           </blockquote>
           <p className="font-semibold">— Priya M., Product Designer</p>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="bg-blue-600 text-white py-20 px-6 text-center rounded-t-3xl">
+      <section className="bg-black text-white py-20 px-6 text-center rounded-t-3xl">
         <h3 className="text-3xl font-bold mb-4">
           Ready to Take the Next Step?
         </h3>
@@ -223,7 +237,7 @@ export default function Page() {
           or share your resume.
         </p>
         <a
-          href="/apply"
+          href="/pages/contact"
           className="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition"
         >
           Apply Now

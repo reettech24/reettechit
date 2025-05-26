@@ -8,7 +8,7 @@ export default function Page() {
       {/* Hero Section */}
 
       <section
-        className="bg-[#070B2A] text-white py-42z text-center bg-cover bg-center relative"
+        className="bg-[#070B2A] text-white py-42 text-center bg-cover bg-center relative"
         style={{ backgroundImage: "url('/AboutUs.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-70" />
