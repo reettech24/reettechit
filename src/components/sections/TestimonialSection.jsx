@@ -51,19 +51,19 @@ export default function TestimonialSection() {
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="group">
-                <div className="bg-white group-hover:bg-transparent group-hover:text-white transition-colors duration-300 text-center shadow-lg p-8 lg:p-6 max-w-2xl mx-auto">
+                <div className="bg-yellow-600 group-hover:bg-transparent group-hover:text-white transition-colors duration-300 text-center shadow-lg p-8 lg:p-6 max-w-2xl mx-auto">
                   <div className="relative w-24 h-24 mb-4 mx-auto">
                     <div className="w-24 h-24 rounded-full bg-[#070B2A] group-hover:bg-white shadow-xl flex items-center justify-center text-teal-500 text-4xl transition-colors duration-300">
                       &ldquo;
                     </div>
                   </div>
-                  <h3 className="text-lg font-semibold uppercase tracking-widest group-hover:text-white transition-colors">
+                  <h3 className=" text-[#070B2A] text-lg font-semibold uppercase tracking-widest group-hover:text-white transition-colors">
                     {item.name}
                   </h3>
-                  <p className="text-sm text-gray-500 group-hover:text-gray-300 mb-6 transition-colors">
+                  <p className="text-[#070B2A] text-sm group-hover:text-gray-300 mb-6 transition-colors">
                     ({item.role})
                   </p>
-                  <p className="text-sm lg:text-lg max-w-2xl text-gray-800 group-hover:text-white transition-colors">
+                  <p className="text-[#070B2A]  text-sm lg:text-lg max-w-2xl  group-hover:text-white transition-colors">
                     {item.text}
                   </p>
                 </div>

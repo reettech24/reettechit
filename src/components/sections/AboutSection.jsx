@@ -125,9 +125,9 @@ export default function AboutSection() {
         <div className="absolute -bottom-70 -right-20">
           <img src="/right-shape.png" alt="Nexus India Logo" className="" />
         </div> */}
-        <div className="absolute -bottom-70 right-0 opacity-30 w-screen">
+        {/* <div className="absolute -bottom-70 right-0 opacity-30 w-screen">
           <img src="/p2.png" alt="Nexus India Logo" className="" />
-        </div>
+        </div> */}
         <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
           <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>

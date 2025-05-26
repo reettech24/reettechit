@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function NexusSolutionsSection() {
   return (
@@ -31,7 +31,6 @@ export default function NexusSolutionsSection() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto grid gap-20 md:grid-cols-2">
-
         {/* Nexus India */}
         <div className="relative flex flex-col items-center">
           {/* Floating Logo */}
@@ -41,18 +40,24 @@ export default function NexusSolutionsSection() {
 
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className="relative bg-white shadow-2xl transition-all duration-300 overflow-hidden w-full pt-16"
+            className="relative bg-white shadow-2xl transition-all duration-300 overflow-hidden w-full"
             style={{
               backgroundImage: "url('/nexusindiaimage.jpeg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           >
             <div className="absolute inset-0 bg-black/60 z-0" />
             <div className="relative z-10 p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Nexus India</h3>
+              <h3 className="text-2xl font-bold text-orange-500 mb-2 uppercase">
+                Nexus India
+              </h3>
+              <h3 className="text-xl font-bold text-blue-200 mb-4 uppercase">
+                The Caring Market
+              </h3>
               <p className="text-white mb-4">
-                A powerful digital initiative tailored to support India's small and medium-sized businesses.
+                A powerful digital initiative tailored to support India's small
+                and medium-sized businesses.
               </p>
               <ul className="list-disc list-inside text-white mb-6 space-y-1">
                 <li>Affordable tech solutions for SMEs</li>
@@ -62,7 +67,7 @@ export default function NexusSolutionsSection() {
               </ul>
               <a
                 href="/products/nexus-india"
-                className="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 font-medium transition shadow"
+                className="inline-block px-6 py-3 text-white bg-orange-500 hover:bg-orange-600 font-medium transition shadow"
               >
                 Learn More
               </a>
@@ -79,18 +84,27 @@ export default function NexusSolutionsSection() {
 
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className="relative bg-white shadow-2xl transition-all duration-300 overflow-hidden w-full pt-16"
+            className="relative bg-white shadow-2xl transition-all duration-300 overflow-hidden w-full "
             style={{
               backgroundImage: "url('/design.jpeg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           >
             <div className="absolute inset-0 bg-black/60 z-0" />
             <div className="relative z-10 p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Nexus Online Management</h3>
+              <h3 className="text-2xl font-bold text-orange-500 mb-2 uppercase">
+                Nexus India
+              </h3>
+              <h3 className="text-xl font-bold text-blue-200 mb-4 uppercase">
+                The Business Management Software
+              </h3>
+              {/* <h3 className="text-2xl font-bold text-white mb-4">
+                Nexus India The Business Management Software
+              </h3> */}
               <p className="text-white mb-4">
-                Your all-in-one dashboard to manage operations, customers, and teams with ease.
+                Your all-in-one dashboard to manage operations, customers, and
+                teams with ease.
               </p>
               <ul className="list-disc list-inside text-white mb-6 space-y-1">
                 <li>Smart dashboards & real-time analytics</li>
@@ -100,14 +114,13 @@ export default function NexusSolutionsSection() {
               </ul>
               <a
                 href="/products/nexus-online-management"
-                className="inline-block px-6 py-3 text-white bg-green-600 hover:bg-green-700 font-medium transition shadow"
+                className="inline-block px-6 py-3 text-white bg-orange-500 hover:bg-orange-600 font-medium transition shadow"
               >
                 Explore Platform
               </a>
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
   );
