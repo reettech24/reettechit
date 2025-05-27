@@ -4,7 +4,6 @@ import React from "react";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 
-
 export default function page() {
   const focusAreas = [
     {
@@ -84,7 +83,7 @@ export default function page() {
       </section>
 
       {/* Why R&D Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className=" relative overflow-hidden py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
@@ -115,6 +114,9 @@ export default function page() {
             className="shadow-lg"
           />
         </div>
+        <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
       {/* Focus Areas */}
@@ -127,17 +129,17 @@ export default function page() {
             {focusAreas.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 shadow hover:shadow-xl transition duration-300"
+                className="bg-gray-800 p-6 shadow hover:shadow-xl transition duration-300"
               >
                 <img
                   src={item.icon}
                   alt={item.title}
                   className="w-12 h-12 mb-4"
                 />
-                <h3 className="text-xl font-semibold mb-2 text-black">
+                <h3 className="text-xl font-semibold mb-2 text-white">
                   {item.title}
                 </h3>
-                <p className="text-gray-600">{item.desc}</p>
+                <p className="text-white/80">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -145,7 +147,7 @@ export default function page() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 px-6 bg-[#070B2A] text-white">
+      <section className=" relative py-20 px-6 bg-[#070B2A] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-12">Our R&D Journey</h2>
           <div className="relative border-l-2 border-indigo-500 pl-6 space-y-10">
@@ -159,6 +161,9 @@ export default function page() {
               </div>
             ))}
           </div>
+        </div>
+          <div className="absolute -bottom-90 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 

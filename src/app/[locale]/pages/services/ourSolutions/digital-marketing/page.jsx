@@ -11,7 +11,7 @@ export default function DigitalMarketingPage() {
 
       <section
         className="relative bg-cover bg-center text-white py- sm:py-40 md:py-52"
-        style={{ backgroundImage: "url('/banners/mobile.jpg')" }}
+        style={{ backgroundImage: "url('/banners/DM.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#070B2A]/80 to-[#1E1E3F]/80" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">

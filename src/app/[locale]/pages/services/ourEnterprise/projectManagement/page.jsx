@@ -82,7 +82,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white relative overflow-hidden py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <img
             src="/nexusindiaonlinemanagement.jpeg"
@@ -92,16 +92,19 @@ export default function Page() {
           <div>
             <h2 className="text-3xl font-bold mb-4">At Reet Technologies</h2>
             <p className="text-gray-600 leading-relaxed">
-            we help you bring your projects to life—on
-              time and with precision. From web to mobile and cloud projects, we
-              plan, execute, and deliver—so you can focus on growth.
+              we help you bring your projects to life—on time and with
+              precision. From web to mobile and cloud projects, we plan,
+              execute, and deliver—so you can focus on growth.
             </p>
           </div>
+        </div>
+        <div className="absolute -bottom-20 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
       {/* Offerings */}
-      <section className="py-24 bg-[#070B2A] text-white">
+      <section className="py-24 bg-[#070B2A] relative overflow-hidden text-white">
         <div className=" max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
             What We Offer
@@ -112,16 +115,21 @@ export default function Page() {
                 key={index}
                 className="p-8 bg-gray-800 shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
               >
-                <h4 className="text-xl font-semibold mb-2 text-white">{item.title}</h4>
+                <h4 className="text-xl font-semibold mb-2 text-white">
+                  {item.title}
+                </h4>
                 <p className="text-white/80">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
+        <div className="absolute -bottom-40 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
       {/* Lifecycle */}
-      <section className="py-24 bg-[#070B2A] text-white">
+      <section className="py-24 relative overflow-hidden bg-[#070B2A] text-white">
         <div className=" max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
             Project Lifecycle
@@ -139,6 +147,9 @@ export default function Page() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="absolute -bottom-10 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -165,18 +176,22 @@ export default function Page() {
       </section>
 
       {/* Why Us */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className=" max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
             Why Partner With Us?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {reasons.map((reason, index) => (
-              <div key={index} className="bg-gray-100 p-6 shadow-sm">
-                <p className="text-lg">✅ {reason}</p>
+              <div key={index} className="bg-gray-800 p-6 shadow-sm">
+                <p className="text-lg text-white">✅ {reason}</p>
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="absolute -bottom-70 right-0 opacity-30 w-screen">
+          <img src="/p2.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 

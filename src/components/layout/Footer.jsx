@@ -84,7 +84,7 @@ export const Footer = () => {
           <div>
             <p className="flex items-center gap-2 mb-1">
               <span className="text-2xl">🇮🇳</span>{" "}
-              <strong className="text-xl">Reet Technologies Pvt. Ltd.</strong>
+              <strong className="text-xl">Reet Technologies</strong>
             </p>
             <p className="text-lg">
               Hinjewadi Phase 1, Pune,

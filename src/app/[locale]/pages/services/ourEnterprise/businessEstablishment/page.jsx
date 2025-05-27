@@ -60,7 +60,7 @@ export default function page() {
       </section>
 
       {/* Company Overview */}
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white relative overflow-hidden py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <img
             src="/about2.jpeg"
@@ -77,10 +77,13 @@ export default function page() {
             </p>
           </div>
         </div>
+          <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
       {/* Services Offered */}
-      <section className="bg-[#070B2A] text-white py-20 px-6">
+      <section className="bg-[#070B2A] relative overflow-hidden text-white py-20 px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white">What We Offer</h2>
           <p className="text-white/70 mt-2">
@@ -103,6 +106,9 @@ export default function page() {
               <p className="text-white/70 mt-2 text-sm">{item.desc}</p>
             </div>
           ))}
+        </div>
+          <div className="absolute -bottom-30 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 

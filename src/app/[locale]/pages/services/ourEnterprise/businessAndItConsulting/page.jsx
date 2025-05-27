@@ -20,7 +20,7 @@ export default function Page() {
           </p>
         </div>
       </section>
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white relative overflow-hidden py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-gray-600 leading-relaxed">
@@ -37,9 +37,12 @@ export default function Page() {
             className=" shadow"
           />
         </div>
+        <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
-      <section className="py-20 px-6 w-full bg-[#070B2A] text-white">
+      <section className="py-20 px-6 w-full relative bg-[#070B2A] text-white">
         <div className=" max-w-6xl mx-auto text-center">
           <div className="text-3xl font-bold text-center mb-12">
             Our Core Services
@@ -89,6 +92,9 @@ export default function Page() {
             ))}
           </div>
         </div>
+        <div className="absolute -bottom-85 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
       <section className="py-20 w-full bg-[#070B2A] text-white">
@@ -122,7 +128,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-20 px-6 w-full max-w-6xl mx-auto">
+      <section className=" relative overflow-hidden py-20 px-6 w-full max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Left Image */}
           <div className="w-full md:w-1/2">
@@ -157,6 +163,9 @@ export default function Page() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="absolute -bottom-70 right-0 opacity-30 w-screen">
+          <img src="/p2.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 

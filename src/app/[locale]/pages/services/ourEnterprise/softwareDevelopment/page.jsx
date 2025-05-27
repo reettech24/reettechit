@@ -22,19 +22,25 @@ export default function Page() {
       </section>
 
       {/* Overview */}
-      <section className="py-20 px-6 max-w-6xl mx-auto text-center">
-        <div className="text-3xl font-bold mb-4">
-          Custom Software Tailored to Your Business
+      <section className="py-20 relative overflow-hidden px-6  text-center">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-3xl font-bold mb-4">
+            Custom Software Tailored to Your Business
+          </div>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            We build secure, scalable, and high-performing software solutions —
+            from SaaS platforms to internal enterprise systems — that solve your
+            unique business challenges.
+          </p>
+
+          <div className="absolute -bottom-0 -right-0 opacity-20 w-screen">
+            <img src="/p1.png" alt="Nexus India Logo" className="" />
+          </div>
         </div>
-        <p className="text-gray-600 max-w-3xl mx-auto">
-          We build secure, scalable, and high-performing software solutions —
-          from SaaS platforms to internal enterprise systems — that solve your
-          unique business challenges.
-        </p>
       </section>
 
       {/* What We Build */}
-      <section className="py-16 px-6 bg-[#070B2A] text-white w-full">
+      <section className=" relative overflow-hidden py-16 px-6 bg-[#070B2A] text-white w-full">
         <div className="max-w-6xl mx-auto text-center">
           <div className="text-2xl font-bold mb-10">Solutions We Develop</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -72,24 +78,27 @@ export default function Page() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 shadow-md shadow-black text-center hover:shadow-lg transition"
+                className="bg-gray-800 p-6 shadow-md shadow-black text-center hover:shadow-lg transition"
               >
                 <img
                   src={item.icon}
                   alt={item.title}
                   className="w-12 h-12 mx-auto mb-4"
                 />
-                <div className="font-semibold text-lg text-black">
+                <div className="font-semibold text-lg text-white">
                   {item.title}
                 </div>
-                <p className="text-sm text-gray-600 mt-2">{item.desc}</p>
+                <p className="text-sm text-white/80 mt-2">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
+        <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
-      <section className="py-20 px-6 max-w-6xl mx-auto">
+      <section className=" relative overflow-hidden py-20 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left Image */}
           <div className="flex-1">
@@ -113,6 +122,10 @@ export default function Page() {
               <li>✅ Post-launch support and continuous optimization</li>
             </ul>
           </div>
+        </div>
+        v{" "}
+        <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -138,9 +151,11 @@ export default function Page() {
                 "Go live with monitoring, support, and iteration.",
               ],
             ].map(([title, desc], idx) => (
-              <div key={idx} className="bg-white p-5 shadow shadow-black">
-                <div className="text-lg font-medium mb-2">{title}</div>
-                <div>{desc}</div>
+              <div key={idx} className="bg-gray-800 p-5 shadow shadow-black">
+                <div className="text-lg font-medium mb-2 text-white">
+                  {title}
+                </div>
+                <div className=" text-white/80">{desc}</div>
               </div>
             ))}
           </div>
@@ -148,30 +163,36 @@ export default function Page() {
       </section>
 
       {/* Industries Served */}
-      <section className="py-20  px-6 max-w-6xl mx-auto">
-        <div className="text-2xl font-bold text-center mb-10">
-          Industries We Serve
+      <section className="py-20 relative overflow-hidden  px-6 ">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-2xl font-bold text-center mb-10">
+            Industries We Serve
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-gray-700">
+            {[
+              "Healthcare",
+              "Finance",
+              "Retail",
+              "Education",
+              "Logistics",
+              "GovTech",
+              "Real Estate",
+              "Media",
+            ].map((sector, idx) => (
+              <div key={idx} className="p-4 bg-gray-800 text-white">
+                {sector}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-gray-700">
-          {[
-            "Healthcare",
-            "Finance",
-            "Retail",
-            "Education",
-            "Logistics",
-            "GovTech",
-            "Real Estate",
-            "Media",
-          ].map((sector, idx) => (
-            <div key={idx} className="p-4 bg-gray-100 rounded-xl">
-              {sector}
-            </div>
-          ))}
+
+        <div className="absolute -bottom-50 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-[#070B2A] text-white px-6 mx-auto">
+      <section className="py-20 relative overflow-hidden bg-[#070B2A] text-white px-6 mx-auto">
         <div className="text-2xl font-bold text-center mb-10">
           Technologies We Use
         </div>
@@ -181,9 +202,18 @@ export default function Page() {
             "nodejs",
             "nextjs",
             "python",
-            "aws",
             "docker",
             "mongodb",
+            "javascript",
+            "typescript",
+            "kubernetes",
+            "redis",
+            "postgresql",
+            "firebase",
+            "flutter",
+            "java",
+            "kotlin",
+            "swift",
           ].map((tech, idx) => (
             <img
               key={idx}
@@ -193,10 +223,13 @@ export default function Page() {
             />
           ))}
         </div>
+        <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 px-6 bg-white max-w-6xl mx-auto">
+      <section className="py-20 px-6 relative overflow-hidden bg-white max-w-6xl mx-auto">
         <div className="text-2xl font-bold text-center mb-10">Case Studies</div>
         <div className="space-y-8">
           {[
@@ -219,12 +252,15 @@ export default function Page() {
               metrics: "Launch in 3 months • 4.9★ average app rating",
             },
           ].map((cs, idx) => (
-            <div key={idx} className="bg-gray-50 p-6 rounded-xl shadow">
-              <div className="text-lg font-semibold">{cs.title}</div>
-              <p className="text-sm mt-1">{cs.summary}</p>
+            <div key={idx} className="bg-gray-900 p-6 shadow">
+              <div className="text-lg font-semibold text-white">{cs.title}</div>
+              <p className="text-sm mt-1 text-white/80">{cs.summary}</p>
               <div className="text-sm text-blue-700 mt-2">{cs.metrics}</div>
             </div>
           ))}
+        </div>
+        <div className="absolute -bottom-70 right-0 opacity-30 w-screen">
+          <img src="/p2.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -238,7 +274,7 @@ export default function Page() {
             ["99.9%", "System Uptime"],
             ["+10Y", "Development Experience"],
           ].map(([stat, label], idx) => (
-            <div key={idx} className="bg-blue-50 p-6 rounded-xl">
+            <div key={idx} className="bg-blue-50 p-6">
               <div className="text-3xl font-bold">{stat}</div>
               <div className="text-sm text-gray-600 mt-1">{label}</div>
             </div>
@@ -263,37 +299,40 @@ export default function Page() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-6 bg-gray-50 max-w-5xl mx-auto">
-        <div className="text-2xl font-bold text-center mb-10">
-          Frequently Asked Questions
+      <section className="py-20 px-6 bg-[#070B2A] text-white ">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-2xl font-bold text-center mb-10">
+            Frequently Asked Questions
+          </div>
+          <div className="space-y-6">
+            {[
+              [
+                "How long does a typical software project take?",
+                "Timelines vary by scope, but most MVPs launch within 8–12 weeks.",
+              ],
+              [
+                "Do you provide post-launch support?",
+                "Yes, we offer ongoing maintenance, monitoring, and feature expansion.",
+              ],
+              [
+                "Can we integrate with our existing systems?",
+                "Absolutely. We specialize in API-first development and legacy integration.",
+              ],
+              [
+                "What tech stack do you recommend?",
+                "We recommend the best tools for your needs — typically React, Node, and AWS.",
+              ],
+            ].map(([q, a], idx) => (
+              <details key={idx} className="bg-white p-4 rounded-md shadow">
+                <summary className="cursor-pointer font-medium text-lg text-black">
+                  {q}
+                </summary>
+                <p className="mt-2 text-black text-sm">{a}</p>
+              </details>
+            ))}
+          </div>
         </div>
-        <div className="space-y-6">
-          {[
-            [
-              "How long does a typical software project take?",
-              "Timelines vary by scope, but most MVPs launch within 8–12 weeks.",
-            ],
-            [
-              "Do you provide post-launch support?",
-              "Yes, we offer ongoing maintenance, monitoring, and feature expansion.",
-            ],
-            [
-              "Can we integrate with our existing systems?",
-              "Absolutely. We specialize in API-first development and legacy integration.",
-            ],
-            [
-              "What tech stack do you recommend?",
-              "We recommend the best tools for your needs — typically React, Node, and AWS.",
-            ],
-          ].map(([q, a], idx) => (
-            <details key={idx} className="bg-white p-4 rounded-md shadow">
-              <summary className="cursor-pointer font-medium text-lg">
-                {q}
-              </summary>
-              <p className="mt-2 text-gray-600 text-sm">{a}</p>
-            </details>
-          ))}
-        </div>
+
       </section>
 
       <ContactUsSection />

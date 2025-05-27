@@ -153,11 +153,11 @@ export default function Page() {
           >
             {services.map((service, i) => (
               <SwiperSlide key={i}>
-                <div className="bg-white border shadow-xl p-5 h-full hover:shadow-2xl transition duration-300">
+                <div className="bg-gray-800 shadow-xl p-5 h-full hover:shadow-2xl transition duration-300">
                   <h3 className="text-xl font-semibold mb-2 text-blue-700">
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 py-3">{service.desc}</p>
+                  <p className=" py-3 text-white/80">{service.desc}</p>
                 </div>
               </SwiperSlide>
             ))}
@@ -171,7 +171,7 @@ export default function Page() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="bg-gray-100 py-20">
+      <section className=" relative overflow-hidden bg-gray-100 py-20">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold">Industries We Empower</h2>
           <p className="text-gray-600 mt-3">
@@ -190,11 +190,15 @@ export default function Page() {
           ].map((industry, i) => (
             <div
               key={i}
-              className="bg-white p-5 shadow-lg  hover:bg-blue-50 transition"
+              className="bg-white p-5 shadow-lg  hover:bg-gray-800 hover:text-white transition"
             >
-              <p className="font-medium">{industry}</p>
+              <p className="font-medium ">{industry}</p>
             </div>
           ))}
+        </div>
+
+        <div className="absolute -bottom-0 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
@@ -239,7 +243,7 @@ export default function Page() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className=" relative py-20 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
           {/* Text Side */}
           <div className="md:w-1/2">
@@ -249,38 +253,38 @@ export default function Page() {
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-5  shadow-md">
-                <h4 className="font-semibold text-lg text-gray-800">
+              <div className="bg-gray-800 p-5  shadow-md">
+                <h4 className="font-semibold text-lg text-white">
                   Custom-Built for Your Growth
                 </h4>
-                <p className="text-gray-600 mt-2">
+                <p className="text-white/80 mt-2">
                   We architect solutions based on your exact goals — no
                   templates, no shortcuts.
                 </p>
               </div>
-              <div className="bg-gray-50 p-5  shadow-md">
-                <h4 className="font-semibold text-lg text-gray-800">
+              <div className="bg-gray-800 p-5  shadow-md">
+                <h4 className="font-semibold text-lg text-white">
                   Top 1% Talent
                 </h4>
-                <p className="text-gray-600 mt-2">
+                <p className=" mt-2 text-white/80">
                   Collaborate with elite engineers, designers, and strategists
                   obsessed with innovation.
                 </p>
               </div>
-              <div className="bg-gray-50 p-5  shadow-md">
-                <h4 className="font-semibold text-lg text-gray-800">
+              <div className="bg-gray-800 p-5  shadow-md">
+                <h4 className="font-semibold text-lg text-white ">
                   Scalable & Secure Tech
                 </h4>
-                <p className="text-gray-600 mt-2">
+                <p className="text-white/80 mt-2">
                   We deliver secure, future-ready platforms that grow with your
                   business.
                 </p>
               </div>
-              <div className="bg-gray-50 p-5  shadow-md">
-                <h4 className="font-semibold text-lg text-gray-800">
+              <div className="bg-gray-800 p-5  shadow-md">
+                <h4 className="font-semibold text-lg text-white">
                   Results-Driven Process
                 </h4>
-                <p className="text-gray-600 mt-2">
+                <p className="text-white/80 mt-2">
                   Our agile frameworks ensure faster delivery, real-time
                   feedback, and tangible ROI.
                 </p>
@@ -291,11 +295,14 @@ export default function Page() {
           {/* Image Side */}
           <div className="md:w-1/2 object-cover">
             <img
-              src="/analytics-comparison-information-networking-concept.jpg"
+              src="/about2.jpeg"
               alt="Why choose us"
               className="w-full shadow-lg object-cover"
             />
           </div>
+        </div>
+          <div className="absolute -bottom-70 right-0 opacity-30 w-screen">
+          <img src="/p2.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 

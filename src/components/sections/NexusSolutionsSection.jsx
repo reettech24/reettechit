@@ -32,11 +32,15 @@ export default function NexusSolutionsSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto grid gap-20 md:grid-cols-2">
         {/* Nexus India */}
+        <div className="absolute -top-50 -left-60 z-10">
+          <img
+            src="/NI.png"
+            alt="Nexus India Logo"
+            className="w-96 h-96 object-contain opacity-80"
+          />
+        </div>
         <div className="relative flex flex-col items-center">
           {/* Floating Logo */}
-          {/* <div className="absolute -top-14 z-20 bg-white rounded-full p-3 shadow-xl">
-            <img src="/nexusindialogo.png" alt="Nexus India Logo" className="w-24 h-24 object-contain" />
-          </div> */}
 
           <motion.div
             whileHover={{ scale: 1.03 }}
@@ -120,6 +124,14 @@ export default function NexusSolutionsSection() {
               </a>
             </div>
           </motion.div>
+        </div>
+
+           <div className="absolute -bottom-40 -right-40 z-10">
+          <img
+            src="/NI.png"
+            alt="Nexus India Logo"
+            className="w-96 h-96 object-contain opacity-40"
+          />
         </div>
       </div>
     </section>

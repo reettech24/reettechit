@@ -130,13 +130,13 @@ export default function ITSolutionsSection() {
               <SwiperSlide key={index}>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="relative bg-[#0D123C] hover:border-2 hover:border-yellow-400 cursor-pointer rounded-xl p-6 py-20 my-4 flex flex-col items-center text-center h-full group"
+                  className="relative bg-[#0D123C] hover:border-2 hover:border-teal-400 cursor-pointer rounded-xl p-6 py-20 my-4 flex flex-col items-center text-center h-full group"
                 >
                   <div className="absolute top-4 right-4 w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-sm">
                     {service.letter}
                   </div>
                   <service.icon
-                    className="h-12 w-12 mb-4 text-yellow-400 transition-transform group-hover:scale-130
+                    className="h-12 w-12 mb-4 text-teal-400 transition-transform group-hover:scale-130
               "
                   />
                   <h3 className="text-xl font-semibold">
@@ -147,7 +147,7 @@ export default function ITSolutionsSection() {
                   </motion.p>
                   <a
                     href="#"
-                    className="mt-4 inline-flex items-center gap-1 text-yellow-400 hover:underline text-md"
+                    className="mt-4 inline-flex items-center gap-1 text-teal-400 hover:underline text-md"
                   >
                     Read Out More <ArrowUpRightIcon className="w-4 h-4" />
                   </a>
@@ -212,7 +212,7 @@ export default function ITSolutionsSection() {
           {/* Right side content */}
           <div className=" relative text-left space-y-6 px-8 lg:px-0">
             <p className="text-lg font-semibold  text-yellow-400 uppercase">
-              service <span className="italic text-white capitalize">it solutions</span>
+              service <span className="italic capitalize text-teal-400">it solutions</span>
             </p>
             <h2 className="text-4xl md:text-5xl font-bold leading-snug">
               Your Business{" "}

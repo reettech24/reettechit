@@ -26,7 +26,7 @@ export default function page() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-white py-16 px-6">
+      <section className=" relative overflow-hidden bg-white py-16 px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">What We Offer</h2>
           <p className="text-gray-600 mt-2">
@@ -58,18 +58,21 @@ export default function page() {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 shadow hover:shadow-lg transition"
+              className="bg-gray-900 p-6 shadow hover:shadow-lg transition"
             >
               <img src={item.img} alt={item.title} className="w-12 h-12 mb-4" />
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-gray-600 mt-2">{item.desc}</p>
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <p className="text-white/80 mt-2">{item.desc}</p>
             </div>
           ))}
+        </div>
+        <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
       {/* Case Study Section */}
-      <section className="bg-[#070B2A] text-white py-16 px-6">
+      <section className="bg-[#070B2A] relative overflow-hidden text-white py-16 px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Real Impact We've Delivered</h2>
         </div>
@@ -100,6 +103,9 @@ export default function page() {
               by 22%.
             </p>
           </div>
+        </div>
+        <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
