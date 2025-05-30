@@ -18,16 +18,25 @@
     "language": "言語"
   },
   "footer": {
-    "reet": "リート",
-    "technology": "テクノロジーズ",
-    "companyDescription": "Reet Technologiesは、高品質なウェブおよびモバイルアプリケーションの開発を専門とするソフトウェア開発会社です。",
+    "tagline": "アイデアが実行に変わる場所。",
     "quickLinks": "クイックリンク",
     "about": "会社概要",
-    "careers": "キャリア",
+    "careers": "採用情報",
     "services": "サービス",
     "contact": "お問い合わせ",
+    "products": "製品",
+    "nexusIndia": "ネクサス・インディア",
+    "nexusOnline": "ネクサス・オンライン管理",
     "followUs": "フォローする",
-    "rightsReserved": "全著作権所有。"
+    "address": {
+      "line1": "ヒンジェワディ第1フェーズ、プネー",
+      "line2": "マハラシュトラ 411028"
+    },
+    "rights": "全著作権所有。",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "refund": "キャンセルおよび返金ポリシー",
+    "shipping": "配送および配達ポリシー"
   },
   "hero": {
     "headline1": "将来に備えたWebとモバイルアプリの構築",
@@ -39,8 +48,15 @@
     "cta2": "実績を見る"
   },
   "contact": {
-    "title": "お問い合わせ",
-    "description": "ご不明点がありましたら、お気軽にお問い合わせください。"
+    "get_in_touch": "お問い合わせ",
+    "full_name": "氏名",
+    "email_address": "メールアドレス",
+    "subject": "件名",
+    "message": "メッセージ",
+    "send_message": "送信",
+    "call_us": "いつでもお電話ください",
+    "make_quote": "見積もり依頼",
+    "location": "所在地"
   },
   "about": {
     "title": "Reet Technologiesについて",
@@ -49,5 +65,164 @@
   "notFound": {
     "message": "お探しのページは見つかりませんでした。",
     "backHome": "ホームに戻る"
+  },
+  "aboutSection": {
+    "title": "リート・テクノロジーズについて",
+    "subtitle": "<highlight>革新的な技術ソリューション</highlight>を通じてビジネスの成長を加速",
+    "description": "将来を見据えた戦略 - 革新性とスケーラビリティに重点を置き、急速に変化する技術環境にも適応し成功するためのソリューションを提供します。",
+    "badge": "6,561以上",
+    "features": [
+      {
+        "title": "デジタルトランスフォーメーション",
+        "description": "オーダーメイドの先進的なソリューションでビジネスを変革します。"
+      },
+      {
+        "title": "次世代コンサルティング",
+        "description": "最新技術に支えられた戦略的サポートを提供します。"
+      }
+    ],
+    "buttonText": "もっと見る →",
+    "ceo": {
+      "name": "パンカジ・デオレ",
+      "title": "CEO、創設者"
+    }
+  },
+  "it_solutions": {
+    "our_services": "私たちのサービス",
+    "main_heading": "すべてのプロフェッショナルなREETサービスとソリューション",
+    "main_subheading": "リートサービス",
+    "main_subheading2": "＆ソリューション",
+    "read_more": "もっと読む",
+    "view_all_services": "すべてのサービスを見る",
+    "years_experience": "年の経験",
+    "industries_catered": "対応業界数",
+    "multinational_clients": "多国籍クライアント",
+    "client_retention": "クライアント保持率",
+    "section_title": "サービス",
+    "section_subtitle": "ITソリューション",
+    "business_heading": "あなたのビジネス",
+    "business_subheading": "進展が重要です",
+    "description": "当社は1990年以来、個人住宅およびコテージの建設に関するすべてのサービスを提供しています。",
+    "benefit_1": "パーソナライズされたクライアントコンサルティング",
+    "benefit_2": "ビジネス問題のためのエンドツーエンドの技術ソリューションの提供",
+    "button_cta": "どのようにお手伝いできるか教えてください",
+    "services": [
+      {
+        "title": "デジタル",
+        "subtitle": "トランスフォーメーション",
+        "description": "革新的なデジタルソリューションでビジネスを加速します。"
+      },
+      {
+        "title": "CRM ＆",
+        "subtitle": "ERPソリューション",
+        "description": "カスタムCRMとERPプラットフォームで業務を効率化します。"
+      },
+      {
+        "title": "モバイル＆ウェブ",
+        "subtitle": "アプリケーション",
+        "description": "高性能で魅力的なモバイルおよびウェブアプリを開発します。"
+      },
+      {
+        "title": "AI ＆",
+        "subtitle": "機械学習",
+        "description": "最先端のAI/MLでインテリジェントな自動化を実現します。"
+      },
+      {
+        "title": "デジタル",
+        "subtitle": "マーケティング",
+        "description": "戦略的なデジタルキャンペーンでリーチとROIを最大化します。"
+      },
+      {
+        "title": "高品質なウェブサイト",
+        "subtitle": "開発",
+        "description": "ピクセルパーフェクトで企業向けの変換率の高いウェブサイトを構築します。"
+      },
+      {
+        "title": "AR ＆ VR",
+        "subtitle": "ソリューション",
+        "description": "没入型の拡張現実および仮想現実体験を提供します。"
+      },
+      {
+        "title": "サイバー",
+        "subtitle": "セキュリティ",
+        "description": "包括的なサイバーセキュリティソリューションで資産を保護します。"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonial1": {
+      "name": "ハヒムラム・ディラット",
+      "role": "ウェブ開発者",
+      "text": "この場所に来ることは常に魅力的で、私たちのオフィスは誇りに思える空間です。まるで磁石のようで、離れがたい場所です。"
+    },
+    "testimonial2": {
+      "name": "リーマ・クマリ",
+      "role": "プロジェクトマネージャー",
+      "text": "ここでの勤務はチーム協力の見方を一変させました。職場の支援と革新性は比類ありません。"
+    },
+    "testimonial3": {
+      "name": "アルジュン・パテル",
+      "role": "UI/UXデザイナー",
+      "text": "柔軟な勤務時間や優秀な仲間たちなど、理想的な職場環境をすべて手に入れました。"
+    },
+    "testimonial4": {
+      "name": "サナ・シャイク",
+      "role": "マーケティング部長",
+      "text": "Reet Technologiesはビジネスと人の成長を大切にしています。この旅の一員であることを誇りに思います。"
+    }
+  },
+  "collaborationSection": {
+    "title": "提携パートナー",
+    "description": "私たちは、テクノロジー、建築、イノベーションを通じてデジタル世界を形成する業界のリーダーと協力できることを誇りに思います。"
+  },
+  "nexusSolutionsSection": {
+    "title": "デジタルソリューションを探る",
+    "description": "ビジネスの成長、適応、そしてデジタル時代でのリードを支援するために設計されたソリューションです。",
+    "nexusIndia": {
+      "name": "Nexus India",
+      "tagline": "思いやりのある市場",
+      "description": "インドの中小企業を支援するために設計された強力なデジタルイニシアチブ。",
+      "features": [
+        "中小企業向けの手頃な技術ソリューション",
+        "Eコマースと物流のためのローカライズツール",
+        "簡単な導入とサポート",
+        "将来の成長に対応できる拡張性"
+      ],
+      "buttonText": "もっと詳しく"
+    },
+    "nexusOnline": {
+      "name": "Nexus India",
+      "tagline": "ビジネスマネジメントソフトウェア",
+      "description": "業務、顧客、チームを簡単に管理するためのオールインワンダッシュボード。",
+      "features": [
+        "スマートダッシュボードとリアルタイム分析",
+        "役割に応じたアクセスと権限設定",
+        "データとプロジェクトツールの一元化",
+        "APIとのカスタム統合"
+      ],
+      "buttonText": "プラットフォームを見る"
+    }
+  },
+  "projectShowcase": {
+    "sectionLabel": "プロジェクト",
+    "heading": "最新のクライアントプロジェクト",
+    "projects": [
+      {
+        "category": "ディンプルケミカルズ",
+        "title": "CRM開発"
+      },
+      {
+        "category": "TAW デザイン＆建築",
+        "title": "ウェブサイト開発"
+      },
+      {
+        "category": "プニータのクリエイティブスタジオ",
+        "title": "クリエイティブウェブスタジオ"
+      },
+      {
+        "category": "KRA",
+        "title": "オークション管理"
+      }
+    ]
   }
 }

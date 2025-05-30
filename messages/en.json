@@ -18,16 +18,25 @@
         "language": "Language"
     },
     "footer": {
-        "reet": "Reet",
-        "technology": "technology",
-        "companyDescription": "Reet Technologies is a software development company that specializes in building high-quality web and mobile applications.",
+        "tagline": "Where Ideas meet execution.",
         "quickLinks": "Quick Links",
         "about": "About",
         "careers": "Careers",
         "services": "Services",
-        "contact": "Contact Us",
+        "contact": "Contact",
+        "products": "Products",
+        "nexusIndia": "Nexus India",
+        "nexusOnline": "Nexus Online Management",
         "followUs": "Follow Us",
-        "rightsReserved": "All Rights Reserved."
+        "address": {
+            "line1": "Hinjewadi Phase 1, Pune",
+            "line2": "Maharashtra 411028"
+        },
+        "rights": "All rights reserved.",
+        "terms": "Terms & Condition",
+        "privacy": "Privacy Policy",
+        "refund": "Cancellation & Refund Policy",
+        "shipping": "Shipping & Delivery Policy"
     },
     "hero": {
         "headline1": "Building Future-Ready Web and Mobile Applications",
@@ -39,8 +48,15 @@
         "cta2": "View Our Work"
     },
     "contact": {
-        "title": "Contact Us",
-        "description": "Feel free to reach out to us for any inquiries."
+        "get_in_touch": "Get In Touch",
+        "full_name": "Full Name",
+        "email_address": "Email Address",
+        "subject": "Subject",
+        "message": "Message",
+        "send_message": "Send Message",
+        "call_us": "Call Us 7/24",
+        "make_quote": "Make a Quote",
+        "location": "Location"
     },
     "about": {
         "title": "About Reet Technologies",
@@ -49,5 +65,164 @@
     "notFound": {
         "message": "Sorry, the page you're looking for doesn't exist.",
         "backHome": "Go back home"
-    }
+    },
+    "aboutSection": {
+        "title": "About Reet Technologies",
+        "subtitle": "Fueling Business Growth Through <highlight>Innovative Technological Solutions</highlight>",
+        "description": "Future-ready strategies – Indicates a focus on innovation and scalability—solutions designed not just for today, but to adapt and succeed in a fast-changing tech landscape.",
+        "badge": "6,561+",
+        "features": [
+            {
+                "title": "Digital Transformation",
+                "description": "Transform your business with tailored, forward-thinking solutions."
+            },
+            {
+                "title": "Next Gen Consulting",
+                "description": "Strategic support powered by the latest technology."
+            }
+        ],
+        "buttonText": "Explore More →",
+        "ceo": {
+            "name": "Pankaj Deole",
+            "title": "CEO, Founder"
+        }
+    },
+    "it_solutions": {
+        "our_services": "Our Services",
+        "main_heading": "All Professional",
+        "main_subheading": "Reet Services",
+        "main_subheading2": "& Solutions",
+        "read_more": "Read Out More",
+        "view_all_services": "View All Services",
+        "years_experience": "Years Experience",
+        "industries_catered": "Industries Catered",
+        "multinational_clients": "Multinational Clients",
+        "client_retention": "Client Retention",
+        "section_title": "service",
+        "section_subtitle": "it solutions",
+        "business_heading": "Your Business",
+        "business_subheading": "Progress Matters",
+        "description": "Our company provides a full range of services for the construction of private houses and cottages since 1990.",
+        "benefit_1": "Personalised Client Consulting",
+        "benefit_2": "Providing end to end Tech Solutions for your business Problems",
+        "button_cta": "Tell Us How Can We Help",
+        "services": [
+            {
+                "title": "Digital",
+                "subtitle": "Transformation",
+                "description": "Accelerate your business with innovative digital solutions."
+            },
+            {
+                "title": "CRM &",
+                "subtitle": "ERP Solutions",
+                "description": "Streamline operations with custom CRM and ERP platforms."
+            },
+            {
+                "title": "Mobile & Web",
+                "subtitle": "Applications",
+                "description": "Engaging, high-performance mobile and web app development."
+            },
+            {
+                "title": "AI &",
+                "subtitle": "Machine Learning",
+                "description": "Unlock intelligent automation with cutting-edge AI/ML."
+            },
+            {
+                "title": "Digital",
+                "subtitle": "Marketing",
+                "description": "Maximize reach and ROI through strategic digital campaigns."
+            },
+            {
+                "title": "High-End Website",
+                "subtitle": "Development",
+                "description": "Craft pixel-perfect, enterprise-grade websites that convert."
+            },
+            {
+                "title": "AR & VR",
+                "subtitle": "Solutions",
+                "description": "Immersive augmented and virtual reality experiences."
+            },
+            {
+                "title": "Cyber",
+                "subtitle": "Security",
+                "description": "Protect your assets with comprehensive cyber defense solutions."
+            }
+        ]
+    },
+    "testimonials": {
+        "testimonial1": {
+            "name": "HAHIMLAM DIRAT",
+            "role": "Web Developer",
+            "text": "It is wanting to come here and afterward our office is something we consider it the little we are pleased with. Magnet; difficult to leave it. Our office is additionally a big name."
+        },
+        "testimonial2": {
+            "name": "REEMA KUMARI",
+            "role": "Project Manager",
+            "text": "Working here has completely transformed my perspective on team collaboration. The support and innovation in the workspace are unmatched."
+        },
+        "testimonial3": {
+            "name": "ARJUN PATEL",
+            "role": "UI/UX Designer",
+            "text": "From flexible working hours to an extremely talented peer group, I’ve found everything I ever wanted in a workplace."
+        },
+        "testimonial4": {
+            "name": "SANA SHAIKH",
+            "role": "Marketing Head",
+            "text": "Reet Technologies believes in growth—of business and people. Proud to be part of this journey."
+        }
+    },
+    "collaborationSection": {
+        "title": "In Collaboration With",
+        "description": "We’re proud to work with industry leaders shaping the digital world through technology, architecture, and innovation."
+    },
+    "nexusSolutionsSection": {
+        "title": "Explore Our Digital Solutions",
+        "description": "Designed to help businesses grow, adapt, and lead in the digital era.",
+        "nexusIndia": {
+            "name": "Nexus India",
+            "tagline": "The Caring Market",
+            "description": "A powerful digital initiative tailored to support India's small and medium-sized businesses.",
+            "features": [
+                "Affordable tech solutions for SMEs",
+                "Localized tools for e-commerce & logistics",
+                "Easy onboarding and support",
+                "Scalable to meet future growth"
+            ],
+            "buttonText": "Learn More"
+        },
+        "nexusOnline": {
+            "name": "Nexus India",
+            "tagline": "The Business Management Software",
+            "description": "Your all-in-one dashboard to manage operations, customers, and teams with ease.",
+            "features": [
+                "Smart dashboards & real-time analytics",
+                "Role-based user access and permissions",
+                "Centralized data and project tools",
+                "Custom integrations with APIs"
+            ],
+            "buttonText": "Explore Platform"
+        }
+    },
+     "projectShowcase": {
+    "sectionLabel": "Projects",
+    "heading": "Our Latest Incredible Client's Projects",
+    "projects": [
+      {
+        "category": "Dimple chemicals",
+        "title": "CRM Development"
+      },
+      {
+        "category": "TAW Designs & architects",
+        "title": "Website Development"
+      },
+      {
+        "category": "Puneeta's creative studio",
+        "title": "Creative website studio"
+      },
+      {
+        "category": "KRA",
+        "title": "Auction Management"
+      }
+    ]
+  }
 }

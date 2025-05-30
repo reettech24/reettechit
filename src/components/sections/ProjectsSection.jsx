@@ -3,50 +3,35 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const projects = [
-  {
-    category: "Dimple chemicals",
-    title: "CRM Development",
-    image: "/DC1.jpg",
-  },
-  {
-    category: "TAW Designs & architects",
-    title: "Website Development",
-    image: "/logo3.png",
-  },
-  {
-    category: "Puneeta's creative studio",
-    title: "Creative website studio",
-    image: "/softwaredevelopment.jpeg",
-  },
-  {
-    category: "KRA",
-    title: "Auction Management",
-    image: "/AI.jpeg",
-  },
- 
-  
-  
+const images = [
+  "/DC1.jpg",
+  "/logo3.png",
+  "/softwaredevelopment.jpeg",
+  "/AI.jpeg"
 ];
 
 export default function ProjectShowcase() {
+  const t = useTranslations("projectShowcase");
+  const projects = t.raw("projects"); // get array of translated project objects
+
   return (
-    <section className=" bg-[#f0f0f0] w-full py-20 relative overflow-hidden">
-      <div className=" flex justify-between max-w-7xl mx-auto px-8 lg:px-0">
+    <section className="bg-[#f0f0f0] w-full py-20 relative overflow-hidden">
+      <div className="flex justify-between max-w-7xl mx-auto px-8 lg:px-0">
         <div>
           <p className="text-sm text-indigo-500 font-semibold mb-2 uppercase">
-            Projects
+            {t("sectionLabel")}
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-10 max-w-xl">
-            Our Latest Incredible <br /> Client's Projects
+            {t("heading")}
           </h2>
         </div>
 
         {/* Navigation Arrows */}
-        <div className=" -top-12 right-0 flex items-center gap-2 pr-4 z-10">
+        <div className="-top-12 right-0 flex items-center gap-2 pr-4 z-10">
           <button className="swiper-prev w-12 h-12 bg-indigo-600 text-white rounded-full">
             <span className="sr-only">Prev</span>←
           </button>
@@ -55,7 +40,8 @@ export default function ProjectShowcase() {
           </button>
         </div>
       </div>
-      <div className=" max-w-7xl px-4 lg:px-0">
+
+      <div className="max-w-7xl px-4 lg:px-0">
         <div className="relative">
           <Swiper
             modules={[Navigation, Autoplay]}
@@ -77,7 +63,7 @@ export default function ProjectShowcase() {
               <SwiperSlide key={index}>
                 <div className="relative group overflow-hidden shadow-lg">
                   <img
-                    src={project.image}
+                    src={images[index]}
                     alt={project.title}
                     className="w-full h-[500px] object-cover"
                   />

@@ -1,42 +1,45 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 const collaborators = [
-  { name: "NexGenEx Tech", logo: "/partners/logo.png" },
-  { name: "TAW Designs & Architects", logo: "/partners/logo3.png" },
-  { name: "Cludo bits", logo: "/partners/cludobits.png" },
-  { name: "Data Vertex Technologies", logo: "/partners/datavertex.png" },
+  { name: 'NexGenEx Tech', logo: '/partners/logo.png' },
+  { name: 'TAW Designs & Architects', logo: '/partners/logo3.png' },
+  { name: 'Cludo bits', logo: '/partners/cludobits.png' },
+  { name: 'Data Vertex Technologies', logo: '/partners/datavertex.png' },
 ];
 
 export default function CompanyCollaborationSection() {
+  const t = useTranslations('collaborationSection');
+
   return (
     <section className="relative w-full py-28 px-6 bg-white overflow-hidden">
-      {/* Decorative background elements */}
+      {/* Background Decorations */}
       <img
         src="/line-shape.png"
         alt="background"
-        className="absolute top-0 left-0 w-72 text-blue-600 pointer-events-none "
+        className="absolute top-0 left-0 w-72 pointer-events-none"
       />
       <img
-          src="/design.png"
+        src="/design.png"
         alt="background"
         className="absolute bottom-0 right-0 w-screen opacity-10 pointer-events-none"
       />
 
-      {/* Content container */}
+      {/* Heading */}
       <div className="relative z-10 max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 capitalize">
-          In Collaboration With
+          {t('title')}
         </h2>
         <div className="mt-4 h-1 w-16 mx-auto bg-blue-600 rounded-full" />
         <p className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">
-          We’re proud to work with industry leaders shaping the digital world through technology, architecture, and innovation.
+          {t('description')}
         </p>
       </div>
 
-      {/* Logos grid */}
+      {/* Collaborators Grid */}
       <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 items-center justify-center">
         {collaborators.map((partner, index) => (
           <motion.div
