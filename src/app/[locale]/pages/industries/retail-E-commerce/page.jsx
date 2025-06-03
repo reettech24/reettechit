@@ -1,27 +1,29 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import Image from "next/image";
 
 export default function page() {
+  const t = useTranslations("retail&ecommerce");
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Hero Section */}
 
       <section
-        className="relative bg-cover bg-center text-white py- sm:py-40 md:py-52"
+        className="relative bg-cover bg-center text-white py-40 md:py-52"
         style={{ backgroundImage: "url('/banners/mobile.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#070B2A]/80 to-[#1E1E3F]/80" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-            Retail & E-Commerce Solution
+            {t("heroTitle")}
           </h1>
 
           <p className="text-white text-base sm:text-lg leading-relaxed">
-            Digital Transformation for Next-Gen Retail
+            {t("heroSubtitle")}
           </p>
         </div>
       </section>
@@ -29,7 +31,7 @@ export default function page() {
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <Image
-            src="/photos/crm1.jpg"
+            src="/test/4.jpg"
             alt="CRM ERP Overview"
             width={600}
             height={400}
@@ -37,16 +39,20 @@ export default function page() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#070B2A]">
-              Empowering Retailers with Digital Innovation
+              {t("empowerTitle")}
             </h2>
 
-            <p className="text-base sm:text-lg text-gray-700 mb-6">
-              At Nexus India, we help retailers and e-commerce businesses thrive
-              in an omnichannel world by providing scalable, customer-centric
-              digital solutions. From online store development to inventory
-              automation and AI-driven insights— we support the full commerce
-              lifecycle.
+            <p className="text-base sm:text-md text-gray-700 mb-6">
+              {t("empowerDescription")}
             </p>
+
+            <div className=" ">
+              <ul className="space-y-4 text-sm  text-black/80">
+                {t.raw("empowerPoints").map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -57,16 +63,10 @@ export default function page() {
       <section className="relative overflow-hidden bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold mb-8 text-center">
-            Key Challenges in Retail & E-Commerce
+            {t("challengesTitle")}
           </h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            {[
-              "Changing customer expectations",
-              "Inventory & supply chain inefficiencies",
-              "Data fragmentation across platforms",
-              "Customer loyalty and personalization",
-              "Scaling operations affordably",
-            ].map((item, idx) => (
+            {t.raw("challenges").map((item, idx) => (
               <div key={idx} className="bg-gray-800 p-6 shadow-sm">
                 <p className="text-white/80 text-sm">{item}</p>
               </div>
@@ -79,35 +79,10 @@ export default function page() {
       <section className="relative overflow-hidden bg-[#070B2A] py-20 px-6  text-center">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold mb-10 text-white">
-            Tailored Solutions for the Modern Retailer
+            {t("solutionsTitle")}
           </h3>
           <div className="grid md:grid-cols-3 gap-10 text-left">
-            {[
-              {
-                title: "E-Commerce Website Development",
-                desc: "Custom Shopify, WooCommerce, and headless CMS implementations that scale.",
-              },
-              {
-                title: "Omnichannel Integration",
-                desc: "Unified customer experience across web, mobile, POS, and third-party marketplaces.",
-              },
-              {
-                title: "AI-Powered Analytics",
-                desc: "Data insights to track sales, predict trends, and personalize offers in real time.",
-              },
-              {
-                title: "Inventory & Supply Chain Tools",
-                desc: "Automation and visibility tools to optimize logistics and inventory management.",
-              },
-              {
-                title: "Digital Marketing Enablement",
-                desc: "Targeted ad campaigns, SEO optimization, and customer engagement solutions.",
-              },
-              {
-                title: "Mobile-First Experience",
-                desc: "Fast, responsive mobile UX that drives conversions on any device.",
-              },
-            ].map((s, idx) => (
+            {t.raw("solutions").map((s, idx) => (
               <div
                 key={idx}
                 className="bg-gray-800 shadow p-6 hover:shadow-lg transition"
@@ -127,26 +102,16 @@ export default function page() {
 
       {/* Case Studies */}
       <section className="bg-gray-100 py-20 px-6 text-center">
-        <h3 className="text-2xl font-bold mb-8">Proven Results</h3>
+        <h3 className="text-2xl font-bold mb-8">{t("caseStudiesTitle")}</h3>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left text-sm">
-          <div className="bg-gray-900 p-6  shadow">
-            <h4 className="font-semibold text-lg mb-2 text-white">
-              Boosting Online Revenue by 60%
-            </h4>
-            <p className="text-white/80">
-              We partnered with a fashion retailer to build a mobile-optimized
-              store with integrated CRM. Result: 60% sales growth in 4 months.
-            </p>
-          </div>
-          <div className=" bg-gray-900 p-6 shadow">
-            <h4 className="font-semibold text-lg mb-2 text-white">
-              Automating Inventory Management
-            </h4>
-            <p className="text-white/80">
-              For an electronics chain, we automated inventory across
-              outlets—reducing out-of-stock issues by 45%.
-            </p>
-          </div>
+          {t.raw("caseStudies").map((item, idx) => (
+            <div key={idx} className="bg-gray-900 p-6 shadow">
+              <h4 className="font-semibold text-lg mb-2 text-white">
+                {item.title}
+              </h4>
+              <p className="text-white/80">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -154,18 +119,11 @@ export default function page() {
       <section className="relative overflow-hidden bg-[#070B2A] py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold mb-6 text-white">
-            Retail Trends & Insights
+            {t("trendsTitle")}
           </h3>
-          <p className=" mb-10 text-white/80">
-            Stay ahead of the curve with insights into how technology is
-            reshaping the retail landscape.
-          </p>
+          <p className=" mb-10 text-white/80">{t("trendsDesc")}</p>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              "Personalized customer journeys are driving conversions.",
-              "Mobile commerce continues to dominate online sales.",
-              "AR & VR are enhancing the virtual shopping experience.",
-            ].map((trend, idx) => (
+            {t.raw("trends").map((trend, idx) => (
               <div key={idx} className="bg-gray-800 p-5 shadow text-left">
                 <p className="text-white/80">{trend}</p>
               </div>
@@ -191,24 +149,9 @@ export default function page() {
       </section>
       {/* FAQs */}
       <section className="py-20 px-6 max-w-4xl mx-auto">
-        <h3 className="text-2xl font-bold mb-8 text-center">
-          Frequently Asked Questions
-        </h3>
+        <h3 className="text-2xl font-bold mb-8 text-center">{t("faqsTitle")}</h3>
         <div className="space-y-6">
-          {[
-            {
-              q: "Do you offer platform migration services?",
-              a: "Yes, we can migrate your store from Magento, WooCommerce, etc. to Shopify or headless solutions with no downtime.",
-            },
-            {
-              q: "Can you integrate with our existing ERP or CRM?",
-              a: "Absolutely. We specialize in API integrations for ERPs, CRMs, and 3rd-party tools.",
-            },
-            {
-              q: "What’s the typical project timeline?",
-              a: "Depending on scope, projects range from 4 to 12 weeks for design, development, and testing.",
-            },
-          ].map((item, idx) => (
+          {t.raw("faqs").map((item, idx) => (
             <div key={idx}>
               <h4 className="font-semibold">{item.q}</h4>
               <p className="text-sm text-gray-600 mt-2">{item.a}</p>
@@ -219,22 +162,10 @@ export default function page() {
 
       {/* Tech Stack */}
       <section className="bg-[#070B2A] text-white py-20 px-6 text-center">
-        <h3 className="text-2xl font-bold mb-6">Our Technology Stack</h3>
-        <p className="text-white/80 mb-10 max-w-xl mx-auto">
-          We work with reliable, modern, and scalable technologies to ensure
-          your business runs smoothly.
-        </p>
+        <h3 className="text-2xl font-bold mb-6"> {t("techTitle")}</h3>
+        <p className="text-white/80 mb-10 max-w-xl mx-auto">{t("techDesc")}</p>
         <div className="flex justify-center flex-wrap gap-6">
-          {[
-            "Shopify",
-            "WooCommerce",
-            "Next.js",
-            "Node.js",
-            "Tailwind CSS",
-            "AWS",
-            "Stripe",
-            "MongoDB",
-          ].map((tech, idx) => (
+          {t.raw("techStack").map((tech, idx) => (
             <div
               key={idx}
               className="bg-gray-800 hover:scale-125 duration-125  px-6 py-3 rounded-full shadow text-sm font-medium"
@@ -247,14 +178,9 @@ export default function page() {
 
       {/* Why Choose Us */}
       <section className="py-20 px-6 max-w-6xl mx-auto text-center">
-        <h3 className="text-2xl font-bold mb-8">Why Choose Nexus India?</h3>
+        <h3 className="text-2xl font-bold mb-8">{t("whyTitle")}</h3>
         <div className="grid md:grid-cols-4 gap-8">
-          {[
-            { icon: "💰", title: "Affordable Packages" },
-            { icon: "⚙️", title: "Custom Development" },
-            { icon: "📊", title: "Scalable Solutions" },
-            { icon: "🤝", title: "End-to-End Support" },
-          ].map((item, idx) => (
+          {t.raw("whyPoints").map((item, idx) => (
             <div key={idx} className="bg-gray-900 p-6 shadow text-center">
               <div className="text-4xl mb-3">{item.icon}</div>
               <h4 className="font-semibold text-white">{item.title}</h4>
@@ -268,18 +194,14 @@ export default function page() {
 
       {/* CTA */}
       <section className="bg-blue-700 text-white py-20 text-center px-6">
-        <h3 className="text-3xl font-bold mb-4">
-          Digitize Your Retail Business Today
-        </h3>
-        <p className="text-white/80 mb-6 max-w-xl mx-auto">
-          Whether you're a small business or an expanding e-commerce brand,
-          Nexus India is here to help you grow with confidence.
-        </p>
+        <h3 className="text-3xl font-bold mb-4">{t("ctaTitle")}</h3>
+        <p className="text-white/80 mb-6 max-w-xl mx-auto">{t("ctaDesc")}</p>
+
         <a
           href="/contact"
           className="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded-xl hover:bg-gray-100 transition"
         >
-          Get In Touch
+          {t("ctaButton")}
         </a>
       </section>
 

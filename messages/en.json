@@ -203,26 +203,424 @@
             "buttonText": "Explore Platform"
         }
     },
-     "projectShowcase": {
-    "sectionLabel": "Projects",
-    "heading": "Our Latest Incredible Client's Projects",
-    "projects": [
-      {
-        "category": "Dimple chemicals",
-        "title": "CRM Development"
-      },
-      {
-        "category": "TAW Designs & architects",
-        "title": "Website Development"
-      },
-      {
-        "category": "Puneeta's creative studio",
-        "title": "Creative website studio"
-      },
-      {
-        "category": "KRA",
-        "title": "Auction Management"
-      }
-    ]
-  }
+    "projectShowcase": {
+        "sectionLabel": "Projects",
+        "heading": "Our Latest Incredible Client's Projects",
+        "projects": [
+            {
+                "category": "Dimple chemicals",
+                "title": "CRM Development"
+            },
+            {
+                "category": "TAW Designs & architects",
+                "title": "Website Development"
+            },
+            {
+                "category": "Puneeta's creative studio",
+                "title": "Creative website studio"
+            },
+            {
+                "category": "KRA",
+                "title": "Auction Management"
+            }
+        ]
+    },
+    "retail&ecommerce": {
+        "heroTitle": "Retail & E-Commerce Solution",
+        "heroSubtitle": "Digital Transformation for Next-Gen Retail",
+        "empowerTitle": "Empowering Retailers with Digital Innovation",
+        "empowerDescription": "Our expertise in retail solutions helps eCommerce platforms easily reach their potential customers, driving rapid business growth. We offer A to Z services, from payment gateways to product delivery tracking systems. Our specialized solutions ensure smooth business transactions and exchanges for clients, customers, and companies.",
+        "empowerPoints": [
+            "Website Performance and User Experience",
+            "High user experience for mobile shoppers",
+            "Customer Acquisition and Retention with low cost marketing",
+            "Inventory Management Systems via Mobile apps and Web Apps",
+            "Supply Chain management",
+            "Shipping and Logistics system tracking from Purchase to delivery",
+            "Technology Integration with help of AI,ML and Automations systems",
+            "Offering a variety of payment methods to cater to different customer preferences"
+        ],
+        "challengesTitle": "Key Challenges in Retail & E-Commerce",
+        "challenges": [
+            "Changing customer expectations",
+            "Inventory & supply chain inefficiencies",
+            "Data fragmentation across platforms",
+            "Customer loyalty and personalization",
+            "Scaling operations affordably"
+        ],
+        "solutionsTitle": "Tailored Solutions for the Modern Retailer",
+        "solutions": [
+            {
+                "title": "E-Commerce Website Development",
+                "desc": "Custom Shopify, WooCommerce, and headless CMS implementations that scale."
+            },
+            {
+                "title": "Omnichannel Integration",
+                "desc": "Unified customer experience across web, mobile, POS, and third-party marketplaces."
+            },
+            {
+                "title": "AI-Powered Analytics",
+                "desc": "Data insights to track sales, predict trends, and personalize offers in real time."
+            },
+            {
+                "title": "Inventory & Supply Chain Tools",
+                "desc": "Automation and visibility tools to optimize logistics and inventory management."
+            },
+            {
+                "title": "Digital Marketing Enablement",
+                "desc": "Targeted ad campaigns, SEO optimization, and customer engagement solutions."
+            },
+            {
+                "title": "Mobile-First Experience",
+                "desc": "Fast, responsive mobile UX that drives conversions on any device."
+            }
+        ],
+        "caseStudiesTitle": "Proven Results",
+        "caseStudies": [
+            {
+                "title": "Boosting Online Revenue by 60%",
+                "desc": "We partnered with a fashion retailer to build a mobile-optimized store with integrated CRM. Result: 60% sales growth in 4 months."
+            },
+            {
+                "title": "Automating Inventory Management",
+                "desc": "For an electronics chain, we automated inventory across outlets—reducing out-of-stock issues by 45%."
+            }
+        ],
+        "trendsTitle": "Retail Trends & Insights",
+        "trendsDesc": "Stay ahead of the curve with insights into how technology is reshaping the retail landscape.",
+        "trends": [
+            "Personalized customer journeys are driving conversions.",
+            "Mobile commerce continues to dominate online sales.",
+            "AR & VR are enhancing the virtual shopping experience."
+        ],
+        "trustedBy": "Trusted By",
+        "faqsTitle": "Frequently Asked Questions",
+        "faqs": [
+            {
+                "q": "Do you offer platform migration services?",
+                "a": "Yes, we can migrate your store from Magento, WooCommerce, etc. to Shopify or headless solutions with no downtime."
+            },
+            {
+                "q": "Can you integrate with our existing ERP or CRM?",
+                "a": "Absolutely. We specialize in API integrations for ERPs, CRMs, and 3rd-party tools."
+            },
+            {
+                "q": "What’s the typical project timeline?",
+                "a": "Depending on scope, projects range from 4 to 12 weeks for design, development, and testing."
+            }
+        ],
+        "techTitle": "Our Technology Stack",
+        "techDesc": "We work with reliable, modern, and scalable technologies to ensure your business runs smoothly.",
+        "techStack": [
+            "Shopify",
+            "WooCommerce",
+            "Next.js",
+            "Node.js",
+            "Tailwind CSS",
+            "AWS",
+            "Stripe",
+            "MongoDB"
+        ],
+        "whyTitle": "Why Choose Nexus India?",
+        "whyPoints": [
+            {
+                "icon": "\uD83D\uDCB0",
+                "title": "Affordable Packages"
+            },
+            {
+                "icon": "\u2699\uFE0F",
+                "title": "Custom Development"
+            },
+            {
+                "icon": "\uD83D\uDCC8",
+                "title": "Scalable Solutions"
+            },
+            {
+                "icon": "\uD83E\uDD1D",
+                "title": "End-to-End Support"
+            }
+        ],
+        "ctaTitle": "Digitize Your Retail Business Today",
+        "ctaDesc": "Whether you're a small business or an expanding e-commerce brand, Nexus India is here to help you grow with confidence.",
+        "ctaButton": "Get In Touch"
+    },
+    "realEstate": {
+        "heroTitle": "Real Estate & Property Tech Solutions",
+        "heroSubtitle": "Transforming Real Estate through Smart Technology",
+        "introTitle": "Digitizing the Real Estate Experience",
+        "introContent": "With innovative technological solutions our expertise helps Real Estate Domain in Lead Generation, Upgrading your business with AR,VR solutions helping Builders and Clients to have a clear vision of sample Flat and Building Premises with Project Details.",
+        "understandTitle": "We Understand Your Problem…",
+        "problems": [
+            "Difficult to convince the client without sample flat?",
+            "Difficulties in Team Management?",
+            "Problems in managing High Rise tower Construction process?",
+            "Inventory Management Systems via Mobile apps and Web Apps",
+            "Project Management Issues?",
+            "Shipping and Logistics system tracking from Purchase to delivery",
+            "Difficulties in handling Multiple Projects?",
+            "Safety Issues on High Rise towers?"
+        ],
+        "challengesTitle": "Real Estate Industry Challenges",
+        "challenges": [
+            "Lack of digital presence & outdated websites",
+            "Inefficient lead management & conversion",
+            "Manual property listings and documentation",
+            "Limited data-driven marketing",
+            "No mobile-first experience"
+        ],
+        "solutionsTitle": "Nexus India's Real Estate Solutions",
+        "solutions": [
+            {
+                "title": "Property Listing Platforms",
+                "desc": "Fully searchable websites with filters, image galleries, and integrated maps."
+            },
+            {
+                "title": "Lead Management Tools",
+                "desc": "CRM integration and automated workflows to track and convert leads efficiently."
+            },
+            {
+                "title": "3D Virtual Tours & Video Walkthroughs",
+                "desc": "Immersive property viewing experiences that increase engagement and trust."
+            },
+            {
+                "title": "Custom Mobile Apps",
+                "desc": "iOS/Android apps for property search, virtual visits, and appointment scheduling."
+            },
+            {
+                "title": "Digital Marketing Services",
+                "desc": "SEO, PPC, social media, and content marketing tailored for real estate."
+            },
+            {
+                "title": "Document Automation & E-signatures",
+                "desc": "Speed up closing time with online forms, digital contracts, and secure e-sign."
+            }
+        ],
+        "caseStudiesTitle": "Success Stories",
+        "caseStudies": [
+            {
+                "title": "30% Increase in Buyer Inquiries",
+                "desc": "We helped a real estate firm revamp their listing portal and integrated CRM. The result was a 30% increase in buyer inquiries and faster response times."
+            },
+            {
+                "title": "Streamlined Property Management",
+                "desc": "A residential group automated maintenance requests and tenant communication with a custom mobile app— saving over 200 hours/month in manual work."
+            }
+        ],
+        "whyTitle": "Why Choose Nexus India for Real Estate?",
+        "why": [
+            {
+                "icon": "🏗️",
+                "title": "Industry Expertise"
+            },
+            {
+                "icon": "📱",
+                "title": "Mobile-First Focus"
+            },
+            {
+                "icon": "🧩",
+                "title": "Custom Integrations"
+            },
+            {
+                "icon": "🔒",
+                "title": "Data Security First"
+            }
+        ],
+        "insightsTitle": "Insights & Resources",
+        "insights": [
+            {
+                "title": "5 Digital Trends in Real Estate",
+                "excerpt": "Explore how virtual tours, AI chatbots, and mobile apps are reshaping real estate."
+            },
+            {
+                "title": "Checklist: Going Digital as a Broker",
+                "excerpt": "Your go-to guide to building a digital-first real estate business."
+            },
+            {
+                "title": "Case Study: 50% Lead Boost in 3 Months",
+                "excerpt": "See how a realty group used our CRM solution to convert better and faster."
+            }
+        ],
+        "faqTitle": "Frequently Asked Questions",
+        "faqs": [
+            {
+                "q": "Can you integrate with existing property CRM systems?",
+                "a": "Yes, we specialize in custom API integrations with leading CRMs like Salesforce, Zoho, and more."
+            },
+            {
+                "q": "Do you build real estate mobile apps?",
+                "a": "Absolutely. We build Android/iOS apps for property search, virtual visits, and lead tracking."
+            },
+            {
+                "q": "Is Nexus India suitable for small agencies?",
+                "a": "Yes! Our solutions are designed to be scalable and budget-friendly for both large firms and small agencies."
+            }
+        ],
+        "ctaTitle": "Take Your Real Estate Business Online",
+        "ctaDesc": "Nexus India provides tailored, affordable digital solutions to help you list, promote, and close faster than ever.",
+        "ctaButton": "Contact Us Now"
+    },
+    "manufacturing": {
+        "heroTitle": "Digital Innovation for Manufacturing",
+        "heroSubtitle": "Transforming operations, streamlining supply chains, and empowering efficiency",
+        "overviewTitle": "Unlock Efficiency & Innovation",
+        "overviewDescription": "From smart factories to predictive maintenance, the manufacturing sector is embracing technology to stay competitive. Our solutions enable streamlined workflows, enhanced visibility, and data-driven decisions for modern manufacturers.",
+        "aboutTitle": "At Reet Technologies",
+        "aboutText": "We offer innovative technological solutions tailored to the manufacturing industry, addressing the key challenges in production processes, quality control, and supply chain management. Our expert solutions enhance quality, defect management, risk management, and safety for factories, industries, warehouses, and storage facilities.",
+        "problemTitle": "We Understand Your Problem…",
+        "problems": [
+            "Do you need help for Live data tracking?",
+            "Can't Manage the excessive production process?",
+            "Issues in Supply chain management?",
+            "Issues in Quality of production?",
+            "Difficulties in Safety management to avoid accidents on floor?"
+        ],
+        "solutionsTitle": "Solutions We Offer",
+        "solutions": [
+            {
+                "title": "Smart Factory Systems",
+                "desc": "IoT and automation solutions to monitor, optimize, and control manufacturing processes in real-time."
+            },
+            {
+                "title": "Supply Chain Digitization",
+                "desc": "Improve logistics, inventory, and procurement with integrated digital tools and analytics."
+            },
+            {
+                "title": "Predictive Maintenance",
+                "desc": "Use sensor data and machine learning to reduce downtime and extend equipment life."
+            }
+        ],
+        "caseStudyTitle": "Case Study: 30% Productivity Increase",
+        "caseStudyDesc": "Learn how a mid-sized manufacturing plant automated its production line and saw measurable improvements in output and quality.",
+        "benefitsTitle": "What You Gain",
+        "benefits": [
+            "Reduced Operational Costs",
+            "Real-time Monitoring",
+            "Improved Product Quality",
+            "Faster Time to Market"
+        ],
+        "trendsTitle": "Manufacturing Trends to Watch",
+        "trends": [
+            {
+                "title": "Industrial IoT (IIoT)",
+                "desc": "Enhanced machine communication enables proactive decision-making."
+            },
+            {
+                "title": "AI & Robotics",
+                "desc": "Smarter automation and robotics are revolutionizing production."
+            },
+            {
+                "title": "Sustainability",
+                "desc": "Eco-friendly operations and green manufacturing are top priorities."
+            }
+        ],
+        "ctaTitle": "Looking to Digitally Transform Your Manufacturing?",
+        "ctaDesc": "We bring expertise, innovation, and results to your industrial operations.",
+        "ctaBtn": "Talk to an Expert"
+    },
+    "education": {
+        "heroTitle": "Empowering Education Through Technology",
+        "heroSubtitle": "Transform learning experiences with digital-first solutions for institutions, educators, and students.",
+        "overviewTitle": "Modernizing Learning for a Digital Era",
+        "overviewDesc": "Our Learning Management System (LMS) solutions simplify the educational process with intuitive and user-friendly software. Easily manage student records, financial transactions, electronic data, and more with our comprehensive and efficient solutions.",
+        "features": [
+            {
+                "title": "Virtual Classrooms",
+                "desc": "Seamless live sessions, discussions, and breakout rooms."
+            },
+            {
+                "title": "LMS Integration",
+                "desc": "Custom LMS solutions for scalable content delivery."
+            },
+            {
+                "title": "Mobile-First Learning",
+                "desc": "Engage learners across devices, anytime, anywhere."
+            },
+            {
+                "title": "AI-Powered Analytics",
+                "desc": "Track performance, attendance & learning outcomes in real time."
+            },
+            {
+                "title": "Gamification & Microlearning",
+                "desc": "Boost engagement through bite-sized, interactive modules."
+            },
+            {
+                "title": "Accessibility First",
+                "desc": "Compliant with WCAG standards for inclusive learning."
+            }
+        ],
+        "journeyTitle": "Digital Learning Experience Journey",
+        "journeySteps": [
+            "Onboarding & Curriculum Mapping",
+            "Interactive Content Creation",
+            "Virtual & Hybrid Delivery Modes",
+            "Student Feedback & Progress Tracking",
+            "Data-Driven Iteration & Personalization"
+        ],
+        "metricsTitle": "What Our Clients Achieved",
+        "metrics": [
+            {
+                "title": "Improved Student Engagement",
+                "value": "95%"
+            },
+            {
+                "title": "Faster Course Completion Rates",
+                "value": "80%"
+            },
+            {
+                "title": "Reduction in Dropouts",
+                "value": "60%"
+            },
+            {
+                "title": "Learners Reached Globally",
+                "value": "100k+"
+            }
+        ],
+        "useCasesTitle": "Use Cases",
+        "useCases": [
+            {
+                "title": "University Learning Portals",
+                "desc": "Manage semester-based academic workflows and research modules."
+            },
+            {
+                "title": "EdTech Startups",
+                "desc": "Scalable architecture for rapid content delivery & gamified features."
+            },
+            {
+                "title": "Corporate Training",
+                "desc": "Microlearning + certification-based modules for employees."
+            }
+        ],
+        "whyChooseTitle": "Why Choose Us for Education Transformation?",
+        "whyChooseFeatures": [
+            "Scalable Architecture",
+            "Multi-Language Support",
+            "24/7 Platform Reliability",
+            "Secure Data Handling"
+        ],
+        "whyChooseDesc": "We ensure our education systems are built for performance, reach, and trust.",
+        "sectorTitle": "Tailored Solutions for Every Education Sector",
+        "sectors": [
+            {
+                "title": "Higher Education Portals",
+                "desc": "Scalable solutions for universities and colleges to manage online lectures, materials, and assignments."
+            },
+            {
+                "title": "School Learning Apps",
+                "desc": "Custom mobile apps designed to help K-12 institutions with assessments and daily interactions."
+            },
+            {
+                "title": "Online Coaching Platforms",
+                "desc": "Serve coaching centers with tools for scheduling, testing, and certification."
+            }
+        ],
+        "blogTitle": "Latest Insights on EdTech",
+        "blogs": [
+            "How AI Is Reshaping Virtual Classrooms",
+            "Gamification: Boosting Learner Motivation",
+            "Blended Learning: The Future of Education"
+        ],
+        "ctaTitle": "Digitize, Educate, Elevate",
+        "ctaDesc": "Whether you're running a school, university, or an online learning platform, we help you scale with innovation and impact.",
+        "ctaBtn": "Talk to Us"
+    }
 }
