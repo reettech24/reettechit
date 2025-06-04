@@ -622,5 +622,87 @@
         "ctaTitle": "Digitize, Educate, Elevate",
         "ctaDesc": "Whether you're running a school, university, or an online learning platform, we help you scale with innovation and impact.",
         "ctaBtn": "Talk to Us"
+    },
+    "bfsi": {
+        "heroTitle": "Transforming BFSI Through Technology",
+        "heroDesc": "Delivering secure, customer-centric, and scalable digital solutions for banks, fintech, and insurance providers.",
+        "overviewTitle": "Modern Solutions for a Trusted Industry",
+        "overviewDesc": "The BFSI sector is rapidly evolving with the advent of fintech innovations, blockchain, AI-powered customer support, and mobile-first services. To remain competitive and compliant, organizations need seamless, secure, and scalable digital strategies that put the customer first.",
+        "featureItems": [
+            {
+                "title": "Omnichannel Experience",
+                "desc": "Unified experiences across mobile, web & branches."
+            },
+            {
+                "title": "Secure Architecture",
+                "desc": "End-to-end encryption & compliance-ready systems."
+            },
+            {
+                "title": "AI-Driven Analytics",
+                "desc": "Detect fraud & personalize banking with AI/ML."
+            },
+            {
+                "title": "Digital KYC",
+                "desc": "Frictionless onboarding with e-KYC and biometric validation."
+            },
+            {
+                "title": "Cloud-Native Infra",
+                "desc": "Scale with confidence using cloud-powered systems."
+            },
+            {
+                "title": "Regulatory Readiness",
+                "desc": "Stay ahead with compliance automation tools."
+            }
+        ],
+        "journeyTitle": "Your Digital Transformation Journey",
+        "journeySteps": [
+            "Strategy Consultation & Compliance Audit",
+            "Designing UX-First Banking Interfaces",
+            "Building Scalable & Secure Platforms",
+            "Data Integration & Legacy System Modernization",
+            "Deployment, Monitoring & Optimization"
+        ],
+        "partnersTitle": "Trusted by Institutions & Fintech Innovators",
+        "securityTitle": "Built with Compliance and Security at the Core",
+        "securityDesc": "Our platforms adhere to the most rigorous security protocols in the BFSI industry, including:",
+        "securityPoints": [
+            "✔ ISO 27001 & PCI-DSS Compliant",
+            "✔ GDPR & RBI Guidelines Adherence",
+            "✔ Secure API Gateways & Role-Based Access",
+            "✔ Threat Monitoring & Incident Response Systems"
+        ],
+        "useCasesTitle": "Use Cases in BFSI Digital Transformation",
+        "useCases": [
+            {
+                "heading": "Fintech Mobile Apps",
+                "desc": "Custom mobile banking and insurance apps with biometric login, e-wallets, and AI chatbots."
+            },
+            {
+                "heading": "Blockchain in Finance",
+                "desc": "Transparent and tamper-proof transactions for lending, claims, and remittances."
+            },
+            {
+                "heading": "Customer Identity Management",
+                "desc": "Integrated identity systems for customer profiling, fraud prevention, and compliance."
+            }
+        ],
+        "insightsTitle": "BFSI Insights & Resources",
+        "insights": [
+            {
+                "title": "Top 5 Digital Trends in BFSI 2025",
+                "desc": "Learn how banks and insurers are innovating faster than ever."
+            },
+            {
+                "title": "Guide to Cloud Compliance for Fintech",
+                "desc": "A practical checklist to migrate securely and stay compliant."
+            },
+            {
+                "title": "AI in Fraud Detection: Case Studies",
+                "desc": "How AI is redefining fraud mitigation in the financial world."
+            }
+        ],
+        "ctaTitle": "Ready to Reinvent Finance for the Digital Age?",
+        "ctaDesc": "Let us help you build secure, customer-centric, and future-proof digital platforms.",
+        "ctaBtn": "Get a Consultation"
     }
 }
