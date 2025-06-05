@@ -1,10 +1,14 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
+
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 
 export default function page() {
+  const t = useTranslations("automotive");
+
   return (
     <>
       {/* Hero Banner */}
@@ -15,32 +19,17 @@ export default function page() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Driving Innovation in the Automotive Industry
+            {t("heroTitle")}
           </h1>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            From smart manufacturing to connected vehicles — we fuel the digital
-            evolution of automotive businesses.
-          </p>
+          <p className="text-white/70 max-w-2xl mx-auto">{t("heroDesc")}</p>
         </div>
       </section>
 
       {/* Industry Overview */}
       <section className="py-20 px-6 bg-white text-center max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          Accelerating Automotive Transformation
-        </h2>
-        <p className="text-gray-700">
-          The automotive industry is undergoing a revolutionary shift toward
-          digital-first operations, intelligent systems, and customer-centric
-          models. We enable businesses to stay ahead through scalable, secure,
-          and innovative technologies.
-        </p>
-        <p className="text-gray-700">
-          Our Future Tech IT services enhance the automotive industry by
-          streamlining manufacturing, optimizing management, and supporting
-          precision engineering for parts. We increase efficiency, boost
-          productivity, and simplify industry management.
-        </p>
+        <h2 className="text-3xl font-bold mb-4">{t("overviewTitle")}</h2>
+        <p className="text-gray-700">{t("overviewDesc")}</p>
+        <p className="text-gray-700">{t("overviewExtra")}</p>
       </section>
 
       {/* Automotive Solutions */}
@@ -50,32 +39,16 @@ export default function page() {
             Solutions We Offer
           </h3>
           <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Connected Vehicle Systems",
-                desc: "Integrate IoT, GPS, and sensors for fleet tracking, diagnostics, and real-time alerts.",
-                icon: "/icons/connected-car.png",
-              },
-              {
-                title: "Automotive eCommerce",
-                desc: "Sell parts, accessories, and vehicles online with advanced cataloging and user experience.",
-                icon: "/icons/ecommerce-car.png",
-              },
-              {
-                title: "Smart Manufacturing",
-                desc: "Enhance production with predictive maintenance, automation, and robotics integration.",
-                icon: "/icons/factory.png",
-              },
-            ].map((item, idx) => (
+            {t.raw("featureItems").map((item, idx) => (
               <div
                 key={idx}
                 className="bg-gray-800 p-6 shadow hover:shadow-lg text-center"
               >
-                <img
+                {/* <img
                   src={item.icon}
                   alt={item.title}
                   className="w-12 h-12 mx-auto mb-4"
-                />
+                /> */}
                 <h4 className="text-xl font-semibold mb-2 text-white">
                   {item.title}
                 </h4>
@@ -89,38 +62,14 @@ export default function page() {
       {/* Use Cases */}
       <section className="py-20 px-6 relative bg-[#070B2A] text-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-8">Practical Applications</h3>
+          <h3 className="text-2xl font-bold mb-8"> {t("useCasesTitle")}</h3>
           <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div>
-              <h4 className="font-semibold mb-2">🚗 Fleet Management</h4>
-              <p className="text-white/80">
-                Monitor driver behavior, fuel usage, maintenance alerts, and
-                real-time GPS tracking.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">🛠️ Predictive Maintenance</h4>
-              <p className="text-white/80">
-                Reduce downtime with AI-based diagnostics and early detection
-                systems.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">
-                📦 Supply Chain Optimization
-              </h4>
-              <p className="text-white/80">
-                Real-time inventory tracking, vendor integration, and automated
-                reordering.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">📱 In-Car Infotainment</h4>
-              <p className="text-white/80">
-                Create immersive driving experiences with entertainment, voice
-                control, and smart assistants.
-              </p>
-            </div>
+            {t.raw("useCases").map((item, idx) => (
+              <div key={idx}>
+                <h4 className="font-semibold mb-2">{item.heading}</h4>
+                <p className="text-white/80">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="absolute -bottom-80 -right-0 opacity-20 w-screen">
@@ -130,23 +79,14 @@ export default function page() {
 
       {/* Tech Stack */}
       <section className="py-20 px-6 bg-gray-100 text-center">
-        <h3 className="text-2xl font-bold mb-8">Technology Stack</h3>
+        <h3 className="text-2xl font-bold mb-8"> {t("techStackTitle")}</h3>
         <div className="flex flex-wrap justify-center gap-6 text-gray-700">
-          {[
-            "React",
-            "Next.js",
-            "AWS IoT",
-            "MongoDB",
-            "Node.js",
-            "Flutter",
-            "Python",
-            "Docker",
-          ].map((tech, idx) => (
+          {t.raw("techStack").map((item, idx) => (
             <span
               key={idx}
               className="p-4 bg-gray-900 text-white  y-2 rounded-full text-sm shadow"
             >
-              {tech}
+              {item}
             </span>
           ))}
         </div>
@@ -155,16 +95,9 @@ export default function page() {
       {/* Impact Metrics */}
       <section className="bg-blue-50 py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-8">
-            Our Performance at a Glance
-          </h3>
+          <h3 className="text-2xl font-bold mb-8">{t("impactTitle")}</h3>
           <div className="grid md:grid-cols-4 gap-10">
-            {[
-              { label: "Projects Delivered", value: "80+" },
-              { label: "Connected Vehicles", value: "12K+" },
-              { label: "Fleet Uptime Increase", value: "18%" },
-              { label: "Automation ROI", value: "24%+" },
-            ].map((item, idx) => (
+            {t.raw("impactMetrics").map((item, idx) => (
               <div key={idx} className="bg-white p-6 shadow text-center">
                 <h4 className="text-3xl font-bold text-blue-600">
                   {item.value}
@@ -179,16 +112,8 @@ export default function page() {
       {/* Why Digital in Automotive */}
       <section className="py-20 px-6 relative bg-[#070B2A] text-white text-center">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Why Embrace Digital in Automotive?
-          </h2>
-          <p className="text-white/80 mb-4">
-            Digital transformation is redefining how the automotive sector
-            designs, manufactures, sells, and services vehicles. With
-            technologies like IoT, AI, and connected systems, businesses are
-            improving safety, reducing costs, and creating exceptional customer
-            experiences.
-          </p>
+          <h2 className="text-3xl font-bold mb-6">{t("whyDigitalTitle")}</h2>
+          <p className="text-white/80 mb-4">{t("whyDigitalDesc")}</p>
         </div>
       </section>
 
@@ -196,28 +121,11 @@ export default function page() {
       <section className="relative bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-12 text-white">
-            Digital Journey of a Modern Auto Business
+            {t("journeyTitle")}
           </h3>
           <div className="relative border-l-2 border-blue-500 pl-6">
-            {[
-              {
-                stage: "Discovery & Engagement",
-                desc: "Reach potential customers through targeted digital campaigns, content, and SEO.",
-              },
-              {
-                stage: "Virtual Showroom",
-                desc: "Allow users to explore vehicles, features, and financing from their devices.",
-              },
-              {
-                stage: "Smart Operations",
-                desc: "Automate supply chains, streamline inventory, and optimize logistics digitally.",
-              },
-              {
-                stage: "After-Sales & Support",
-                desc: "Enable digital maintenance schedules, service booking, and loyalty programs.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="mb-10 ml-4">
+            {t.raw("journeySteps").map((item, idx) => (
+              <div key={idx} className="mb-10 ml-4">
                 <div className="bg-blue-500 text-white px-4 py-2 rounded-full w-fit mb-2">
                   {item.stage}
                 </div>
@@ -227,16 +135,14 @@ export default function page() {
           </div>
         </div>
 
-            <div className="absolute -bottom-60 -right-0 opacity-20 w-screen">
+        <div className="absolute -bottom-60 -right-0 opacity-20 w-screen">
           <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
       {/* Featured Clients */}
       <section className="py-20 px-6 bg-white text-center">
-        <h3 className="text-2xl font-bold mb-8">
-          Trusted by Leading Automotive Brands
-        </h3>
+        <h3 className="text-2xl font-bold mb-8">{t("partnersTitle")}</h3>
         <div className="flex flex-wrap justify-center gap-10 items-center opacity-80">
           {["toyota", "bosch", "bmw", "mahindra", "audi"].map((brand, idx) => (
             <img
@@ -253,7 +159,7 @@ export default function page() {
       <section className="py-20 relative bg-[#070B2A] text-white px-6">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-8 text-white">
-            Frequently Asked Questions
+            {t("faqTitle")}
           </h3>
           <div className="space-y-6">
             {[
@@ -275,24 +181,25 @@ export default function page() {
                 <p className="text-white/70">{faq.a}</p>
               </div>
             ))}
+            {t.raw("faq").map((item, idx) => (
+              <div key={idx} className="bg-gray-800 p-6 shadow">
+                <h4 className="font-semibold mb-2 text-white">{item.q}</h4>
+                <p className="text-white/70">{item.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
       <section className="bg-blue-700 text-white py-20 text-center px-6">
-        <h3 className="text-3xl font-bold mb-4">
-          Future-Proof Your Automotive Business
-        </h3>
-        <p className="mb-6 text-white/90">
-          Embrace next-gen digital tools to stay competitive, connected, and
-          customer-first.
-        </p>
+        <h3 className="text-3xl font-bold mb-4">{t("ctaTitle")}</h3>
+        <p className="mb-6 text-white/90">{t("ctaDesc")}</p>
         <a
           href="/pages/contact"
           className="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded-xl hover:bg-gray-100 transition"
         >
-          Start Your Digital Journey
+          {t("ctaBtn")}
         </a>
       </section>
 

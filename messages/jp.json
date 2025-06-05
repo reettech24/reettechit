@@ -58,6 +58,39 @@
     "make_quote": "見積もり依頼",
     "location": "所在地"
   },
+  "contactus": {
+    "heroTitle": "お問い合わせ",
+    "heroDesc": "ホーム / お問い合わせ",
+    "overviewTitle": "お電話・メール・訪問でのご連絡を歓迎します",
+    "overviewDesc": "ご質問、見積依頼、ご訪問のいずれでも、私たちはいつでも対応いたします。",
+    "featureItems": [
+      {
+        "title": "24時間対応のお電話",
+        "desc": "+91 123-456-7890"
+      },
+      {
+        "title": "見積依頼",
+        "desc": "support@reettechit.com"
+      },
+      {
+        "title": "所在地",
+        "desc": "インジェワディ フェーズ1、プネー、マハラシュトラ"
+      }
+    ],
+    "journeyTitle": "お問い合わせフォーム",
+    "journeySteps": [
+      "お名前",
+      "メールアドレス",
+      "件名",
+      "メッセージ"
+    ],
+    "partnersTitle": "さらに情報が必要ですか？",
+    "securityTitle": "サポートの様子をご覧ください",
+    "securityDesc": "どのように迅速かつ明確に対応するかを簡単にご紹介します。",
+    "ctaTitle": "あなたからのご連絡をお待ちしています",
+    "ctaDesc": "メッセージを送信していただければ、すぐにご返信いたします。",
+    "ctaBtn": "メッセージ送信"
+  },
   "about": {
     "title": "Reet Technologiesについて",
     "description": "次世代のデジタル体験を創造するソフトウェア企業です。"
@@ -704,5 +737,664 @@
     "ctaTitle": "デジタル時代の金融を再構築しませんか？",
     "ctaDesc": "安全で顧客中心、将来性のあるデジタルプラットフォームの構築を支援します。",
     "ctaBtn": "無料相談を申し込む"
+  },
+  "healthcare": {
+    "heroTitle": "テクノロジーで医療を変革する",
+    "heroDesc": "革新的なデジタルヘルスソリューションで医療提供者と患者を支援します。",
+    "overviewTitle": "スマートな医療はここから始まる",
+    "overviewDesc": "当社のLMSソリューションは、直感的なソフトウェアで教育を簡素化します。学生記録、財務、電子データなどを包括的かつ効率的に管理します。",
+    "featureTitle": "Key Features of Our Healthcare Solutions",
+    "featureItems": [
+      {
+        "title": "遠隔医療プラットフォーム",
+        "desc": "リモート診察とフォローアップのための安全でスケーラブルな仮想医療システム。"
+      },
+      {
+        "title": "患者ポータル",
+        "desc": "患者が健康記録、予約、処方箋にアクセスできるようにします。"
+      },
+      {
+        "title": "EHR統合",
+        "desc": "インテリジェントな電子健康記録システムで臨床業務を効率化。"
+      }
+    ],
+    "useCasesTitle": "実際のユースケース",
+    "useCases": [
+      {
+        "heading": "クリニックと病院",
+        "desc": "予約、記録、請求、仮想診察を1つの安全なプラットフォームで管理。"
+      },
+      {
+        "heading": "在宅医療提供者",
+        "desc": "遠隔モニタリング、個別ダッシュボード、ケア提供者とのコミュニケーションツールを提供。"
+      },
+      {
+        "heading": "健康・フィットネスアプリ",
+        "desc": "ウェアラブルと同期し、バイタルを追跡、リアルタイムのコーチングを提供するユーザー中心のアプリ。"
+      },
+      {
+        "heading": "診断ラボ",
+        "desc": "予約から報告までのワークフローをデジタル化し、自動アラートと共有機能を提供。"
+      }
+    ],
+    "metricsTitle": "数字で見る私たちの実績",
+    "metrics": [
+      {
+        "value": "25+",
+        "label": "開発された医療アプリ数"
+      },
+      {
+        "value": "500K+",
+        "label": "管理されている患者記録数"
+      },
+      {
+        "value": "99.9%",
+        "label": "稼働保証"
+      },
+      {
+        "value": "200K+",
+        "label": "実施された遠隔診察数"
+      }
+    ],
+    "whyUsTitle": "私たちが選ばれる理由",
+    "whyUsPointsone": [
+      "HIPAA準拠のアーキテクチャ",
+      "病院システムとのシームレスな統合",
+      "クリニックから大規模ネットワークまで対応可能なスケーラブルなプラットフォーム",
+      "リアルタイムの分析と患者モニタリング"
+    ],
+    "whyUsPointstwo": [
+      "患者とスタッフ向けのカスタムモバイルアプリ",
+      "AI/MLによる診断支援",
+      "強固なデータプライバシーとセキュリティプロトコル",
+      "アクセシビリティに配慮したユーザー中心のインターフェース"
+    ],
+    "insightTitle": "医療のデジタル革新はもはや選択肢ではない",
+    "insightDesc": "仮想医療、予測分析、接続されたエコシステムへの移行が現代医療を再定義しています。私たちはその変革を支援します。",
+    "technologyTitle": "使用技術",
+    "technologyStack": [
+      "React",
+      "Next.js",
+      "AWS",
+      "Firebase",
+      "MongoDB",
+      "Node.js",
+      "Docker",
+      "Figma"
+    ],
+    "faqTitle": "よくある質問",
+    "faqs": [
+      {
+        "question": "患者データのプライバシーはどのように確保していますか？",
+        "answer": "HIPAAやGDPRなどの業界標準に従い、暗号化されたストレージと安全なAPIを使用しています。"
+      },
+      {
+        "question": "既存のEHR/EMRシステムと統合できますか？",
+        "answer": "はい、HL7、FHIR、カスタムAPIに対応した統合が可能です。"
+      },
+      {
+        "question": "ウェブおよびモバイルアプリの開発は可能ですか？",
+        "answer": "もちろんです。患者と医療提供者向けに、レスポンシブなウェブプラットフォームおよびネイティブ／ハイブリッドアプリを開発します。"
+      }
+    ],
+    "partnersTitle": "医療革新のパートナーとして信頼されています",
+    "partnersDesc": "私たちは、デジタル医療の最前線を行く組織と共に仕事をしてきました。",
+    "ctaTitle": "未来の医療を共に創りませんか？",
+    "ctaDesc": "安全でスケーラブル、そして患者中心のデジタルプラットフォームを一緒に開発しましょう。",
+    "ctaBtn": "相談を申し込む"
+  },
+  "logistic": {
+    "heroTitle": "物流のデジタルトランスフォーメーション",
+    "heroDescription": "リアルタイムの可視性、運用の卓越性、サプライチェーン全体の自動化を提供",
+    "industryChallengesTitle": "現代物流の課題を克服",
+    "industryChallengesDescription": "物流業界は、スピード、正確性、透明性への要求が高まっています。デジタルソリューションを活用することで、配送ルートの最適化、車両の効率的な管理、リアルタイム追跡の提供が可能になります。",
+    "solutionsTitle": "物流向けデジタルソリューション",
+    "solutions": [
+      {
+        "title": "フリート追跡と管理",
+        "desc": "車両の位置、運転行動、ルート効率をリアルタイムで監視。"
+      },
+      {
+        "title": "ルート最適化",
+        "desc": "AIルーティングツールで燃料コストと配達時間を削減。"
+      },
+      {
+        "title": "サプライチェーンの可視化",
+        "desc": "サプライヤーから顧客までの在庫追跡と透明性を向上。"
+      }
+    ],
+    "benefitsTitle": "物流業者向けの主な利点",
+    "benefits": [
+      "配送コストの削減",
+      "迅速なフルフィルメント",
+      "リアルタイム顧客通知",
+      "運転手の安全性向上"
+    ],
+    "useCaseTitle": "導入事例：全国規模の宅配最適化",
+    "useCaseDescription": "地域物流会社が当社の技術を使用して300以上の配送ルートを最適化し、燃料コストを25％削減、98％の時間通り配送を実現しました。",
+    "useCaseCTA": "導入事例を詳しく見る",
+    "trendsTitle": "注目すべき物流トレンド",
+    "trends": [
+      {
+        "title": "グリーン物流",
+        "desc": "EVフリートや炭素追跡などの持続可能な取り組みが標準化。"
+      },
+      {
+        "title": "ラストマイル自動化",
+        "desc": "ドローンや自律走行車が最終配送を変革。"
+      },
+      {
+        "title": "デジタルツイン",
+        "desc": "リアルタイムの仮想サプライチェーンで予測と計画を改善。"
+      }
+    ],
+    "techStackTitle": "強力な技術で構築",
+    "techStackDescription": "私たちは先進的なツールとプラットフォームを活用し、スケーラブルかつ安全な物流ソリューションを提供します。",
+    "techStack": [
+      "AWS",
+      "Google Maps API",
+      "IoTセンサー",
+      "React.js",
+      "Next.js",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "expertInsightTitle": "専門家の見解",
+    "expertQuote": "「デジタル化は単に配送を速くすることではなく、物流会社の意思決定、顧客との関わり、将来の備えを再定義することです。技術は選択肢ではなく、競争上の必須事項です。」",
+    "expertAuthor": "– グローバルトランスポートフォーラム イノベーションリーダー",
+    "ctaTitle": "あなたの物流を未来へ導く",
+    "ctaDescription": "地域配送から世界的な出荷まで、当社のツールはあらゆるレベルで物流の変革を実現します。",
+    "ctaButton": "デジタル変革を始めましょう"
+  },
+  "automotive": {
+    "heroTitle": "Driving Innovation in the Automotive Industry",
+    "heroDesc": "From smart manufacturing to connected vehicles — we fuel the digital evolution of automotive businesses.",
+    "overviewTitle": "Accelerating Automotive Transformation",
+    "overviewDesc": "The automotive industry is undergoing a revolutionary shift toward digital-first operations, intelligent systems, and customer-centric models. We enable businesses to stay ahead through scalable, secure, and innovative technologies.",
+    "overviewExtra": "Our Future Tech IT services enhance the automotive industry by streamlining manufacturing, optimizing management, and supporting precision engineering for parts. We increase efficiency, boost productivity, and simplify industry management.",
+    "featureItems": [
+      {
+        "title": "Connected Vehicle Systems",
+        "desc": "Integrate IoT, GPS, and sensors for fleet tracking, diagnostics, and real-time alerts."
+      },
+      {
+        "title": "Automotive eCommerce",
+        "desc": "Sell parts, accessories, and vehicles online with advanced cataloging and user experience."
+      },
+      {
+        "title": "Smart Manufacturing",
+        "desc": "Enhance production with predictive maintenance, automation, and robotics integration."
+      }
+    ],
+    "useCasesTitle": "Practical Applications",
+    "useCases": [
+      {
+        "heading": "Fleet Management",
+        "desc": "Monitor driver behavior, fuel usage, maintenance alerts, and real-time GPS tracking."
+      },
+      {
+        "heading": "Predictive Maintenance",
+        "desc": "Reduce downtime with AI-based diagnostics and early detection systems."
+      },
+      {
+        "heading": "Supply Chain Optimization",
+        "desc": "Real-time inventory tracking, vendor integration, and automated reordering."
+      },
+      {
+        "heading": "In-Car Infotainment",
+        "desc": "Create immersive driving experiences with entertainment, voice control, and smart assistants."
+      }
+    ],
+    "techStackTitle": "Technology Stack",
+    "techStack": [
+      "React",
+      "Next.js",
+      "AWS IoT",
+      "MongoDB",
+      "Node.js",
+      "Flutter",
+      "Python",
+      "Docker"
+    ],
+    "impactTitle": "Our Performance at a Glance",
+    "impactMetrics": [
+      {
+        "label": "Projects Delivered",
+        "value": "80+"
+      },
+      {
+        "label": "Connected Vehicles",
+        "value": "12K+"
+      },
+      {
+        "label": "Fleet Uptime Increase",
+        "value": "18%"
+      },
+      {
+        "label": "Automation ROI",
+        "value": "24%+"
+      }
+    ],
+    "whyDigitalTitle": "Why Embrace Digital in Automotive?",
+    "whyDigitalDesc": "Digital transformation is redefining how the automotive sector designs, manufactures, sells, and services vehicles. With technologies like IoT, AI, and connected systems, businesses are improving safety, reducing costs, and creating exceptional customer experiences.",
+    "journeyTitle": "Digital Journey of a Modern Auto Business",
+    "journeySteps": [
+      {
+        "stage": "Discovery & Engagement",
+        "desc": "Reach potential customers through targeted digital campaigns, content, and SEO."
+      },
+      {
+        "stage": "Virtual Showroom",
+        "desc": "Allow users to explore vehicles, features, and financing from their devices."
+      },
+      {
+        "stage": "Smart Operations",
+        "desc": "Automate supply chains, streamline inventory, and optimize logistics digitally."
+      },
+      {
+        "stage": "After-Sales & Support",
+        "desc": "Enable digital maintenance schedules, service booking, and loyalty programs."
+      }
+    ],
+    "partnersTitle": "Trusted by Leading Automotive Brands",
+    "faqTitle": "Frequently Asked Questions",
+    "faq": [
+      {
+        "q": "Can you integrate existing ERP/CRM systems?",
+        "a": "Yes, we specialize in seamless API integrations with platforms like SAP, Salesforce, and Zoho."
+      },
+      {
+        "q": "Do you provide ongoing support?",
+        "a": "Absolutely! We offer post-launch maintenance, performance monitoring, and feature updates."
+      },
+      {
+        "q": "What about data security?",
+        "a": "We implement end-to-end encryption, role-based access, and industry-standard compliance measures."
+      }
+    ],
+    "ctaTitle": "Future-Proof Your Automotive Business",
+    "ctaDesc": "Embrace next-gen digital tools to stay competitive, connected, and customer-first.",
+    "ctaBtn": "Start Your Digital Journey"
+  },
+  "aboutourfocus": {
+    "heroTitle": "私たちの焦点",
+    "heroDesc": "私たちについて / 私たちの焦点",
+    "overviewTitle": "私たちの使命とビジョン",
+    "overviewDesc": "",
+    "featureItems": [
+      {
+        "title": "私たちの使命",
+        "desc": "最先端のデジタルソリューションで組織を支援し、効率性、革新性、測定可能な成果を推進します。"
+      },
+      {
+        "title": "私たちのビジョン",
+        "desc": "変革的なデジタル成長を求めるスタートアップ、企業、政府機関にとって最も信頼されるコンサルティングパートナーになること。"
+      }
+    ],
+    "coreValuesTitle": "私たちの基本的価値",
+    "coreValues": [
+      {
+        "title": "誠実",
+        "desc": "正直さと一貫性を持って行動します。"
+      },
+      {
+        "title": "革新",
+        "desc": "創造性と技術で問題を解決します。"
+      },
+      {
+        "title": "協力",
+        "desc": "クライアントとチームと協力します。"
+      },
+      {
+        "title": "卓越",
+        "desc": "高品質な結果で期待を超えます。"
+      }
+    ],
+    "workProcessTitle": "私たちの働き方",
+    "workProcess": [
+      {
+        "title": "発見",
+        "desc": "目標、ギャップ、機会を評価します。"
+      },
+      {
+        "title": "設計",
+        "desc": "スマートで拡張可能なデジタル戦略を構築します。"
+      },
+      {
+        "title": "開発",
+        "desc": "アジャイルで段階的に実行します。"
+      },
+      {
+        "title": "提供",
+        "desc": "成功を測定し継続的に最適化します。"
+      }
+    ],
+    "globalReachTitle": "世界中で信頼されている",
+    "globalReachDesc": "北米、ヨーロッパ、アジア、中東のクライアントに対応。グローバルな開発とローカリゼーションに精通しています。",
+    "whyChooseUsTitle": "なぜ私たちを選ぶか",
+    "whyChooseUs": [
+      "✔ 経験: 10年以上のデジタルとIT変革の実績。",
+      "✔ 柔軟性: アジャイルなワークフローと迅速なプロトタイピング。",
+      "✔ パートナーシップ: 長期的な関係を重視。",
+      "✔ 専門知識: クラウド、セキュリティ、AIの専門家が在籍。"
+    ],
+    "teamCultureTitle": "私たちのチーム文化",
+    "teamCultureDesc": "好奇心、責任感、革新を大切にする環境を育んでいます。素晴らしい製品は素晴らしいチームから生まれます。"
+  },
+  "aboutoutteam": {
+    "heroTitle": "私たちのチーム",
+    "heroDesc": "私たちについて / 私たちのチーム",
+    "overviewTitle": "協力に基づき、専門知識により推進",
+    "overviewDesc": "私たちの成功の基盤は人材です。技術、ビジネス、デザイン、戦略における数十年の経験を持つグローバルな人材が集まり、卓越性を提供することに尽力しています。",
+    "featureItems": [
+      {
+        "title": "アニカ・パテル",
+        "desc": "CEO — アニカは15年以上の技術リーダーシップとデジタルトランスフォーメーションの経験をもとにビジョンを牽引しています。"
+      },
+      {
+        "title": "ジェームズ・カーター",
+        "desc": "技術部長 — スケーラブルなクラウドシステムの設計と技術革新を主導します。"
+      },
+      {
+        "title": "メイ・ウォン",
+        "desc": "戦略担当副社長 — 企業向けコンサルティングの経験を活かし、ビジネスとテクノロジーの整合性を確保します。"
+      },
+      {
+        "title": "デビッド・キム",
+        "desc": "プロダクト責任者 — 顧客中心の開発プロセスをリードします。"
+      },
+      {
+        "title": "サラ・ロペス",
+        "desc": "オペレーションディレクター — グローバルチームによるスムーズなデリバリーを管理します。"
+      },
+      {
+        "title": "アルジュン・シャルマ",
+        "desc": "ソリューションアーキテクトリーダー — セキュリティと拡張性を重視しながらシステム設計を担当します。"
+      }
+    ],
+    "cultureTitle": "私たちの文化",
+    "cultureDesc": "所有感、包括性、革新性を重視した文化を信じています。私たちのグローバルチームは相互の尊重とシンプルな解決策への情熱で成長しています。"
+  },
+  "studentcourses": {
+    "heroTitle": "学生向けコース",
+    "heroDesc": "キャリア / 学生向けコース",
+    "overviewTitle": "デジタル未来への力を学生に",
+    "overviewDesc": "私たちのコースは、学術理論と業界スキルの架け橋です。実務的なカリキュラムで、スタートアップでも大企業でも通用する準備が整います。",
+    "featureItems": [
+      {
+        "title": "フルスタックWeb開発",
+        "desc": "HTML、CSS、JavaScript、React、Node.jsを使ってアプリやサイトを構築します。",
+        "duration": "12週間"
+      },
+      {
+        "title": "AWS & Azureによるクラウドコンピューティング",
+        "desc": "クラウドの展開、スケーリング、管理の基礎を学びます。",
+        "duration": "8週間"
+      },
+      {
+        "title": "データサイエンス & 機械学習",
+        "desc": "Python、pandas、scikit-learnを使用してデータ分析と予測モデルを作成します。",
+        "duration": "10週間"
+      },
+      {
+        "title": "サイバーセキュリティ基礎",
+        "desc": "脅威、暗号化、防御戦略を理解します。",
+        "duration": "6週間"
+      },
+      {
+        "title": "アジャイルプロジェクト管理",
+        "desc": "JiraやScrumなどのツールと手法を習得します。",
+        "duration": "4週間"
+      },
+      {
+        "title": "UI/UXデザイン",
+        "desc": "Figmaとデザインシステムを活用してユーザー中心のUIを設計します。",
+        "duration": "6週間"
+      }
+    ],
+    "journeyTitle": "なぜ私たちを選ぶ？",
+    "journeySteps": [
+      "マンツーマンの指導",
+      "業界認定資格",
+      "実践的なプロジェクト"
+    ],
+    "partnersTitle": "学びの旅を始めましょう！",
+    "securityTitle": "今日申し込んで、成功する技術キャリアへの一歩を踏み出そう。",
+    "ctaBtn": "今すぐ申し込む"
+  },
+  "jobshiring": {
+    "heroTitle": "チームに参加する",
+    "heroDesc": "キャリア / 採用情報",
+    "overviewTitle": "情熱あるイノベーターを募集中",
+    "overviewDesc": "変化を起こしたい人を常に探しています。ここでは影響力のあるプロジェクトに関わり、優秀な仲間と協力し、キャリアを築く環境があります。",
+    "featureItems": [
+      {
+        "title": "フロントエンド開発者",
+        "desc": "ReactとモダンなUIフレームワークで世界レベルのWeb体験を構築します。"
+      },
+      {
+        "title": "クラウドDevOpsエンジニア",
+        "desc": "AWSとCI/CDを活用してスケーラブルかつ安全なインフラを構築・管理します。"
+      },
+      {
+        "title": "アジャイル プロジェクトマネージャー",
+        "desc": "スプリントと成果物を管理し、チームと関係者の連携を保ちます。"
+      },
+      {
+        "title": "サイバーセキュリティアナリスト",
+        "desc": "インフラの監視と保護、脅威評価、監査を行います。"
+      },
+      {
+        "title": "ビジネスアナリスト",
+        "desc": "市場調査や関係者インタビューを通じて製品戦略をサポートします。"
+      }
+    ],
+    "journeyTitle": "私たちと働く理由",
+    "journeySteps": [
+      "キャリア成長",
+      "柔軟な働き方",
+      "インクルーシブな文化"
+    ],
+    "partnersTitle": "福利厚生",
+    "securityTitle": "Reet Technologiesでの生活",
+    "securityDesc": "私たちはただの同僚ではなく、コミュニティです。",
+    "securityPoints": [
+      "🩺 健康保険 – あなたとご家族のための包括的な補償。",
+      "💻 リモート環境支援 – 生産性と快適性のための在宅支援金。",
+      "🏖️ 有給休暇 – 充実したバケーションとリフレッシュ休暇。",
+      "📚 学習予算 – スキルと成長に投資できます。",
+      "🌍 多様なチーム – グローバルな人材と協力。",
+      "🏆 表彰制度 – 優れた貢献や成功を定期的に称えます。"
+    ],
+    "ctaTitle": "次のステップに進む準備はできていますか？",
+    "ctaDesc": "あなたの仕事に本当の意味がある、そんな会社で働きませんか？今すぐ応募を。",
+    "ctaBtn": "今すぐ応募"
+  },
+  "aiml": {
+    "heroTitle": "AIとMLでビジネスを変革する",
+    "heroDesc": "自動化、洞察、インテリジェンスを解き放ちます。高度なAIおよびMLソリューションで、組織の進化を加速させましょう。",
+    "overviewTitle": "AI、ML、およびデータ駆動型ソリューション",
+    "overviewDesc": "プネーにいる当社の機械学習専門家は、顧客行動の予測、異常の検出、体験のパーソナライズ、反復作業の自動化を可能にするインテリジェントなアルゴリズムを構築します。販売予測から在庫管理まで、当社のMLモデルはビジネスの成長とともに適応し進化します。",
+    "featureItems": [
+      {
+        "title": "予測分析",
+        "desc": "トレンドや顧客行動を予測し、業務を最適化します。"
+      },
+      {
+        "title": "スマートチャットボット",
+        "desc": "自然な会話とリアルタイムサポートを提供するAIエージェント。"
+      },
+      {
+        "title": "コンピュータビジョン",
+        "desc": "画像や動画を高精度で検出、追跡、分類します。"
+      },
+      {
+        "title": "NLPソリューション",
+        "desc": "言語を理解し、インサイトを自動化し、感情を抽出します。"
+      },
+      {
+        "title": "パーソナライゼーションエンジン",
+        "desc": "エンゲージメントを高めるための個別体験を提供。"
+      },
+      {
+        "title": "プロセスの自動化",
+        "desc": "ワークフローを自動化し、手作業を削減し、効率を向上。"
+      }
+    ],
+    "industriesTitle": "対応業界",
+    "industries": [
+      "医療",
+      "Eコマース",
+      "金融",
+      "製造業",
+      "教育",
+      "不動産",
+      "物流",
+      "小売"
+    ],
+    "journeyTitle": "AIソリューション構築の流れ",
+    "journeySteps": [
+      "発見とビジネス理解",
+      "データ収集と前処理",
+      "モデル開発とテスト",
+      "既存システムとの統合",
+      "監視、調整、保守"
+    ],
+    "caseStudyTitle": "ケーススタディ：AIによる販売最適化",
+    "caseStudyDesc": "ユーザー行動を分析し、製品の推奨や価格戦略を動的に調整するMLモデルにより、主要なECブランドのコンバージョン率を27%向上させました。",
+    "caseStudyPoints": [
+      "行動ベースのパーソナライゼーション",
+      "動的価格設定AIモジュール",
+      "モデルインサイト付きリアルタイムダッシュボード"
+    ],
+    "whyChooseUsTitle": "当社を選ぶ理由",
+    "whyChooseUs": [
+      {
+        "title": "専門チーム",
+        "desc": "経験豊富なAI科学者・エンジニア・ドメイン専門家が在籍。"
+      },
+      {
+        "title": "カスタマイズソリューション",
+        "desc": "ビジネスニーズに合わせたAIモデルを提供。"
+      },
+      {
+        "title": "倫理的なAI実践",
+        "desc": "透明性・公平性・責任を重視したAI開発を実施。"
+      }
+    ],
+    "technologiesTitle": "使用技術",
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "Keras",
+      "OpenCV",
+      "spaCy",
+      "AWS SageMaker",
+      "Azure ML",
+      "Google Cloud AI"
+    ],
+    "successStoriesTitle": "お客様の成功事例",
+    "successStories": [
+      {
+        "name": "FinBankのAIによる不正検出",
+        "result": "異常検出により不正損失を40％削減。"
+      },
+      {
+        "name": "RetailCoの動的価格設定",
+        "result": "祭シーズン中に売上が30％増加。"
+      }
+    ],
+    "faqTitle": "よくある質問",
+    "faqs": [
+      {
+        "q": "AIソリューション開発にはどのくらい時間がかかりますか？",
+        "a": "複雑さによります。簡単なモデルは2～4週間、大規模システムでは3～6か月。"
+      },
+      {
+        "q": "サポートは継続して受けられますか？",
+        "a": "はい、導入後の監視・最適化・再トレーニングも提供します。"
+      },
+      {
+        "q": "既存システムにAIを統合できますか？",
+        "a": "もちろん可能です。APIやシステム連携に特化しています。"
+      }
+    ],
+    "ctaTitle": "共に未来を創りましょう",
+    "ctaDesc": "お客様固有の課題に合わせたAI/MLソリューションを設計します。",
+    "ctaBtn": "AIプロジェクトを始める"
+  },
+  "arvr": {
+    "heroTitle": "AR・VRソリューション",
+    "heroDesc": "没入型テクノロジーで未来へ踏み出そう",
+    "sectiontitle": "没入感を体感",
+    "sectiondesc": "仮想物件の探索、外科手術のシミュレーション、従業員トレーニングなど、当社の没入型テクノロジーは現実に限りなく近い体験を提供します。",
+    "overviewTitle": "新たな体験の次元を解き放つ",
+    "overviewDesc": "当社のAR・VRサービスは、ブランドの顧客エンゲージメント、学習、業務などを没入型デジタル環境で革新します。",
+    "industriesTitle": "対応業界",
+    "industriesdesc": "多様な業界向けにカスタマイズされたAR・VRソリューション。",
+    "industries": [
+      {
+        "title": "医療",
+        "desc": "インタラクティブな3D環境とシミュレーションで体験を向上。"
+      },
+      {
+        "title": "不動産",
+        "desc": "インタラクティブな3D環境とシミュレーションで体験を向上。"
+      },
+      {
+        "title": "教育",
+        "desc": "インタラクティブな3D環境とシミュレーションで体験を向上。"
+      },
+      {
+        "title": "Eコマース",
+        "desc": "インタラクティブな3D環境とシミュレーションで体験を向上。"
+      },
+      {
+        "title": "製造業",
+        "desc": "インタラクティブな3D環境とシミュレーションで体験を向上。"
+      },
+      {
+        "title": "エンターテインメント",
+        "desc": "インタラクティブな3D環境とシミュレーションで体験を向上。"
+      }
+    ],
+    "technologiesTitle": "使用技術",
+    "technologies": [
+      "Unity 3D",
+      "Unreal Engine",
+      "WebXR",
+      "ARKit & ARCore",
+      "Vuforia",
+      "Three.js"
+    ],
+    "whychosearvr": "AR/VRを選ぶ理由",
+    "featureItems": [
+      {
+        "title": "エンゲージメント向上",
+        "desc": "印象的でインタラクティブな体験を提供。"
+      },
+      {
+        "title": "没入型トレーニング",
+        "desc": "実世界の環境を再現した効果的な従業員研修。"
+      },
+      {
+        "title": "ブランドの革新",
+        "desc": "最先端テクノロジーで未来志向のブランドを構築。"
+      }
+    ],
+    "vrtitle": "VRをインタラクティブに体験",
+    "vrdesc": "WebGLとThree.jsによるリアルタイム3D体験に飛び込もう。",
+    "whyUsTitle": "当社と働く理由",
+    "whyUsPoints": [
+      "✔️ クリエイティブなストーリーボードと体験設計",
+      "✔️ マルチプラットフォーム対応（モバイル、Web、ウェアラブル）",
+      "✔️ UI/UXのインタラクション設計に精通",
+      "✔️ リリース後のサポートと最適化"
+    ],
+    "ctaTitle": "共に未来を創ろう",
+    "ctaDesc": "構想から導入まで、あなたの没入型ビジョンを形にします。",
+    "ctaBtn": "お問い合わせ"
   }
 }

@@ -58,6 +58,39 @@
         "make_quote": "Make a Quote",
         "location": "Location"
     },
+    "contactus": {
+        "heroTitle": "Contact Us",
+        "heroDesc": "Home / Contact Us",
+        "overviewTitle": "Call, Email, or Visit Us",
+        "overviewDesc": "Reach out to our team anytime. Whether you’re looking for support, a quote, or want to drop by — we’re here for you.",
+        "featureItems": [
+            {
+                "title": "Call Us 24/7",
+                "desc": "+91 123-456-7890"
+            },
+            {
+                "title": "Make a Quote",
+                "desc": "support@reettechit.com"
+            },
+            {
+                "title": "Location",
+                "desc": "Hinjewadi Phase 1, Pune, Maharashtra"
+            }
+        ],
+        "journeyTitle": "Get In Touch",
+        "journeySteps": [
+            "Full Name",
+            "Email Address",
+            "Subject",
+            "Message"
+        ],
+        "partnersTitle": "Need More Info?",
+        "securityTitle": "Watch Our Support Preview",
+        "securityDesc": "A quick look into how we assist clients efficiently and clearly.",
+        "ctaTitle": "Looking Forward to Hearing From You",
+        "ctaDesc": "Send us a message and our team will respond shortly.",
+        "ctaBtn": "Send Message"
+    },
     "about": {
         "title": "About Reet Technologies",
         "description": "We are a software company focused on creating next-generation digital experiences."
@@ -704,5 +737,664 @@
         "ctaTitle": "Ready to Reinvent Finance for the Digital Age?",
         "ctaDesc": "Let us help you build secure, customer-centric, and future-proof digital platforms.",
         "ctaBtn": "Get a Consultation"
+    },
+    "healthcare": {
+        "heroTitle": "Transforming Healthcare with Technology",
+        "heroDesc": "Empowering providers and patients through innovative digital health solutions.",
+        "overviewTitle": "Smarter Healthcare Starts Here",
+        "overviewDesc": "Our LMS solutions simplify education with intuitive software. Manage student records, finances, electronic data, and more through comprehensive, efficient tools.",
+        "featureTitle": "Key Features of Our Healthcare Solutions",
+        "featureItems": [
+            {
+                "title": "Telemedicine Platforms",
+                "desc": "Secure, scalable virtual care systems for remote consultations and follow-ups."
+            },
+            {
+                "title": "Patient Portals",
+                "desc": "Empowering patients with access to health records, appointments, and prescriptions."
+            },
+            {
+                "title": "EHR Integration",
+                "desc": "Streamlining clinical workflows with intelligent electronic health record systems."
+            }
+        ],
+        "useCasesTitle": "Real-World Applications",
+        "useCases": [
+            {
+                "heading": "Clinics & Hospitals",
+                "desc": "Manage appointments, records, billing, and virtual consultations in one secure platform."
+            },
+            {
+                "heading": "Home Healthcare Providers",
+                "desc": "Enable remote monitoring, personalized dashboards, and caregiver communication tools."
+            },
+            {
+                "heading": "Wellness & Fitness Apps",
+                "desc": "User-centric apps that sync with wearables, track vitals, and offer real-time coaching."
+            },
+            {
+                "heading": "Diagnostics Labs",
+                "desc": "Digitize workflows from booking to reporting with automated alerts and sharing."
+            }
+        ],
+        "metricsTitle": "Our Impact in Numbers",
+        "metrics": [
+            {
+                "value": "25+",
+                "label": "Health Apps Built"
+            },
+            {
+                "value": "500K+",
+                "label": "Patient Records Managed"
+            },
+            {
+                "value": "99.9%",
+                "label": "Uptime Guarantee"
+            },
+            {
+                "value": "200K+",
+                "label": "Teleconsults Enabled"
+            }
+        ],
+        "whyUsTitle": "Why Healthcare Organizations Work With Us",
+        "whyUsPointsone": [
+            "HIPAA-compliant architecture",
+            "Seamless integration with hospital systems",
+            "Scalable platforms for small clinics and large networks",
+            "Real-time analytics & patient monitoring"
+        ],
+        "whyUsPointstwo": [
+            "Custom mobile apps for patients & staff",
+            "AI/ML powered diagnostics support",
+            "Robust data privacy & security protocols",
+            "User-centric interfaces for accessibility"
+        ],
+        "insightTitle": "Healthcare Digital Innovation Is No Longer Optional",
+        "insightDesc": "The shift toward virtual care, predictive analytics, and connected ecosystems is redefining modern medicine. We help you lead this transformation.",
+        "technologyTitle": "Technology We Use",
+        "technologyStack": [
+            "React",
+            "Next.js",
+            "AWS",
+            "Firebase",
+            "MongoDB",
+            "Node.js",
+            "Docker",
+            "Figma"
+        ],
+        "faqTitle": "Frequently Asked Questions",
+        "faqs": [
+            {
+                "question": "How do you ensure patient data privacy?",
+                "answer": "We follow industry best practices, including HIPAA and GDPR standards, with encrypted storage and secure APIs."
+            },
+            {
+                "question": "Can you integrate with existing EHR/EMR systems?",
+                "answer": "Yes, our solutions support HL7, FHIR, and custom APIs for smooth integrations."
+            },
+            {
+                "question": "Do you build both web and mobile healthcare apps?",
+                "answer": "Absolutely. We create responsive web platforms and native/hybrid apps tailored for patients and healthcare providers."
+            }
+        ],
+        "partnersTitle": "Trusted by Healthcare Innovators",
+        "partnersDesc": "We’ve had the privilege of working with organizations pushing boundaries in digital care.",
+        "ctaTitle": "Ready to Build the Future of Healthcare?",
+        "ctaDesc": "Let’s develop secure, scalable, and patient-centered digital platforms together.",
+        "ctaBtn": "Schedule a Consultation"
+    },
+    "logistic": {
+        "heroTitle": "Digital Transformation in Logistics",
+        "heroDescription": "Delivering real-time visibility, operational excellence, and automation across the supply chain",
+        "industryChallengesTitle": "Overcoming Modern Logistics Challenges",
+        "industryChallengesDescription": "The logistics industry faces increasing demands for speed, accuracy, and transparency. With digital solutions, companies can optimize delivery routes, manage fleets efficiently, and offer real-time tracking to customers.",
+        "solutionsTitle": "Our Digital Solutions for Logistics",
+        "solutions": [
+            {
+                "title": "Fleet Tracking & Management",
+                "desc": "Monitor vehicle locations, driver behavior, and route efficiency in real-time."
+            },
+            {
+                "title": "Route Optimization",
+                "desc": "Reduce fuel costs and delivery times with AI-powered routing tools."
+            },
+            {
+                "title": "Supply Chain Visibility",
+                "desc": "Improve transparency and inventory tracking across suppliers, distributors, and customers."
+            }
+        ],
+        "benefitsTitle": "Key Benefits for Logistics Providers",
+        "benefits": [
+            "Lower Delivery Costs",
+            "Faster Fulfillment",
+            "Real-Time Customer Updates",
+            "Improved Driver Safety"
+        ],
+        "useCaseTitle": "Use Case: Nationwide Courier Optimization",
+        "useCaseDescription": "A regional logistics company used our technology to optimize 300+ delivery routes, reducing fuel costs by 25% and improving on-time deliveries to 98%.",
+        "useCaseCTA": "View Full Case Study",
+        "trendsTitle": "Logistics Trends to Watch",
+        "trends": [
+            {
+                "title": "Green Logistics",
+                "desc": "Sustainable practices like EV fleets and carbon tracking are becoming standard."
+            },
+            {
+                "title": "Last-Mile Automation",
+                "desc": "Drones and autonomous vehicles are revolutionizing final-mile delivery."
+            },
+            {
+                "title": "Digital Twins",
+                "desc": "Real-time virtual supply chains enable better forecasting and planning."
+            }
+        ],
+        "techStackTitle": "Built with Powerful Technologies",
+        "techStackDescription": "We leverage cutting-edge tools and platforms to deliver logistics solutions that scale efficiently and securely.",
+        "techStack": [
+            "AWS",
+            "Google Maps API",
+            "IoT Sensors",
+            "React.js",
+            "Next.js",
+            "MongoDB",
+            "PostgreSQL"
+        ],
+        "expertInsightTitle": "Expert Insight",
+        "expertQuote": "\"Digitization isn’t just about faster deliveries—it’s about redefining how logistics companies make decisions, interact with clients, and future-proof their supply chains. Technology is not optional—it's a competitive necessity.\"",
+        "expertAuthor": "– Logistics Innovation Lead, Global Transport Forum",
+        "ctaTitle": "Let’s Drive Your Logistics Into the Future",
+        "ctaDescription": "From local distribution to global shipping, our tools empower logistics transformation at every level.",
+        "ctaButton": "Start Your Digital Journey"
+    },
+    "automotive": {
+        "heroTitle": "Driving Innovation in the Automotive Industry",
+        "heroDesc": "From smart manufacturing to connected vehicles — we fuel the digital evolution of automotive businesses.",
+        "overviewTitle": "Accelerating Automotive Transformation",
+        "overviewDesc": "The automotive industry is undergoing a revolutionary shift toward digital-first operations, intelligent systems, and customer-centric models. We enable businesses to stay ahead through scalable, secure, and innovative technologies.",
+        "overviewExtra": "Our Future Tech IT services enhance the automotive industry by streamlining manufacturing, optimizing management, and supporting precision engineering for parts. We increase efficiency, boost productivity, and simplify industry management.",
+        "featureItems": [
+            {
+                "title": "Connected Vehicle Systems",
+                "desc": "Integrate IoT, GPS, and sensors for fleet tracking, diagnostics, and real-time alerts."
+            },
+            {
+                "title": "Automotive eCommerce",
+                "desc": "Sell parts, accessories, and vehicles online with advanced cataloging and user experience."
+            },
+            {
+                "title": "Smart Manufacturing",
+                "desc": "Enhance production with predictive maintenance, automation, and robotics integration."
+            }
+        ],
+        "useCasesTitle": "Practical Applications",
+        "useCases": [
+            {
+                "heading": "Fleet Management",
+                "desc": "Monitor driver behavior, fuel usage, maintenance alerts, and real-time GPS tracking."
+            },
+            {
+                "heading": "Predictive Maintenance",
+                "desc": "Reduce downtime with AI-based diagnostics and early detection systems."
+            },
+            {
+                "heading": "Supply Chain Optimization",
+                "desc": "Real-time inventory tracking, vendor integration, and automated reordering."
+            },
+            {
+                "heading": "In-Car Infotainment",
+                "desc": "Create immersive driving experiences with entertainment, voice control, and smart assistants."
+            }
+        ],
+        "techStackTitle": "Technology Stack",
+        "techStack": [
+            "React",
+            "Next.js",
+            "AWS IoT",
+            "MongoDB",
+            "Node.js",
+            "Flutter",
+            "Python",
+            "Docker"
+        ],
+        "impactTitle": "Our Performance at a Glance",
+        "impactMetrics": [
+            {
+                "label": "Projects Delivered",
+                "value": "80+"
+            },
+            {
+                "label": "Connected Vehicles",
+                "value": "12K+"
+            },
+            {
+                "label": "Fleet Uptime Increase",
+                "value": "18%"
+            },
+            {
+                "label": "Automation ROI",
+                "value": "24%+"
+            }
+        ],
+        "whyDigitalTitle": "Why Embrace Digital in Automotive?",
+        "whyDigitalDesc": "Digital transformation is redefining how the automotive sector designs, manufactures, sells, and services vehicles. With technologies like IoT, AI, and connected systems, businesses are improving safety, reducing costs, and creating exceptional customer experiences.",
+        "journeyTitle": "Digital Journey of a Modern Auto Business",
+        "journeySteps": [
+            {
+                "stage": "Discovery & Engagement",
+                "desc": "Reach potential customers through targeted digital campaigns, content, and SEO."
+            },
+            {
+                "stage": "Virtual Showroom",
+                "desc": "Allow users to explore vehicles, features, and financing from their devices."
+            },
+            {
+                "stage": "Smart Operations",
+                "desc": "Automate supply chains, streamline inventory, and optimize logistics digitally."
+            },
+            {
+                "stage": "After-Sales & Support",
+                "desc": "Enable digital maintenance schedules, service booking, and loyalty programs."
+            }
+        ],
+        "partnersTitle": "Trusted by Leading Automotive Brands",
+        "faqTitle": "Frequently Asked Questions",
+        "faq": [
+            {
+                "q": "Can you integrate existing ERP/CRM systems?",
+                "a": "Yes, we specialize in seamless API integrations with platforms like SAP, Salesforce, and Zoho."
+            },
+            {
+                "q": "Do you provide ongoing support?",
+                "a": "Absolutely! We offer post-launch maintenance, performance monitoring, and feature updates."
+            },
+            {
+                "q": "What about data security?",
+                "a": "We implement end-to-end encryption, role-based access, and industry-standard compliance measures."
+            }
+        ],
+        "ctaTitle": "Future-Proof Your Automotive Business",
+        "ctaDesc": "Embrace next-gen digital tools to stay competitive, connected, and customer-first.",
+        "ctaBtn": "Start Your Digital Journey"
+    },
+    "aboutourfocus": {
+        "heroTitle": "Our Focus",
+        "heroDesc": "About Us / Our Focus",
+        "overviewTitle": "Our Mission & Vision",
+        "overviewDesc": "",
+        "featureItems": [
+            {
+                "title": "Our Mission",
+                "desc": "To empower organizations with cutting-edge digital solutions, driving efficiency, innovation, and measurable outcomes through tailored technology strategies."
+            },
+            {
+                "title": "Our Vision",
+                "desc": "To be the most trusted consulting partner for startups, enterprises, and government bodies seeking transformative digital growth and sustainable value."
+            }
+        ],
+        "coreValuesTitle": "Our Core Values",
+        "coreValues": [
+            {
+                "title": "Integrity",
+                "desc": "We act with honesty and consistency."
+            },
+            {
+                "title": "Innovation",
+                "desc": "We solve problems with creativity and technology."
+            },
+            {
+                "title": "Collaboration",
+                "desc": "We work hand-in-hand with clients and teams."
+            },
+            {
+                "title": "Excellence",
+                "desc": "We exceed expectations with quality results."
+            }
+        ],
+        "workProcessTitle": "How We Work",
+        "workProcess": [
+            {
+                "title": "Discover",
+                "desc": "We assess goals, gaps, and opportunities."
+            },
+            {
+                "title": "Design",
+                "desc": "We craft smart, scalable digital strategies."
+            },
+            {
+                "title": "Develop",
+                "desc": "We execute with agile, iterative delivery."
+            },
+            {
+                "title": "Deliver",
+                "desc": "We measure success and optimize continuously."
+            }
+        ],
+        "globalReachTitle": "Trusted Worldwide",
+        "globalReachDesc": "We've served clients in North America, Europe, Asia, and the Middle East. Our team is equipped to handle the nuances of global-scale development and localization.",
+        "whyChooseUsTitle": "Why Choose Us",
+        "whyChooseUs": [
+            "✔ Experience: 10+ years of digital and IT transformation success.",
+            "✔ Flexibility: Agile workflows, rapid prototyping, and scalable delivery.",
+            "✔ Partnership: Long-term client relationships, not just transactions.",
+            "✔ Expertise: Certified professionals in cloud, security, and AI."
+        ],
+        "teamCultureTitle": "Our Team Culture",
+        "teamCultureDesc": "We foster an environment of curiosity, ownership, and innovation. We believe great products come from great teams—diverse, motivated, and focused on client success."
+    },
+    "aboutoutteam": {
+        "heroTitle": "Our Team",
+        "heroDesc": "About Us / Our Team",
+        "overviewTitle": "Built on Collaboration, Driven by Expertise",
+        "overviewDesc": "Our people are the foundation of our success. With decades of combined experience across tech, business, design, and strategy — we bring together global talent committed to delivering excellence.",
+        "featureItems": [
+            {
+                "title": "Anika Patel",
+                "desc": "Chief Executive Officer — Anika leads our global vision with over 15 years of experience in tech leadership and digital transformation."
+            },
+            {
+                "title": "James Carter",
+                "desc": "Head of Technology — James architects scalable cloud systems and drives innovation across our technical teams."
+            },
+            {
+                "title": "Mei Wong",
+                "desc": "VP of Strategy — With deep experience in enterprise consulting, Mei ensures alignment between business goals and tech execution."
+            },
+            {
+                "title": "David Kim",
+                "desc": "Head of Product — David brings a product-first mindset, ensuring customer-centric design and development workflows."
+            },
+            {
+                "title": "Sara Lopez",
+                "desc": "Director of Operations — Sara oversees operational excellence and ensures smooth client delivery across global teams."
+            },
+            {
+                "title": "Arjun Sharma",
+                "desc": "Lead Solutions Architect — Arjun drives system architecture and client integrations, with a focus on security and scalability."
+            }
+        ],
+        "cultureTitle": "Our Culture",
+        "cultureDesc": "We believe in a culture of ownership, inclusion, and innovation. Our global team thrives on mutual respect and a shared passion for solving complex problems with simple, effective solutions."
+    },
+    "studentcourses": {
+        "heroTitle": "Student Courses",
+        "heroDesc": "Career / Courses for Students",
+        "overviewTitle": "Empowering Students for the Digital Future",
+        "overviewDesc": "Our curated courses bridge academic theory with industry-ready skills. Designed by professionals, these hands-on programs prepare you for the tech world — whether you're launching a startup or joining a global company.",
+        "featureItems": [
+            {
+                "title": "Full-Stack Web Development",
+                "desc": "Build complete websites and apps using HTML, CSS, JavaScript, React, and Node.js.",
+                "duration": "12 weeks"
+            },
+            {
+                "title": "Cloud Computing with AWS & Azure",
+                "desc": "Learn the essentials of deploying, scaling, and managing cloud infrastructure.",
+                "duration": "8 weeks"
+            },
+            {
+                "title": "Data Science & Machine Learning",
+                "desc": "Analyze data and create predictive models using Python, pandas, and scikit-learn.",
+                "duration": "10 weeks"
+            },
+            {
+                "title": "Cybersecurity Fundamentals",
+                "desc": "Understand threats, encryption, and defense strategies in modern IT environments.",
+                "duration": "6 weeks"
+            },
+            {
+                "title": "Agile Project Management",
+                "desc": "Master tools like Jira and methodologies like Scrum to manage software teams.",
+                "duration": "4 weeks"
+            },
+            {
+                "title": "UI/UX Design",
+                "desc": "Design user-centric interfaces using Figma, wireframes, and design systems.",
+                "duration": "6 weeks"
+            }
+        ],
+        "journeyTitle": "Why Learn With Us?",
+        "journeySteps": [
+            "1-on-1 Mentorship",
+            "Industry Certification",
+            "Real Projects"
+        ],
+        "partnersTitle": "Ready to Start Your Learning Journey?",
+        "securityTitle": "Apply today and join hundreds of students building successful tech careers with us.",
+        "ctaBtn": "Apply Now"
+    },
+    "jobshiring": {
+        "heroTitle": "Join Our Team",
+        "heroDesc": "Career / Jobs & Hiring",
+        "overviewTitle": "We’re Hiring Passionate Innovators",
+        "overviewDesc": "We're always looking for people who want to make a difference. At our company, you'll work on impactful projects, collaborate with brilliant minds, and grow your career in a supportive environment.",
+        "featureItems": [
+            {
+                "title": "Frontend Developer",
+                "desc": "Work with React and modern UI frameworks to build world-class web experiences."
+            },
+            {
+                "title": "Cloud DevOps Engineer",
+                "desc": "Deploy and manage scalable, secure infrastructure using AWS and CI/CD pipelines."
+            },
+            {
+                "title": "Project Manager (Agile)",
+                "desc": "Manage sprints and deliverables while keeping teams aligned and stakeholders informed."
+            },
+            {
+                "title": "Cybersecurity Analyst",
+                "desc": "Monitor and protect infrastructure, perform threat assessments and audits."
+            },
+            {
+                "title": "Business Analyst",
+                "desc": "Support product strategy through market research and stakeholder interviews."
+            }
+        ],
+        "journeyTitle": "Why Work With Us?",
+        "journeySteps": [
+            "Career Growth",
+            "Flexible Work",
+            "Inclusive Culture"
+        ],
+        "partnersTitle": "Perks & Benefits",
+        "securityTitle": "Life at Reet Technologies",
+        "securityDesc": "We’re more than just coworkers—we’re a community.",
+        "securityPoints": [
+            "🩺 Health Insurance – Comprehensive coverage for you and your family.",
+            "💻 Remote Setup Stipend – Home office allowance for productivity and comfort.",
+            "🏖️ Paid Time Off – Ample vacation and personal leave to recharge.",
+            "📚 Learning Budget – Invest in your professional development and skills.",
+            "🌍 Diverse Team – Collaborate with global talent from multiple backgrounds.",
+            "🏆 Recognition Program – Celebrate wins and outstanding contributions regularly."
+        ],
+        "ctaTitle": "Ready to Take the Next Step?",
+        "ctaDesc": "Join a mission-driven company where your work truly matters. Apply now or share your resume.",
+        "ctaBtn": "Apply Now"
+    },
+    "aiml": {
+        "heroTitle": "Transform Your Business with AI & ML",
+        "heroDesc": "Unlock automation, insights, and intelligence. Our advanced AI & ML solutions empower your organization to evolve faster and smarter.",
+        "overviewTitle": "AI, ML & Data-Driven Solutions",
+        "overviewDesc": "Our machine learning experts in Pune build intelligent algorithms that help predict customer behavior, detect anomalies, personalize experiences, and automate repetitive tasks. From sales forecasting to inventory management, our ML models adapt and evolve as your business grows.",
+        "featureItems": [
+            {
+                "title": "Predictive Analytics",
+                "desc": "Forecast trends, customer behavior, and optimize operations."
+            },
+            {
+                "title": "Smart Chatbots",
+                "desc": "AI agents that converse naturally and provide real-time support."
+            },
+            {
+                "title": "Computer Vision",
+                "desc": "Detect, track, and classify images or videos with high accuracy."
+            },
+            {
+                "title": "NLP Solutions",
+                "desc": "Understand language, automate insights, and extract sentiment."
+            },
+            {
+                "title": "Personalization Engines",
+                "desc": "Deliver tailored experiences that boost engagement."
+            },
+            {
+                "title": "Process Automation",
+                "desc": "Automate workflows, reduce manual effort, and improve efficiency."
+            }
+        ],
+        "industriesTitle": "Industries We Serve",
+        "industries": [
+            "Healthcare",
+            "E-commerce",
+            "Finance",
+            "Manufacturing",
+            "EdTech",
+            "Real Estate",
+            "Logistics",
+            "Retail"
+        ],
+        "journeyTitle": "How We Build AI Solutions",
+        "journeySteps": [
+            "Discovery & Business Understanding",
+            "Data Collection & Preprocessing",
+            "Model Development & Testing",
+            "Integration with Your Existing Systems",
+            "Monitoring, Tuning & Maintenance"
+        ],
+        "caseStudyTitle": "Case Study: AI-Powered Sales Optimization",
+        "caseStudyDesc": "We helped a leading e-commerce brand increase their conversion rate by 27% through a machine learning model that analyzed user behavior and dynamically adjusted product recommendations and pricing strategies.",
+        "caseStudyPoints": [
+            "Behavior-based personalization",
+            "Dynamic pricing AI module",
+            "Real-time dashboard with model insights"
+        ],
+        "whyChooseUsTitle": "Why Choose Us",
+        "whyChooseUs": [
+            {
+                "title": "Expert Team",
+                "desc": "Our AI scientists, engineers, and domain experts bring years of experience."
+            },
+            {
+                "title": "Customized Solutions",
+                "desc": "We tailor AI models specifically for your business needs."
+            },
+            {
+                "title": "Ethical AI Practices",
+                "desc": "Our solutions prioritize transparency, fairness, and responsibility."
+            }
+        ],
+        "technologiesTitle": "Technologies We Use",
+        "technologies": [
+            "Python",
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-learn",
+            "Keras",
+            "OpenCV",
+            "spaCy",
+            "AWS SageMaker",
+            "Azure ML",
+            "Google Cloud AI"
+        ],
+        "successStoriesTitle": "Client Success Stories",
+        "successStories": [
+            {
+                "name": "FinBank AI Fraud Detection",
+                "result": "Reduced fraud loss by 40% using our anomaly detection system."
+            },
+            {
+                "name": "RetailCo Dynamic Pricing",
+                "result": "Increased sales by 30% during festive seasons via ML-driven pricing."
+            }
+        ],
+        "faqTitle": "Frequently Asked Questions",
+        "faqs": [
+            {
+                "q": "How long does it take to develop an AI solution?",
+                "a": "It depends on the complexity. Simple models may take 2-4 weeks; enterprise systems can take 3-6 months."
+            },
+            {
+                "q": "Do you offer ongoing support?",
+                "a": "Yes, we offer post-deployment monitoring, optimization, and model re-training as needed."
+            },
+            {
+                "q": "Can AI integrate with our existing systems?",
+                "a": "Absolutely. We specialize in seamless API and system integrations."
+            }
+        ],
+        "ctaTitle": "Let’s Build the Future Together",
+        "ctaDesc": "Our AI/ML team is ready to design intelligent solutions tailored to your specific challenges.",
+        "ctaBtn": "Start Your AI Project"
+    },
+    "arvr": {
+        "heroTitle": "AR & VR Solutions",
+        "heroDesc": "Step into the Future with Immersive Technology",
+        "sectiontitle": "Feel the Immersion",
+        "sectiondesc": "Whether it's navigating a virtual property, performing surgery simulations, or training your workforce, our immersive tech brings you as close to reality as it gets.",
+        "overviewTitle": "Unlock a New Dimension of Experience",
+        "overviewDesc": "Our Augmented and Virtual Reality services help brands revolutionize customer engagement, learning, operations, and beyond through immersive digital environments.",
+        "industriesTitle": "Industries We Serve",
+        "industriesdesc": "Tailored AR/VR solutions across a wide spectrum of sectors.",
+        "industries": [
+            {
+                "title": "Healthcare",
+                "desc": "Enhance experiences using interactive 3D environments and simulations."
+            },
+            {
+                "title": "Real Estate",
+                "desc": "Enhance experiences using interactive 3D environments and simulations."
+            },
+            {
+                "title": "Education",
+                "desc": "Enhance experiences using interactive 3D environments and simulations."
+            },
+            {
+                "title": "E-commerce",
+                "desc": "Enhance experiences using interactive 3D environments and simulations."
+            },
+            {
+                "title": "Manufacturing",
+                "desc": "Enhance experiences using interactive 3D environments and simulations."
+            },
+            {
+                "title": "Entertainment",
+                "desc": "Enhance experiences using interactive 3D environments and simulations."
+            }
+        ],
+        "technologiesTitle": "Our Tech Stack",
+        "technologies": [
+            "Unity 3D",
+            "Unreal Engine",
+            "WebXR",
+            "ARKit & ARCore",
+            "Vuforia",
+            "Three.js"
+        ],
+        "whychosearvr": "Why Choose AR/VR..?",
+        "featureItems": [
+            {
+                "title": "Enhanced Engagement",
+                "desc": "Deliver memorable, interactive experiences for your audience."
+            },
+            {
+                "title": "Immersive Training",
+                "desc": "Simulate real-world environments for effective employee training."
+            },
+            {
+                "title": "Brand Innovation",
+                "desc": "Position your brand as a futuristic leader with cutting-edge tech."
+            }
+        ],
+        "vrtitle": "   Explore VR Interactively",
+        "vrdesc": "  Dive into a real-time 3D experience powered by WebGL & Three.js..",
+        "whyUsTitle": "Why Work With Us?",
+        "whyUsPoints": [
+            "✔️ Creative storyboarding & experience mapping",
+            "✔️ Multi-platform support (Mobile, Web, Wearables)",
+            "✔️ Deep understanding of interactive UI/UX",
+            "✔️ Post-launch support & optimization"
+        ],
+        "ctaTitle": "Let’s Build the Future Together",
+        "ctaDesc": "From ideation to deployment, we bring your immersive vision to life.",
+        "ctaBtn": "Get in Touch"
     }
 }
