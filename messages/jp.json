@@ -1120,6 +1120,7 @@
     "heroDesc": "キャリア / 学生向けコース",
     "overviewTitle": "デジタル未来への力を学生に",
     "overviewDesc": "私たちのコースは、学術理論と業界スキルの架け橋です。実務的なカリキュラムで、スタートアップでも大企業でも通用する準備が整います。",
+    "availableCoursesTitle": "Available Courses",
     "featureItems": [
       {
         "title": "フルスタックWeb開発",
@@ -1167,6 +1168,7 @@
     "heroDesc": "キャリア / 採用情報",
     "overviewTitle": "情熱あるイノベーターを募集中",
     "overviewDesc": "変化を起こしたい人を常に探しています。ここでは影響力のあるプロジェクトに関わり、優秀な仲間と協力し、キャリアを築く環境があります。",
+    "availableJobsTitle": "Current Openings",
     "featureItems": [
       {
         "title": "フロントエンド開発者",

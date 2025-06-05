@@ -1120,6 +1120,7 @@
         "heroDesc": "Career / Courses for Students",
         "overviewTitle": "Empowering Students for the Digital Future",
         "overviewDesc": "Our curated courses bridge academic theory with industry-ready skills. Designed by professionals, these hands-on programs prepare you for the tech world — whether you're launching a startup or joining a global company.",
+        "availableCoursesTitle": "Available Courses",
         "featureItems": [
             {
                 "title": "Full-Stack Web Development",
@@ -1167,6 +1168,7 @@
         "heroDesc": "Career / Jobs & Hiring",
         "overviewTitle": "We’re Hiring Passionate Innovators",
         "overviewDesc": "We're always looking for people who want to make a difference. At our company, you'll work on impactful projects, collaborate with brilliant minds, and grow your career in a supportive environment.",
+        "availableJobsTitle": "Current Openings",
         "featureItems": [
             {
                 "title": "Frontend Developer",

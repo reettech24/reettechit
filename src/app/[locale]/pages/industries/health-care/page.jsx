@@ -118,9 +118,7 @@ export default function page() {
 
       {/* Tech Stack */}
       <section className="py-20 px-6 bg-[#070B2A] text-white text-center">
-        <h3 className="text-2xl font-bold mb-8">
-          {t("technologyTitle")}
-          </h3>
+        <h3 className="text-2xl font-bold mb-8">{t("technologyTitle")}</h3>
         <div className="flex flex-wrap justify-center gap-6 text-gray-600">
           {t.raw("technologyStack").map((item, idx) => (
             <span

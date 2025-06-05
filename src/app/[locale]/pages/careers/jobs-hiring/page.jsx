@@ -1,10 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import React from "react";
 
 export default function Page() {
+  const t = useTranslations("jobshiring");
+
   return (
     <>
       {/* Hero Section */}
@@ -14,28 +18,25 @@ export default function Page() {
       >
         <div className="absolute inset-0 bg-[#0A1A3F] opacity-80" />
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">Join Our Team</h1>
-          <p className="text-white/70">Career / Jobs & Hiring</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+            {" "}
+            {t("heroTitle")}
+          </h1>
+          <p className="text-white/70"> {t("heroDesc")}</p>
         </div>
       </section>
 
       {/* Introduction */}
       <section className="py-16 px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          We’re Hiring Passionate Innovators
-        </h2>
-        <p className="text-gray-700 max-w-3xl mx-auto">
-          We're always looking for people who want to make a difference. At our
-          company, you'll work on impactful projects, collaborate with brilliant
-          minds, and grow your career in a supportive environment.
-        </p>
+        <h2 className="text-3xl font-bold mb-4">{t("overviewTitle")}</h2>
+        <p className="text-gray-700 max-w-3xl mx-auto">{t("overviewDesc")}</p>
       </section>
 
       {/* Job Openings */}
       <section className="relative bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl font-bold text-center mb-12 text-white">
-            Current Job Openings
+            {t("availableJobsTitle")}
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -84,6 +85,21 @@ export default function Page() {
                 </div>
               </div>
             ))}
+            {t.raw("featureItems").map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-800 p-6 shadow hover:shadow-xl transition"
+              >
+                <h4 className="text-xl font-semibold mb-2 text-white">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-white/80 mb-3">{item.desc}</p>
+                <div className="flex justify-between text-sm text-whaite/60">
+                  {/* <span>{job.location}</span>
+                  <span>{job.type}</span> */}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -96,11 +112,9 @@ export default function Page() {
       <section className="py-20 px-6 relative overflow-hidden bg-[#070B2A] text-white">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-3xl font-bold mb-4 text-white">
-            Life at Reet Technologies
+            {t("securityTitle")}
           </h3>
-          <p className="text-white/80 mb-10">
-            We’re more than just coworkers—we’re a community.
-          </p>
+          <p className="text-white/80 mb-10">{t("securityDesc")}</p>
           <div className="grid md:grid-cols-3 gap-6">
             {["logo3.png", "logo3.png", "logo3.png"].map((img, idx) => (
               <img
@@ -121,7 +135,7 @@ export default function Page() {
       {/* Perks Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold">Why Work With Us?</h3>
+          <h3 className="text-2xl font-bold"> {t("journeyTitle")}</h3>
           <p className="text-black max-w-3xl mx-auto mt-2">
             More than just a job — it’s a journey of learning, impact, and
             collaboration.
@@ -157,6 +171,19 @@ export default function Page() {
               We value diversity, transparency, and honest collaboration.
             </p>
           </div>
+          {t.raw("journeySteps").map((item, idx) => (
+            <div key={idx} className=" bg-gray-900 p-6 shadow-sm">
+              <img
+                src="/logo3.png"
+                className="w-40 mx-auto mb-3"
+                alt="Culture"
+              />
+              <h4 className="font-semibold text-white">{item}</h4>
+              <p className="text-sm text-white/80 mt-2">
+                We value diversity, transparency, and honest collaboration.
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -164,7 +191,7 @@ export default function Page() {
       <section className="relative bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-6 text-white">
-            Perks & Benefits
+            {t("partnersTitle")}
           </h3>
           <div className="grid md:grid-cols-3 gap-10 text-left">
             {[
@@ -207,6 +234,15 @@ export default function Page() {
                 <p className="text-sm text-white/80">{perk.desc}</p>
               </div>
             ))}
+            {t.raw("securityPoints").map((item, idx) => (
+              <div key={idx} className="bg-gray-800 p-6 shadow-sm">
+                {/* <div className="text-3xl mb-3">{item.icon}</div> */}
+                <h4 className="font-semibold text-lg mb-1 text-white">
+                  {item}
+                </h4>
+                {/* <p className="text-sm text-white/80">{item.desc}</p> */}
+              </div>
+            ))}
           </div>
         </div>
         <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
@@ -229,18 +265,13 @@ export default function Page() {
 
       {/* Call to Action */}
       <section className="bg-black text-white py-20 px-6 text-center rounded-t-3xl">
-        <h3 className="text-3xl font-bold mb-4">
-          Ready to Take the Next Step?
-        </h3>
-        <p className="mb-6 text-white/90">
-          Join a mission-driven company where your work truly matters. Apply now
-          or share your resume.
-        </p>
+        <h3 className="text-3xl font-bold mb-4">{t("ctaTitle")}</h3>
+        <p className="mb-6 text-white/90">{t("ctaDesc")}</p>
         <a
           href="/pages/contact"
           className="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition"
         >
-          Apply Now
+          {t("ctaBtn")}
         </a>
       </section>
 

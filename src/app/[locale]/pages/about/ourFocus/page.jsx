@@ -30,7 +30,7 @@ export default function Page() {
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12">
           {t.raw("featureItems").map((item, idx) => (
-            <div>
+            <div key={idx}>
               <div className="text-2xl font-bold mb-4"> {item.title}</div>
               <p className="text-gray-700">{item.desc}</p>
             </div>
