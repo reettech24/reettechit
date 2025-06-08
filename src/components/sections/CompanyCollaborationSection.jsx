@@ -9,6 +9,8 @@ const collaborators = [
   { name: 'TAW Designs & Architects', logo: '/partners/logo3.png' },
   { name: 'Cludo bits', logo: '/partners/cludobits.png' },
   { name: 'Data Vertex Technologies', logo: '/partners/datavertex.png' },
+  { name: 'Rid Tech', logo: '/partners/client-6.png' },
+  { name: 'alternative leadership', logo: '/partners/client-7.png' },
 ];
 
 export default function CompanyCollaborationSection() {
@@ -40,7 +42,7 @@ export default function CompanyCollaborationSection() {
       </div>
 
       {/* Collaborators Grid */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 items-center justify-center">
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-10 items-center justify-center">
         {collaborators.map((partner, index) => (
           <motion.div
             key={partner.name}
@@ -53,7 +55,7 @@ export default function CompanyCollaborationSection() {
             <img
               src={partner.logo}
               alt={`${partner.name} logo`}
-              className="max-h-16 object-contain grayscale hover:grayscale-0 transition duration-300"
+              className="max-h-28 object-contain grayscale hover:grayscale-0 transition duration-300"
             />
           </motion.div>
         ))}

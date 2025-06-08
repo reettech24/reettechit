@@ -1,5 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 // import { OrbitControls, Box, Stars } from '@react-three/drei';
+import { useTranslations } from "next-intl";
+
 import {
   OrbitControls,
   Stars,
@@ -11,6 +13,8 @@ import * as THREE from "three";
 import VirtualSpace from "./VirtualSpace";
 
 function VRModel() {
+  const t = useTranslations("arvr");
+
   return (
     <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10 backdrop-blur-md relative">
       <Canvas camera={{ position: [3, 3, 3] }}>
@@ -45,16 +49,18 @@ function VRModel() {
 }
 
 export default function VRSection() {
+  const t = useTranslations("arvr");
+
   return (
     <section className="relative z-10 bg-[#0a0a23] py-24 px-6 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] bg-purple-500/20 rounded-full blur-3xl opacity-30 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-purple-500 animate-pulse mb-6 tracking-tight">
-          Explore VR Interactively
+          {t("vrtitle")}
         </h2>
         <p className="text-white/70 max-w-2xl mx-auto mb-14 text-lg">
-          Dive into a real-time 3D experience powered by WebGL & Three.js.
+          {t("vrdesc")}
         </p>
         <div className="relative before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-br before:from-cyan-500/10 before:to-purple-500/5 before:blur-2xl before:z-[-1]">
           <VRModel />

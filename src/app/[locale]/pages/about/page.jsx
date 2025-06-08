@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import ProjectShowcase from "@/components/sections/ProjectsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import AboutSection from "@/components/sections/AboutSection";
+import NexusSolutionsSection from "@/components/sections/NexusSolutionsSection";
 
 export default function AboutPage() {
   const t = useTranslations("about");
@@ -35,9 +36,14 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-gray-800">Mission</h2>
             <p className="text-gray-600 mb-4">
-              To empower small and medium-sized enterprises (SMEs) across India
-              with innovative, affordable digital solutions that foster growth,
-              efficiency, and impact.
+              we aim to empower businesses through advanced technology solutions
+              that drive innovation, efficiency, and growth. We are dedicated to
+              transforming ideas into reality by leveraging our expertise in
+              cutting-edge technologies like AR, VR, AI, ML, Digital Marketing,
+              High End Website Development, Effective and Easy Mobile
+              Applications and digital transformation. Our goal is to deliver
+              exceptional client experiences and create value by providing
+              tailored, impactful, and future-ready solutions.
             </p>
           </div>
           <img
@@ -65,8 +71,12 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-gray-800">Vision</h2>
             <p className="text-gray-600 mb-4">
-              To become the most trusted digital transformation partner for SMEs
-              by simplifying technology and amplifying opportunity.
+              To be a globally recognized leader in technology innovation and
+              digital transformation, bridging the gap between tradition and the
+              future of technology. We envision a world where businesses of all
+              sizes can harness the power of advanced technology to achieve new
+              heights, enhance customer engagement, and thrive in an
+              ever-evolving digital landscape.
             </p>
           </div>
         </div>
@@ -217,6 +227,7 @@ export default function AboutPage() {
 
       {/* Project Showcase */}
       <ProjectShowcase />
+      <NexusSolutionsSection />
 
       {/* Testimonials */}
       <TestimonialSection />

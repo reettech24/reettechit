@@ -907,45 +907,45 @@
     "ctaButton": "デジタル変革を始めましょう"
   },
   "automotive": {
-    "heroTitle": "Driving Innovation in the Automotive Industry",
-    "heroDesc": "From smart manufacturing to connected vehicles — we fuel the digital evolution of automotive businesses.",
-    "overviewTitle": "Accelerating Automotive Transformation",
-    "overviewDesc": "The automotive industry is undergoing a revolutionary shift toward digital-first operations, intelligent systems, and customer-centric models. We enable businesses to stay ahead through scalable, secure, and innovative technologies.",
-    "overviewExtra": "Our Future Tech IT services enhance the automotive industry by streamlining manufacturing, optimizing management, and supporting precision engineering for parts. We increase efficiency, boost productivity, and simplify industry management.",
+    "heroTitle": "自動車業界におけるイノベーションの推進",
+    "heroDesc": "スマート製造からコネクテッドビークルまで―私たちは自動車ビジネスのデジタル進化を支えます。",
+    "overviewTitle": "自動車変革を加速する",
+    "overviewDesc": "自動車業界はデジタルファーストな運営、インテリジェントなシステム、顧客中心のモデルへと革命的に変化しています。私たちはスケーラブルで安全、かつ革新的な技術により企業が先を行くのを支援します。",
+    "overviewExtra": "当社のFuture Tech ITサービスは、製造の合理化、管理の最適化、そして部品の精密設計をサポートし、自動車産業を強化します。効率性を高め、生産性を向上させ、業界管理を簡素化します。",
     "featureItems": [
       {
-        "title": "Connected Vehicle Systems",
-        "desc": "Integrate IoT, GPS, and sensors for fleet tracking, diagnostics, and real-time alerts."
+        "title": "コネクテッド車両システム",
+        "desc": "IoT、GPS、センサーを統合し、車両追跡、診断、リアルタイムアラートを実現します。"
       },
       {
-        "title": "Automotive eCommerce",
-        "desc": "Sell parts, accessories, and vehicles online with advanced cataloging and user experience."
+        "title": "自動車向けeコマース",
+        "desc": "部品、アクセサリー、車両を高度なカタログとUXでオンライン販売します。"
       },
       {
-        "title": "Smart Manufacturing",
-        "desc": "Enhance production with predictive maintenance, automation, and robotics integration."
+        "title": "スマート製造",
+        "desc": "予防保全、自動化、ロボティクス統合により生産を強化します。"
       }
     ],
-    "useCasesTitle": "Practical Applications",
+    "useCasesTitle": "実用的な活用事例",
     "useCases": [
       {
-        "heading": "Fleet Management",
-        "desc": "Monitor driver behavior, fuel usage, maintenance alerts, and real-time GPS tracking."
+        "heading": "フリート管理",
+        "desc": "ドライバー行動、燃料消費、メンテナンスアラート、GPS追跡を監視します。"
       },
       {
-        "heading": "Predictive Maintenance",
-        "desc": "Reduce downtime with AI-based diagnostics and early detection systems."
+        "heading": "予知保全",
+        "desc": "AIを活用した診断と早期検出システムでダウンタイムを低減します。"
       },
       {
-        "heading": "Supply Chain Optimization",
-        "desc": "Real-time inventory tracking, vendor integration, and automated reordering."
+        "heading": "サプライチェーン最適化",
+        "desc": "リアルタイム在庫追跡、ベンダー統合、自動再注文を実現します。"
       },
       {
-        "heading": "In-Car Infotainment",
-        "desc": "Create immersive driving experiences with entertainment, voice control, and smart assistants."
+        "heading": "車載インフォテインメント",
+        "desc": "エンターテインメント、音声制御、スマートアシスタントによる没入体験を提供します。"
       }
     ],
-    "techStackTitle": "Technology Stack",
+    "techStackTitle": "技術スタック",
     "techStack": [
       "React",
       "Next.js",
@@ -956,65 +956,65 @@
       "Python",
       "Docker"
     ],
-    "impactTitle": "Our Performance at a Glance",
+    "impactTitle": "実績ハイライト",
     "impactMetrics": [
       {
-        "label": "Projects Delivered",
+        "label": "納品プロジェクト",
         "value": "80+"
       },
       {
-        "label": "Connected Vehicles",
+        "label": "接続車両数",
         "value": "12K+"
       },
       {
-        "label": "Fleet Uptime Increase",
+        "label": "稼働時間の向上",
         "value": "18%"
       },
       {
-        "label": "Automation ROI",
+        "label": "自動化ROI",
         "value": "24%+"
       }
     ],
-    "whyDigitalTitle": "Why Embrace Digital in Automotive?",
-    "whyDigitalDesc": "Digital transformation is redefining how the automotive sector designs, manufactures, sells, and services vehicles. With technologies like IoT, AI, and connected systems, businesses are improving safety, reducing costs, and creating exceptional customer experiences.",
-    "journeyTitle": "Digital Journey of a Modern Auto Business",
+    "whyDigitalTitle": "なぜ自動車分野でデジタル化を？",
+    "whyDigitalDesc": "IoT、AI、コネクテッドシステムにより、安全性の向上、コスト削減、優れた顧客体験を実現するため、自動車業界のデジタル変革が加速しています。",
+    "journeyTitle": "現代自動車ビジネスのデジタルジャーニー",
     "journeySteps": [
       {
-        "stage": "Discovery & Engagement",
-        "desc": "Reach potential customers through targeted digital campaigns, content, and SEO."
+        "stage": "発見とエンゲージメント",
+        "desc": "デジタルキャンペーン、コンテンツ、SEOで見込み客にアプローチします。"
       },
       {
-        "stage": "Virtual Showroom",
-        "desc": "Allow users to explore vehicles, features, and financing from their devices."
+        "stage": "バーチャルショールーム",
+        "desc": "ユーザーが車両、機能、ファイナンスをデバイス上で体験できます。"
       },
       {
-        "stage": "Smart Operations",
-        "desc": "Automate supply chains, streamline inventory, and optimize logistics digitally."
+        "stage": "スマートな運営",
+        "desc": "サプライチェーンの自動化、在庫管理、物流の最適化を進めます。"
       },
       {
-        "stage": "After-Sales & Support",
-        "desc": "Enable digital maintenance schedules, service booking, and loyalty programs."
+        "stage": "アフターセールス＆サポート",
+        "desc": "デジタルによるメンテスケジュール、予約、ロイヤルティプログラムを提供します。"
       }
     ],
-    "partnersTitle": "Trusted by Leading Automotive Brands",
-    "faqTitle": "Frequently Asked Questions",
+    "partnersTitle": "大手自動車ブランドに信頼されています",
+    "faqTitle": "よくある質問",
     "faq": [
       {
-        "q": "Can you integrate existing ERP/CRM systems?",
-        "a": "Yes, we specialize in seamless API integrations with platforms like SAP, Salesforce, and Zoho."
+        "q": "既存のERP/CRMとの統合は可能ですか？",
+        "a": "はい。SAP、Salesforce、ZohoなどとのシームレスなAPI統合を得意としています。"
       },
       {
-        "q": "Do you provide ongoing support?",
-        "a": "Absolutely! We offer post-launch maintenance, performance monitoring, and feature updates."
+        "q": "継続的なサポートはありますか？",
+        "a": "もちろんです。リリース後の保守、性能監視、機能アップデートを提供します。"
       },
       {
-        "q": "What about data security?",
-        "a": "We implement end-to-end encryption, role-based access, and industry-standard compliance measures."
+        "q": "データセキュリティはどうなっていますか？",
+        "a": "エンドツーエンド暗号化、ロールベースアクセス、業界標準のコンプライアンスを実装しています。"
       }
     ],
-    "ctaTitle": "Future-Proof Your Automotive Business",
-    "ctaDesc": "Embrace next-gen digital tools to stay competitive, connected, and customer-first.",
-    "ctaBtn": "Start Your Digital Journey"
+    "ctaTitle": "自動車ビジネスの将来に備えませんか？",
+    "ctaDesc": "次世代のデジタルツールを導入して競争力や接続性、顧客本位を実現しましょう。",
+    "ctaBtn": "デジタルジャーニーを始める"
   },
   "aboutourfocus": {
     "heroTitle": "私たちの焦点",
@@ -1219,26 +1219,32 @@
     "overviewDesc": "プネーにいる当社の機械学習専門家は、顧客行動の予測、異常の検出、体験のパーソナライズ、反復作業の自動化を可能にするインテリジェントなアルゴリズムを構築します。販売予測から在庫管理まで、当社のMLモデルはビジネスの成長とともに適応し進化します。",
     "featureItems": [
       {
+        "icon": "📊",
         "title": "予測分析",
         "desc": "トレンドや顧客行動を予測し、業務を最適化します。"
       },
       {
+        "icon": "💬",
         "title": "スマートチャットボット",
         "desc": "自然な会話とリアルタイムサポートを提供するAIエージェント。"
       },
       {
+        "icon": "🧠",
         "title": "コンピュータビジョン",
         "desc": "画像や動画を高精度で検出、追跡、分類します。"
       },
       {
+        "icon": "🗣️",
         "title": "NLPソリューション",
         "desc": "言語を理解し、インサイトを自動化し、感情を抽出します。"
       },
       {
+        "icon": "🎯",
         "title": "パーソナライゼーションエンジン",
         "desc": "エンゲージメントを高めるための個別体験を提供。"
       },
       {
+        "icon": "⚙️",
         "title": "プロセスの自動化",
         "desc": "ワークフローを自動化し、手作業を削減し、効率を向上。"
       }
@@ -1398,5 +1404,403 @@
     "ctaTitle": "共に未来を創ろう",
     "ctaDesc": "構想から導入まで、あなたの没入型ビジョンを形にします。",
     "ctaBtn": "お問い合わせ"
+  },
+  "crm": {
+    "heroTitle": "CRMおよびERPソリューション",
+    "heroDesc": "カスタムCRMおよびERPソリューションで業務を効率化し、顧客エンゲージメントを向上させましょう。",
+    "overviewTitle": "カスタムCRM、ERP、在庫ソリューション",
+    "overviewDesc": "Reet Technologiesでは、企業が効率的に運営し、情報に基づいた意思決定を行い、競争力を維持できるように、カスタマイズされたCRMおよびERPソリューションを開発しています。",
+    "coreModulesTitle": "主要機能",
+    "coreModulesDesc": "業務自動化と成長のために設計された重要なモジュールを紹介します。",
+    "coreModules": [
+      {
+        "title": "営業およびリード管理",
+        "desc": "リードを追跡し、見込み客を育成し、パイプラインを最適化します。"
+      },
+      {
+        "title": "カスタマーサポート",
+        "desc": "ケースの追跡、SLA管理、多チャネル対応を提供します。"
+      },
+      {
+        "title": "財務および請求",
+        "desc": "請求書発行、自動課金、財務分析を自動化します。"
+      },
+      {
+        "title": "在庫管理およびSCM",
+        "desc": "在庫のリアルタイム追跡、発注、仕入先との連携を実現します。"
+      },
+      {
+        "title": "人事および給与管理",
+        "desc": "従業員記録、給与の自動化、パフォーマンス追跡に対応します。"
+      },
+      {
+        "title": "レポートおよび分析",
+        "desc": "高度な分析とカスタマイズ可能なレポートでスマートな意思決定をサポートします。"
+      }
+    ],
+    "featuresOverviewTitle": "私たちのCRM＆ERPを選ぶ理由",
+    "featuresOverview": [
+      {
+        "title": "完全なカスタマイズ",
+        "desc": "すべてのモジュールやダッシュボードはチームのワークフローに合わせて調整可能です。"
+      },
+      {
+        "title": "クラウドネイティブ",
+        "desc": "エンタープライズ向けクラウドホスティングでどこからでもアクセス可能です。"
+      },
+      {
+        "title": "シームレスな統合",
+        "desc": "WhatsApp、メール、決済ゲートウェイなどのツールと連携可能です。"
+      }
+    ],
+    "industryUseCasesTitle": "業界別ユースケース",
+    "industryUseCasesDesc": "CRM＆ERPはさまざまな業界に柔軟に対応します。",
+    "industryUseCases": [
+      {
+        "title": "小売およびEコマース",
+        "desc": "小売・EC業界向けのカスタムワークフロー、統合、レポート。"
+      },
+      {
+        "title": "ヘルスケア",
+        "desc": "医療業界向けのカスタムワークフロー、統合、レポート。"
+      },
+      {
+        "title": "製造業",
+        "desc": "製造業向けのカスタムワークフロー、統合、レポート。"
+      },
+      {
+        "title": "教育",
+        "desc": "教育分野向けのカスタムワークフロー、統合、レポート。"
+      },
+      {
+        "title": "不動産",
+        "desc": "不動産業向けのカスタムワークフロー、統合、レポート。"
+      },
+      {
+        "title": "物流",
+        "desc": "物流業界向けのカスタムワークフロー、統合、レポート。"
+      }
+    ],
+    "crmFeaturesTitle": "CRM機能",
+    "crmFeatures": [
+      "リード＆営業管理",
+      "顧客セグメンテーションと追跡",
+      "Eメール＆SMSキャンペーン自動化",
+      "リアルタイム分析のカスタムダッシュボード",
+      "統合サポートチケットシステム"
+    ],
+    "erpModulesTitle": "主要ERPモジュール",
+    "erpModules": [
+      "財務・会計",
+      "人事管理",
+      "調達・サプライチェーン",
+      "生産計画・制御",
+      "コンプライアンスとレポート自動化"
+    ],
+    "inventoryHighlightsTitle": "在庫管理の主な特徴",
+    "inventoryHighlights": [
+      "在庫レベルの監視とアラート",
+      "バーコードとロット追跡",
+      "発注および注文管理",
+      "倉庫および物流との統合",
+      "在庫ダッシュボードとレポート"
+    ],
+    "ctaTitle": "ビジネスを効率化する準備はできていますか？",
+    "ctaDesc": "お客様のニーズに合い、成長に対応できるCRM＆ERPソリューションを導入しましょう。",
+    "ctaBtn": "お問い合わせ"
+  },
+  "mobile": {
+    "heroTitle": "Web & モバイルアプリケーションソリューション",
+    "heroDesc": "私たちは、ビジネスの成長と革新を促進する、レスポンシブでスケーラブル、かつ安全なWebおよびモバイルアプリケーションを設計・開発しています。",
+    "overviewTitle": "Reet Technologiesでは、",
+    "overviewDesc": "私たちは、ビジネス目標に合わせた高性能なモバイルおよびWebアプリケーションの開発を専門としています。カスタマー向けモバイルアプリや安全でデータ重視のWebプラットフォームなど、現代のユーザー向けに設計された機能豊富なソリューションを提供します。",
+    "overviewPoints": [
+      "迅速な納品のためのアジャイル開発",
+      "ターゲットに合わせたUI/UXデザイン",
+      "高いセキュリティ基準とデータプライバシー準拠",
+      "スケーラブルなバックエンドとクラウド統合",
+      "リリース後のサポート、分析、最適化"
+    ],
+    "whyChooseUsTitle": "私たちを選ぶ理由",
+    "whyChooseUs": [
+      {
+        "title": "専門チーム",
+        "desc": "経験豊富な開発者、デザイナー、プロジェクトマネージャー。"
+      },
+      {
+        "title": "アジャイルプロセス",
+        "desc": "継続的なフィードバックを重視した透明性のある開発。"
+      },
+      {
+        "title": "スケーラブルソリューション",
+        "desc": "お客様のビジネスと共に成長するアプリを構築します。"
+      },
+      {
+        "title": "顧客重視",
+        "desc": "クライアントのニーズとユーザー満足度を最優先にします。"
+      }
+    ],
+    "coreServicesTitle": "主なサービス内容",
+    "coreServices": [
+      {
+        "title": "カスタムWeb開発",
+        "desc": "モダンなフレームワークで構築された高性能Webアプリ。"
+      },
+      {
+        "title": "モバイルアプリ開発",
+        "desc": "目的に合わせたAndroidおよびiOSアプリ。"
+      },
+      {
+        "title": "UI/UXデザイン",
+        "desc": "コンバージョンを促進する魅力的な体験。"
+      },
+      {
+        "title": "バックエンド＆API",
+        "desc": "安全でスケーラブルなバックエンドシステム。"
+      },
+      {
+        "title": "メンテナンス＆サポート",
+        "desc": "信頼性の高いアップデートと問題解決。"
+      },
+      {
+        "title": "クロスプラットフォーム対応",
+        "desc": "React Native、Flutter、PWAに対応。"
+      }
+    ],
+    "industriesTitle": "対応業界",
+    "industries": [
+      "Eコマース",
+      "ヘルスケア",
+      "フィンテック",
+      "教育",
+      "旅行・ホスピタリティ",
+      "物流・サプライチェーン"
+    ],
+    "webAppBenefitsTitle": "Webアプリケーション開発",
+    "webAppBenefitsDesc": "あらゆるデバイスでの利用を想定したスケーラブルでセキュアなWebアプリを構築します。",
+    "webAppPoints": [
+      "カスタムビジネスポータルとダッシュボード",
+      "Eコマースや予約システム",
+      "安全なユーザー管理システム",
+      "クラウドアーキテクチャとデータベース管理",
+      "CRM、ERP、外部ツールとの統合"
+    ],
+    "technologiesTitle": "使用技術",
+    "technologies": [
+      {
+        "title": "フロントエンド",
+        "desc": "React、Angular、Vue、Tailwind CSS"
+      },
+      {
+        "title": "バックエンド",
+        "desc": "Node.js、Python、PHP、Laravel"
+      },
+      {
+        "title": "モバイル",
+        "desc": "Flutter、React Native、Kotlin、Swift"
+      },
+      {
+        "title": "データベース",
+        "desc": "MongoDB、MySQL、PostgreSQL"
+      },
+      {
+        "title": "クラウド",
+        "desc": "AWS、Azure、Docker、Firebase"
+      },
+      {
+        "title": "その他",
+        "desc": "Figma、GitHub、Web3、GraphQL"
+      }
+    ],
+    "processTitle": "開発プロセス",
+    "process": [
+      {
+        "step": "要件定義",
+        "desc": "ニーズと目標の理解。"
+      },
+      {
+        "step": "デザイン",
+        "desc": "UI/UXワイヤーフレームとプロトタイプ作成。"
+      },
+      {
+        "step": "開発",
+        "desc": "堅牢なコードとテスト。"
+      },
+      {
+        "step": "導入",
+        "desc": "リリースと継続的なサポート。"
+      }
+    ],
+    "trustedByTitle": "導入実績",
+    "ctaTitle": "アイデアがありますか？一緒に実現しましょう",
+    "ctaDesc": "スタートアップでも大企業でも、私たちはデジタルビジョンを形にします。今すぐ無料相談にご連絡ください。",
+    "ctaBtn": "今すぐ連絡"
+  },
+  "digitaltransformation": {
+    "heroTitle": "デジタルトランスフォーメーション",
+    "heroDesc": "テクノロジー、自動化、デジタル戦略を通じてビジネスの進化を支援します。",
+    "section1Title": "デジタルトランスフォーメーションで未来を切り拓く",
+    "section1Points": [
+      "最新技術と戦略的手法を組み合わせ、Reet Technologies はプネーの企業向けにデジタル変革を推進します。",
+      "プロセスの自動化とクラウド移行により、柔軟性と効率を高め、将来に備える支援をします。",
+      "今日の急速に進化するテクノロジー主導の世界では、デジタルトランスフォーメーションは選択ではなく必須です。",
+      "当社は、ビジネスのあらゆる面に高度なデジタル技術を統合し、進化をサポートします。",
+      "スタートアップから大企業まで、革新と効率向上、新たな成長機会の創出を実現するカスタマイズされたソリューションを提供します。",
+      "デジタルトランスフォーメーションとは、ビジネスプロセス、文化、顧客体験を変革するためにデジタル技術を活用することを指します。"
+    ],
+    "overviewTitle": "なぜデジタルトランスフォーメーション？",
+    "overviewDesc": "競争の激しい現代において、企業は生き残るために適応が必要です。",
+    "overviewPoints": [
+      "主要業務機能の自動化",
+      "顧客エンゲージメントの強化",
+      "データ主導の戦略",
+      "チーム全体でのアジャイル変革"
+    ],
+    "servicesTitle": "当社のデジタルトランスフォーメーションサービス",
+    "servicesDesc": "デジタル時代においてビジネスを成功に導く包括的なサービス群を提供します。",
+    "services": [
+      {
+        "title": "デジタル戦略とコンサルティング",
+        "description": "変革の旅を導くためのデジタルロードマップを提供します。"
+      },
+      {
+        "title": "クラウド移行とインフラ構築",
+        "description": "スケーラブルで安全、効率的なクラウド環境へ移行します。"
+      },
+      {
+        "title": "AIと自動化の統合",
+        "description": "AIによるプロセスとスマート自動化で生産性を向上します。"
+      },
+      {
+        "title": "IoTとスマートシステム",
+        "description": "デバイスやプラットフォーム全体でのスマートな接続性を実現します。"
+      },
+      {
+        "title": "レガシーシステムの近代化",
+        "description": "古いシステムを現代のニーズに対応させて刷新します。"
+      },
+      {
+        "title": "カスタムソフトウェアとアプリ開発",
+        "description": "ビジネス目標に合致したデジタル製品を構築します。"
+      },
+      {
+        "title": "UI/UXデザインとデジタル体験",
+        "description": "直感的で魅力的、かつ使いやすいインターフェースを設計します。"
+      },
+      {
+        "title": "サイバーセキュリティとコンプライアンス対応",
+        "description": "システムを保護し、規制への準拠を確保します。"
+      }
+    ],
+    "benefitsTitle": "ビジネスへの主な利点",
+    "benefits": [
+      "✓ プロセスの効率化によるコスト削減",
+      "✓ 生産性と従業員満足度の向上",
+      "✓ リアルタイムなデータアクセスと予測分析",
+      "✓ コラボレーションとリモート機能の強化",
+      "✓ テクノロジー主導の世界における競争優位性"
+    ],
+    "caseStudyTitle": "実証された成果と影響",
+    "caseStudyDesc": "物流企業の業務効率を40%改善した実績をご覧ください。",
+    "caseStudyCta": "無料相談を予約する"
+  },
+  "digitalmarketing": {
+    "heroTitle": "デジタルマーケティングで賢く成長",
+    "heroDesc": "適切なオーディエンスを惹きつけ、関与させ、コンバージョンに導きます。",
+    "aboutTitle": "エンドツーエンドのデジタル成長パートナー",
+    "aboutPoints": [
+      "創造性とデータに基づいたインサイトを組み合わせた成長戦略を作成し、測定可能な成果を得ます。",
+      "SEO、広告、メール、ソーシャル、インフルエンサー、アフィリエイトマーケティング",
+      "専任の専門家、週次レポート、A/B テスト",
+      "スタートアップ、D2Cブランド、大企業向けの360°サポート"
+    ],
+    "servicesTitle": "当社のコアサービス",
+    "services": [
+      {
+        "title": "SEO",
+        "desc": "Googleで上位に表示され、見つけてもらう。"
+      },
+      {
+        "title": "PPC広告",
+        "desc": "Google & Meta の精密な広告ターゲティング。"
+      },
+      {
+        "title": "ソーシャルメディアマーケティング",
+        "desc": "コミュニティと認知度を構築。"
+      },
+      {
+        "title": "メールマーケティング",
+        "desc": "自動化でリードをコンバージョンに。"
+      },
+      {
+        "title": "コンテンツマーケティング",
+        "desc": "教育・情報提供・エンゲージメントの実現。"
+      },
+      {
+        "title": "分析とCRO",
+        "desc": "コンバージョンを継続的に最適化。"
+      }
+    ],
+    "processTitle": "実証済みのマーケティングプロセス",
+    "processSteps": [
+      {
+        "title": "1. リサーチと監査",
+        "desc": "市場、オーディエンス、競合を分析。"
+      },
+      {
+        "title": "2. 戦略設計",
+        "desc": "最適なマルチチャネル戦略を設計。"
+      },
+      {
+        "title": "3. 実行",
+        "desc": "キャンペーンの運用と最適化。"
+      },
+      {
+        "title": "4. レポートと拡大",
+        "desc": "透明性のある成果報告とスケールアップ計画。"
+      }
+    ],
+    "industriesTitle": "対応業界",
+    "industries": [
+      "Eコマース",
+      "不動産",
+      "医療",
+      "教育",
+      "フィンテック",
+      "スタートアップ"
+    ],
+    "whyUsTitle": "当社のデジタルマーケティングを選ぶ理由",
+    "whyUsPoints": [
+      "200社以上の実績",
+      "Google & Meta認定の専門家",
+      "ROI重視の戦略と予算最適化",
+      "専任アカウントマネージャーによる迅速なサポート",
+      "完全な透明性と倫理的な実践"
+    ],
+    "caseStudyTitle": "事例紹介：D2Cブランドで10倍のROASを実現",
+    "caseStudyDesc": "Meta広告、インフルエンサーマーケティング、ランディングページ最適化を活用し、アパレルブランドの月間売上を₹1.5Lから₹10L+に拡大しました。",
+    "caseStudyHighlights": [
+      "+210% オーガニック成長",
+      "CPA を 35% 削減",
+      "3ヶ月で平均ROAS 10倍"
+    ],
+    "faqsTitle": "よくある質問",
+    "faqs": [
+      {
+        "q": "キャンペーン成果はどう測定しますか？",
+        "a": "トラフィック、リード、ROAS、CPA、コンバージョン、ユーザーエンゲージメントなどを高度な分析ツールで追跡します。"
+      },
+      {
+        "q": "開始にあたっての最低予算はありますか？",
+        "a": "ゴールに応じて、月額 ₹15K から始められる柔軟な戦略を提案します。"
+      },
+      {
+        "q": "レポートはもらえますか？",
+        "a": "はい。月次レポートに加え、週次で主要インサイトと次のステップをお伝えします。"
+      }
+    ],
+    "ctaTitle": "オンラインでビジネスを成長させませんか？",
+    "ctaDesc": "あなたのブランドに測定可能な成果をもたらすデジタル戦略を一緒に設計しましょう。",
+    "ctaBtn": "無料戦略コールを予約"
   }
 }

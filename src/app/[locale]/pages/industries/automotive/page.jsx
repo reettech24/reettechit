@@ -162,25 +162,7 @@ export default function page() {
             {t("faqTitle")}
           </h3>
           <div className="space-y-6">
-            {[
-              {
-                q: "Can you integrate existing ERP/CRM systems?",
-                a: "Yes, we specialize in seamless API integrations with platforms like SAP, Salesforce, and Zoho.",
-              },
-              {
-                q: "Do you provide ongoing support?",
-                a: "Absolutely! We offer post-launch maintenance, performance monitoring, and feature updates.",
-              },
-              {
-                q: "What about data security?",
-                a: "We implement end-to-end encryption, role-based access, and industry-standard compliance measures.",
-              },
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-gray-800 p-6 shadow">
-                <h4 className="font-semibold mb-2 text-white">{faq.q}</h4>
-                <p className="text-white/70">{faq.a}</p>
-              </div>
-            ))}
+          
             {t.raw("faq").map((item, idx) => (
               <div key={idx} className="bg-gray-800 p-6 shadow">
                 <h4 className="font-semibold mb-2 text-white">{item.q}</h4>

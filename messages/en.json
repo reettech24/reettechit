@@ -92,8 +92,39 @@
         "ctaBtn": "Send Message"
     },
     "about": {
-        "title": "About Reet Technologies",
-        "description": "We are a software company focused on creating next-generation digital experiences."
+        "heroTitle": "About Us",
+        "heroDesc": "Home / Who We Are",
+        "introTitle": "Grow Your Business with Truly Prominent Innovative Solutions",
+        "introDesc": "At Reet Technologies, we pride ourselves on delivering tailored solutions that meet the unique needs of each client—from immersive AR/VR and AI/ML innovation to digital marketing, mobile apps, and web development. With advanced strategies like 3D Anamorphic videos and creative advertising, we help businesses reach potential customers with impactful, eye-catching content.",
+        "missionTitle": "Our Mission",
+        "missionDesc": "To empower businesses through advanced technology solutions that drive innovation, efficiency, and growth. We are dedicated to transforming ideas into reality using AR, VR, AI, ML, Digital Marketing, Website & App Development, and digital transformation.",
+        "visionTitle": "Our Vision",
+        "visionDesc": "To be a globally recognized leader in technology innovation, bridging tradition with the future. We help businesses of all sizes leverage modern tech to elevate engagement and thrive in a digital-first world.",
+        "cultureTitle": "Our Culture",
+        "cultureValues": [
+            {
+                "title": "Diversity",
+                "desc": "Diversity helps our cross-culture team deliver experiences par excellence."
+            },
+            {
+                "title": "Innovation",
+                "desc": "Innovation drives us to think beyond boundaries and apply expertise with purpose."
+            },
+            {
+                "title": "Creativity",
+                "desc": "Creativity unlocks our potential to produce unique, powerful outcomes."
+            }
+        ],
+        "whyUsTitle": "Why Choose Us",
+        "whyUsDesc": "To Empower Your Business With Our Comprehensive IT Solutions",
+        "resourcesTitle": "Resources",
+        "resourcesDesc": "Download our brochure to explore cutting-edge IT strategies.",
+        "processTitle": "Our Process",
+        "processDesc": "We deliver persona-based and visually inspiring digital experiences by combining deep expertise with design thinking and agile methodologies.",
+        "teamTitle": "Meet Our Expert Team",
+        "teamDesc": "Led by Pankaj Deole, our team of highly-skilled professionals is committed to innovation, quality, and client satisfaction. With over 15 years of experience, Pankaj emphasizes user-friendly design, a strong workplace culture, and continuous team development.",
+        "clientsTitle": "Meet Our Clients",
+        "clientsDesc": "Be Associated with Us"
     },
     "notFound": {
         "message": "Sorry, the page you're looking for doesn't exist.",
@@ -1219,26 +1250,32 @@
         "overviewDesc": "Our machine learning experts in Pune build intelligent algorithms that help predict customer behavior, detect anomalies, personalize experiences, and automate repetitive tasks. From sales forecasting to inventory management, our ML models adapt and evolve as your business grows.",
         "featureItems": [
             {
+                "icon": "📊",
                 "title": "Predictive Analytics",
                 "desc": "Forecast trends, customer behavior, and optimize operations."
             },
             {
+                "icon": "💬",
                 "title": "Smart Chatbots",
                 "desc": "AI agents that converse naturally and provide real-time support."
             },
             {
+                "icon": "🧠",
                 "title": "Computer Vision",
                 "desc": "Detect, track, and classify images or videos with high accuracy."
             },
             {
+                "icon": "🗣️",
                 "title": "NLP Solutions",
                 "desc": "Understand language, automate insights, and extract sentiment."
             },
             {
+                "icon": "🎯",
                 "title": "Personalization Engines",
                 "desc": "Deliver tailored experiences that boost engagement."
             },
             {
+                "icon": "⚙️",
                 "title": "Process Automation",
                 "desc": "Automate workflows, reduce manual effort, and improve efficiency."
             }
@@ -1398,5 +1435,400 @@
         "ctaTitle": "Let’s Build the Future Together",
         "ctaDesc": "From ideation to deployment, we bring your immersive vision to life.",
         "ctaBtn": "Get in Touch"
+    },
+    "crm": {
+        "heroTitle": "CRM & ERP Solutions",
+        "heroDesc": "Streamline your operations and enhance customer engagement with our custom CRM and ERP solutions.",
+        "overviewTitle": "Custom CRM, ERP & Inventory Solutions",
+        "overviewDesc": "At Reet Technologies, we specialize in developing customized CRM and ERP solutions that empower businesses to operate efficiently, make informed decisions, and stay competitive.",
+        "coreModulesTitle": "Core Functionalities",
+        "coreModulesDesc": "Explore essential modules tailored for business automation and growth.",
+        "coreModules": [
+            {
+                "title": "Sales & Lead Management",
+                "desc": "Track leads, nurture prospects, and optimize your pipeline."
+            },
+            {
+                "title": "Customer Support",
+                "desc": "Case tracking, SLA management, and multi-channel communication."
+            },
+            {
+                "title": "Finance & Billing",
+                "desc": "Automated billing, invoicing, and financial analytics."
+            },
+            {
+                "title": "Inventory & SCM",
+                "desc": "Live stock tracking, purchase orders, and supplier integration."
+            },
+            {
+                "title": "HR & Payroll",
+                "desc": "Employee records, payroll automation, and performance tracking."
+            },
+            {
+                "title": "Reports & Insights",
+                "desc": "Advanced analytics and customizable reports for smarter decisions."
+            }
+        ],
+        "featuresOverviewTitle": "Why Choose Our CRM & ERP?",
+        "featuresOverview": [
+            {
+                "title": "Complete Customization",
+                "desc": "Every module and dashboard can be tailored to your team’s exact workflow and needs."
+            },
+            {
+                "title": "Cloud-Native",
+                "desc": "Access your platform anywhere, anytime with enterprise-grade cloud hosting."
+            },
+            {
+                "title": "Seamless Integration",
+                "desc": "Connect with third-party tools including WhatsApp, Email, Payment Gateways, and more."
+            }
+        ],
+        "industryUseCasesTitle": "Industry Use Cases",
+        "industryUseCasesDesc": "CRM & ERP that adapts to different industries effortlessly.",
+        "industryUseCases": [
+            {
+                "title": "Retail & E-commerce",
+                "desc": "Custom workflows, integrations, and reports for the retail and e-commerce sector."
+            },
+            {
+                "title": "Healthcare",
+                "desc": "Custom workflows, integrations, and reports for the healthcare sector."
+            },
+            {
+                "title": "Manufacturing",
+                "desc": "Custom workflows, integrations, and reports for the manufacturing sector."
+            },
+            {
+                "title": "Education",
+                "desc": "Custom workflows, integrations, and reports for the education sector."
+            },
+            {
+                "title": "Real Estate",
+                "desc": "Custom workflows, integrations, and reports for the real estate sector."
+            },
+            {
+                "title": "Logistics",
+                "desc": "Custom workflows, integrations, and reports for the logistics sector."
+            }
+        ],
+        "crmFeaturesTitle": "CRM Features",
+        "crmFeatures": [
+            "Lead & sales management",
+            "Customer segmentation & tracking",
+            "Email & SMS campaign automation",
+            "Custom dashboards with real-time analytics",
+            "Integrated support ticketing system"
+        ],
+        "erpModulesTitle": "Key ERP Modules",
+        "erpModules": [
+            "Finance & accounting",
+            "Human resources management",
+            "Procurement & supply chain",
+            "Production planning & control",
+            "Compliance and reporting automation"
+        ],
+        "inventoryHighlightsTitle": "Inventory Management Highlights",
+        "inventoryHighlights": [
+            "Stock level monitoring and alerts",
+            "Barcode & batch tracking",
+            "Purchase and order management",
+            "Warehouse & logistics integration",
+            "Inventory dashboards and reporting"
+        ],
+        "ctaTitle": "Ready to streamline your business?",
+        "ctaDesc": "Contact us today to implement a CRM & ERP solution that fits your needs and scales with your goals.",
+        "ctaBtn": "Get in Touch"
+    },
+    "mobile": {
+        "heroTitle": "Web & Mobile Application Solutions",
+        "heroDesc": "We design and develop responsive, scalable, and secure web and mobile applications that empower business growth and innovation.",
+        "overviewTitle": "At Reet Technologies,",
+        "overviewDesc": "we specialize in building high-performance mobile and web applications in Pune tailored to your business goals. Whether you need a customer-facing mobile app or a secure, data-driven web platform, we deliver powerful, feature-rich solutions designed for modern users. Our experienced developers help startups, SMEs, and enterprises build apps that improve engagement, increase efficiency, and support digital transformation. At Reet Technologies, we specialize in developing customized CRM and ERP solutions that empower businesses to operate efficiently, make informed decisions, and stay competitive. Whether you're managing customers, inventory, or streamlining operations—our platforms are built for your exact needs.",
+        "overviewPoints": [
+            "Agile development for fast delivery",
+            "Customized UI/UX design for your audience",
+            "High-security standards & data privacy compliance",
+            "Scalable backend and cloud integration",
+            "Post-launch support, analytics & app optimization"
+        ],
+        "whyChooseUsTitle": "Why Choose Us?",
+        "whyChooseUs": [
+            {
+                "title": "Expert Team",
+                "desc": "Experienced developers, designers, and project managers."
+            },
+            {
+                "title": "Agile Process",
+                "desc": "Iterative, transparent development with regular feedback loops."
+            },
+            {
+                "title": "Scalable Solutions",
+                "desc": "We build apps to grow with your business."
+            },
+            {
+                "title": "Customer Focused",
+                "desc": "We prioritize client needs and end-user satisfaction."
+            }
+        ],
+        "coreServicesTitle": "Our Core Services",
+        "coreServices": [
+            {
+                "title": "Custom Web Development",
+                "desc": "High-performance web apps built on modern frameworks."
+            },
+            {
+                "title": "Mobile App Development",
+                "desc": "Android & iOS apps tailored to your goals."
+            },
+            {
+                "title": "UI/UX Design",
+                "desc": "Delightful experiences that convert."
+            },
+            {
+                "title": "Backend & API",
+                "desc": "Secure, scalable backend systems."
+            },
+            {
+                "title": "Maintenance & Support",
+                "desc": "Reliable updates & issue resolution."
+            },
+            {
+                "title": "Cross-Platform Solutions",
+                "desc": "React Native, Flutter, PWA expertise."
+            }
+        ],
+        "industriesTitle": "Industries We Serve",
+        "industries": [
+            "E-commerce",
+            "Healthcare",
+            "Fintech",
+            "Education",
+            "Travel & Hospitality",
+            "Logistics & Supply Chain"
+        ],
+        "webAppBenefitsTitle": "Web Application Development",
+        "webAppBenefitsDesc": "Our web app development solutions empower businesses to operate smarter and reach users across any device. We build scalable, secure, and responsive web applications that are tailored for performance, user experience, and business growth.",
+        "webAppPoints": [
+            "Custom business portals and dashboards",
+            "E-commerce platforms and online booking systems",
+            "Secure user management and login systems",
+            "Cloud-based architecture & database management",
+            "Integration with CRM, ERP, and third-party tools"
+        ],
+        "technologiesTitle": "Technologies We Work With",
+        "technologies": [
+            {
+                "title": "Frontend",
+                "desc": "React, Angular, Vue, Tailwind CSS"
+            },
+            {
+                "title": "Backend",
+                "desc": "Node.js, Python, PHP, Laravel"
+            },
+            {
+                "title": "Mobile",
+                "desc": "Flutter, React Native, Kotlin, Swift"
+            },
+            {
+                "title": "Database",
+                "desc": "MongoDB, MySQL, PostgreSQL"
+            },
+            {
+                "title": "Cloud",
+                "desc": "AWS, Azure, Docker, Firebase"
+            },
+            {
+                "title": "Others",
+                "desc": "Figma, GitHub, Web3, GraphQL"
+            }
+        ],
+        "processTitle": "Our Development Process",
+        "process": [
+            {
+                "step": "Discovery",
+                "desc": "Understanding your needs and goals."
+            },
+            {
+                "step": "Design",
+                "desc": "UI/UX wireframes & interactive prototypes."
+            },
+            {
+                "step": "Development",
+                "desc": "Robust coding & rigorous testing."
+            },
+            {
+                "step": "Deployment",
+                "desc": "Go live with ongoing support."
+            }
+        ],
+        "trustedByTitle": "Trusted By",
+        "ctaTitle": "Have an Idea? Let’s Build It Together",
+        "ctaDesc": "Whether you're a startup or enterprise, we bring your digital vision to life. Get in touch for a free consultation.",
+        "ctaBtn": "Contact Us Now"
+    },
+    "digitaltransformation": {
+        "heroTitle": "Digital Transformation",
+        "heroDesc": "Empowering businesses to evolve through technology, automation, and digital strategies.",
+        "section1Title": "Embrace the Future with Digital Transformation",
+        "section1Points": [
+            "By combining the latest technologies with strategic methods, we at Reet Technologies lead digital transformation initiatives for companies in Pune. We help organizations in being more flexible, effective, and prepared for the future by automating processes and moving to the cloud.",
+            "In today's fast-paced, tech-driven world, Digital Transformation is no longer a choice—it's a necessity. At Reet Technologies, we help businesses evolve by integrating advanced digital technologies into every aspect of their operations. Whether you're a startup or an enterprise, our tailored solutions drive innovation, boost efficiency, and unlock new growth opportunities.",
+            "Digital Transformation refers to the process of using digital technologies to create new—or modify existing—business processes, culture, and customer experiences to meet changing business and market."
+        ],
+        "overviewTitle": "Why Digital Transformation?",
+        "overviewDesc": "In today’s competitive environment, businesses need to adapt to survive...",
+        "overviewPoints": [
+            "Automation of core business functions",
+            "Enhanced customer engagement",
+            "Data-driven strategies",
+            "Agile transformation across teams"
+        ],
+        "servicesTitle": "Our Digital Transformation Services",
+        "servicesDesc": "We provide a comprehensive suite of services that empower your business to thrive in the digital age.",
+        "services": [
+            {
+                "title": "Digital Strategy & Consulting",
+                "description": "Tailored digital roadmaps to guide your transformation journey."
+            },
+            {
+                "title": "Cloud Migration & Infrastructure",
+                "description": "Move to scalable, secure, and efficient cloud environments."
+            },
+            {
+                "title": "AI & Automation Integration",
+                "description": "Boost productivity through AI-driven processes and smart automation."
+            },
+            {
+                "title": "IoT & Smart Systems",
+                "description": "Enable smart connectivity across devices and platforms."
+            },
+            {
+                "title": "Legacy System Modernization",
+                "description": "Revamp old systems to meet modern demands and performance."
+            },
+            {
+                "title": "Custom Software & App Development",
+                "description": "Build tailored digital products that match your business goals."
+            },
+            {
+                "title": "UI/UX Design & Digital Experience",
+                "description": "Craft intuitive, engaging, and accessible digital interfaces."
+            },
+            {
+                "title": "Cybersecurity & Compliance Solutions",
+                "description": "Protect your systems and ensure regulatory compliance."
+            }
+        ],
+        "benefitsTitle": "Key Benefits for Your Business",
+        "benefits": [
+            "✓ Cost reduction through streamlined processes",
+            "✓ Increased productivity and employee satisfaction",
+            "✓ Real-time data access and intelligent forecasting",
+            "✓ Enhanced collaboration and remote capabilities",
+            "✓ Competitive advantage in a tech-driven world"
+        ],
+        "caseStudyTitle": "Real Impact, Proven Results",
+        "caseStudyDesc": "Discover how we helped a logistics enterprise improve operational efficiency by 40%...",
+        "caseStudyCta": "book a free consultation"
+    },
+    "digitalmarketing": {
+        "heroTitle": "Grow Smarter with Digital Marketing",
+        "heroDesc": "We help you attract, engage & convert the right audience online.",
+        "aboutTitle": "End-to-End Digital Growth Partner",
+        "aboutPoints": [
+            "We create growth strategies that combine creativity with data-driven insights to get real, measurable results across channels.",
+            "SEO, Ads, Email, Social, Influencer & Affiliate Marketing",
+            "Dedicated experts, weekly reports & A/B testing",
+            "360° support for startups, D2C brands, and enterprises"
+        ],
+        "servicesTitle": "Our Core Services",
+        "services": [
+            {
+                "title": "SEO",
+                "desc": "Get ranked & found on Google."
+            },
+            {
+                "title": "PPC Advertising",
+                "desc": "Laser-targeted Google & Meta ads."
+            },
+            {
+                "title": "Social Media Marketing",
+                "desc": "Build community & awareness."
+            },
+            {
+                "title": "Email Marketing",
+                "desc": "Convert leads with automation."
+            },
+            {
+                "title": "Content Marketing",
+                "desc": "Educate, inform, and engage."
+            },
+            {
+                "title": "Analytics & CRO",
+                "desc": "Optimize conversions continuously."
+            }
+        ],
+        "processTitle": "Our Proven Marketing Process",
+        "processSteps": [
+            {
+                "title": "1. Research & Audit",
+                "desc": "We analyze your market, audience, and competitors."
+            },
+            {
+                "title": "2. Strategy Design",
+                "desc": "We define a tailored multi-channel roadmap."
+            },
+            {
+                "title": "3. Execution",
+                "desc": "Our team runs and optimizes campaigns."
+            },
+            {
+                "title": "4. Report & Scale",
+                "desc": "You get transparent performance updates with scale-up plans."
+            }
+        ],
+        "industriesTitle": "Industries We Serve",
+        "industries": [
+            "E-commerce",
+            "Real Estate",
+            "Healthcare",
+            "Education",
+            "Fintech",
+            "Startups"
+        ],
+        "whyUsTitle": "Why Choose Our Digital Marketing Services?",
+        "whyUsPoints": [
+            "Proven Track Record with 200+ clients",
+            "Certified Google & Meta Experts",
+            "ROI-focused strategies & budget optimization",
+            "Fast support with a dedicated account manager",
+            "100% transparency & ethical practices"
+        ],
+        "caseStudyTitle": "Case Study: 10X ROAS for D2C Brand",
+        "caseStudyDesc": "We scaled an apparel brand from ₹1.5L to ₹10L+ monthly revenue using Meta ads, influencer marketing, and landing page optimization.",
+        "caseStudyHighlights": [
+            "+210% Organic Growth",
+            "35% Reduction in CPA",
+            "Avg. ROAS 10x in 3 months"
+        ],
+        "faqsTitle": "FAQs",
+        "faqs": [
+            {
+                "q": "How do you measure campaign success?",
+                "a": "We track KPIs like traffic, leads, ROAS, CPA, conversions, and user engagement through advanced analytics tools."
+            },
+            {
+                "q": "Is there a minimum budget to start?",
+                "a": "Our solutions scale with you. We create budget-friendly strategies based on your goals — starting from as low as ₹15K/month."
+            },
+            {
+                "q": "Will I get reports?",
+                "a": "Yes. You’ll receive detailed monthly reports plus weekly check-ins with key insights and next steps."
+            }
+        ],
+        "ctaTitle": "Ready to Grow Your Business Online?",
+        "ctaDesc": "Let’s design a digital strategy that delivers measurable results for your brand.",
+        "ctaBtn": "Book a Free Strategy Call"
     }
 }

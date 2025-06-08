@@ -13,10 +13,10 @@ export default function page() {
       {/* Hero Section */}
 
       <section
-        className="relative bg-cover bg-center text-white py-40 md:py-52"
-        style={{ backgroundImage: "url('/banners/mobile.jpg')" }}
+        className="relative bg-cover bg-top text-white py-40 md:py-52"
+        style={{ backgroundImage: "url('/banners/RECOM1.jpeg')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070B2A]/80 to-[#1E1E3F]/80" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
             {t("heroTitle")}

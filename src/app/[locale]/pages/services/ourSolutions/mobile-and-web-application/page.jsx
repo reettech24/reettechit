@@ -1,10 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import React from "react";
 import ProjectShowcase from "@/components/sections/ProjectsSection";
 
 export default function Page() {
+  const t = useTranslations("mobile");
+
   return (
     <>
       {/* Hero Section */}
@@ -16,12 +22,11 @@ export default function Page() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#070B2A]/80 to-[#1E1E3F]/80" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-            Web & Mobile Application Solutions
+            {t("heroTitle")}
           </h1>
 
           <p className="text-white text-base sm:text-lg leading-relaxed">
-            We design and develop responsive, scalable, and secure web and
-            mobile applications that empower business growth and innovation.
+            {t("heroDesc")}
           </p>
         </div>
       </section>
@@ -37,21 +42,10 @@ export default function Page() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#070B2A]">
-              At Reet Technologies,
+              {t("overviewTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-700 mb-6">
-              we specialize in building high-performance mobile and web
-              applications in Pune tailored to your business goals. Whether you
-              need a customer-facing mobile app or a secure, data-driven web
-              platform, we deliver powerful, feature-rich solutions designed for
-              modern users. Our experienced developers help startups, SMEs, and
-              enterprises build apps that improve engagement, increase
-              efficiency, and support digital transformation. At Reet
-              Technologies, we specialize in developing customized CRM and ERP
-              solutions that empower businesses to operate efficiently, make
-              informed decisions, and stay competitive. Whether you're managing
-              customers, inventory, or streamlining operations—our platforms are
-              built for your exact needs.
+              {t("overviewDesc")}
             </p>
             <ul className="space-y-4 text-gray-600 text-base">
               <li>✅ Agile development for fast delivery</li>
@@ -59,6 +53,9 @@ export default function Page() {
               <li>✅ High-security standards & data privacy compliance</li>
               <li>✅ Scalable backend and cloud integration</li>
               <li>✅ Post-launch support, analytics & app optimization</li>
+              {t.raw("overviewPoints").map((item, idx) => (
+                <li key={idx}>✅ {item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -66,7 +63,7 @@ export default function Page() {
 
       {/* Why Choose Us */}
       <section className="py-16 px-6 bg-[#070B2A] text-white text-center">
-        <h2 className="text-3xl font-bold mb-10">Why Choose Us?</h2>
+        <h2 className="text-3xl font-bold mb-10">{t("whyChooseUsTitle")}</h2>
         <div className="grid md:grid-cols-4 gap-6 text-left max-w-6xl mx-auto">
           {[
             [
@@ -91,13 +88,24 @@ export default function Page() {
               <p className="text-sm text-white/60">{desc}</p>
             </div>
           ))}
+          {t.raw("whyChooseUs").map((item, idx) => (
+            <div
+              key={idx}
+              className="p-6 bg-gray-800 shadow hover:shadow-md transition"
+            >
+              <h3 className="font-semibold text-lg mb-2 text-white">
+                {item.title}
+              </h3>
+              <p className="text-sm text-white/60">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Our Core Services (with icons or images) */}
       <section className=" relative px-6 py-12 bg-[#070B2A] text-white">
         <h2 className="text-3xl font-bold text-center mb-10">
-          Our Core Services
+          {t("coreServicesTitle")}
         </h2>
         <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
           {[
@@ -147,6 +155,23 @@ export default function Page() {
               <p className="text-sm text-white/60">{desc}</p>
             </div>
           ))}
+
+          {t.raw("coreServices").map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-gray-800 p-6 shadow text-center hover:shadow-lg transition"
+            >
+              {/* <Image
+                src={img}
+                alt={title}
+                width={64}
+                height={64}
+                className="mx-auto mb-4"
+              /> */}
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-sm text-white/60">{item.desc}</p>
+            </div>
+          ))}
         </div>
 
         <div className="absolute -bottom-0 right-0 opacity-10 w-screen">
@@ -156,7 +181,7 @@ export default function Page() {
 
       {/* Industries We Serve */}
       <section className="px-6 py-12 bg-white text-center">
-        <h2 className="text-3xl font-bold mb-10">Industries We Serve</h2>
+        <h2 className="text-3xl font-bold mb-10">{t("industriesTitle")}</h2>
         <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
           {[
             "E-commerce",
@@ -170,18 +195,19 @@ export default function Page() {
               <h3 className="text-lg font-semibold">{industry}</h3>
             </div>
           ))}
+          {t.raw("industries").map((item, idx) => (
+            <div key={idx} className="bg-gray-100 p-6 rounded-xl shadow">
+              <h3 className="text-lg font-semibold">{item}</h3>
+            </div>
+          ))}
         </div>
       </section>
 
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-[#070B2A] text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-          
             <p className="text-base sm:text-lg text-white/70 mb-6">
-              Our web app development solutions empower businesses to operate
-              smarter and reach users across any device. We build scalable,
-              secure, and responsive web applications that are tailored for
-              performance, user experience, and business growth.
+              {t("webAppBenefitsDesc")}
             </p>
             <ul className="space-y-4 text-white/70   text-base">
               <li>✅ Custom business portals and dashboards</li>
@@ -189,6 +215,9 @@ export default function Page() {
               <li>✅ Secure user management and login systems</li>
               <li>✅ Cloud-based architecture & database management</li>
               <li>✅ Integration with CRM, ERP, and third-party tools</li>
+              {t.raw("webAppPoints").map((item, idx) => (
+                <li key={idx}>✅ {item}</li>
+              ))}
             </ul>
           </div>
           <Image
@@ -204,7 +233,7 @@ export default function Page() {
       {/* Technologies We Use */}
       <section className="px-6 py-12 bg-[#070B2A] text-white">
         <h2 className="text-3xl font-bold text-center mb-10">
-          Technologies We Work With
+          {t("technologiesTitle")}
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
           {[
@@ -220,12 +249,18 @@ export default function Page() {
               <p className="text-sm text-white/60">{techs}</p>
             </div>
           ))}
+          {t.raw("technologies").map((item, idx) => (
+            <div key={idx} className="bg-gray-800 p-6 shadow">
+              <h3 className="font-semibold mb-2 text-white">{item.title}</h3>
+              <p className="text-sm text-white/60">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Our Process Timeline */}
       <section className="px-6 py-12 bg-[#f0f0f0] text-center">
-        <h2 className="text-3xl font-bold mb-10">Our Development Process</h2>
+        <h2 className="text-3xl font-bold mb-10"> {t("processTitle")}</h2>
         <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {[
             ["Discovery", "Understanding your needs and goals."],
@@ -244,12 +279,26 @@ export default function Page() {
               <p className="text-sm text-white/60">{desc}</p>
             </div>
           ))}
+          {t.raw("process").map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-gray-800 p-6 shadow hover:shadow-lg text-center"
+            >
+              <h4 className="text-xl font-semibold mb-2 text-white">
+                {item.step}
+              </h4>
+              <p className="text-white/80 text-sm">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Client Logos */}
       <section className="px-6 py-12 bg-[#070B2A] text-white text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-10">Trusted By</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-10">
+          {" "}
+          {t("trustedByTitle")}
+        </h2>
         <div className="flex flex-wrap justify-center items-center gap-8 max-w-5xl mx-auto">
           {[1, 2, 3, 4, 5].map((num) => (
             <Image
@@ -267,18 +316,15 @@ export default function Page() {
 
       {/* Call to Action */}
       <section className="bg-black text-white px-6 py-16 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4">
-          Have an Idea? Let’s Build It Together
-        </h2>
+        <h2 className="text-2xl md:text-4xl font-bold mb-4">{t("ctaTitle")}</h2>
         <p className="max-w-2xl mx-auto text-sm md:text-base mb-6">
-          Whether you're a startup or enterprise, we bring your digital vision
-          to life. Get in touch for a free consultation.
+          {t("ctaDesc")}
         </p>
         <a
           href="#contact"
           className="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
         >
-          Contact Us Now
+          {t("ctaBtn")}
         </a>
       </section>
 

@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import NexusSolutionsSection from "@/components/sections/NexusSolutionsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
@@ -5,6 +9,8 @@ import Image from "next/image";
 import React from "react";
 
 export default function Page() {
+  const t = useTranslations("crm");
+
   return (
     <>
       {/* Hero Section */}
@@ -15,16 +21,11 @@ export default function Page() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#070B2A]/80 to-[#1E1E3F]/80" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-            CRM & ERP Solutions
+            {t("heroTitle")}
           </h1>
 
           <p className="text-white text-base sm:text-lg leading-relaxed">
-            Streamline your operations and enhance customer engagement with our
-            custom CRM and ERP solutions. At Reet Technologies, we help
-            businesses centralize data, automate workflows, and gain real-time
-            visibility into sales, inventory, finance, and more. Whether you're
-            scaling up or optimizing processes, our platforms are built to adapt
-            and grow with your organization.
+            {t("heroDesc")}
           </p>
         </div>
       </section>
@@ -39,14 +40,10 @@ export default function Page() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#070B2A]">
-              Custom CRM, ERP & Inventory Solutions
+              {t("overviewTitle")}
             </h2>
             <p className="text-base sm:text-lg text-gray-700 mb-6">
-              At Reet Technologies, we specialize in developing customized CRM
-              and ERP solutions that empower businesses to operate efficiently,
-              make informed decisions, and stay competitive. Whether you're
-              managing customers, inventory, or streamlining operations—our
-              platforms are built for your exact needs.
+              {t("overviewDesc")}
             </p>
             <ul className="space-y-4 text-gray-600 text-base">
               <li>
@@ -55,19 +52,24 @@ export default function Page() {
               <li>✅ ERP Solutions Designed for Operational Excellence</li>
               <li>✅ Advanced Inventory Management Software</li>
               <li>✅ Make Informed Business Decisions with Smart Dashboards</li>
+{/* 
+              {t.raw("whyUsPointstwo").map((item, idx) => (
+                <li key={idx}>✅ {item}</li>
+              ))} */}
             </ul>
           </div>
         </div>
       </section>
-      ;{/* Core Modules */}
+      {/* Core Modules */}
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Core Functionalities
+                      {t("coreModulesTitle")}
+
           </h2>
           <p className="text-white/80 mb-10">
-            Explore essential modules tailored for business automation and
-            growth.
+                     {t("coreModulesDesc")}
+
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 text-left">
             {[
@@ -112,6 +114,17 @@ export default function Page() {
                 <p className="text-white/80 text-sm">{mod.desc}</p>
               </div>
             ))}
+            {t.raw("coreModules").map((item, idx) => (
+               <div
+                key={idx}
+                className="bg-gray-800 hover:bg-gray-700 p-6 sm:p-8 shadow-lg hover:scale-105 transition-transform"
+              >
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white/80 text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -119,7 +132,8 @@ export default function Page() {
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Why Choose Our CRM & ERP?
+                    {t("featuresOverviewTitle")}
+
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 text-left">
             <div>
@@ -144,6 +158,20 @@ export default function Page() {
                 Connect with third-party tools including WhatsApp, Email,
                 Payment Gateways, and more.
               </p>
+
+              {t.raw("featuresOverview").map((item, idx) => (
+              <div
+                key={idx}
+                
+              >
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2">
+      {item.title}
+              </h3>
+              <p className="text-white/80">
+                {item.desc}
+              </p>
+              </div>
+            ))}
             </div>
             <Image
               src="/photos/crm3.jpg"
@@ -160,10 +188,12 @@ export default function Page() {
       <section className="bg-gray-100 py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#070B2A] mb-6">
-            Industry Use Cases
+                   {t("industryUseCasesTitle")}
+
           </h2>
           <p className="text-gray-600 mb-10">
-            CRM & ERP that adapts to different industries effortlessly.
+                          {t("industryUseCasesDesc")}
+
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 text-left">
             {[
@@ -187,12 +217,26 @@ export default function Page() {
                 </p>
               </div>
             ))}
+             {t.raw("industryUseCases").map((item, idx) => (
+             <div
+                key={idx}
+                className=" bg-gray-900 hover:bg-gray-800 p-6 shadow hover:shadow-xl transition"
+              >
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white/70 text-sm ">
+               {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">CRM Features</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">            {t("crmFeaturesTitle")}
+</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
             {[
               "Lead & sales management",
@@ -208,13 +252,22 @@ export default function Page() {
                 <h3 className="text-lg font-semibold mb-2">{item}</h3>
               </div>
             ))}
+             {t.raw("crmFeatures").map((item, idx) => (
+               <div
+                key={idx}
+                className="bg-gray-800 hover:bg-gray-700 p-6 shadow-md rounded transition"
+              >
+                <h3 className="text-lg font-semibold mb-2">{item}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
       <section className="bg-gray-100 text-[#070B2A] py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Key ERP Modules
+            {t("erpModulesTitle")}
+
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
             {[
@@ -231,6 +284,14 @@ export default function Page() {
                 <h3 className="text-lg font-semibold mb-2">{item}</h3>
               </div>
             ))}
+            {t.raw("erpModules").map((item, idx) => (
+               <div
+                key={idx}
+                className="bg-white hover:bg-gray-50 p-6 shadow-md rounded transition"
+              >
+                <h3 className="text-lg font-semibold mb-2">{item}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -238,7 +299,8 @@ export default function Page() {
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Inventory Management Highlights
+                   {t("inventoryHighlightsTitle")}
+
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
             {[
@@ -255,23 +317,38 @@ export default function Page() {
                 <h3 className="text-lg font-semibold mb-2">{item}</h3>
               </div>
             ))}
+             {t.raw("inventoryHighlights").map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-800 p-6 shadow hover:shadow-lg text-center"
+              >
+                <h4 className="text-xl font-semibold mb-2 text-white">
+                  {item.title}
+                </h4>
+                <p className="text-white/80 text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
       {/* Call to Action */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-[#070B2A] text-white text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-          Ready to streamline your business?
+                     {t("ctaTitle")}
+
         </h2>
         <p className="text-white/80 max-w-xl mx-auto mb-6">
-          Contact us today to implement a CRM & ERP solution that fits your
-          needs and scales with your goals.
+              {t("ctaDesc")}
+
+          
+         
         </p>
         <a
           href="#contact"
           className="inline-block px-6 py-3 sm:px-8 sm:py-3 bg-white text-[#070B2A] font-semibold rounded hover:bg-gray-100 transition"
         >
-          Get in Touch
+              {t("ctaBtn")}
+
         </a>
       </section>
       {/* Testimonials */}
