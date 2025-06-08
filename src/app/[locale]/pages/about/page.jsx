@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import ProjectShowcase from "@/components/sections/ProjectsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
-import AboutSection from "@/components/sections/AboutSection";
 import NexusSolutionsSection from "@/components/sections/NexusSolutionsSection";
 
 export default function AboutPage() {
@@ -19,8 +18,45 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 bg-black opacity-50" />
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">About Us</h1>
-          <p className="text-sm text-white/70">Home / Who We Are</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
+            {t("bannerTitle")}
+          </h1>
+          <p className="text-sm text-white/70">{t("breadcrumb")}</p>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <Image
+            src="/test/4.jpg"
+            alt="CRM ERP Overview"
+            width={600}
+            height={400}
+            className="w-full"
+          />
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#070B2A]">
+              {t("empowerTitle")}
+            </h2>
+
+            <p className="text-base sm:text-md text-gray-700 mb-6">
+              {t("empowerDescription1")}
+            </p>
+            <p className="text-base sm:text-md text-gray-700 mb-6">
+              {t("empowerDescription2")}
+            </p>
+            <p className="text-base sm:text-md text-gray-700 mb-6">
+              {t("empowerDescription3")}
+            </p>
+
+            {/* <div className=" ">
+              <ul className="space-y-4 text-sm  text-black/80">
+                {t.raw("empowerPoints").map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+            </div> */}
+          </div>
         </div>
       </section>
 
@@ -28,27 +64,20 @@ export default function AboutPage() {
         <div className="absolute -top-20 -left-20">
           <img
             src="/left-shape.png"
-            alt="Nexus India Logo"
+            alt="shape"
             className=" h-96 opacity-100"
           />
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Mission</h2>
-            <p className="text-gray-600 mb-4">
-              we aim to empower businesses through advanced technology solutions
-              that drive innovation, efficiency, and growth. We are dedicated to
-              transforming ideas into reality by leveraging our expertise in
-              cutting-edge technologies like AR, VR, AI, ML, Digital Marketing,
-              High End Website Development, Effective and Easy Mobile
-              Applications and digital transformation. Our goal is to deliver
-              exceptional client experiences and create value by providing
-              tailored, impactful, and future-ready solutions.
-            </p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              {t("missionTitle")}
+            </h2>
+            <p className="text-gray-600 mb-4">{t("missionText")}</p>
           </div>
           <img
             src="/Team.jpeg"
-            alt="R&D Illustration"
+            alt="Mission"
             className="shadow-lg object-cover h-full z-10"
           />
         </div>
@@ -58,26 +87,21 @@ export default function AboutPage() {
         <div className="absolute -top-20 -left-20">
           <img
             src="/left-shape.png"
-            alt="Nexus India Logo"
+            alt="shape"
             className=" h-96 opacity-100"
           />
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <img
             src="/Team.jpeg"
-            alt="R&D Illustration"
+            alt="Vision"
             className="shadow-lg object-cover h-full z-10"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Vision</h2>
-            <p className="text-gray-600 mb-4">
-              To be a globally recognized leader in technology innovation and
-              digital transformation, bridging the gap between tradition and the
-              future of technology. We envision a world where businesses of all
-              sizes can harness the power of advanced technology to achieve new
-              heights, enhance customer engagement, and thrive in an
-              ever-evolving digital landscape.
-            </p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              {t("visionTitle")}
+            </h2>
+            <p className="text-gray-600 mb-4">{t("visionText")}</p>
           </div>
         </div>
       </section>
@@ -85,32 +109,13 @@ export default function AboutPage() {
       {/* Core Values */}
       <section className="bg-[#070B2A] text-white py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-10">Our Core Values</h2>
+          <h2 className="text-2xl font-bold mb-10">{t("coreValuesTitle")}</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: "💡",
-                title: "Innovation",
-                desc: "We build for the future with creative and scalable solutions.",
-              },
-              {
-                icon: "🤝",
-                title: "Integrity",
-                desc: "We operate transparently and ethically in everything we do.",
-              },
-              {
-                icon: "🌐",
-                title: "Accessibility",
-                desc: "We make tech accessible to businesses of all sizes.",
-              },
-              {
-                icon: "🚀",
-                title: "Growth",
-                desc: "We help clients grow—and grow alongside them.",
-              },
-            ].map((item, idx) => (
+            {t.raw("coreValues").map((item, idx) => (
               <div key={idx} className="p-6 bg-gray-800 shadow hover:shadow-md">
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="text-4xl mb-4">
+                  {["💡", "🤝", "🌐", "🚀"][idx]}
+                </div>
                 <h4 className="font-semibold text-lg text-white">
                   {item.title}
                 </h4>
@@ -121,78 +126,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Journey / Timeline */}
+      {/* Journey */}
       <section className="bg-gray-100 py-20 px-6 text-center">
-        <h2 className="text-2xl font-bold mb-10">Our Journey</h2>
+        <h2 className="text-2xl font-bold mb-10">{t("journeyTitle")}</h2>
         <div className="space-y-6 max-w-4xl mx-auto text-left text-sm text-gray-700">
-          <div>
-            <strong>2019:</strong> Founded with a mission to serve India’s SMEs.
-          </div>
-          <div>
-            <strong>2020:</strong> Launched first version of Nexus platform with
-            50+ businesses onboarded.
-          </div>
-          <div>
-            <strong>2022:</strong> Expanded features with CRM, payments, and
-            content management.
-          </div>
-          <div>
-            <strong>2024:</strong> Serving 10,000+ SMEs with remote teams and
-            regional presence.
-          </div>
+          {t.raw("journey").map((event, idx) => (
+            <div key={idx}>{event}</div>
+          ))}
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Leadership */}
       <section className="py-20 px-6 relative text-center bg-[#070B2A] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-10">Meet Our Leadership</h2>
+          <h2 className="text-2xl font-bold mb-10">{t("leadershipTitle")}</h2>
           <div className="grid md:grid-cols-4 gap-10">
-            {[
-              {
-                name: "Pankaj Deole",
-                role: "Founder & CEO",
-                image: "/logo3.png",
-              },
-              {
-                name: "T Jaiprakash",
-                role: "Chief Tecnhology Officer",
-                image: "/logo3.png",
-              },
-              {
-                name: "Rohit Sinha",
-                role: "Technical Project Head",
-                image: "/logo3.png",
-              },
-              {
-                name: "Rishab Chaurasiya",
-                role: "Project Manager",
-                image: "/logo3.png",
-              },
-              {
-                name: "Lokesh Kapse",
-                role: "Data Analyst",
-                image: "/logo3.png",
-              },
-              {
-                name: "Durvesh Shinde",
-                role: "Design Head",
-                image: "/logo3.png",
-              },
-              {
-                name: "Chaitrali Thorat",
-                role: "Senior Design Consultant",
-                image: "/logo3.png",
-              },
-              {
-                name: "Himanshi Bayas",
-                role: "Content Writer",
-                image: "/logo3.png",
-              },
-            ].map((person, idx) => (
+            {t.raw("leadership").map((person, idx) => (
               <div key={idx} className="text-center z-10">
                 <img
-                  src={person.image}
+                  src={
+                    [
+                      "/work/pankaj.jpg",
+                      "/logo3.png",
+                      "/work/jai.jpg",
+                      "/logo3.png",
+                      "/logo3.png",
+                      "/work/ash.jpg",
+
+                      "/work/durvesh.png",
+                      "/logo3.png",
+                    ][idx]
+                  }
                   alt={person.name}
                   className="w-80 h-80 mx-auto mb-4 object-cover"
                 />
@@ -207,16 +171,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Culture Section */}
+      {/* Culture */}
       <section className="bg-[#070B2A] text-white py-20 px-6 text-center">
         <h2 className="text-2xl font-bold mb-8 text-white">
-          What It's Like Working Here
+          {t("cultureTitle")}
         </h2>
         <p className="max-w-3xl mx-auto text-sm text-white/80 mb-10">
-          At Nexus India, we nurture a culture of collaboration, inclusion, and
-          continuous learning. Whether remote or onsite, every team member is
-          encouraged to bring ideas to the table and make meaningful
-          contributions.
+          {t("cultureText")}
         </p>
         <img
           src="/about2.jpeg"
@@ -225,25 +186,19 @@ export default function AboutPage() {
         />
       </section>
 
-      {/* Project Showcase */}
       <ProjectShowcase />
       <NexusSolutionsSection />
-
-      {/* Testimonials */}
       <TestimonialSection />
 
       {/* CTA */}
       <section className="bg-blue-700 text-white py-20 px-6 text-center">
-        <h3 className="text-3xl font-bold mb-4">Ready to Work with Us?</h3>
-        <p className="mb-6 text-white/90 max-w-xl mx-auto">
-          Whether you’re a business looking to scale or a professional looking
-          to contribute—we’d love to connect.
-        </p>
+        <h3 className="text-3xl font-bold mb-4">{t("ctaTitle")}</h3>
+        <p className="mb-6 text-white/90 max-w-xl mx-auto">{t("ctaDesc")}</p>
         <a
           href="/contact"
           className="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded-xl hover:bg-gray-100 transition"
         >
-          Contact Us
+          {t("ctaBtn")}
         </a>
       </section>
     </div>

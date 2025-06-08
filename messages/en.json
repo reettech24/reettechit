@@ -29,8 +29,8 @@
         "nexusOnline": "Nexus Online Management",
         "followUs": "Follow Us",
         "address": {
-            "line1": "Hinjewadi Phase 1, Pune",
-            "line2": "Maharashtra 411028"
+            "line1": "Datta Nagar Road, Katraj",
+            "line2": "Maharashtra, Pune 411046"
         },
         "rights": "All rights reserved.",
         "terms": "Terms & Condition",
@@ -66,15 +66,15 @@
         "featureItems": [
             {
                 "title": "Call Us 24/7",
-                "desc": "+91 123-456-7890"
+                "desc": "+91 797-290-5758"
             },
             {
                 "title": "Make a Quote",
-                "desc": "support@reettechit.com"
+                "desc": "sales@reettechit.com"
             },
             {
                 "title": "Location",
-                "desc": "Hinjewadi Phase 1, Pune, Maharashtra"
+                "desc": "Datta Nagar Road Katraj, Pune, Maharashtra"
             }
         ],
         "journeyTitle": "Get In Touch",
@@ -92,39 +92,82 @@
         "ctaBtn": "Send Message"
     },
     "about": {
-        "heroTitle": "About Us",
-        "heroDesc": "Home / Who We Are",
-        "introTitle": "Grow Your Business with Truly Prominent Innovative Solutions",
-        "introDesc": "At Reet Technologies, we pride ourselves on delivering tailored solutions that meet the unique needs of each client—from immersive AR/VR and AI/ML innovation to digital marketing, mobile apps, and web development. With advanced strategies like 3D Anamorphic videos and creative advertising, we help businesses reach potential customers with impactful, eye-catching content.",
-        "missionTitle": "Our Mission",
-        "missionDesc": "To empower businesses through advanced technology solutions that drive innovation, efficiency, and growth. We are dedicated to transforming ideas into reality using AR, VR, AI, ML, Digital Marketing, Website & App Development, and digital transformation.",
-        "visionTitle": "Our Vision",
-        "visionDesc": "To be a globally recognized leader in technology innovation, bridging tradition with the future. We help businesses of all sizes leverage modern tech to elevate engagement and thrive in a digital-first world.",
-        "cultureTitle": "Our Culture",
-        "cultureValues": [
-            {
-                "title": "Diversity",
-                "desc": "Diversity helps our cross-culture team deliver experiences par excellence."
-            },
+        "bannerTitle": "About Us",
+        "breadcrumb": "Home / Who We Are",
+        "empowerTitle": "Who We Are",
+        "empowerDescription1": "Our IT and business consulting services are intended to assist you in realizing the full potential of emerging technology. As a top IT firm in Pune, we concentrate on improving actual company expansion, improving client interactions, and optimizing processes for long-term effects.",
+        "empowerDescription2": "As a trusted technology partner, we provide specialized IT solutions made to meet the particular requirements of start-ups, large corporations, and international brands. Choosing Reet Technologies helps you stay ahead in the changing digital world, not just adapt to it.",
+        "empowerDescription3": "Our skilled team can help you realize your vision, whether it's to deploy immersive AR and VR experiences, use AI and ML to gain insightful business insights, start a full-scale digital transformation, or improve your brand with effective digital marketing services in Pune. With a focus on results and an affection for technology, we assist companies in becoming stronger, quicker, and smarter.",
+        "missionTitle": "Mission",
+        "missionText": "We aim to empower businesses through advanced technology solutions that drive innovation, efficiency, and growth. We are dedicated to transforming ideas into reality by leveraging our expertise in cutting-edge technologies like AR, VR, AI, ML, Digital Marketing, High End Website Development, Effective and Easy Mobile Applications and digital transformation. Our goal is to deliver exceptional client experiences and create value by providing tailored, impactful, and future-ready solutions.",
+        "visionTitle": "Vision",
+        "visionText": "To be a globally recognized leader in technology innovation and digital transformation, bridging the gap between tradition and the future of technology. We envision a world where businesses of all sizes can harness the power of advanced technology to achieve new heights, enhance customer engagement, and thrive in an ever-evolving digital landscape.",
+        "coreValuesTitle": "Our Core Values",
+        "coreValues": [
             {
                 "title": "Innovation",
-                "desc": "Innovation drives us to think beyond boundaries and apply expertise with purpose."
+                "desc": "We build for the future with creative and scalable solutions."
             },
             {
-                "title": "Creativity",
-                "desc": "Creativity unlocks our potential to produce unique, powerful outcomes."
+                "title": "Integrity",
+                "desc": "We operate transparently and ethically in everything we do."
+            },
+            {
+                "title": "Accessibility",
+                "desc": "We make tech accessible to businesses of all sizes."
+            },
+            {
+                "title": "Growth",
+                "desc": "We help clients grow—and grow alongside them."
             }
         ],
-        "whyUsTitle": "Why Choose Us",
-        "whyUsDesc": "To Empower Your Business With Our Comprehensive IT Solutions",
-        "resourcesTitle": "Resources",
-        "resourcesDesc": "Download our brochure to explore cutting-edge IT strategies.",
-        "processTitle": "Our Process",
-        "processDesc": "We deliver persona-based and visually inspiring digital experiences by combining deep expertise with design thinking and agile methodologies.",
-        "teamTitle": "Meet Our Expert Team",
-        "teamDesc": "Led by Pankaj Deole, our team of highly-skilled professionals is committed to innovation, quality, and client satisfaction. With over 15 years of experience, Pankaj emphasizes user-friendly design, a strong workplace culture, and continuous team development.",
-        "clientsTitle": "Meet Our Clients",
-        "clientsDesc": "Be Associated with Us"
+        "journeyTitle": "Our Journey",
+        "journey": [
+            "2022: Founded with a mission to serve India’s SMEs.",
+            "2023: Launched first version of Nexus platform with 50+ businesses onboarded.",
+            "2024: Expanded features with CRM, payments, and content management.",
+            "2025: Serving 10,000+ SMEs with remote teams and regional presence."
+        ],
+        "leadershipTitle": "Meet Our Leadership",
+        "leadership": [
+            {
+                "name": "Pankaj Deole",
+                "role": "Founder & CEO"
+            },
+            {
+                "name": "Saddaf khan",
+                "role": "Project Management Head"
+            },
+            {
+                "name": "T Jaiprakash",
+                "role": "Chief Tecnhology Officer"
+            },
+            {
+                "name": "Rishab Chaurasiya",
+                "role": "Project Manager"
+            },
+            {
+                "name": "Snahal Patil",
+                "role": "Full Stack Developer"
+            },
+            {
+                "name": "Aishwarya Varade",
+                "role": "Data Analyst"
+            },
+            {
+                "name": "Durvesh Shinde",
+                "role": "Design Head"
+            },
+            {
+                "name": "Himanshi Bayas",
+                "role": "Content Writer"
+            }
+        ],
+        "cultureTitle": "What It's Like Working Here",
+        "cultureText": "At Nexus India, we nurture a culture of collaboration, inclusion, and continuous learning. Whether remote or onsite, every team member is encouraged to bring ideas to the table and make meaningful contributions.",
+        "ctaTitle": "Ready to Work with Us?",
+        "ctaDesc": "Whether you’re a business looking to scale or a professional looking to contribute—we’d love to connect.",
+        "ctaBtn": "Contact Us"
     },
     "notFound": {
         "message": "Sorry, the page you're looking for doesn't exist.",
@@ -1247,7 +1290,7 @@
         "heroTitle": "Transform Your Business with AI & ML",
         "heroDesc": "Unlock automation, insights, and intelligence. Our advanced AI & ML solutions empower your organization to evolve faster and smarter.",
         "overviewTitle": "AI, ML & Data-Driven Solutions",
-        "overviewDesc": "Our machine learning experts in Pune build intelligent algorithms that help predict customer behavior, detect anomalies, personalize experiences, and automate repetitive tasks. From sales forecasting to inventory management, our ML models adapt and evolve as your business grows.",
+        "overviewDesc": "Our machine learning expertss build intelligent algorithms that help predict customer behavior, detect anomalies, personalize experiences, and automate repetitive tasks. From sales forecasting to inventory management, our ML models adapt and evolve as your business grows.",
         "featureItems": [
             {
                 "icon": "📊",
@@ -1544,7 +1587,7 @@
         "heroTitle": "Web & Mobile Application Solutions",
         "heroDesc": "We design and develop responsive, scalable, and secure web and mobile applications that empower business growth and innovation.",
         "overviewTitle": "At Reet Technologies,",
-        "overviewDesc": "we specialize in building high-performance mobile and web applications in Pune tailored to your business goals. Whether you need a customer-facing mobile app or a secure, data-driven web platform, we deliver powerful, feature-rich solutions designed for modern users. Our experienced developers help startups, SMEs, and enterprises build apps that improve engagement, increase efficiency, and support digital transformation. At Reet Technologies, we specialize in developing customized CRM and ERP solutions that empower businesses to operate efficiently, make informed decisions, and stay competitive. Whether you're managing customers, inventory, or streamlining operations—our platforms are built for your exact needs.",
+        "overviewDesc": "we specialize in building high-performance mobile and web applications designed to your business goals. Whether you need a customer-facing mobile app or a secure, data-driven web platform, we deliver powerful, feature-rich solutions designed for modern users. Our experienced developers help startups, SMEs, and enterprises build apps that improve engagement, increase efficiency, and support digital transformation. At Reet Technologies, we specialize in developing customized CRM and ERP solutions that empower businesses to operate efficiently, make informed decisions, and stay competitive. Whether you're managing customers, inventory, or streamlining operations—our platforms are built for your exact needs.",
         "overviewPoints": [
             "Agile development for fast delivery",
             "Customized UI/UX design for your audience",
@@ -1830,5 +1873,617 @@
         "ctaTitle": "Ready to Grow Your Business Online?",
         "ctaDesc": "Let’s design a digital strategy that delivers measurable results for your brand.",
         "ctaBtn": "Book a Free Strategy Call"
+    },
+    "softwaredevelopment": {
+        "heroTitle": "Software Development",
+        "heroDesc": "Building secure, scalable software solutions that empower your business to grow, innovate, and lead in your industry.",
+        "overviewTitle": "Custom Software Tailored to Your Business",
+        "overviewDesc": "We specialize in delivering custom software solutions designed to meet your exact business requirements. Whether you're a startup, SME, or enterprise, we develop powerful, scalable, and secure software using the latest technologies that integrate seamlessly with cloud servers and supporting hardware systems. Our team works closely with clients to understand their workflow, goals, and challenges—then builds tailored solutions that drive efficiency, automation, and growth.",
+        "solutionsTitle": "Solutions We Develop",
+        "solutions": [
+            {
+                "title": "Web Applications",
+                "desc": "Responsive, secure platforms for B2B, B2C, or internal use.",
+                "icon": "https://cdn-icons-png.flaticon.com/512/1006/1006771.png"
+            },
+            {
+                "title": "Mobile Apps",
+                "desc": "iOS/Android apps with excellent UI and performance.",
+                "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png"
+            },
+            {
+                "title": "Enterprise Software",
+                "desc": "Custom CRM, ERP, workflow, and automation platforms.",
+                "icon": "https://cdn-icons-png.flaticon.com/512/270/270798.png"
+            },
+            {
+                "title": "SaaS Products",
+                "desc": "Scalable cloud-based software as a service platforms.",
+                "icon": "https://cdn-icons-png.flaticon.com/512/2345/2345338.png"
+            },
+            {
+                "title": "API Development",
+                "desc": "RESTful and GraphQL APIs to integrate with your ecosystem.",
+                "icon": "https://cdn-icons-png.flaticon.com/512/1086/1086741.png"
+            },
+            {
+                "title": "Legacy System Modernization",
+                "desc": "Upgrade aging platforms into modern, agile systems.",
+                "icon": "https://cdn-icons-png.flaticon.com/512/847/847969.png"
+            }
+        ],
+        "whyUsTitle": "Why Partner With Us?",
+        "whyUsPoints": [
+            "✅ Proven track record with 100+ successful software deployments",
+            "✅ Agile, DevOps & CI/CD expertise for rapid delivery",
+            "✅ 100% custom development — no templates, no shortcuts",
+            "✅ Dedicated project manager and full-stack team",
+            "✅ Post-launch support and continuous optimization"
+        ],
+        "processTitle": "Our Development Process",
+        "processSteps": [
+            {
+                "title": "1. Discovery",
+                "desc": "Understand goals, users, and technical needs."
+            },
+            {
+                "title": "2. Design & Plan",
+                "desc": "UI/UX wireframes, architecture, and backlog."
+            },
+            {
+                "title": "3. Develop & Test",
+                "desc": "Agile sprints, QA testing, user feedback loops."
+            },
+            {
+                "title": "4. Launch & Support",
+                "desc": "Go live with monitoring, support, and iteration."
+            }
+        ],
+        "industriesTitle": "Industries We Serve",
+        "industries": [
+            "Healthcare",
+            "Finance",
+            "Retail",
+            "Education",
+            "Logistics",
+            "GovTech",
+            "Real Estate",
+            "Media"
+        ],
+        "techStackTitle": "Technologies We Use",
+        "caseStudiesTitle": "Case Studies",
+        "caseStudies": [
+            {
+                "title": "Retail SaaS Platform",
+                "summary": "Launched a scalable e-commerce engine for a B2B client, increasing conversion by 55%.",
+                "metrics": "Revenue ↑ 55% • Downtime ↓ 80%"
+            },
+            {
+                "title": "Government Portal",
+                "summary": "Modernized a citizen portal with accessibility and cybersecurity at its core.",
+                "metrics": "100% ADA compliant • Zero security incidents"
+            },
+            {
+                "title": "Healthcare App",
+                "summary": "Developed a HIPAA-compliant platform for patient scheduling and records.",
+                "metrics": "Launch in 3 months • 4.9★ average app rating"
+            }
+        ],
+        "resultsTitle": "Proven Results",
+        "results": [
+            {
+                "label": "Projects Delivered",
+                "value": "+120"
+            },
+            {
+                "label": "Faster Time to Market",
+                "value": "+40%"
+            },
+            {
+                "label": "System Uptime",
+                "value": "99.9%"
+            },
+            {
+                "label": "Development Experience",
+                "value": "+10Y"
+            }
+        ],
+        "ctaTitle": "Let's Build Something Powerful Together",
+        "ctaDesc": "Book a free consultation to discuss your next software project.",
+        "ctaBtn": "Schedule a Call",
+        "faqsTitle": "Frequently Asked Questions",
+        "faqs": [
+            {
+                "q": "How long does a typical software project take?",
+                "a": "Timelines vary by scope, but most MVPs launch within 8–12 weeks."
+            },
+            {
+                "q": "Do you provide post-launch support?",
+                "a": "Yes, we offer ongoing maintenance, monitoring, and feature expansion."
+            },
+            {
+                "q": "Can we integrate with our existing systems?",
+                "a": "Absolutely. We specialize in API-first development and legacy integration."
+            },
+            {
+                "q": "What tech stack do you recommend?",
+                "a": "We recommend the best tools for your needs — typically React, Node, and AWS."
+            }
+        ]
+    },
+    "businessConsulting": {
+        "heroTitle": "Digital Solutions for Ambitious Organizations",
+        "heroDesc": "Scalable IT & Business Consulting for Startups, Enterprises, and Government",
+        "introText": "In order to help businesses and beyond improve productivity, increase profitability, and maintain their competitiveness in a market that is changing quickly, Reet Tech offers professional business and IT consulting services. To provide actual commercial outcomes, we integrate technical know-how with strategic insight.",
+        "coreServicesTitle": "Our Core Services",
+        "coreServices": [
+            {
+                "title": "Digital Transformation",
+                "desc": "Streamline operations using AI, automation, and cloud-native tools."
+            },
+            {
+                "title": "Strategic IT Consulting",
+                "desc": "Build tailored IT roadmaps to align tech with business growth."
+            },
+            {
+                "title": "Cloud Migration & Infra",
+                "desc": "Modernize your stack with scalable cloud solutions (AWS, Azure, GCP)."
+            },
+            {
+                "title": "Cybersecurity & Compliance",
+                "desc": "Protect systems, manage risks, and stay ahead of regulations."
+            },
+            {
+                "title": "Software Integration",
+                "desc": "Evaluate, implement, and integrate best-fit tools for productivity."
+            },
+            {
+                "title": "Data & Intelligence",
+                "desc": "Transform raw data into insights with real-time analytics and dashboards."
+            }
+        ],
+        "whoWeServeTitle": "Who We Serve",
+        "whoWeServe": [
+            {
+                "name": "Startups",
+                "icon": "https://cdn-icons-png.flaticon.com/512/888/888879.png"
+            },
+            {
+                "name": "Enterprises",
+                "icon": "https://cdn-icons-png.flaticon.com/512/219/219983.png"
+            },
+            {
+                "name": "Government",
+                "icon": "https://cdn-icons-png.flaticon.com/512/1702/1702876.png"
+            }
+        ],
+        "consultingApproachTitle": "Consulting Approach",
+        "consultingApproach": [
+            {
+                "step": "1. Discover",
+                "desc": "We assess current systems, pain points, and growth goals."
+            },
+            {
+                "step": "2. Strategize",
+                "desc": "We develop a plan using frameworks like ITIL, TOGAF, or Agile."
+            },
+            {
+                "step": "3. Execute",
+                "desc": "We implement scalable solutions with minimal disruption."
+            },
+            {
+                "step": "4. Optimize",
+                "desc": "We track KPIs, iterate, and ensure continuous improvement."
+            }
+        ],
+        "whyChooseUsTitle": "Why Choose Us",
+        "whyChooseUs": [
+            {
+                "label": "Proven Success",
+                "desc": "Over 100 completed projects with measurable results."
+            },
+            {
+                "label": "Tailored Consulting",
+                "desc": "Customized strategies aligned with your vision."
+            },
+            {
+                "label": "Dedicated Experts",
+                "desc": "Cross-functional teams that partner with you end-to-end."
+            },
+            {
+                "label": "Multi-Sector Knowledge",
+                "desc": "Deep experience across tech, enterprise, and public sectors."
+            }
+        ]
+    },
+    "projectManagement": {
+        "heroTitle": "Project Management Services",
+        "heroDesc": "Empowering your team to plan, execute, and deliver successful projects with our expert solutions.",
+        "introTitle": "At Reet Technologies",
+        "introDesc": "we help you bring your projects to life—on time and with precision. From web to mobile and cloud projects, we plan, execute, and deliver—so you can focus on growth.",
+        "offeringsTitle": "What We Offer",
+        "offerings": [
+            {
+                "title": "End-to-End Project Planning",
+                "desc": "Clear roadmaps, timelines, and milestones tailored to your business goals."
+            },
+            {
+                "title": "Agile & Waterfall Methodologies",
+                "desc": "Flexible management approaches tailored to your project scope and style."
+            },
+            {
+                "title": "Design & Development Oversight",
+                "desc": "Supervised UI/UX, coding, and deployment for seamless delivery."
+            },
+            {
+                "title": "Technical Support & Troubleshooting",
+                "desc": "Ongoing assistance during and post-deployment to ensure stability."
+            },
+            {
+                "title": "Team Coordination & Resource Management",
+                "desc": "Efficient collaboration between developers, designers, and stakeholders."
+            },
+            {
+                "title": "Risk Management & Quality Assurance",
+                "desc": "Proactive issue resolution and thorough testing to guarantee excellence."
+            }
+        ],
+        "lifecycleTitle": "Project Lifecycle",
+        "lifecycleSteps": [
+            "Discovery & Requirements Gathering",
+            "Project Planning & Milestone Setup",
+            "UI/UX & Development Oversight",
+            "QA Testing & Risk Mitigation",
+            "Client Review & Feedback Loop",
+            "Launch & Post-Deployment Support"
+        ],
+        "toolsTitle": "Tools & Platforms We Use",
+        "tools": [
+            "Slack",
+            "Jira",
+            "Trello",
+            "Notion",
+            "ClickUp",
+            "Asana"
+        ],
+        "whyUsTitle": "Why Partner With Us?",
+        "whyUsPoints": [
+            "Expert management of web, mobile, cloud, and custom software projects.",
+            "Use of modern tools like Jira, Trello, Git, and Asana for transparent tracking.",
+            "Dedicated project managers and technical leads for each engagement.",
+            "Clear, consistent communication and weekly progress updates.",
+            "Proven success across industries, from startups to enterprise clients."
+        ],
+        "successStoriesTitle": "Success Stories",
+        "successStories": [
+            {
+                "title": "E-Commerce Expansion",
+                "desc": "ClickUp and Slack enhanced visibility and communication.",
+                "result": "Saved $40K and improved team productivity by 30%."
+            },
+            {
+                "title": "Startup MVP Launch",
+                "desc": "Used Notion and Jira to execute lean development for MVP.",
+                "result": "Reduced time-to-market by 40%."
+            }
+        ],
+        "ctaTitle": "Let’s Manage Your Next Project Seamlessly",
+        "ctaDesc": "Contact Reet Technologies today and let’s bring your vision to life — efficiently, transparently, and on schedule.",
+        "ctaBtn": "Book a Free Consultation"
+    },
+    "businessEstablishment": {
+        "heroTitle": "Build a Future-Ready Business with Reet Technologies",
+        "heroDesc": "Whether you're launching a startup or optimizing an enterprise, we build strategic, scalable, and resilient foundations aligned with your business vision.",
+        "overviewTitle": "At Reet Technologies",
+        "overviewParagraphs": [
+            "We specialize in building the foundation for your business success. Whether you're launching a startup or restructuring an existing organization, we create a robust, future-ready framework aligned with your strategic goals.",
+            "Our Business Establishment service is designed to ensure that your company's structure, talent, and operational processes are in sync with your long‑term vision. Through our Organizational Development expertise, we foster a culture of excellence, innovation, and scalable growth."
+        ],
+        "servicesTitle": "What We Offer",
+        "servicesSubheading": "Our Business Establishment services span strategy, people, processes, tech, and compliance.",
+        "services": [
+            {
+                "title": "Strategic Business Structuring",
+                "desc": "Build a solid organizational framework tailored to your industry and objectives."
+            },
+            {
+                "title": "Team Setup & HR Planning",
+                "desc": "Recruit and align the right talent with roles that drive performance and accountability."
+            },
+            {
+                "title": "Process Optimization",
+                "desc": "Refine internal procedures to enhance productivity and efficiency."
+            },
+            {
+                "title": "Technology Integration",
+                "desc": "Implement tech solutions that support your operational and business growth."
+            },
+            {
+                "title": "Culture & Leadership Development",
+                "desc": "Shape a strong culture with leadership training and value‑driven practices."
+            },
+            {
+                "title": "Compliance & Documentation",
+                "desc": "Ensure all legal, financial, and regulatory requirements are in place from day one."
+            }
+        ],
+        "whyChooseTitle": "Why Choose Reet Tech?",
+        "whyChoosePoints": [
+            "Industry expertise across multiple domains",
+            "Personalized consultation and strategy mapping",
+            "End‑to‑end support from planning to execution",
+            "Focus on long‑term scalability and innovation"
+        ],
+        "trustedTitle": "Trusted By Many",
+        "trustStats": [
+            {
+                "stat": "500+",
+                "label": "Businesses Empowered"
+            },
+            {
+                "stat": "12+",
+                "label": "Industries Served"
+            },
+            {
+                "stat": "4",
+                "label": "Continents Covered"
+            }
+        ],
+        "ctaTitle": "Let’s Build Something Powerful Together",
+        "ctaDesc": "Take the first step toward launching or scaling your business the right way.",
+        "ctaBtn": "Book a Free Consultation"
+    },
+    "rnd": {
+        "heroTitle": "Innovation Through Research & Development",
+        "heroDesc": "We don’t just follow trends — we create them. Our R&D team uncovers market truths and transforms them into actionable, brand‑shaping strategies.",
+        "whyTitle": "Why Invest in R&D?",
+        "whyParagraphs": [
+            "At Reet Technologies, innovation is at the core of everything we do. Our Research & Development (R&D) Services empower businesses to explore new ideas, develop cutting‑edge solutions, and stay ahead in a rapidly evolving digital landscape.",
+            "We work closely with your team to identify opportunities, experiment with technologies, and create prototypes that lead to real‑world impact. From product innovation to process improvement, our R&D solutions are designed to turn vision into value."
+        ],
+        "whyBullets": [
+            "Uncover unmet consumer needs before your competitors do",
+            "Test product‑market fit through rapid prototyping",
+            "Reduce risk and improve campaign efficiency",
+            "Forecast cultural trends to future‑proof your brand"
+        ],
+        "focusTitle": "Core Research & Development Focus Areas",
+        "focusAreas": [
+            {
+                "icon": "https://cdn-icons-png.flaticon.com/512/3270/3270985.png",
+                "title": "Consumer Behavior Lab",
+                "desc": "We decode human insights, buying patterns, and emotional triggers to craft precision‑targeted brand experiences."
+            },
+            {
+                "icon": "https://cdn-icons-png.flaticon.com/512/3884/3884010.png",
+                "title": "AI & Market Prediction",
+                "desc": "Our AI models analyze data trends to predict future shifts and enable proactive business decisions."
+            },
+            {
+                "icon": "https://cdn-icons-png.flaticon.com/512/1850/1850516.png",
+                "title": "Sustainable Branding",
+                "desc": "We innovate eco‑conscious branding methods, packaging, and positioning aligned with modern ethical values."
+            },
+            {
+                "icon": "https://cdn-icons-png.flaticon.com/512/9068/9068701.png",
+                "title": "UX Research & Prototyping",
+                "desc": "We design, test, and iterate interfaces that deliver intuitive user journeys based on real feedback loops."
+            },
+            {
+                "icon": "https://cdn-icons-png.flaticon.com/512/2097/2097264.png",
+                "title": "Digital Transformation",
+                "desc": "From legacy processes to cloud‑native platforms, we reimagine how brands evolve in the digital world."
+            },
+            {
+                "icon": "https://cdn-icons-png.flaticon.com/512/235/235861.png",
+                "title": "Cultural Foresight",
+                "desc": "Our cultural intelligence tools detect shifts in values, language, and art—guiding future‑proof branding."
+            }
+        ],
+        "timelineTitle": "Our R&D Journey",
+        "timeline": [
+            {
+                "year": "2021",
+                "event": "Established our dedicated R&D wing to explore behavioral data and AI‑driven brand strategies."
+            },
+            {
+                "year": "2022",
+                "event": "Launched predictive branding AI for ecommerce clients, increasing engagement by 38%."
+            },
+            {
+                "year": "2023",
+                "event": "Partnered with sustainability researchers to develop green design frameworks for FMCG packaging."
+            },
+            {
+                "year": "2024",
+                "event": "Integrated UX research labs and launched 17+ prototypes across health, finance, and education sectors."
+            }
+        ],
+        "impactTitle": "Our Impact in Action",
+        "impactStories": [
+            {
+                "title": "Predictive AI for Fashion",
+                "desc": "We built a fashion AI model that projected micro‑trends 3 months in advance, resulting in a 28% sales uplift during key seasons."
+            },
+            {
+                "title": "Green Branding for FMCG",
+                "desc": "Our sustainability research helped a leading food brand redesign their packaging, leading to a 40% positive sentiment boost."
+            }
+        ],
+        "ctaTitle": "Let’s Research the Future Together",
+        "ctaDesc": "Whether you're a startup looking to disrupt or an enterprise aiming to evolve, Reet Technologies delivers the research and innovation power to make it happen.",
+        "ctaBtn": "Start a Conversation"
+    },
+    "bpm": {
+        "heroTitle": "Brand Portfolio Management",
+        "heroDesc": "Strategically managing your brand family to maximize reach, resonance, and revenue.",
+        "aboutTitle": "At Reet Technologies",
+        "aboutParagraphs": [
+            "Companies grow, scale, and develop by providing specialist brand portfolio management services. Your brand architecture will be clear, unified, and in line with your company's mission thanks to our unique brand strategy solutions.",
+            "We assist companies in organizing and managing their brand portfolios for growth, clarity, and consistency at Reet Tech, Pune's go-to branding and strategy firm."
+        ],
+        "servicesTitle": "What We Offer",
+        "servicesDesc": "Comprehensive brand portfolio solutions for growing businesses.",
+        "services": [
+            {
+                "title": "Brand Architecture Design",
+                "desc": "Establish a clear structure for your brand hierarchy to eliminate confusion and enhance synergy."
+            },
+            {
+                "title": "Market Positioning Strategy",
+                "desc": "Differentiate your brands with precise market positioning that speaks directly to your audience."
+            },
+            {
+                "title": "Portfolio Rationalization",
+                "desc": "Remove overlap and focus resources where it matters by identifying underperforming or redundant brands."
+            },
+            {
+                "title": "M&A Brand Integration",
+                "desc": "Seamlessly merge or rebrand after acquisitions to retain equity and reduce friction."
+            }
+        ],
+        "caseTitle": "Real Impact We've Delivered",
+        "caseStudies": [
+            {
+                "title": "Repositioning Legacy Brands",
+                "desc": "We helped a 40-year-old brand portfolio modernize and expand into the Gen Z market—resulting in a 28% increase in market share within one year."
+            },
+            {
+                "title": "M&A Brand Integration",
+                "desc": "After a major acquisition, our team created a unified brand ecosystem that retained loyalty while reducing operational costs by 22%."
+            }
+        ],
+        "processTitle": "Our Proven Process",
+        "processDesc": "We follow a structured approach to deliver measurable brand value.",
+        "processSteps": [
+            {
+                "title": "Discovery",
+                "desc": "Deep dive into your brand history, goals, and market."
+            },
+            {
+                "title": "Diagnosis",
+                "desc": "Identify gaps, overlaps, and opportunities in your portfolio."
+            },
+            {
+                "title": "Design",
+                "desc": "Craft a clear architecture and positioning strategy."
+            },
+            {
+                "title": "Deployment",
+                "desc": "Execute with precision while measuring brand performance."
+            }
+        ],
+        "whyTitle": "Why Partner With Us?",
+        "whyPoints": [
+            {
+                "title": "Strategic Thinkers",
+                "desc": "Our brand consultants are strategists who blend creativity with data to make informed decisions."
+            },
+            {
+                "title": "Proven Portfolio Models",
+                "desc": "We leverage frameworks used by Fortune 500 companies to structure and grow brand portfolios efficiently."
+            }
+        ],
+        "clientsTitle": "Trusted By Leading Brands",
+        "ctaTitle": "Let’s Build a Powerful Brand Ecosystem",
+        "ctaDesc": "Start maximizing your brand portfolio’s potential today.",
+        "ctaBtn": "Schedule a Free Consultation"
+    },
+    "consulting": {
+        "heroTitle": "Next Generation Consulting",
+        "heroDesc": "Accelerate Your Digital Future with Innovation, Intelligence, and Impact.",
+        "heroSubtext": "At NextGen, we don’t just build solutions — we create transformative digital experiences that scale.",
+        "whyTitle": "Why Next Generation Consulting?",
+        "whyParagraphs": [
+            "Businesses want innovation at the heart of their operations in the quickly changing digital market, not just traditional strategies. By combining data-driven insights, flexible business models, and future tech solutions, Reet Technologies provides next-generation consulting services in Pune that will keep your company ahead of the curve.",
+            "We produce faster, smarter, and highly scalable results than traditional consulting by combining AI, automation, sustainability, and agile techniques. In addition to offering advice, our top technology consulting firm in Pune gives you the tools you need to take the lead in the future."
+        ],
+        "whyBullets": [
+            "Future-Focused Strategy Development",
+            "Technology-Driven Business Solutions",
+            "Agile, Scalable & Sustainable Growth Models",
+            "Industry-Specific Expertise Across Domains",
+            "End-to-End Execution Support"
+        ],
+        "servicesTitle": "What We Do Best",
+        "servicesDesc": "Innovative services tailored to disrupt, deliver, and drive success.",
+        "services": [
+            {
+                "title": "AI & Automation Advisory",
+                "desc": "Harness artificial intelligence to automate, analyze, and accelerate your business workflows."
+            },
+            {
+                "title": "Digital Transformation Strategy",
+                "desc": "Integrate scalable platforms for real-time operations, customer engagement, and data synergy."
+            },
+            {
+                "title": "Business Model Innovation",
+                "desc": "Deliver intuitive, responsive, and conversion-optimized applications that users love."
+            },
+            {
+                "title": "Data Analytics & Intelligence",
+                "desc": "Unlock data intelligence and future-proof your decisions with ML-backed models."
+            },
+            {
+                "title": "Change Management Consulting",
+                "desc": "Drive growth with precision targeting, intelligent funnels, and ROI-led strategies."
+            },
+            {
+                "title": "Customer Experience Optimization",
+                "desc": "Build high-performance, accessible, and SEO-optimized digital platforms."
+            },
+            {
+                "title": "Cloud Strategy & IT Modernization",
+                "desc": "Create interactive, hyper-real environments for training, sales, and customer engagement."
+            },
+            {
+                "title": "Sustainability & ESG Consulting",
+                "desc": "Build strategies that meet tomorrow’s environmental and ethical standards today."
+            }
+        ],
+        "industriesTitle": "Industries We Empower",
+        "industriesDesc": "From traditional sectors to emerging markets, we drive digital change.",
+        "industries": [
+            "Enterprises looking to digitally scale",
+            "Startups entering high-growth phases",
+            "Healthcare providers embracing telehealth & AI",
+            "Retail & eCommerce brands seeking omnichannel strategies",
+            "Manufacturing companies transitioning to Industry 4.0",
+            "Educational institutions modernizing operations"
+        ],
+        "impactTitle": "Proven Impact. Measurable Success.",
+        "impactDesc": "A glimpse into how we’ve helped clients redefine their digital roadmap.",
+        "impactStories": [
+            {
+                "title": "Smart Retail Enablement",
+                "desc": "Enabled AI-led customer segmentation and automation for a D2C brand, boosting conversions by 42% in 3 months."
+            },
+            {
+                "title": "AI in Diagnostics",
+                "desc": "Developed a ML-backed tool for a diagnostics chain, reducing patient screening time from 40 minutes to under 10."
+            }
+        ],
+        "whyTrustTitle": "Why Forward-Thinking Brands Trust Us",
+        "trustPoints": [
+            {
+                "title": "Custom-Built for Your Growth",
+                "desc": "We architect solutions based on your exact goals — no templates, no shortcuts."
+            },
+            {
+                "title": "Top 1% Talent",
+                "desc": "Collaborate with elite engineers, designers, and strategists obsessed with innovation."
+            },
+            {
+                "title": "Scalable & Secure Tech",
+                "desc": "We deliver secure, future-ready platforms that grow with your business."
+            },
+            {
+                "title": "Results-Driven Process",
+                "desc": "Our agile frameworks ensure faster delivery, real-time feedback, and tangible ROI."
+            }
+        ],
+        "ctaTitle": "Stay Ahead of the Curve with Us",
+        "ctaDesc": "In an ever-evolving marketplace, success belongs to those who adapt quickly. Our consulting framework helps you build an agile, data-powered, and tech-enabled business.",
+        "ctaBtn": "Schedule a Free Strategy Session Today!"
     }
 }

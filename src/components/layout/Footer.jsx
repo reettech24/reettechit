@@ -69,21 +69,21 @@ export const Footer = () => {
               {t("address.line2")}
             </p>
             <p className="flex items-center gap-2 mt-1">
-              <PhoneIcon className="w-4 h-4" /> +91 1234567890
+              <PhoneIcon className="w-4 h-4" /> +91 797-290-5758, <br/> +91 957-969-5319
             </p>
           </div>
 
           <div className="space-y-2 md:col-span-2 md:col-start-4">
             <h4 className="font-semibold text-xl">{t("followUs")}</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-blue-500"><Twitter size={30} /></a>
-              <a href="#" className="text-blue-500"><Facebook size={30} /></a>
-              <a href="#" className="text-blue-500"><Instagram size={30} /></a>
-              <a href="#" className="text-blue-500"><Linkedin size={30} /></a>
-              <a href="#" className="text-blue-500"><Youtube size={30} /></a>
+              {/* <a href="#" className="text-blue-500"><Twitter size={30} /></a> */}
+              <a href="https://www.facebook.com/profile.php?id=61563815199946" className="text-blue-500"><Facebook size={30} /></a>
+              <a href="https://www.instagram.com/reettechnologies/" className="text-blue-500"><Instagram size={30} /></a>
+              <a href="https://www.linkedin.com/company/reet-technologies/posts/?feedView=all" className="text-blue-500"><Linkedin size={30} /></a>
+              <a href="https://www.youtube.com/@ReetTechnologies" className="text-blue-500"><Youtube size={30} /></a>
             </div>
             <p className="flex items-center gap-2 text-xl">
-              <EnvelopeIcon className="w-4 h-4" /> contact@reettechit.com
+              <EnvelopeIcon className="w-4 h-4" /> sales@reettechit.com
             </p>
           </div>
         </div>

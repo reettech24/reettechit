@@ -88,7 +88,7 @@ export default function AboutSection() {
 
           <div className="flex items-center gap-3">
             <Image
-              src="/test.jpg"
+              src="/work/pankaj.jpg"
               alt={t('ceo.name')}
               width={40}
               height={40}

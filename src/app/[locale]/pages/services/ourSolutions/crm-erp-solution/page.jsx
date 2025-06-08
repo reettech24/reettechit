@@ -52,7 +52,7 @@ export default function Page() {
               <li>✅ ERP Solutions Designed for Operational Excellence</li>
               <li>✅ Advanced Inventory Management Software</li>
               <li>✅ Make Informed Business Decisions with Smart Dashboards</li>
-{/* 
+              {/* 
               {t.raw("whyUsPointstwo").map((item, idx) => (
                 <li key={idx}>✅ {item}</li>
               ))} */}
@@ -64,15 +64,11 @@ export default function Page() {
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                      {t("coreModulesTitle")}
-
+            {t("coreModulesTitle")}
           </h2>
-          <p className="text-white/80 mb-10">
-                     {t("coreModulesDesc")}
-
-          </p>
+          <p className="text-white/80 mb-10">{t("coreModulesDesc")}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 text-left">
-            {[
+            {/* {[
               {
                 title: "Sales & Lead Management",
                 desc: "Track leads, nurture prospects, and optimize your pipeline.",
@@ -113,9 +109,9 @@ export default function Page() {
                 </h3>
                 <p className="text-white/80 text-sm">{mod.desc}</p>
               </div>
-            ))}
+            ))} */}
             {t.raw("coreModules").map((item, idx) => (
-               <div
+              <div
                 key={idx}
                 className="bg-gray-800 hover:bg-gray-700 p-6 sm:p-8 shadow-lg hover:scale-105 transition-transform"
               >
@@ -132,12 +128,11 @@ export default function Page() {
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                    {t("featuresOverviewTitle")}
-
+            {t("featuresOverviewTitle")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 text-left">
             <div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+              {/* <h3 className="text-lg sm:text-xl font-semibold mb-2">
                 Complete Customization
               </h3>
               <p className="text-white/80 mb-4">
@@ -157,21 +152,16 @@ export default function Page() {
               <p className="text-white/80">
                 Connect with third-party tools including WhatsApp, Email,
                 Payment Gateways, and more.
-              </p>
+              </p> */}
 
               {t.raw("featuresOverview").map((item, idx) => (
-              <div
-                key={idx}
-                
-              >
+                <div key={idx}>
                   <h3 className="text-lg sm:text-xl font-semibold mb-2">
-      {item.title}
-              </h3>
-              <p className="text-white/80">
-                {item.desc}
-              </p>
-              </div>
-            ))}
+                    {item.title}
+                  </h3>
+                  <p className="text-white/80">{item.desc}</p>
+                </div>
+              ))}
             </div>
             <Image
               src="/photos/crm3.jpg"
@@ -188,15 +178,11 @@ export default function Page() {
       <section className="bg-gray-100 py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#070B2A] mb-6">
-                   {t("industryUseCasesTitle")}
-
+            {t("industryUseCasesTitle")}
           </h2>
-          <p className="text-gray-600 mb-10">
-                          {t("industryUseCasesDesc")}
-
-          </p>
+          <p className="text-gray-600 mb-10">{t("industryUseCasesDesc")}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 text-left">
-            {[
+            {/* {[
               "Retail & E-commerce",
               "Healthcare",
               "Manufacturing",
@@ -216,18 +202,16 @@ export default function Page() {
                   {sector.toLowerCase()} sector.
                 </p>
               </div>
-            ))}
-             {t.raw("industryUseCases").map((item, idx) => (
-             <div
+            ))} */}
+            {t.raw("industryUseCases").map((item, idx) => (
+              <div
                 key={idx}
                 className=" bg-gray-900 hover:bg-gray-800 p-6 shadow hover:shadow-xl transition"
               >
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-white/70 text-sm ">
-               {item.desc}
-                </p>
+                <p className="text-white/70 text-sm ">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -235,10 +219,12 @@ export default function Page() {
       </section>
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">            {t("crmFeaturesTitle")}
-</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            {" "}
+            {t("crmFeaturesTitle")}
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
-            {[
+            {/* {[
               "Lead & sales management",
               "Customer segmentation & tracking",
               "Email & SMS campaign automation",
@@ -251,9 +237,9 @@ export default function Page() {
               >
                 <h3 className="text-lg font-semibold mb-2">{item}</h3>
               </div>
-            ))}
-             {t.raw("crmFeatures").map((item, idx) => (
-               <div
+            ))} */}
+            {t.raw("crmFeatures").map((item, idx) => (
+              <div
                 key={idx}
                 className="bg-gray-800 hover:bg-gray-700 p-6 shadow-md rounded transition"
               >
@@ -267,10 +253,9 @@ export default function Page() {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             {t("erpModulesTitle")}
-
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
-            {[
+            {/* {[
               "Finance & accounting",
               "Human resources management",
               "Procurement & supply chain",
@@ -283,9 +268,9 @@ export default function Page() {
               >
                 <h3 className="text-lg font-semibold mb-2">{item}</h3>
               </div>
-            ))}
+            ))} */}
             {t.raw("erpModules").map((item, idx) => (
-               <div
+              <div
                 key={idx}
                 className="bg-white hover:bg-gray-50 p-6 shadow-md rounded transition"
               >
@@ -299,11 +284,10 @@ export default function Page() {
       <section className="bg-[#070B2A] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                   {t("inventoryHighlightsTitle")}
-
+            {t("inventoryHighlightsTitle")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
-            {[
+            {/* {[
               "Stock level monitoring and alerts",
               "Barcode & batch tracking",
               "Purchase and order management",
@@ -316,16 +300,16 @@ export default function Page() {
               >
                 <h3 className="text-lg font-semibold mb-2">{item}</h3>
               </div>
-            ))}
-             {t.raw("inventoryHighlights").map((item, idx) => (
+            ))} */}
+            {t.raw("inventoryHighlights").map((item, idx) => (
               <div
                 key={idx}
                 className="bg-gray-800 p-6 shadow hover:shadow-lg text-center"
               >
                 <h4 className="text-xl font-semibold mb-2 text-white">
-                  {item.title}
+                  {item}
                 </h4>
-                <p className="text-white/80 text-sm">{item.desc}</p>
+                <p className="text-white/80 text-sm">{item}</p>
               </div>
             ))}
           </div>
@@ -333,22 +317,13 @@ export default function Page() {
       </section>
       {/* Call to Action */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-[#070B2A] text-white text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                     {t("ctaTitle")}
-
-        </h2>
-        <p className="text-white/80 max-w-xl mx-auto mb-6">
-              {t("ctaDesc")}
-
-          
-         
-        </p>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t("ctaTitle")}</h2>
+        <p className="text-white/80 max-w-xl mx-auto mb-6">{t("ctaDesc")}</p>
         <a
           href="#contact"
           className="inline-block px-6 py-3 sm:px-8 sm:py-3 bg-white text-[#070B2A] font-semibold rounded hover:bg-gray-100 transition"
         >
-              {t("ctaBtn")}
-
+          {t("ctaBtn")}
         </a>
       </section>
       {/* Testimonials */}

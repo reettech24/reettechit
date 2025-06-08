@@ -11,12 +11,13 @@ export default function Page() {
     {
       title: t("featureItems.0.title"),
       desc: t("featureItems.0.desc"),
-      image: "/logo3.png",
+      image: "/work/pankaj.jpg",
     },
     {
       title: t("featureItems.1.title"),
       desc: t("featureItems.1.desc"),
-      image: "/logo3.png",
+       image: "/work/jai.jpg",
+
     },
     {
       title: t("featureItems.2.title"),
