@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
@@ -45,7 +46,9 @@ export default function Page() {
                   alt={item.title}
                   className="w-12 h-12 mx-auto mb-4"
                 />
-                <div className="font-semibold text-lg text-white">{item.title}</div>
+                <div className="font-semibold text-lg text-white">
+                  {item.title}
+                </div>
                 <p className="text-sm text-white/80 mt-2">{item.desc}</p>
               </div>
             ))}
@@ -118,7 +121,24 @@ export default function Page() {
           {t("techStackTitle")}
         </div>
         <div className="flex justify-center flex-wrap gap-6">
-          {["react","nodejs","nextjs","python","docker","mongodb","javascript","typescript","kubernetes","redis","postgresql","firebase","flutter","java","kotlin","swift"].map((tech, idx) => (
+          {[
+            "react",
+            "nodejs",
+            "nextjs",
+            "python",
+            "docker",
+            "mongodb",
+            "javascript",
+            "typescript",
+            "kubernetes",
+            "redis",
+            "postgresql",
+            "firebase",
+            "flutter",
+            "java",
+            "kotlin",
+            "swift",
+          ].map((tech, idx) => (
             <img
               key={idx}
               src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech}/${tech}-original.svg`}

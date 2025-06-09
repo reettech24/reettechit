@@ -1,9 +1,11 @@
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import getRequestConfig from '@/i18n/request';
-import { routing } from '@/i18n/routing';
-import { notFound } from 'next/navigation';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+export const dynamic = "force-dynamic";
+
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import getRequestConfig from "@/i18n/request";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 // ✅ Static rendering support for all locales
 export function generateStaticParams() {
@@ -17,14 +19,14 @@ export async function generateMetadata({ params }) {
   const messages = (await import(`../../../messages/${locale}.json`)).default;
 
   return {
-    title: messages?.metadata?.title || 'Reet Technologies',
+    title: messages?.metadata?.title || "Reet Technologies",
     description:
       messages?.metadata?.description ||
-      'Reet Technologies is a modern software company building future-ready applications.',
-      icons: {
-        icon: "/reetlogo.png",
-        shortcut: "/reetlogo.png",
-      },
+      "Reet Technologies is a modern software company building future-ready applications.",
+    icons: {
+      icon: "/reetlogo.png",
+      shortcut: "/reetlogo.png",
+    },
   };
 }
 

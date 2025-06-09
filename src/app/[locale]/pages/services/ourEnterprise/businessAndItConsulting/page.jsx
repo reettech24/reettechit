@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import { useTranslations } from "next-intl";
 import ContactUsSection from "@/components/sections/ContactUsSection";
@@ -21,9 +22,7 @@ export default function Page() {
       >
         <div className="absolute inset-0 bg-black opacity-70" />
         <div className="relative z-10">
-          <h1 className="text-5xl font-extrabold mb-6">
-            {t("heroTitle")}
-          </h1>
+          <h1 className="text-5xl font-extrabold mb-6">{t("heroTitle")}</h1>
           <p className="text-2xl max-w-3xl mx-auto">{t("heroDesc")}</p>
         </div>
       </section>
@@ -74,7 +73,7 @@ export default function Page() {
           <div className="flex justify-center flex-wrap gap-12">
             {whoWeServe.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
-                  <img
+                <img
                   src={item.icon}
                   alt={`${item.name} icon`}
                   className="w-16 h-16 mb-2"

@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import React from "react";
 import TestimonialSection from "@/components/sections/TestimonialSection";
@@ -58,11 +59,17 @@ export default function Page() {
 
       <section className="bg-white relative overflow-hidden py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <img src="/about2.jpeg" alt="Business foundation" className=" shadow" />
+          <img
+            src="/about2.jpeg"
+            alt="Business foundation"
+            className=" shadow"
+          />
           <div>
             <h2 className="text-3xl font-bold mb-4">{t("aboutTitle")}</h2>
             {t.raw("aboutParagraphs").map((p, i) => (
-              <p key={i} className="text-gray-600 leading-relaxed">{p}</p>
+              <p key={i} className="text-gray-600 leading-relaxed">
+                {p}
+              </p>
             ))}
           </div>
         </div>
@@ -78,7 +85,10 @@ export default function Page() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {services.map((item, i) => (
-            <div key={i} className="bg-gray-900 p-6 shadow hover:shadow-lg transition">
+            <div
+              key={i}
+              className="bg-gray-900 p-6 shadow hover:shadow-lg transition"
+            >
               <img src={item.img} alt={item.title} className="w-12 h-12 mb-4" />
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
               <p className="text-white/80 mt-2">{item.desc}</p>
@@ -136,7 +146,12 @@ export default function Page() {
           <h2 className="text-3xl text-white font-bold">{t("clientsTitle")}</h2>
         </div>
         <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
-          {["/partners/logo.png", "/partners/logo3.png", "/partners/dimplechemicals.png", "/partners/happysoul.png"].map((logo, i) => (
+          {[
+            "/partners/logo.png",
+            "/partners/logo3.png",
+            "/partners/dimplechemicals.png",
+            "/partners/happysoul.png",
+          ].map((logo, i) => (
             <img key={i} src={logo} alt="Client Logo" className="h-20 w-auto" />
           ))}
         </div>

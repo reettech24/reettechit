@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
+
 import AboutSection from "@/components/sections/AboutSection";
 import CompanyCollaborationSection from "@/components/sections/CompanyCollaborationSection";
 import ContactForm from "@/components/sections/ContactForm";

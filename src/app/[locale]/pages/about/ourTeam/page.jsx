@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
+
 
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import { useTranslations } from "next-intl";

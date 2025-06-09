@@ -1,12 +1,49 @@
 "use client";
+export const dynamic = "force-dynamic";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Mail, Phone, MapPin, Play } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
   const t = useTranslations("contactus");
+  const [subject, setSubject] = useState("Web Development");
+  const formRef = useRef();
+
+  const serviceOptions = [
+    "Web Development",
+    "Mobile App Development",
+    "AR/VR Solutions",
+    "AI/ML Services",
+    "Digital Marketing",
+    "Project Management",
+    "Brand Consulting",
+    "Other",
+  ];
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "your_service_id",
+        "your_template_id",
+        formRef.current,
+        "your_public_key"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
+  };
 
   const contactItems = [
     {
@@ -42,7 +79,9 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 bg-[#070B2A] opacity-70" />
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">{t("heroTitle")}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
+            {t("heroTitle")}
+          </h1>
           <p className="text-sm text-white/70">{t("heroDesc")}</p>
         </div>
       </section>
@@ -84,28 +123,55 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-3xl font-bold text-white mb-6">{t("journeyTitle")}</h3>
-            <form className="space-y-4">
+            <h3 className="text-3xl font-bold text-white mb-6">
+              {t("journeyTitle")}
+            </h3>
+
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
               <input
                 type="text"
+                name="user_name"
                 placeholder={formPlaceholders[0]}
-                className="w-full px-4 py-3 placeholder-white/40 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              />
+              <input
+                type="text"
+                name="firm_name"
+                placeholder="Firm / Company Name"
+                className="w-full px-4 py-3 placeholder-white/40 border text-white  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
               <input
                 type="email"
+                name="user_email"
                 placeholder={formPlaceholders[1]}
-                className="w-full px-4 py-3 placeholder-white/40 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
-              <input
-                type="text"
-                placeholder={formPlaceholders[2]}
-                className="w-full px-4 py-3 placeholder-white/40 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
-              />
+              <select
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                className="w-full px-4 py-3 text-white/70 bg-[#070B2A] border  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              >
+                {serviceOptions.map((option, idx) => (
+                  <option key={idx} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              {subject === "Other" && (
+                <textarea
+                  name="custom_query"
+                  rows={3}
+                  placeholder="Please specify your query"
+                  className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                />
+              )}
               <textarea
                 rows={5}
+                name="message"
                 placeholder={formPlaceholders[3]}
-                className="w-full px-4 py-3 placeholder-white/40 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
-              ></textarea>
+                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              />
               <button
                 type="submit"
                 className="bg-[#2244f8] text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"

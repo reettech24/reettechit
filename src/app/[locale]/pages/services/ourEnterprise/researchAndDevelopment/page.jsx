@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import React from "react";
 import ContactUsSection from "@/components/sections/ContactUsSection";
@@ -30,9 +31,13 @@ export default function Page() {
       <section className="relative overflow-hidden py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">{t("whyTitle")}</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              {t("whyTitle")}
+            </h2>
             {t.raw("whyParagraphs").map((para, idx) => (
-              <p key={idx} className="text-gray-600 mb-4">{para}</p>
+              <p key={idx} className="text-gray-600 mb-4">
+                {para}
+              </p>
             ))}
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               {t.raw("whyBullets").map((item, idx) => (
@@ -40,7 +45,11 @@ export default function Page() {
               ))}
             </ul>
           </div>
-          <img src="/design.jpeg" alt="R&D Illustration" className="shadow-lg" />
+          <img
+            src="/design.jpeg"
+            alt="R&D Illustration"
+            className="shadow-lg"
+          />
         </div>
         <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
           <img src="/p1.png" alt="Nexus India Logo" className="" />
@@ -50,12 +59,23 @@ export default function Page() {
       {/* Focus Areas */}
       <section className="bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-14">{t("focusTitle")}</h2>
+          <h2 className="text-3xl font-bold text-center mb-14">
+            {t("focusTitle")}
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {focusAreas.map((item, idx) => (
-              <div key={idx} className="bg-gray-800 p-6 shadow hover:shadow-xl transition duration-300">
-                <img src={item.icon} alt={item.title} className="w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+              <div
+                key={idx}
+                className="bg-gray-800 p-6 shadow hover:shadow-xl transition duration-300"
+              >
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-12 h-12 mb-4"
+                />
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  {item.title}
+                </h3>
                 <p className="text-white/80">{item.desc}</p>
               </div>
             ))}
@@ -71,7 +91,9 @@ export default function Page() {
             {timeline.map((item, index) => (
               <div key={index} className="relative">
                 <div className="absolute -left-4 top-0 w-4 h-4 bg-indigo-500 rounded-full"></div>
-                <h4 className="text-lg font-semibold text-white">{item.year}</h4>
+                <h4 className="text-lg font-semibold text-white">
+                  {item.year}
+                </h4>
                 <p className="text-white/80">{item.event}</p>
               </div>
             ))}
@@ -85,7 +107,9 @@ export default function Page() {
       {/* Success Stories */}
       <section className="bg-indigo-50 py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">{t("impactTitle")}</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t("impactTitle")}
+          </h2>
           <div className="grid md:grid-cols-2 gap-10">
             {impactStories.map((story, i) => (
               <div
@@ -94,7 +118,9 @@ export default function Page() {
                   i % 2 === 0 ? "border-purple-600" : "border-indigo-600"
                 }`}
               >
-                <h4 className="text-xl font-semibold mb-2 text-white">{story.title}</h4>
+                <h4 className="text-xl font-semibold mb-2 text-white">
+                  {story.title}
+                </h4>
                 <p className="text-white/60">{story.desc}</p>
               </div>
             ))}

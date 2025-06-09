@@ -90,8 +90,8 @@ export default function AboutSection() {
             <Image
               src="/work/pankaj.jpg"
               alt={t('ceo.name')}
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               className="rounded-full"
             />
             <div>

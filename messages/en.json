@@ -2139,12 +2139,12 @@
         ],
         "toolsTitle": "Tools & Platforms We Use",
         "tools": [
-            "Slack",
-            "Jira",
-            "Trello",
-            "Notion",
-            "ClickUp",
-            "Asana"
+            "slack",
+            "jira",
+            "trello",
+            "notion",
+            "clickUp",
+            "asana"
         ],
         "whyUsTitle": "Why Partner With Us?",
         "whyUsPoints": [
