@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -10,6 +9,8 @@ import TestimonialSection from "@/components/sections/TestimonialSection";
 
 export default function page() {
   const t = useTranslations("automotive");
+
+  const Images = ["/test/39.jpeg", "/test/42.jpeg", "/test/40.jpeg"];
 
   return (
     <>
@@ -46,11 +47,11 @@ export default function page() {
                 key={idx}
                 className="bg-gray-800 p-6 shadow hover:shadow-lg text-center"
               >
-                {/* <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-12 h-12 mx-auto mb-4"
-                /> */}
+                <img
+                  src={Images[idx]}
+                  alt={`solutions Images ${idx + 1}`}
+                  className="w-68 h-52 object-cover mx-auto mb-4"
+                />
                 <h4 className="text-xl font-semibold mb-2 text-white">
                   {item.title}
                 </h4>
@@ -164,7 +165,6 @@ export default function page() {
             {t("faqTitle")}
           </h3>
           <div className="space-y-6">
-          
             {t.raw("faq").map((item, idx) => (
               <div key={idx} className="bg-gray-800 p-6 shadow">
                 <h4 className="font-semibold mb-2 text-white">{item.q}</h4>

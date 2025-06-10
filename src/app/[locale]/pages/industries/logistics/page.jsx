@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -9,8 +8,10 @@ import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 
 export default function page() {
-    const t = useTranslations("logistic");
-  
+  const t = useTranslations("logistic");
+
+  const journeySteps = ["/test/36.jpeg", "/test/37.jpeg", "/test/38.jpeg"];
+
   return (
     <>
       {/* Hero Banner */}
@@ -43,48 +44,16 @@ export default function page() {
             {t("solutionsTitle")}
           </h3>
           <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Fleet Tracking & Management",
-                desc: "Monitor vehicle locations, driver behavior, and route efficiency in real-time.",
-                icon: "/icons/fleet.svg",
-              },
-              {
-                title: "Route Optimization",
-                desc: "Reduce fuel costs and delivery times with AI-powered routing tools.",
-                icon: "/icons/route.svg",
-              },
-              {
-                title: "Supply Chain Visibility",
-                desc: "Improve transparency and inventory tracking across suppliers, distributors, and customers.",
-                icon: "/icons/visibility.svg",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-gray-800 p-6 shadow text-center hover:shadow-lg transition"
-              >
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-12 h-12 mx-auto mb-4"
-                />
-                <h4 className="font-semibold text-lg mb-2 text-white">
-                  {item.title}
-                </h4>
-                <p className="text-white/80 text-sm">{item.desc}</p>
-              </div>
-            ))}
             {t.raw("solutions").map((item, idx) => (
               <div
                 key={idx}
                 className="bg-gray-800 p-6 shadow text-center hover:shadow-lg transition"
               >
-                {/* <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-12 h-12 mx-auto mb-4"
-                /> */}
+                <img
+                  src={journeySteps[idx]}
+                  alt={`Journey Step ${idx + 1}`}
+                  className="w-68 h-52 object-cover mx-auto mb-4"
+                />
                 <h4 className="font-semibold text-lg mb-2 text-white">
                   {item.title}
                 </h4>
@@ -100,16 +69,6 @@ export default function page() {
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-10">{t("benefitsTitle")}</h3>
           <div className="grid md:grid-cols-4 gap-8">
-            {[
-              "Lower Delivery Costs",
-              "Faster Fulfillment",
-              "Real-Time Customer Updates",
-              "Improved Driver Safety",
-            ].map((benefit, i) => (
-              <div key={i} className="p-4 bg-gray-900 shadow-sm">
-                <p className="font-medium text-white/80">{benefit}</p>
-              </div>
-            ))}
             {t.raw("benefits").map((item, idx) => (
               <div key={idx} className="p-4 bg-gray-900 shadow-sm">
                 <p className="font-medium text-white/80">{item}</p>
@@ -140,27 +99,6 @@ export default function page() {
             {t("trendsTitle")}
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Green Logistics",
-                desc: "Sustainable practices like EV fleets and carbon tracking are becoming standard.",
-              },
-              {
-                title: "Last-Mile Automation",
-                desc: "Drones and autonomous vehicles are revolutionizing final-mile delivery.",
-              },
-              {
-                title: "Digital Twins",
-                desc: "Real-time virtual supply chains enable better forecasting and planning.",
-              },
-            ].map((trend, i) => (
-              <div key={i} className="bg-gray-800 p-6 shadow">
-                <h4 className="text-lg font-semibold mb-2 text-white">
-                  {trend.title}
-                </h4>
-                <p className="text-sm text-white/80">{trend.desc}</p>
-              </div>
-            ))}
             {t.raw("trends").map((item, idx) => (
               <div key={idx} className="bg-gray-800 p-6 shadow">
                 <h4 className="text-lg font-semibold mb-2 text-white">
@@ -183,22 +121,6 @@ export default function page() {
             {t("techStackDescription")}
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            {[
-              "AWS",
-              "Google Maps API",
-              "IoT Sensors",
-              "React.js",
-              "Next.js",
-              "MongoDB",
-              "PostgreSQL",
-            ].map((tech, idx) => (
-              <span
-                key={idx}
-                className="bg-blue-100 text-blue-800 font-medium px-4 py-2 rounded-full text-sm shadow"
-              >
-                {tech}
-              </span>
-            ))}
             {t.raw("techStack").map((item, idx) => (
               <span
                 key={idx}

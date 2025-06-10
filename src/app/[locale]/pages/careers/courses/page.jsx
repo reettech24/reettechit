@@ -9,6 +9,12 @@ import React from "react";
 export default function Page() {
   const t = useTranslations("studentcourses");
 
+  const journeyImages = [
+    "/test/16.jpeg",
+    "/test/18.jpeg",
+    "/test/20.jpeg",
+  ];
+
   return (
     <>
       {/* Hero Section */}
@@ -71,47 +77,14 @@ export default function Page() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <img
-                src="/logo3.png"
-                className="w-40 mx-auto mb-3"
-                alt="Mentorship"
-              />
-              <h4 className="font-semibold">1-on-1 Mentorship</h4>
-              <p className="text-sm text-white/80 mt-2">
-                Get guidance from experts working at top tech firms.
-              </p>
-            </div>
-            <div>
-              <img
-                src="/logo3.png"
-                className="w-40 mx-auto mb-3"
-                alt="Mentorship"
-              />
-              <h4 className="font-semibold">Industry Certification</h4>
-              <p className="text-sm text-white/80 mt-2">
-                Earn certificates that boost your resume and confidence.
-              </p>
-            </div>
-            <div>
-              <img
-                src="/logo3.png"
-                className="w-40 mx-auto mb-3"
-                alt="Mentorship"
-              />
-              <h4 className="font-semibold">Real Projects</h4>
-              <p className="text-sm text-white/80 mt-2">
-                Work on real-world use cases and build a portfolio.
-              </p>
-            </div>
             {t.raw("journeySteps").map((item, idx) => (
-              <div key={idx}>
+              <div key={idx} className="text-center">
                 <img
-                  src="/logo3.png"
-                  className="w-40 mx-auto mb-3"
-                  alt="Mentorship"
+                  src={journeyImages[idx]}
+                  className="w-60 h-60 object-cover mx-auto mb-3 shadow-md"
+                  alt={`Journey Step ${idx + 1}`}
                 />
-                <h4 className="font-semibold">{item}</h4>
+                <h4 className="font-semibold text-white text-lg">{item}</h4>
                 <p className="text-sm text-white/80 mt-2">
                   Work on real-world use cases and build a portfolio.
                 </p>

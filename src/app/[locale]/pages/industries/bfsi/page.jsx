@@ -122,7 +122,7 @@ export default function page() {
       </section>
 
       {/* Partner Logos */}
-      <section className="bg-gray-100 py-16 px-6 text-center">
+      {/* <section className="bg-gray-100 py-16 px-6 text-center">
         <h3 className="text-xl font-bold mb-8">{t("partnersTitle")}</h3>
         <div className="flex justify-center items-center gap-10 flex-wrap max-w-5xl mx-auto">
           {["visa", "mastercard", "paypal", "stripe", "revolut"].map(
@@ -136,7 +136,7 @@ export default function page() {
             )
           )}
         </div>
-      </section>
+      </section> */}
 
       {/* Security & Certification */}
       <section className="py-20 px-6 bg-white">

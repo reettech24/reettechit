@@ -152,12 +152,12 @@ export default function page() {
       {/* Trusted Partners */}
       <section className="py-20 bg-white px-6 text-center">
         <h3 className="text-2xl font-bold mb-6">{t("partnersTitle")}</h3>
-        <p className="text-gray-600 mb-10">{t("partnersDesc")}</p>
-        <div className="flex justify-center flex-wrap gap-6">
+        <p className="text-gray-600">{t("partnersDesc")}</p>
+        {/* <div className="flex justify-center flex-wrap gap-6">
           <img src="/logos/hospital1.png" alt="Partner 1" className="h-12" />
           <img src="/logos/hospital2.png" alt="Partner 2" className="h-12" />
           <img src="/logos/hospital3.png" alt="Partner 3" className="h-12" />
-        </div>
+        </div> */}
       </section>
 
       {/* CTA */}

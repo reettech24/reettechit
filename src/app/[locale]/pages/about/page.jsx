@@ -77,9 +77,9 @@ export default function AboutPage() {
             <p className="text-gray-600 mb-4">{t("missionText")}</p>
           </div>
           <img
-            src="/Team.jpeg"
+            src="/test/27.jpeg"
             alt="Mission"
-            className="shadow-lg object-cover h-full z-10"
+            className="shadow-lg object-cover h-80 w-full z-10"
           />
         </div>
       </section>
@@ -94,9 +94,9 @@ export default function AboutPage() {
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <img
-            src="/Team.jpeg"
+            src="/test/19.jpeg"
             alt="Vision"
-            className="shadow-lg object-cover h-full z-10"
+            className="shadow-lg object-cover h-80 w-full z-10"
           />
           <div>
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
@@ -141,21 +141,21 @@ export default function AboutPage() {
       <section className="py-20 px-6 relative text-center bg-[#070B2A] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-10">{t("leadershipTitle")}</h2>
-          <div className="grid md:grid-cols-4 gap-10">
+          <div className="grid md:grid-cols-3 gap-10">
             {t.raw("leadership").map((person, idx) => (
               <div key={idx} className="text-center z-10">
                 <img
                   src={
                     [
                       "/work/pankaj.jpg",
-                      "/logo3.png",
+                      "/work/saddaf.jpeg",
                       "/work/jai.jpg",
                       "/logo3.png",
                       "/logo3.png",
-                      "/work/ash.jpg",
-
-                      "/work/durvesh.png",
-                      "/logo3.png",
+                      "/work/aswariya.jpg",
+                      "/work/durvesh.jpg",
+                      "/work/himanshu.jpeg",
+                      "/work/saurabh.jpg",
                     ][idx]
                   }
                   alt={person.name}
@@ -181,7 +181,7 @@ export default function AboutPage() {
           {t("cultureText")}
         </p>
         <img
-          src="/about2.jpeg"
+          src="/test/13.jpg"
           alt="Company Culture"
           className="mx-auto shadow-lg md:max-w-4xl"
         />

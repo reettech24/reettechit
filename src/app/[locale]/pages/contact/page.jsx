@@ -9,8 +9,18 @@ import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
   const t = useTranslations("contactus");
-  const [subject, setSubject] = useState("Web Development");
   const formRef = useRef();
+  const [status, setStatus] = useState("");
+
+  const [formData, setFormData] = useState({
+    name: "",
+    firm: "",
+    email: "",
+    phone: "", // ✅ Added phone here
+    subject: "Web Development",
+    custom_query: "",
+    message: "",
+  });
 
   const serviceOptions = [
     "Web Development",
@@ -23,24 +33,42 @@ export default function ContactPage() {
     "Other",
   ];
 
-  const sendEmail = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setStatus("Sending...");
 
     emailjs
-      .sendForm(
-        "your_service_id",
-        "your_template_id",
-        formRef.current,
-        "your_public_key"
+      .send(
+        "service_mbu89yq",
+        "template_uyjes9m",
+        {
+          ...formData,
+        },
+        "BCW7qT_gn3b4_hP4j"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully!");
+        () => {
+          setStatus("Message sent successfully! ✅");
+          setFormData({
+            name: "",
+            firm: "",
+            email: "",
+            phone: "", // ✅ Reset phone too
+            subject: "Web Development",
+            custom_query: "",
+            message: "",
+          });
         },
-        (error) => {
-          console.log(error.text);
-          alert("Failed to send message. Please try again later.");
+        () => {
+          setStatus("Failed to send message ❌");
         }
       );
   };
@@ -72,24 +100,22 @@ export default function ContactPage() {
 
   return (
     <div>
-      {/* Top Banner */}
+      {/* Hero Section */}
       <section
         className="bg-[#070B2A] text-white py-52 text-center bg-cover bg-center relative"
         style={{ backgroundImage: "url('/breadcrumb.jpg')" }}
       >
         <div className="absolute inset-0 bg-[#070B2A] opacity-70" />
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">
-            {t("heroTitle")}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">{t("heroTitle")}</h1>
           <p className="text-sm text-white/70">{t("heroDesc")}</p>
         </div>
       </section>
 
-      {/* Info + Form */}
+      {/* Contact Form Section */}
       <section className="py-20 px-6 lg:px-20 bg-[#070B2A] overflow-hidden">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Info Card */}
+          {/* Contact Info */}
           <div>
             <div className="bg-[#2244f8] text-white p-8 rounded-lg space-y-6">
               {contactItems.map((item, idx) => (
@@ -105,10 +131,9 @@ export default function ContactPage() {
               ))}
             </div>
 
-            {/* Preview Button */}
             <div className="mt-8 relative w-full h-64 rounded-md overflow-hidden shadow-md">
               <Image
-                src="/illu.png"
+                src="/Services.jpeg"
                 alt="Contact preview"
                 fill
                 className="object-cover"
@@ -123,34 +148,46 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-3xl font-bold text-white mb-6">
-              {t("journeyTitle")}
-            </h3>
-
-            <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+            <h3 className="text-3xl font-bold text-white mb-6">{t("journeyTitle")}</h3>
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
-                name="user_name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder={formPlaceholders[0]}
                 className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
               <input
                 type="text"
-                name="firm_name"
+                name="firm"
+                value={formData.firm}
+                onChange={handleChange}
                 placeholder="Firm / Company Name"
-                className="w-full px-4 py-3 placeholder-white/40 border text-white  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
               <input
                 type="email"
-                name="user_email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder={formPlaceholders[1]}
+                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              />
+              {/* ✅ Phone Field */}
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
                 className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
               <select
                 name="subject"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                className="w-full px-4 py-3 text-white/70 bg-[#070B2A] border  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                value={formData.subject}
+                onChange={handleChange}
+                className="w-full px-4 py-3 text-white/70 bg-[#070B2A] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               >
                 {serviceOptions.map((option, idx) => (
                   <option key={idx} value={option}>
@@ -158,9 +195,11 @@ export default function ContactPage() {
                   </option>
                 ))}
               </select>
-              {subject === "Other" && (
+              {formData.subject === "Other" && (
                 <textarea
                   name="custom_query"
+                  value={formData.custom_query}
+                  onChange={handleChange}
                   rows={3}
                   placeholder="Please specify your query"
                   className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
@@ -169,6 +208,8 @@ export default function ContactPage() {
               <textarea
                 rows={5}
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder={formPlaceholders[3]}
                 className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
               />
@@ -178,12 +219,13 @@ export default function ContactPage() {
               >
                 {t("ctaBtn")}
               </button>
+              {status && <p className="text-white mt-2">{status}</p>}
             </form>
           </div>
         </div>
       </section>
 
-      {/* Map Embed */}
+      {/* Google Map */}
       <section className="h-[400px] w-full">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10264.101790527155!2d73.8422636895683!3d18.45182023491473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eacd9ab69bf7%3A0x53519bbf068e9be9!2sRenaissance%20-%20Project%20by%20Krishna%20Developers!5e1!3m2!1sen!2sus!4v1748290274174!5m2!1sen!2sus"

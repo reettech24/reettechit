@@ -389,11 +389,11 @@ export const Header = () => {
           </Popover>
 
           {/* Industries */}
-          <Popover className="relative">
+          <Popover className="relative group">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {t("industries")} <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90">
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300" >
               <Link
                 href="/pages/industries/retail-E-commerce"
                 className="block"
@@ -425,12 +425,12 @@ export const Header = () => {
           </Popover>
 
           {/* Our Products */}
-          <Popover className="relative">
+          <Popover className="relative group">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {t("products")}
               <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90">
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
               <Link href="/pages/products/nexus-india" className="block">
                 Nexus India Applicaion
               </Link>
@@ -441,11 +441,11 @@ export const Header = () => {
           </Popover>
 
           {/* About Us */}
-          <Popover className="relative">
+          <Popover className="relative group">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {t("aboutUs")} <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90">
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
               <Link href="/pages/about" className="block hover:text-blue-300">
                 Who We Are
               </Link>
@@ -465,11 +465,11 @@ export const Header = () => {
           </Popover>
 
           {/* Career Courses */}
-          <Popover className="relative">
+          <Popover className="relative group">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {t("careers")} <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90">
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
               <Link href="/pages/careers/courses" className="block">
                 Student Courses
               </Link>
@@ -488,11 +488,11 @@ export const Header = () => {
           </Link>
 
           {/* Language Switcher */}
-          <Popover className="relative">
+          <Popover className="relative group">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition">
               🌐 <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute right-0 top-15 w-40 p-4 bg-[#070B2A] backdrop-blur-xl text-sm text-white/80 space-y-2 z-40">
+            <PopoverPanel className="absolute right-0 top-15 w-40 p-4 bg-[#070B2A] backdrop-blur-xl text-sm text-white/80 space-y-2 z-40 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
               {locales.map(({ code, label }) => (
                 <Link
                   key={code}

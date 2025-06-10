@@ -56,7 +56,8 @@ export default function NexusSolutionsSection() {
           >
             <div className="absolute inset-0 bg-black/60 z-0" />
             <div className="relative z-10 p-8">
-              <h3 className="text-2xl font-bold text-orange-500 mb-2 uppercase">{t('nexusIndia.name')}</h3>
+              {/* <h3 className="text-2xl font-bold text-orange-500 mb-2 uppercase">{t('nexusIndia.name')}</h3> */}
+             <img src="/nexusindialogo.png" className='w-80' alt='nexus india' />
               <h3 className="text-xl font-bold text-blue-200 mb-4 uppercase">{t('nexusIndia.tagline')}</h3>
               <p className="text-white mb-4">{t('nexusIndia.description')}</p>
               <ul className="list-disc list-inside text-white mb-6 space-y-1">
@@ -87,7 +88,9 @@ export default function NexusSolutionsSection() {
           >
             <div className="absolute inset-0 bg-black/60 z-0" />
             <div className="relative z-10 p-8">
-              <h3 className="text-2xl font-bold text-orange-500 mb-2 uppercase">{t('nexusOnline.name')}</h3>
+              {/* <h3 className="text-2xl font-bold text-orange-500 mb-2 uppercase">{t('nexusOnline.name')}</h3> */}
+             <img src="/nexusindialogo.png" className='w-80' alt='nexus india' />
+
               <h3 className="text-xl font-bold text-blue-200 mb-4 uppercase">{t('nexusOnline.tagline')}</h3>
               <p className="text-white mb-4">{t('nexusOnline.description')}</p>
               <ul className="list-disc list-inside text-white mb-6 space-y-1">

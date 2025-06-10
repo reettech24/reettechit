@@ -11,19 +11,15 @@ import "swiper/css/navigation";
 const testimonialsData = [
   {
     key: "testimonial1",
-    avatar: "/avatars/avatar1.jpg",
+    avatar: "/partners/dimplechemicals.png",
   },
   {
     key: "testimonial2",
-    avatar: "/avatars/avatar2.jpg",
+    avatar: "/partners/logo3.png",
   },
   {
     key: "testimonial3",
-    avatar: "/reetlogo.png",
-  },
-  {
-    key: "testimonial4",
-    avatar: "/reetlogo.png",
+    avatar: "/partners/puneeta.png",
   },
 ];
 
@@ -80,11 +76,31 @@ export default function TestimonialSection() {
         <img src="/p1.png" alt="Nexus India Logo" />
       </div>
       <div className="absolute inset-0 pointer-events-none">
-        <img src="/reetlogo.png" alt="avatar" className="w-10 h-10 rounded-full absolute top-10 left-20 shadow-md" />
-        <img src="/reetlogo.png" alt="avatar" className="w-10 h-10 rounded-full absolute top-105 lg:top-80 left-20 lg:left-40 shadow-md" />
-        <img src="/reetlogo.png" alt="avatar" className="w-10 h-10 rounded-full absolute top-0 right-28 shadow-md" />
-        <img src="/reetlogo.png" alt="avatar" className="w-10 h-10 rounded-full absolute bottom-10 right-40 shadow-md" />
-        <img src="/reetlogo.png" alt="avatar" className="w-10 h-10 rounded-full absolute top-15 lg:top-10 right-5 lg:right-120 shadow-md" />
+        <img
+          src="/reetlogo.png"
+          alt="avatar"
+          className="w-10 h-10 rounded-full absolute top-10 left-20 shadow-md"
+        />
+        <img
+          src="/reetlogo.png"
+          alt="avatar"
+          className="w-10 h-10 rounded-full absolute top-105 lg:top-80 left-20 lg:left-40 shadow-md"
+        />
+        <img
+          src="/reetlogo.png"
+          alt="avatar"
+          className="w-10 h-10 rounded-full absolute top-0 right-28 shadow-md"
+        />
+        <img
+          src="/reetlogo.png"
+          alt="avatar"
+          className="w-10 h-10 rounded-full absolute bottom-10 right-40 shadow-md"
+        />
+        <img
+          src="/reetlogo.png"
+          alt="avatar"
+          className="w-10 h-10 rounded-full absolute top-15 lg:top-10 right-5 lg:right-120 shadow-md"
+        />
       </div>
     </section>
   );

@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Hero = () => {
-  const t = useTranslations('hero');
+  const t = useTranslations("hero");
 
-  const keys = ['headline1', 'headline2', 'headline3', 'headline4'];
+  const keys = ["headline1", "headline2", "headline3", "headline4"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -46,16 +47,20 @@ const Hero = () => {
         </AnimatePresence>
 
         <p className="text-sm sm:text-xl text-gray-300 max-w-2xl">
-          {t('subtext')}
+          {t("subtext")}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 pt-2 text-md lg:text-lg">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
-            {t('cta1')}
-          </button>
-          <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-            {t('cta2')}
-          </button>
+          <Link href="/pages/contact" passHref>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
+              {t("cta1")}
+            </button>
+          </Link>
+          <Link href="/pages/about" passHref>
+            <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+              {t("cta2")}
+            </button>
+          </Link>
         </div>
       </div>
     </section>

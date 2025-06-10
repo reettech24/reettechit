@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import { useTranslations } from "next-intl";
 import React from "react";
@@ -18,13 +17,12 @@ export default function Page() {
     {
       title: t("featureItems.1.title"),
       desc: t("featureItems.1.desc"),
-       image: "/work/jai.jpg",
-
+      image: "/work/saddaf.jpeg",
     },
     {
       title: t("featureItems.2.title"),
       desc: t("featureItems.2.desc"),
-      image: "/logo3.png",
+      image: "/work/jai.jpg",
     },
     {
       title: t("featureItems.3.title"),
@@ -39,7 +37,22 @@ export default function Page() {
     {
       title: t("featureItems.5.title"),
       desc: t("featureItems.5.desc"),
-      image: "/logo3.png",
+      image: "/work/aswariya.jpg",
+    },
+    {
+      title: t("featureItems.6.title"),
+      desc: t("featureItems.6.desc"),
+      image: "/work/durvesh.jpg",
+    },
+    {
+      title: t("featureItems.7.title"),
+      desc: t("featureItems.7.desc"),
+      image: "/work/himanshu.jpeg",
+    },
+    {
+      title: t("featureItems.8.title"),
+      desc: t("featureItems.8.desc"),
+      image: "/work/saurabh.jpg",
     },
   ];
 
@@ -52,7 +65,9 @@ export default function Page() {
       >
         <div className="absolute inset-0 bg-[#0A0F2E] opacity-70" />
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">{t("heroTitle")}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+            {t("heroTitle")}
+          </h1>
           <p className="text-sm text-white/70">{t("heroDesc")}</p>
         </div>
       </section>
@@ -80,7 +95,9 @@ export default function Page() {
                   alt={member.title}
                   className="w-60 h-60 mx-auto object-cover mb-4"
                 />
-                <h3 className="text-lg font-semibold text-white">{member.title}</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {member.title}
+                </h3>
                 <p className="text-sm text-white/80">{member.desc}</p>
               </div>
             ))}
@@ -90,12 +107,14 @@ export default function Page() {
 
       {/* Culture & Diversity */}
       <section className="py-20 px-6 max-w-5xl mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-8">{t("cultureTitle")}</h2>
+        <h2 className="text-2xl font-bold text-center mb-8">
+          {t("cultureTitle")}
+        </h2>
         <p className="text-gray-700 text-center max-w-3xl mx-auto mb-8">
           {t("cultureDesc")}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {Array(4)
+          {/* {Array(4)
             .fill(0)
             .map((_, idx) => (
               <div
@@ -103,7 +122,11 @@ export default function Page() {
                 className="h-40 bg-gray-200 rounded-lg animate-pulse"
                 title="Culture photo placeholder"
               />
-            ))}
+            ))} */}
+          <img src="/test/31.jpeg" className=" w-full bg-cover h-68" />
+          <img src="/test/17.jpeg" className=" w-full bg-cover h-68" />
+          <img src="/test/24.jpeg" className=" w-full bg-cover h-68" />
+          <img src="/test/26.jpeg" className=" w-full bg-cover h-68" />
         </div>
       </section>
 

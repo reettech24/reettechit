@@ -39,52 +39,6 @@ export default function Page() {
             {t("availableJobsTitle")}
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Frontend Developer",
-                location: "Remote / India",
-                type: "Full-Time",
-                desc: "Work with React and modern UI frameworks to build world-class web experiences.",
-              },
-              {
-                title: "Cloud DevOps Engineer",
-                location: "Hyderabad, India",
-                type: "Full-Time",
-                desc: "Deploy and manage scalable, secure infrastructure using AWS and CI/CD pipelines.",
-              },
-              {
-                title: "Project Manager (Agile)",
-                location: "Remote / Hybrid",
-                type: "Contract",
-                desc: "Manage sprints and deliverables while keeping teams aligned and stakeholders informed.",
-              },
-              {
-                title: "Cybersecurity Analyst",
-                location: "Delhi NCR",
-                type: "Full-Time",
-                desc: "Monitor and protect infrastructure, perform threat assessments and audits.",
-              },
-              {
-                title: "Business Analyst",
-                location: "Pune",
-                type: "Internship",
-                desc: "Support product strategy through market research and stakeholder interviews.",
-              },
-            ].map((job, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 p-6 shadow hover:shadow-xl transition"
-              >
-                <h4 className="text-xl font-semibold mb-2 text-white">
-                  {job.title}
-                </h4>
-                <p className="text-sm text-white/80 mb-3">{job.desc}</p>
-                <div className="flex justify-between text-sm text-whaite/60">
-                  <span>{job.location}</span>
-                  <span>{job.type}</span>
-                </div>
-              </div>
-            ))}
             {t.raw("featureItems").map((item, idx) => (
               <div
                 key={idx}
@@ -116,14 +70,16 @@ export default function Page() {
           </h3>
           <p className="text-white/80 mb-10">{t("securityDesc")}</p>
           <div className="grid md:grid-cols-3 gap-6">
-            {["logo3.png", "logo3.png", "logo3.png"].map((img, idx) => (
-              <img
-                key={idx}
-                src={`/${img}`}
-                alt="Life at Company"
-                className=" object-cover h-64 w-full shadow-md z-10"
-              />
-            ))}
+            {["/test/20.jpeg", "/test/21.jpeg", "/test/32.jpeg"].map(
+              (img, idx) => (
+                <img
+                  key={idx}
+                  src={`${img}`}
+                  alt="Life at Company"
+                  className=" object-cover h-64 w-full shadow-md z-10"
+                />
+              )
+            )}
           </div>
         </div>
 
@@ -142,43 +98,14 @@ export default function Page() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div className=" bg-gray-900 p-6 shadow-sm">
-            <img
-              src="/logo3.png"
-              className="w-40 mx-auto mb-3"
-              alt="Career Growth"
-            />
-            <h4 className="font-semibold text-white">Career Growth</h4>
-            <p className="text-sm text-white/80 mt-2">
-              We invest in your learning, skills, and professional development.
-            </p>
-          </div>
-          <div className=" bg-gray-900 p-6 shadow-sm">
-            <img
-              src="/logo3.png"
-              className="w-40 mx-auto mb-3"
-              alt="Flexibility"
-            />
-            <h4 className="font-semibold text-white">Flexible Work</h4>
-            <p className="text-sm text-white/80 mt-2">
-              Remote-friendly culture with work-life balance built in.
-            </p>
-          </div>
-          <div className=" bg-gray-900 p-6 shadow-sm">
-            <img src="/logo3.png" className="w-40 mx-auto mb-3" alt="Culture" />
-            <h4 className="font-semibold text-white">Inclusive Culture</h4>
-            <p className="text-sm text-white/80 mt-2">
-              We value diversity, transparency, and honest collaboration.
-            </p>
-          </div>
           {t.raw("journeySteps").map((item, idx) => (
-            <div key={idx} className=" bg-gray-900 p-6 shadow-sm">
+            <div key={idx} className="bg-gray-900 p-6 shadow-sm rounded-md">
               <img
-                src="/logo3.png"
-                className="w-40 mx-auto mb-3"
-                alt="Culture"
+                src={`/test/${20 + idx}.jpeg`} // Assumes filenames like 20.jpeg, 21.jpeg, etc.
+                alt="Life at Company"
+                className="object-cover h-64 w-full mb-4 rounded shadow-md"
               />
-              <h4 className="font-semibold text-white">{item}</h4>
+              <h4 className="font-semibold text-white text-lg">{item}</h4>
               <p className="text-sm text-white/80 mt-2">
                 We value diversity, transparency, and honest collaboration.
               </p>
@@ -194,53 +121,14 @@ export default function Page() {
             {t("partnersTitle")}
           </h3>
           <div className="grid md:grid-cols-3 gap-10 text-left">
-            {[
-              {
-                icon: "🩺",
-                title: "Health Insurance",
-                desc: "Comprehensive coverage for you and your family.",
-              },
-              {
-                icon: "💻",
-                title: "Remote Setup Stipend",
-                desc: "Home office allowance for productivity and comfort.",
-              },
-              {
-                icon: "🏖️",
-                title: "Paid Time Off",
-                desc: "Ample vacation and personal leave to recharge.",
-              },
-              {
-                icon: "📚",
-                title: "Learning Budget",
-                desc: "Invest in your professional development and skills.",
-              },
-              {
-                icon: "🌍",
-                title: "Diverse Team",
-                desc: "Collaborate with global talent from multiple backgrounds.",
-              },
-              {
-                icon: "🏆",
-                title: "Recognition Program",
-                desc: "Celebrate wins and outstanding contributions regularly.",
-              },
-            ].map((perk, idx) => (
+            
+            {t.raw("securityPoints").map((perk, idx) => (
               <div key={idx} className="bg-gray-800 p-6 shadow-sm">
                 <div className="text-3xl mb-3">{perk.icon}</div>
                 <h4 className="font-semibold text-lg mb-1 text-white">
                   {perk.title}
                 </h4>
                 <p className="text-sm text-white/80">{perk.desc}</p>
-              </div>
-            ))}
-            {t.raw("securityPoints").map((item, idx) => (
-              <div key={idx} className="bg-gray-800 p-6 shadow-sm">
-                {/* <div className="text-3xl mb-3">{item.icon}</div> */}
-                <h4 className="font-semibold text-lg mb-1 text-white">
-                  {item}
-                </h4>
-                {/* <p className="text-sm text-white/80">{item.desc}</p> */}
               </div>
             ))}
           </div>

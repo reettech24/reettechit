@@ -1,12 +1,12 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import { useTranslations } from "next-intl";
 
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import React from "react";
+import Image from "next/image";
 
 export default function Page() {
   const t = useTranslations("aboutourfocus");
@@ -47,7 +47,6 @@ export default function Page() {
             {t("coreValuesTitle")}
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-white/80">
-           
             {t.raw("coreValues").map((item, idx) => (
               <div
                 key={idx}
@@ -70,7 +69,6 @@ export default function Page() {
             {t("workProcessTitle")}
           </div>
           <div className="grid md:grid-cols-4 gap-8 text-center text-gray-800">
-          
             {t.raw("workProcess").map((item, idx) => (
               <div key={idx} className="p-6 bg-gray-800 transition">
                 <div className="font-semibold text-lg text-white">
@@ -94,7 +92,7 @@ export default function Page() {
           </div>
           <p className="text-white/80 mb-8">{t("globalReachDesc")}</p>
           <img
-            src="/about2.jpeg"
+            src="/test/28.jpeg"
             alt="Global Presence"
             className="mx-auto w-full max-w-3xl shadow"
           />
@@ -108,7 +106,6 @@ export default function Page() {
             {t("whyChooseUsTitle")}
           </div>
           <ul className="grid sm:grid-cols-2 gap-8 text-white/80 text-md">
-       
             {t.raw("whyChooseUs").map((item, idx) => (
               <li key={idx}>
                 <strong>{item} </strong>
@@ -131,11 +128,17 @@ export default function Page() {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {/* Replace with real team photos if desired */}
-          {Array(4)
+          {/* {Array(4)
             .fill(0)
             .map((_, idx) => (
               <div key={idx} className="h-40 bg-gray-900" />
-            ))}
+            ))} */}
+
+          <img src="/test/31.jpeg" className=" w-full bg-cover h-68" />
+          <img src="/test/17.jpeg" className=" w-full bg-cover h-68" />
+          <img src="/test/24.jpeg" className=" w-full bg-cover h-68" />
+          <img src="/test/26.jpeg" className=" w-full bg-cover h-68" />
+          
         </div>
       </section>
 

@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import { useState } from "react";
 import Image from "next/image";
 import { Play } from "lucide-react";
@@ -9,6 +8,7 @@ import Accordion from "@/components/ui/Accordion";
 import ProjectShowcase from "@/components/sections/ProjectsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
+import NexusSolutionsSection from "@/components/sections/NexusSolutionsSection";
 
 const accordionData = {
   "Next Generation Consulting": {
@@ -25,7 +25,7 @@ const accordionData = {
   "Brand Portfolio Management": {
     heading: "Brand Portfolio Management",
     description:
-      "Maximize brand equity and streamline multi-brand strategies with precision oversight.",
+      "Companies grow, scale, and develop by providing specialist brand portfolio management services. Your brand architecture will be clear, unified, and in line with your company's mission thanks to our unique brand strategy solutions.We assist companies in organizing and managing their brand portfolios for growth, clarity, and consistency at Reet Tech, Pune's go-to branding and strategy firm.",
     videoTitle: "Portfolio Growth Strategies",
     bulletPoints: [
       "Unified brand voice",
@@ -36,7 +36,7 @@ const accordionData = {
   "Project Management": {
     heading: "Project Management",
     description:
-      "Efficient planning, execution, and delivery of projects with agile methodologies.",
+      "we help you bring your projects to life—on time and with precision. From web to mobile and cloud projects, we plan, execute, and deliver—so you can focus on growth.",
     videoTitle: "Project Execution Tips",
     bulletPoints: [
       "Agile frameworks",
@@ -58,7 +58,7 @@ const accordionData = {
   "Software Development": {
     heading: "Software Development",
     description:
-      "Full-cycle software solutions from architecture to deployment using modern tech stacks.",
+      "We specialize in delivering custom software solutions designed to meet your exact business requirements. Whether you're a startup, SME, or enterprise, we develop powerful, scalable, and secure software using the latest technologies that integrate seamlessly with cloud servers and supporting hardware systems. Our team works closely with clients to understand their workflow, goals, and challenges—then builds tailored solutions that drive efficiency, automation, and growth.",
     videoTitle: "Modern Dev Workflows",
     bulletPoints: [
       "Robust architecture",
@@ -69,7 +69,7 @@ const accordionData = {
   "Digital Transformation": {
     heading: "Digital Transformation",
     description:
-      "Reimagine operations and experiences with data-driven digital innovation.",
+      "By combining the latest technologies with strategic methods, we at Reet Technologies lead digital transformation initiatives for companies in Pune. We help organizations in being more flexible, effective, and prepared for the future by automating processes and moving to the cloud.In today's fast-paced, tech-driven world, Digital Transformation is no longer a choice—it's a necessity. At Reet Technologies, we help businesses evolve by integrating advanced digital technologies into every aspect of their operations. Whether you're a startup or an enterprise, our tailored solutions drive innovation, boost efficiency, and unlock new growth opportunities.Digital Transformation refers to the process of using digital technologies to create new—or modify existing—business processes, culture, and customer experiences to meet changing business and market.",
     videoTitle: "Transforming with Tech",
     bulletPoints: [
       "Customer-centric workflows",
@@ -80,7 +80,7 @@ const accordionData = {
   "CRM & ERP Solutions": {
     heading: "CRM & ERP Solutions",
     description:
-      "Implement, customize, and optimize enterprise systems for smooth workflows.",
+      " we specialize in developing customized CRM and ERP solutions that empower businesses to operate efficiently, make informed decisions, and stay competitive.",
     videoTitle: "Enterprise System Benefits",
     bulletPoints: [
       "Centralized operations",
@@ -115,7 +115,7 @@ export default function page() {
       <section className="py-16 px-6 lg:px-20 grid md:grid-cols-3 gap-12">
         {/* Sidebar */}
         <aside className="space-y-3">
-          <div className="bg-black text-white p-4 flex justify-between items-center rounded shadow">
+          <div className="bg-black text-white p-4 flex justify-between items-center shadow">
             <span>Our Services</span>
             <span className="text-teal-400">→</span>
           </div>
@@ -123,7 +123,7 @@ export default function page() {
             <div
               key={idx}
               onClick={() => setSelectedService(service)}
-              className={`cursor-pointer p-4 flex justify-between items-center rounded shadow-sm ${
+              className={`cursor-pointer p-4 flex justify-between items-center shadow-sm ${
                 selectedService === service
                   ? "bg-[#070B2A] text-white"
                   : "bg-gray-100 text-black hover:bg-teal-50"
@@ -135,7 +135,7 @@ export default function page() {
           ))}
 
           {/* Contact Form */}
-          <form className="bg-white border p-4 mt-6 space-y-4 rounded shadow">
+          {/* <form className="bg-white border p-4 mt-6 space-y-4 rounded shadow">
             <div className="grid grid-cols-2 gap-2">
               <input placeholder="First Name" className="p-2 border rounded" />
               <input placeholder="Last Name" className="p-2 border rounded" />
@@ -150,7 +150,7 @@ export default function page() {
             <button className="bg-black text-white py-2 px-4 rounded">
               Send Message
             </button>
-          </form>
+          </form> */}
         </aside>
 
         {/* Content */}
@@ -162,23 +162,25 @@ export default function page() {
             height={300}
             className="h-[200px] object-cover rounded-lg shadow"
           /> */}
-          <h2 className="text-2xl font-bold">{content.heading}</h2>
-          <p className="text-gray-600">{content.description}</p>
+          <h2 className="text-4xl font-bold">{content.heading}</h2>
 
           {/* Video + Side Text */}
           <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div className="relative aspect-video rounded overflow-hidden">
-              <Image
+            <div className="relative h-fit overflow-hidden items-center">
+              {/* <Image
                 src="/illu.png"
                 alt="video"
                 fill
                 className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20 flex justify-center items-center">
+              /> */}
+              <video autoPlay loop muted playsInline className="object-cover">
+                <source src="/contactusvideo.mp4" type="video/mp4" />
+              </video>
+              {/* <div className="absolute inset-0 bg-black/20 flex justify-center items-center">
                 <button className="bg-white text-teal-600 p-3 rounded-full shadow-lg">
                   <Play className="w-6 h-6" />
                 </button>
-              </div>
+              </div> */}
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2">{content.videoTitle}</h3>
@@ -189,6 +191,7 @@ export default function page() {
               </ul>
             </div>
           </div>
+          <p className="text-gray-600 ">{content.description}</p>
 
           {/* FAQ Accordion */}
           <Accordion
@@ -212,6 +215,7 @@ export default function page() {
           />
         </main>
       </section>
+      <NexusSolutionsSection />
       <ProjectShowcase />
       <TestimonialSection />
     </div>

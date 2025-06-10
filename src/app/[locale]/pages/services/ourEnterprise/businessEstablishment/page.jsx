@@ -61,7 +61,7 @@ export default function page() {
       <section className="bg-white relative overflow-hidden py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <img
-            src="/about2.jpeg"
+            src="/test/7.jpg"
             alt="Business foundation"
             className=" shadow"
           />

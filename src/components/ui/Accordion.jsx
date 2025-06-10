@@ -15,23 +15,23 @@ export default function Accordion({ items }) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="border border-gray-200 rounded-md overflow-hidden transition-all"
+          className="border border-gray-200 bg-gray-800 overflow-hidden transition-all"
         >
           <button
             onClick={() => toggle(index)}
             aria-expanded={openIndex === index}
-            className="w-full flex justify-between items-center px-5 py-4 bg-white hover:bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+            className="w-full flex justify-between items-center px-5 py-4 bg-gray-800 hover:bg-gray-900 text-left focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
           >
-            <span className="font-medium text-gray-800">{item.title}</span>
+            <span className="font-medium text-white">{item.title}</span>
             <ChevronDown
-              className={`w-5 h-5 transform transition-transform duration-300 ${
+              className={`w-5 h-5 transform transition-transform duration-300 text-white ${
                 openIndex === index ? "rotate-180" : ""
               }`}
             />
           </button>
 
           <div
-            className={`px-5 text-gray-600 text-sm transition-all duration-300 ease-in-out ${
+            className={`px-5 text-white/80 text-sm transition-all duration-300 ease-in-out ${
               openIndex === index ? "max-h-96 py-4 opacity-100" : "max-h-0 overflow-hidden opacity-0"
             }`}
           >

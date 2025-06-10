@@ -158,7 +158,7 @@ export default function page() {
       <section className="bg-white py-24 px-6 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <Image
-            src="/about2.jpeg"
+            src="/test/ar1.jpeg"
             alt="AR VR Showcase"
             width={600}
             height={400}

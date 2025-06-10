@@ -34,11 +34,11 @@ export default function Page() {
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <Image
-            src="/photos/crm1.jpg"
+            src="/test/43.jpeg"
             alt="CRM ERP Overview"
             width={600}
             height={400}
-            className="w-full"
+            className="w-full h-96 object-cover"
           />
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#070B2A]">

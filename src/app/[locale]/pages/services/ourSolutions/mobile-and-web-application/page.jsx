@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -36,7 +35,7 @@ export default function Page() {
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <Image
-            src="/photos/crm1.jpg"
+            src="/test/44.jpeg"
             alt="CRM ERP Overview"
             width={600}
             height={400}
@@ -50,11 +49,6 @@ export default function Page() {
               {t("overviewDesc")}
             </p>
             <ul className="space-y-4 text-gray-600 text-base">
-              <li>✅ Agile development for fast delivery</li>
-              <li>✅ Customized UI/UX design for your audience</li>
-              <li>✅ High-security standards & data privacy compliance</li>
-              <li>✅ Scalable backend and cloud integration</li>
-              <li>✅ Post-launch support, analytics & app optimization</li>
               {t.raw("overviewPoints").map((item, idx) => (
                 <li key={idx}>✅ {item}</li>
               ))}
@@ -67,29 +61,6 @@ export default function Page() {
       <section className="py-16 px-6 bg-[#070B2A] text-white text-center">
         <h2 className="text-3xl font-bold mb-10">{t("whyChooseUsTitle")}</h2>
         <div className="grid md:grid-cols-4 gap-6 text-left max-w-6xl mx-auto">
-          {[
-            [
-              "Expert Team",
-              "Experienced developers, designers, and project managers.",
-            ],
-            [
-              "Agile Process",
-              "Iterative, transparent development with regular feedback loops.",
-            ],
-            ["Scalable Solutions", "We build apps to grow with your business."],
-            [
-              "Customer Focused",
-              "We prioritize client needs and end-user satisfaction.",
-            ],
-          ].map(([title, desc], i) => (
-            <div
-              key={i}
-              className="p-6 bg-gray-800 shadow hover:shadow-md transition"
-            >
-              <h3 className="font-semibold text-lg mb-2 text-white">{title}</h3>
-              <p className="text-sm text-white/60">{desc}</p>
-            </div>
-          ))}
           {t.raw("whyChooseUs").map((item, idx) => (
             <div
               key={idx}
@@ -110,7 +81,7 @@ export default function Page() {
           {t("coreServicesTitle")}
         </h2>
         <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
-          {[
+          {/* {[
             [
               "Custom Web Development",
               "High-performance web apps built on modern frameworks.",
@@ -146,17 +117,17 @@ export default function Page() {
               key={i}
               className="bg-gray-800 p-6 shadow text-center hover:shadow-lg transition"
             >
-              {/* <Image
+              <Image
                 src={img}
                 alt={title}
                 width={64}
                 height={64}
                 className="mx-auto mb-4"
-              /> */}
+              />
               <h3 className="text-xl font-semibold mb-2">{title}</h3>
               <p className="text-sm text-white/60">{desc}</p>
             </div>
-          ))}
+          ))} */}
 
           {t.raw("coreServices").map((item, idx) => (
             <div
@@ -185,7 +156,7 @@ export default function Page() {
       <section className="px-6 py-12 bg-white text-center">
         <h2 className="text-3xl font-bold mb-10">{t("industriesTitle")}</h2>
         <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
-          {[
+          {/* {[
             "E-commerce",
             "Healthcare",
             "Fintech",
@@ -196,10 +167,10 @@ export default function Page() {
             <div key={industry} className="bg-gray-100 p-6 rounded-xl shadow">
               <h3 className="text-lg font-semibold">{industry}</h3>
             </div>
-          ))}
+          ))} */}
           {t.raw("industries").map((item, idx) => (
-            <div key={idx} className="bg-gray-100 p-6 rounded-xl shadow">
-              <h3 className="text-lg font-semibold">{item}</h3>
+            <div key={idx} className="bg-gray-800 p-6 shadow">
+              <h3 className="text-lg font-semibold text-white">{item}</h3>
             </div>
           ))}
         </div>
@@ -212,18 +183,13 @@ export default function Page() {
               {t("webAppBenefitsDesc")}
             </p>
             <ul className="space-y-4 text-white/70   text-base">
-              <li>✅ Custom business portals and dashboards</li>
-              <li>✅ E-commerce platforms and online booking systems</li>
-              <li>✅ Secure user management and login systems</li>
-              <li>✅ Cloud-based architecture & database management</li>
-              <li>✅ Integration with CRM, ERP, and third-party tools</li>
               {t.raw("webAppPoints").map((item, idx) => (
                 <li key={idx}>✅ {item}</li>
               ))}
             </ul>
           </div>
           <Image
-            src="/photos/crm1.jpg"
+            src="/test/46.jpeg"
             alt="CRM ERP Overview"
             width={600}
             height={400}
@@ -238,19 +204,6 @@ export default function Page() {
           {t("technologiesTitle")}
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
-          {[
-            ["Frontend", "React, Angular, Vue, Tailwind CSS"],
-            ["Backend", "Node.js, Python, PHP, Laravel"],
-            ["Mobile", "Flutter, React Native, Kotlin, Swift"],
-            ["Database", "MongoDB, MySQL, PostgreSQL"],
-            ["Cloud", "AWS, Azure, Docker, Firebase"],
-            ["Others", "Figma, GitHub, Web3, GraphQL"],
-          ].map(([title, techs]) => (
-            <div key={title} className="bg-gray-800 p-6 shadow">
-              <h3 className="font-semibold mb-2 text-white">{title}</h3>
-              <p className="text-sm text-white/60">{techs}</p>
-            </div>
-          ))}
           {t.raw("technologies").map((item, idx) => (
             <div key={idx} className="bg-gray-800 p-6 shadow">
               <h3 className="font-semibold mb-2 text-white">{item.title}</h3>
@@ -264,28 +217,14 @@ export default function Page() {
       <section className="px-6 py-12 bg-[#f0f0f0] text-center">
         <h2 className="text-3xl font-bold mb-10"> {t("processTitle")}</h2>
         <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {[
-            ["Discovery", "Understanding your needs and goals."],
-            ["Design", "UI/UX wireframes & interactive prototypes."],
-            ["Development", "Robust coding & rigorous testing."],
-            ["Deployment", "Go live with ongoing support."],
-          ].map(([step, desc], idx) => (
-            <div
-              key={idx}
-              className="bg-gray-800 hover:bg-gray-700 p-6  shadow"
-            >
-              <div className="text-4xl font-bold text-indigo-600 mb-2">
-                {idx + 1}
-              </div>
-              <h3 className="text-lg font-semibold text-white">{step}</h3>
-              <p className="text-sm text-white/60">{desc}</p>
-            </div>
-          ))}
           {t.raw("process").map((item, idx) => (
             <div
               key={idx}
               className="bg-gray-800 p-6 shadow hover:shadow-lg text-center"
             >
+              <div className="text-4xl font-bold text-indigo-600 mb-2">
+                {idx + 1}
+              </div>
               <h4 className="text-xl font-semibold mb-2 text-white">
                 {item.step}
               </h4>

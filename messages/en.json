@@ -50,6 +50,8 @@
     "contact": {
         "get_in_touch": "Get In Touch",
         "full_name": "Full Name",
+        "firm_name": "Firm Name",
+        "phone_number": "Phone Number",
         "email_address": "Email Address",
         "subject": "Subject",
         "message": "Message",
@@ -140,7 +142,7 @@
             },
             {
                 "name": "T Jaiprakash",
-                "role": "Chief Tecnhology Officer"
+                "role": "Chief Tecnhology Officer (CTO)"
             },
             {
                 "name": "Rishab Chaurasiya",
@@ -161,10 +163,14 @@
             {
                 "name": "Himanshi Bayas",
                 "role": "Content Writer"
+            },
+            {
+                "name": "Saurabh Dhariya",
+                "role": "Digital Marketing Head"
             }
         ],
         "cultureTitle": "What It's Like Working Here",
-        "cultureText": "At Nexus India, we nurture a culture of collaboration, inclusion, and continuous learning. Whether remote or onsite, every team member is encouraged to bring ideas to the table and make meaningful contributions.",
+        "cultureText": "At Reet Technologies, we nurture a culture of collaboration, inclusion, and continuous learning. Whether remote or onsite, every team member is encouraged to bring ideas to the table and make meaningful contributions.",
         "ctaTitle": "Ready to Work with Us?",
         "ctaDesc": "Whether you’re a business looking to scale or a professional looking to contribute—we’d love to connect.",
         "ctaBtn": "Contact Us"
@@ -258,24 +264,19 @@
     },
     "testimonials": {
         "testimonial1": {
-            "name": "HAHIMLAM DIRAT",
-            "role": "Web Developer",
-            "text": "It is wanting to come here and afterward our office is something we consider it the little we are pleased with. Magnet; difficult to leave it. Our office is additionally a big name."
+            "name": "Team Dimple Chemicals",
+            "role": "Client",
+            "text": "Reet Technologies developed a user-friendly CRM and a professional website for us, both of which have greatly streamlined our business operations and improved our online presence. Their team was efficient, responsive, and easy to work with."
         },
         "testimonial2": {
-            "name": "REEMA KUMARI",
-            "role": "Project Manager",
-            "text": "Working here has completely transformed my perspective on team collaboration. The support and innovation in the workspace are unmatched."
+            "name": "Team TAW Designs",
+            "role": "Client",
+            "text": "Working with Reet Technologies was a seamless experience. They designed a visually stunning and highly functional website that truly reflects our brand. Their creativity, technical skill, and timely delivery exceeded our expectations."
         },
         "testimonial3": {
-            "name": "ARJUN PATEL",
-            "role": "UI/UX Designer",
-            "text": "From flexible working hours to an extremely talented peer group, I’ve found everything I ever wanted in a workplace."
-        },
-        "testimonial4": {
-            "name": "SANA SHAIKH",
-            "role": "Marketing Head",
-            "text": "Reet Technologies believes in growth—of business and people. Proud to be part of this journey."
+            "name": "Puneeta Ranjan",
+            "role": "Artist",
+            "text": "Reet Technologies brought my vision to life with a beautiful and artistic website that showcases my paintings perfectly. Their design sense, attention to detail, and smooth communication made the whole process enjoyable and stress-free."
         }
     },
     "collaborationSection": {
@@ -1162,28 +1163,40 @@
         "overviewDesc": "Our people are the foundation of our success. With decades of combined experience across tech, business, design, and strategy — we bring together global talent committed to delivering excellence.",
         "featureItems": [
             {
-                "title": "Anika Patel",
-                "desc": "Chief Executive Officer — Anika leads our global vision with over 15 years of experience in tech leadership and digital transformation."
+                "title": "Pankaj Deole",
+                "desc": "Founder & CEO — Pankaj shapes the strategic direction of Reet Technologies with visionary leadership and entrepreneurial spirit."
             },
             {
-                "title": "James Carter",
-                "desc": "Head of Technology — James architects scalable cloud systems and drives innovation across our technical teams."
+                "title": "Saddaf Khan",
+                "desc": "Project Management Head — Saddaf ensures timely, budget-conscious delivery across all projects with precision and leadership."
             },
             {
-                "title": "Mei Wong",
-                "desc": "VP of Strategy — With deep experience in enterprise consulting, Mei ensures alignment between business goals and tech execution."
+                "title": "T Jaiprakash",
+                "desc": "Chief Technology Officer (CTO) — Jaiprakash leads technological innovation and architecture across client and internal systems."
             },
             {
-                "title": "David Kim",
-                "desc": "Head of Product — David brings a product-first mindset, ensuring customer-centric design and development workflows."
+                "title": "Rishab Chaurasiya",
+                "desc": "Project Manager — Rishab coordinates cross-functional teams, delivering seamless project execution with a client-first approach."
             },
             {
-                "title": "Sara Lopez",
-                "desc": "Director of Operations — Sara oversees operational excellence and ensures smooth client delivery across global teams."
+                "title": "Snahal Patil",
+                "desc": "Full Stack Developer — Snahal crafts scalable, high-performance web solutions from backend logic to front-end experience."
             },
             {
-                "title": "Arjun Sharma",
-                "desc": "Lead Solutions Architect — Arjun drives system architecture and client integrations, with a focus on security and scalability."
+                "title": "Aishwarya Varade",
+                "desc": "Data Analyst — Aishwarya deciphers complex data into actionable insights that drive intelligent business decisions."
+            },
+            {
+                "title": "Durvesh Shinde",
+                "desc": "Design Head — Durvesh leads creative direction, blending aesthetics with usability for impactful digital experiences."
+            },
+            {
+                "title": "Himanshi Bayas",
+                "desc": "Content Writer — Himanshi crafts clear, engaging content that aligns brand messaging with user intent."
+            },
+            {
+                "title": "Saurabh Dhariya",
+                "desc": "Digital Marketing Head — Saurabh drives growth through performance marketing, SEO, and digital brand strategy."
             }
         ],
         "cultureTitle": "Our Culture",
@@ -1275,12 +1288,36 @@
         "securityTitle": "Life at Reet Technologies",
         "securityDesc": "We’re more than just coworkers—we’re a community.",
         "securityPoints": [
-            "🩺 Health Insurance – Comprehensive coverage for you and your family.",
-            "💻 Remote Setup Stipend – Home office allowance for productivity and comfort.",
-            "🏖️ Paid Time Off – Ample vacation and personal leave to recharge.",
-            "📚 Learning Budget – Invest in your professional development and skills.",
-            "🌍 Diverse Team – Collaborate with global talent from multiple backgrounds.",
-            "🏆 Recognition Program – Celebrate wins and outstanding contributions regularly."
+            {
+                "icon": "🩺",
+                "title": "Health Insurance",
+                "desc": "Comprehensive coverage for you and your family."
+            },
+            {
+                "icon": "💻",
+                "title": "Remote Setup Stipend",
+                "desc": "Home office allowance for productivity and comfort."
+            },
+            {
+                "icon": "🏖️",
+                "title": "Paid Time Off",
+                "desc": "Ample vacation and personal leave to recharge."
+            },
+            {
+                "icon": "📚",
+                "title": "Learning Budget",
+                "desc": "Invest in your professional development and skills."
+            },
+            {
+                "icon": "🌍",
+                "title": "Diverse Team",
+                "desc": "Collaborate with global talent from multiple backgrounds."
+            },
+            {
+                "icon": "🏆",
+                "title": "Recognition Program",
+                "desc": "Celebrate wins and outstanding contributions regularly."
+            }
         ],
         "ctaTitle": "Ready to Take the Next Step?",
         "ctaDesc": "Join a mission-driven company where your work truly matters. Apply now or share your resume.",

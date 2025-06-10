@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import React from "react";
 import { useTranslations } from "next-intl";
 import TestimonialSection from "@/components/sections/TestimonialSection";
@@ -113,18 +112,14 @@ export default function DigitalMarketingPage() {
               ))}
             </ul>
           </div>
-          <img
-            src="/about2.jpeg"
-            alt="Why Choose Us"
-            className=" shadow-lg"
-          />
+          <img src="/test/17.jpeg" alt="Why Choose Us" className=" shadow-lg" />
         </div>
       </section>
 
       {/* Case Study */}
       <section className="py-20 bg-gray-50 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <img src="/about2.jpeg" alt="Results" className=" shadow-xl" />
+          <img src="/test/47.jpeg" alt="Results" className=" shadow-xl" />
           <div>
             <h2 className="text-3xl font-bold mb-4">{t("caseStudyTitle")}</h2>
             <p className="text-gray-700 mb-4">{t("caseStudyDesc")}</p>
@@ -140,7 +135,9 @@ export default function DigitalMarketingPage() {
       {/* FAQs */}
       <section className="bg-[#070B2A] text-white py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">{t("faqsTitle")}</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            {t("faqsTitle")}
+          </h2>
           <div className="space-y-6">
             {t.raw("faqs").map((faq, i) => (
               <div key={i}>
