@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -49,16 +48,11 @@ export default function AiMlSolutionsPage() {
               {t("overviewDesc")}
             </p>
             <ul className="space-y-4 text-gray-600 text-base">
-              <li>✅ Predictive analytics for accurate forecasting</li>
-              <li>✅ Customized UI/UX design for your audience</li>
-              <li>✅ Real-time data classification and clustering</li>
-              <li>✅ Pattern recognition for improved strategy</li>
-              <li>✅ Scalable machine learning deployment</li>
-              {/* {t.raw("whyUsPointsone").map((item, idx) => (
-                <ul key={idx} className="space-y-4 text-white/80">
+              {t.raw("overviewlist").map((item, idx) => (
+                <ul key={idx} className="space-y-4 text-black">
                   <li>✅ {item}</li>
                 </ul>
-              ))} */}
+              ))}
             </ul>
           </div>
         </div>
@@ -103,8 +97,7 @@ export default function AiMlSolutionsPage() {
       <section className="bg-indigo-900 py-16 sm:py-20 px-4 sm:px-6 lg:px-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <Image
-                        src="/test/5.jpg"
-
+            src="/test/5.jpg"
             alt="CRM ERP Overview"
             width={600}
             height={400}
@@ -143,12 +136,7 @@ export default function AiMlSolutionsPage() {
             </ul>
           </div>
           <div>
-            <img
-                                  src="/test/4.jpg"
-
-              alt="Case Study"
-              className=" shadow-md"
-            />
+            <img src="/test/4.jpg" alt="Case Study" className=" shadow-md" />
           </div>
         </div>
       </section>
@@ -160,38 +148,12 @@ export default function AiMlSolutionsPage() {
             {t("whyChooseUsTitle")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Expert Team",
-                desc: "Our AI scientists, engineers, and domain experts bring years of experience.",
-                icon: "👨‍🔬",
-              },
-              {
-                title: "Customized Solutions",
-                desc: "We tailor AI models specifically for your business needs.",
-                icon: "🛠️",
-              },
-              {
-                title: "Ethical AI Practices",
-                desc: "Our solutions prioritize transparency, fairness, and responsibility.",
-                icon: "⚖️",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white p-8 shadow-md hover:shadow-lg transition"
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-700">{item.desc}</p>
-              </div>
-            ))}
             {t.raw("whyChooseUs").map((item, idx) => (
               <div
                 key={idx}
                 className="bg-white p-8 shadow-md hover:shadow-lg transition"
               >
-                {/* <div className="text-4xl mb-4">{item.icon}</div> */}
+                <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-700">{item.desc}</p>
               </div>

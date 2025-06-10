@@ -172,6 +172,39 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="py-20 px-6 relative overflow-hidden text-center bg-black text-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-10">{t("techPartnersTitle")}</h2>
+          <div className="grid md:grid-cols-3 gap-10 items-center justify-center">
+            {t.raw("techPartners").map((partner, idx) => (
+              <div key={idx} className="text-center z-10">
+                <img
+                  src={
+                    [
+                      "/partners/logo.png",
+                      "/partners/happysoul.png",
+                      "/partners/dimplechemicals.png",
+                      "/partners/client-7.png",
+                      "/partners/theblackspade.png",
+                    ][idx]
+                  }
+                  alt={partner.name}
+                  className="h-40 mx-auto mb-4 object-contain"
+                />
+                <h4 className="font-semibold text-white text-lg">
+                  {partner.name}
+                </h4>
+                <p className="text-sm text-white/80">{partner.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="absolute -bottom-0 -left-0 opacity-10 w-screen">
+          <img src="/p2.png" alt="Design Pattern" className="" />
+        </div>
+      </section>
+      <NexusSolutionsSection />
+
       {/* Culture */}
       <section className="bg-[#070B2A] text-white py-20 px-6 text-center">
         <h2 className="text-2xl font-bold mb-8 text-white">
@@ -188,7 +221,6 @@ export default function AboutPage() {
       </section>
 
       <ProjectShowcase />
-      <NexusSolutionsSection />
       <TestimonialSection />
 
       {/* CTA */}

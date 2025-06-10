@@ -123,6 +123,29 @@
                 "desc": "We help clients grow—and grow alongside them."
             }
         ],
+        "techPartnersTitle": "Our Technology Partners",
+        "techPartners": [
+            {
+                "name": "Nexgenex Tech",
+                "desc": "Cutting-edge IT infrastructure and futuristic enterprise solutions."
+            },
+            {
+                "name": "HappsoulIndia",
+                "desc": "Creative digital solutions driving emotional brand engagement."
+            },
+            {
+                "name": "Demple Chemicles",
+                "desc": "Innovative chemical tech enabling sustainable product development."
+            },
+            {
+                "name": "Alternative Leadership",
+                "desc": "Human-centric leadership development and strategy consulting."
+            },
+            {
+                "name": "The Black Spade",
+                "desc": "Design-led branding studio blending art, strategy, and culture."
+            }
+        ],
         "journeyTitle": "Our Journey",
         "journey": [
             "2022: Founded with a mission to serve India’s SMEs.",
@@ -137,7 +160,7 @@
                 "role": "Founder & CEO"
             },
             {
-                "name": "Saddaf khan",
+                "name": "Sadaf khan",
                 "role": "Project Management Head"
             },
             {
@@ -149,7 +172,7 @@
                 "role": "Project Manager"
             },
             {
-                "name": "Snahal Patil",
+                "name": "Snehal Patil",
                 "role": "Full Stack Developer"
             },
             {
@@ -1167,7 +1190,7 @@
                 "desc": "Founder & CEO — Pankaj shapes the strategic direction of Reet Technologies with visionary leadership and entrepreneurial spirit."
             },
             {
-                "title": "Saddaf Khan",
+                "title": "Sadaf Khan",
                 "desc": "Project Management Head — Saddaf ensures timely, budget-conscious delivery across all projects with precision and leadership."
             },
             {
@@ -1179,7 +1202,7 @@
                 "desc": "Project Manager — Rishab coordinates cross-functional teams, delivering seamless project execution with a client-first approach."
             },
             {
-                "title": "Snahal Patil",
+                "title": "Snehal Patil",
                 "desc": "Full Stack Developer — Snahal crafts scalable, high-performance web solutions from backend logic to front-end experience."
             },
             {
@@ -1328,6 +1351,13 @@
         "heroDesc": "Unlock automation, insights, and intelligence. Our advanced AI & ML solutions empower your organization to evolve faster and smarter.",
         "overviewTitle": "AI, ML & Data-Driven Solutions",
         "overviewDesc": "Our machine learning expertss build intelligent algorithms that help predict customer behavior, detect anomalies, personalize experiences, and automate repetitive tasks. From sales forecasting to inventory management, our ML models adapt and evolve as your business grows.",
+        "overviewlist": [
+            "Predictive analytics for accurate forecasting",
+            "Customized UI/UX design for your audience",
+            "Real-time data classification and clustering",
+            "Pattern recognition for improved strategy",
+            "Scalable machine learning deploymen"
+        ],
         "featureItems": [
             {
                 "icon": "📊",
