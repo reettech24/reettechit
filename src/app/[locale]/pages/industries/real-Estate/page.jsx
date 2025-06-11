@@ -15,7 +15,7 @@ export default function page() {
     <div className="bg-gray-50 text-gray-900">
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center text-white py- sm:py-40 md:py-52"
+        className="relative bg-cover bg-center text-white py-52 sm:py-40 md:py-52"
         style={{ backgroundImage: "url('/banners/RE.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#070B2A]/80 to-[#1E1E3F]/80" />

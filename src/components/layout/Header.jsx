@@ -393,7 +393,7 @@ export const Header = () => {
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {t("industries")} <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300" >
+            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
               <Link
                 href="/pages/industries/retail-E-commerce"
                 className="block"
@@ -434,7 +434,10 @@ export const Header = () => {
               <Link href="/pages/products/nexus-india" className="block">
                 Nexus India Applicaion
               </Link>
-              <Link href="/pages/products/nexus-online-management" className="block">
+              <Link
+                href="/pages/products/nexus-online-management"
+                className="block"
+              >
                 Nexus Online Management
               </Link>
             </PopoverPanel>
@@ -539,7 +542,7 @@ export const Header = () => {
         <div className="off-canvas__inner py-5 px-7">
           <nav className="off-canvas__nav">
             <PopoverGroup className=" lg:gap-x-12 text-lg font-medium text-white capitalizeg">
-              <Link href="/" className="transition">
+              <Link href="/" className="transition" onClick={toggleMobileMenu}>
                 {t("home")}
               </Link>
 
@@ -749,6 +752,7 @@ export const Header = () => {
               <Link
                 href="/pages/contact"
                 className="hover:text-blue-300 transition"
+                onClick={toggleMobileMenu}
               >
                 {t("contact")}
               </Link>

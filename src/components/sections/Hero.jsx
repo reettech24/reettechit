@@ -52,12 +52,12 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 pt-2 text-md lg:text-lg">
           <Link href="/pages/contact" passHref>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
+            <button className="bg-blue-600 w-full hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
               {t("cta1")}
             </button>
           </Link>
           <Link href="/pages/about" passHref>
-            <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+            <button className="bg-white text-blue-600 w-full border border-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
               {t("cta2")}
             </button>
           </Link>

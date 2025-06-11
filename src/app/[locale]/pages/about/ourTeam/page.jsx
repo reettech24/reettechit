@@ -27,7 +27,7 @@ export default function Page() {
     {
       title: t("featureItems.3.title"),
       desc: t("featureItems.3.desc"),
-      image: "/logo3.png",
+      image: "/work/Prashant.jpg",
     },
     {
       title: t("featureItems.4.title"),
@@ -37,16 +37,21 @@ export default function Page() {
     {
       title: t("featureItems.5.title"),
       desc: t("featureItems.5.desc"),
-      image: "/work/aswariya.jpg",
+      image: "/logo3.png",
     },
     {
       title: t("featureItems.6.title"),
       desc: t("featureItems.6.desc"),
-      image: "/work/durvesh.jpg",
+      image: "/work/aswariya.jpg",
     },
     {
       title: t("featureItems.7.title"),
       desc: t("featureItems.7.desc"),
+      image: "/work/durvesh.jpg",
+    },
+    {
+      title: t("featureItems.8.title"),
+      desc: t("featureItems.8.desc"),
       image: "/work/himanshu.jpeg",
     },
     {

@@ -134,7 +134,7 @@
                 "desc": "Creative digital solutions driving emotional brand engagement."
             },
             {
-                "name": "Demple Chemicles",
+                "name": "Dimple Chemicals",
                 "desc": "Innovative chemical tech enabling sustainable product development."
             },
             {
@@ -144,6 +144,10 @@
             {
                 "name": "The Black Spade",
                 "desc": "Design-led branding studio blending art, strategy, and culture."
+            },
+            {
+                "name": "IDICE – IT For Excellence",
+                "desc": "A design-driven branding studio where creativity meets strategic thinking—merging art, technology, and culture to craft impactful brand experiences."
             }
         ],
         "journeyTitle": "Our Journey",
@@ -166,6 +170,10 @@
             {
                 "name": "T Jaiprakash",
                 "role": "Chief Tecnhology Officer (CTO)"
+            },
+            {
+                "name": "Prashant Kumbhare",
+                "role": "AI/ML Engineer"
             },
             {
                 "name": "Rishab Chaurasiya",
@@ -1191,11 +1199,15 @@
             },
             {
                 "title": "Sadaf Khan",
-                "desc": "Project Management Head — Saddaf ensures timely, budget-conscious delivery across all projects with precision and leadership."
+                "desc": "Project Management Head — Sadaf ensures timely, budget-conscious delivery across all projects with precision and leadership."
             },
             {
                 "title": "T Jaiprakash",
                 "desc": "Chief Technology Officer (CTO) — Jaiprakash leads technological innovation and architecture across client and internal systems."
+            },
+            {
+                "title": "Prashant Kumbhare",
+                "desc": "AI/ML Engineer — Prashant brings deep technical expertise and a problem-solving mindset, driving intelligent automation and innovative solutions tailored to client needs."
             },
             {
                 "title": "Rishab Chaurasiya",
@@ -1203,7 +1215,7 @@
             },
             {
                 "title": "Snehal Patil",
-                "desc": "Full Stack Developer — Snahal crafts scalable, high-performance web solutions from backend logic to front-end experience."
+                "desc": "Full Stack Developer — Snehal crafts scalable, high-performance web solutions from backend logic to front-end experience."
             },
             {
                 "title": "Aishwarya Varade",

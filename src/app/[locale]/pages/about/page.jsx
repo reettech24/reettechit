@@ -150,6 +150,7 @@ export default function AboutPage() {
                       "/work/pankaj.jpg",
                       "/work/saddaf.jpeg",
                       "/work/jai.jpg",
+                      "/work/Prashant.jpg",
                       "/logo3.png",
                       "/logo3.png",
                       "/work/aswariya.jpg",
@@ -186,6 +187,7 @@ export default function AboutPage() {
                       "/partners/dimplechemicals.png",
                       "/partners/client-7.png",
                       "/partners/theblackspade.png",
+                      "/partners/Idice.jpg",
                     ][idx]
                   }
                   alt={partner.name}
