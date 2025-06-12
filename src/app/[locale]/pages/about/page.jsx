@@ -148,11 +148,11 @@ export default function AboutPage() {
                   src={
                     [
                       "/work/pankaj.jpg",
-                      "/work/saddaf.jpeg",
+                      // "/work/saddaf.jpeg",
                       "/work/jai.jpg",
                       "/work/Prashant.jpg",
-                      "/logo3.png",
-                      "/logo3.png",
+                      // "/logo3.png",
+                      "/work/Rishabh.jpg",
                       "/work/aswariya.jpg",
                       "/work/durvesh.jpg",
                       "/work/himanshu.jpeg",
@@ -239,3 +239,55 @@ export default function AboutPage() {
     </div>
   );
 }
+
+//  {
+//                 "title": "Sadaf Khan",
+//                 "desc": "Project Management Head — Sadaf ensures timely, budget-conscious delivery across all projects with precision and leadership."
+//             },
+//    {
+//                 "title": "Snehal Patil",
+//                 "desc": "Full Stack Developer — Snehal crafts scalable, high-performance web solutions from backend logic to front-end experience."
+//             },
+
+// {
+//       "title": "صدف خان",
+//       "desc": "Project Management Head — تضمن صدف التسليم في الوقت المحدد والميزانية عبر جميع المشاريع بدقة وقيادة."
+//     },
+//     {
+//       "title": "سنال باتيل",
+//       "desc": "Full Stack Developer — يبتكر سنال حلول ويب عالية الأداء وقابلة للتوسع من الخلفية إلى الواجهة."
+//     },
+
+//       {
+//       "title": "サダフ・カーン",
+//       "desc": "Project Management Head — サダフは高い精度とリーダーシップで、すべてのプロジェクトの納期と予算を守ります。"
+//     },
+//      {
+//       "title": "スナール・パティル",
+//       "desc": "Full Stack Developer — スナールは、バックエンドロジックからフロントエンド体験まで、スケーラブルで高性能なウェブソリューションを構築します。"
+//     },
+
+//        {
+//               "name": "Sadaf khan",
+//               "role": "Project Management Head"
+//           },
+//             {
+//               "name": "Snehal Patil",
+//               "role": "Full Stack Developer"
+//           },
+//             {
+//       "name": "Sadaf khan",
+//       "role": "رئيس إدارة المشاريع"
+//     },
+//       {
+//       "name": "Snehal Patil",
+//       "role": "مطور Full Stack"
+//     },
+//      {
+//       "name": "Sadaf khan",
+//       "role": "プロジェクト管理部門長"
+//     },
+//       {
+//       "name": "Snehal Patil",
+//       "role": "フルスタック開発者"
+//     },

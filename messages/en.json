@@ -164,10 +164,6 @@
                 "role": "Founder & CEO"
             },
             {
-                "name": "Sadaf khan",
-                "role": "Project Management Head"
-            },
-            {
                 "name": "T Jaiprakash",
                 "role": "Chief Tecnhology Officer (CTO)"
             },
@@ -178,10 +174,6 @@
             {
                 "name": "Rishab Chaurasiya",
                 "role": "Project Manager"
-            },
-            {
-                "name": "Snehal Patil",
-                "role": "Full Stack Developer"
             },
             {
                 "name": "Aishwarya Varade",
@@ -1198,10 +1190,6 @@
                 "desc": "Founder & CEO — Pankaj shapes the strategic direction of Reet Technologies with visionary leadership and entrepreneurial spirit."
             },
             {
-                "title": "Sadaf Khan",
-                "desc": "Project Management Head — Sadaf ensures timely, budget-conscious delivery across all projects with precision and leadership."
-            },
-            {
                 "title": "T Jaiprakash",
                 "desc": "Chief Technology Officer (CTO) — Jaiprakash leads technological innovation and architecture across client and internal systems."
             },
@@ -1212,10 +1200,6 @@
             {
                 "title": "Rishab Chaurasiya",
                 "desc": "Project Manager — Rishab coordinates cross-functional teams, delivering seamless project execution with a client-first approach."
-            },
-            {
-                "title": "Snehal Patil",
-                "desc": "Full Stack Developer — Snehal crafts scalable, high-performance web solutions from backend logic to front-end experience."
             },
             {
                 "title": "Aishwarya Varade",
