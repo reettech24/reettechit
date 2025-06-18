@@ -69,7 +69,7 @@ export const Footer = () => {
               {t("address.line2")}
             </p>
             <p className="flex items-center gap-2 mt-1">
-              <PhoneIcon className="w-4 h-4" /> +91 797-290-5758, <br/> +91 957-969-5319
+              <PhoneIcon className="w-4 h-4" /> +91 797-290-5758
             </p>
           </div>
 

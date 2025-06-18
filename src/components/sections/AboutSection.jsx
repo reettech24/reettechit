@@ -90,10 +90,10 @@ export default function AboutSection() {
             ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 border-t pt-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 border-t pt-6 ">
           <a
-            href="#"
-            className="bg-[#070B2A] text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-blue-700 transition"
+            href="/pages/services"
+            className="bg-[#070B2A] text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-blue-700 transition cursor-pointer"
           >
             {t("buttonText")}
           </a>
@@ -113,7 +113,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
+        <div className="absolute -bottom-70 -right-20 opacity-20 w-screen pointer-events-none">
           <img src="/p1.png" alt="Background Shape" className="" />
         </div>
       </div>
