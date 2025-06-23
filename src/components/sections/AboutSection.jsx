@@ -22,7 +22,7 @@ export default function AboutSection() {
             alt="Business Woman"
             width={500}
             height={400}
-            className="shadow-lg"
+            className=" w-auto h-auto shadow-lg"
           />
         </div>
 
@@ -104,7 +104,7 @@ export default function AboutSection() {
               alt={t("ceo.name")}
               width={50}
               height={50}
-              className="rounded-full"
+              className=" w-14 h-12 rounded-full"
             />
             <div>
               <p className="font-semibold">{t("ceo.name")}</p>
