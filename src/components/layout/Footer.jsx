@@ -37,10 +37,26 @@ export const Footer = () => {
           <div className="space-y-2">
             <h4 className="font-semibold text-xl">{t("quickLinks")}</h4>
             <ul className="flex flex-col gap-2 text-white/70 text-md">
-              <li><a href="/pages/about" className="hover:text-white">{t("about")}</a></li>
-              <li><a href="/pages/careers" className="hover:text-white">{t("careers")}</a></li>
-              <li><a href="/pages/services" className="hover:text-white">{t("services")}</a></li>
-              <li><a href="/pages/contact" className="hover:text-white">{t("contact")}</a></li>
+              <li>
+                <a href="/pages/about" className="hover:text-white">
+                  {t("about")}
+                </a>
+              </li>
+              <li>
+                <a href="/pages/careers" className="hover:text-white">
+                  {t("careers")}
+                </a>
+              </li>
+              <li>
+                <a href="/pages/services" className="hover:text-white">
+                  {t("services")}
+                </a>
+              </li>
+              <li>
+                <a href="/pages/contact" className="hover:text-white">
+                  {t("contact")}
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -48,8 +64,12 @@ export const Footer = () => {
           <div className="space-y-2">
             <h4 className="font-semibold text-xl">{t("products")}</h4>
             <ul className="gap-4 text-blue-500 font-medium text-md">
-              <li><a href="#">{t("nexusIndia")}</a></li>
-              <li><a href="#">{t("nexusOnline")}</a></li>
+              <li>
+                <a href="#">{t("nexusIndia")}</a>
+              </li>
+              <li>
+                <a href="#">{t("nexusOnline")}</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -77,10 +97,30 @@ export const Footer = () => {
             <h4 className="font-semibold text-xl">{t("followUs")}</h4>
             <div className="flex space-x-4">
               {/* <a href="#" className="text-blue-500"><Twitter size={30} /></a> */}
-              <a href="https://www.facebook.com/profile.php?id=61563815199946" className="text-blue-500"><Facebook size={30} /></a>
-              <a href="https://www.instagram.com/reettechnologies/" className="text-blue-500"><Instagram size={30} /></a>
-              <a href="https://www.linkedin.com/company/reet-technologies/posts/?feedView=all" className="text-blue-500"><Linkedin size={30} /></a>
-              <a href="https://www.youtube.com/@ReetTechnologies" className="text-blue-500"><Youtube size={30} /></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61563815199946"
+                className="text-blue-500"
+              >
+                <Facebook size={30} />
+              </a>
+              <a
+                href="https://www.instagram.com/reettechnologies/"
+                className="text-blue-500"
+              >
+                <Instagram size={30} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/reet-technologies/posts/?feedView=all"
+                className="text-blue-500"
+              >
+                <Linkedin size={30} />
+              </a>
+              <a
+                href="https://www.youtube.com/@ReetTechnologies"
+                className="text-blue-500"
+              >
+                <Youtube size={30} />
+              </a>
             </div>
             <p className="flex items-center gap-2 text-xl">
               <EnvelopeIcon className="w-4 h-4" /> sales@reettechit.com
@@ -92,13 +132,49 @@ export const Footer = () => {
 
         {/* Bottom Row */}
         <div className="flex flex-col md:flex-row justify-between text-md text-white/70 gap-2">
-          <p>© {new Date().getFullYear()} Reet Technologies. {t("rights")}</p>
+          <p>
+            © {new Date().getFullYear()} Reet Technologies. {t("rights")}
+          </p>
           <div className="flex flex-wrap gap-3">
-            <a href="#" className="hover:text-white">{t("about")}</a><span>|</span>
-            <a href="#" className="hover:text-white">{t("terms")}</a><span>|</span>
-            <a href="#" className="hover:text-white">{t("privacy")}</a><span>|</span>
-            <a href="#" className="hover:text-white">{t("refund")}</a><span>|</span>
-            <a href="#" className="hover:text-white">{t("shipping")}</a>
+            <a href="/pages/about" className="hover:text-white">
+              {t("about")}
+            </a>
+            <span>|</span>
+            <a
+              href="/pages/policies/termsConditions"
+              className="hover:text-white"
+            >
+              {t("terms")}
+            </a>
+            <span>|</span>
+            <a
+              href="/pages/policies/privacyPolicy"
+              className="hover:text-white"
+            >
+              {t("privacy")}
+            </a>
+            {/* <span>|</span>
+            <a
+              href="/pages/policies/privacyPolicy"
+              className="hover:text-white"
+            >
+              {t("refund")}
+            </a> */}
+
+            <span>|</span>
+            <a
+              href="/pages/policies/californiaPrivacyPolicy"
+              className="hover:text-white"
+            >
+              {t("california")}
+            </a>
+            <span>|</span>
+            <a
+              href="/pages/policies/privacyPolicy"
+              className="hover:text-white"
+            >
+              {t("shipping")}
+            </a>
           </div>
         </div>
       </div>

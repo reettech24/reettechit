@@ -36,7 +36,8 @@
         "terms": "Terms & Condition",
         "privacy": "Privacy Policy",
         "refund": "Cancellation & Refund Policy",
-        "shipping": "Shipping & Delivery Policy"
+        "shipping": "Shipping & Delivery Policy",
+        "california": "California Privacy Rights"
     },
     "hero": {
         "headline1": "Building Future-Ready Web and Mobile Applications",
