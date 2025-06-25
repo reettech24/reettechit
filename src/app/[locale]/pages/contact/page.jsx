@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function ContactPage() {
   const t = useTranslations("contactus");
@@ -38,18 +40,21 @@ export default function ContactPage() {
   const validate = () => {
     const newErrors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^[6-9]\d{9}$/;
+    const phoneRegex = /^\+?[1-9]\d{6,14}$/; // E.164 format
 
     if (!formData.name.trim()) newErrors.name = "Name is required.";
     if (!formData.firm.trim()) newErrors.firm = "Firm name is required.";
     if (!formData.email.trim()) newErrors.email = "Email is required.";
-    else if (!emailRegex.test(formData.email)) newErrors.email = "Invalid email address.";
+    else if (!emailRegex.test(formData.email))
+      newErrors.email = "Invalid email address.";
     if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
-    else if (!phoneRegex.test(formData.phone)) newErrors.phone = "Invalid phone number.";
+    else if (!phoneRegex.test(formData.phone.replace(/\s+/g, "")))
+      newErrors.phone = "Invalid phone number.";
     if (!formData.subject) newErrors.subject = "Please select a subject.";
     if (formData.subject === "Other" && !formData.custom_query.trim())
       newErrors.custom_query = "Please specify your custom query.";
-    if (!formData.message.trim()) newErrors.message = "Message cannot be empty.";
+    if (!formData.message.trim())
+      newErrors.message = "Message cannot be empty.";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -74,7 +79,12 @@ export default function ContactPage() {
     toast.loading("Sending...", { id: "contact-toast" });
 
     emailjs
-      .send("service_tq10qxx", "template_vz09a9m", { ...formData }, "dS08Hy3gaFiNSD_du")
+      .send(
+        "service_tq10qxx",
+        "template_vz09a9m",
+        { ...formData },
+        "dS08Hy3gaFiNSD_du"
+      )
       .then(() => {
         toast.success("Message sent successfully! ✅", { id: "contact-toast" });
         setFormData({
@@ -116,6 +126,8 @@ export default function ContactPage() {
     t("journeySteps.1"),
     t("journeySteps.2"),
     t("journeySteps.3"),
+    t("journeySteps.4"),
+    t("journeySteps.5"),
   ];
 
   const inputBase =
@@ -131,7 +143,9 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 bg-[#070B2A] opacity-70" />
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">{t("heroTitle")}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
+            {t("heroTitle")}
+          </h1>
           <p className="text-sm text-white/70">{t("heroDesc")}</p>
         </div>
       </section>
@@ -172,7 +186,9 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-3xl font-bold text-white mb-6">{t("journeyTitle")}</h3>
+            <h3 className="text-3xl font-bold text-white mb-6">
+              {t("journeyTitle")}
+            </h3>
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
@@ -180,39 +196,62 @@ export default function ContactPage() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={formPlaceholders[0]}
-                className={`${inputBase} ${errors.name ? errorStyle : "border-gray-300"}`}
+                className={`${inputBase} ${
+                  errors.name ? errorStyle : "border-gray-300"
+                }`}
               />
-              {errors.name && <p className="text-red-400 text-sm">{errors.name}</p>}
+              {errors.name && (
+                <p className="text-red-400 text-sm">{errors.name}</p>
+              )}
 
               <input
                 type="text"
                 name="firm"
                 value={formData.firm}
                 onChange={handleChange}
-                placeholder="Firm / Company Name"
-                className={`${inputBase} ${errors.firm ? errorStyle : "border-gray-300"}`}
+                placeholder={formPlaceholders[1]}
+                className={`${inputBase} ${
+                  errors.firm ? errorStyle : "border-gray-300"
+                }`}
               />
-              {errors.firm && <p className="text-red-400 text-sm">{errors.firm}</p>}
+              {errors.firm && (
+                <p className="text-red-400 text-sm">{errors.firm}</p>
+              )}
 
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder={formPlaceholders[1]}
-                className={`${inputBase} ${errors.email ? errorStyle : "border-gray-300"}`}
+                placeholder={formPlaceholders[2]}
+                className={`${inputBase} ${
+                  errors.email ? errorStyle : "border-gray-300"
+                }`}
               />
-              {errors.email && <p className="text-red-400 text-sm">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-red-400 text-sm">{errors.email}</p>
+              )}
 
-              <input
-                type="tel"
-                name="phone"
+              <PhoneInput
+                country={"in"}
                 value={formData.phone}
-                onChange={handleChange}
-                placeholder="Phone Number"
-                className={`${inputBase} ${errors.phone ? errorStyle : "border-gray-300"}`}
+                onChange={(phone) => {
+                  setFormData((prev) => ({ ...prev, phone }));
+                  setErrors((prev) => ({ ...prev, phone: "" }));
+                }}
+                inputProps={{
+                  name: "phone",
+                  required: true,
+                }}
+                containerClass="!w-full !bg-[#070B2A] !rounded-md !border !border-gray-300 focus-within:!ring-2 focus-within:!ring-[#2244f8]"
+                inputClass="!w-full !h-[52px] !bg-[#070B2A] !text-white !pl-16 !pr-4 !border-none placeholder-white/40"
+                buttonClass=" !border-r !border-gray-600 !px-3"
+                dropdownClass="!bg-[#1E253F] !text-white"
+                placeholder={formPlaceholders[3]}
               />
-              {errors.phone && <p className="text-red-400 text-sm">{errors.phone}</p>}
+              {errors.phone && (
+                <p className="text-red-400 text-sm mt-1">{errors.phone}</p>
+              )}
 
               <select
                 name="subject"
@@ -235,10 +274,14 @@ export default function ContactPage() {
                     onChange={handleChange}
                     rows={3}
                     placeholder="Please specify your query"
-                    className={`${inputBase} ${errors.custom_query ? errorStyle : "border-gray-300"}`}
+                    className={`${inputBase} ${
+                      errors.custom_query ? errorStyle : "border-gray-300"
+                    }`}
                   />
                   {errors.custom_query && (
-                    <p className="text-red-400 text-sm">{errors.custom_query}</p>
+                    <p className="text-red-400 text-sm">
+                      {errors.custom_query}
+                    </p>
                   )}
                 </>
               )}
@@ -248,10 +291,14 @@ export default function ContactPage() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder={formPlaceholders[3]}
-                className={`${inputBase} ${errors.message ? errorStyle : "border-gray-300"}`}
+                placeholder={formPlaceholders[5]}
+                className={`${inputBase} ${
+                  errors.message ? errorStyle : "border-gray-300"
+                }`}
               />
-              {errors.message && <p className="text-red-400 text-sm">{errors.message}</p>}
+              {errors.message && (
+                <p className="text-red-400 text-sm">{errors.message}</p>
+              )}
 
               <button
                 type="submit"

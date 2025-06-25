@@ -83,7 +83,9 @@
         "journeyTitle": "Get In Touch",
         "journeySteps": [
             "Full Name",
+            "Firm Name",
             "Email Address",
+            "phone Number",
             "Subject",
             "Message"
         ],
