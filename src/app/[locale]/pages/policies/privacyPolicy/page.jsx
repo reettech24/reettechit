@@ -157,9 +157,9 @@ export default function page() {
           To exercise your rights, email us at:{" "}
           <a
             className="text-blue-600 underline"
-            href="mailto:enquire@reettechit.com"
+            href="mailto:info@reettechit.com"
           >
-            enquire@reettechit.com
+            info@reettechit.com
           </a>
         </p>
       </section>
@@ -194,9 +194,9 @@ export default function page() {
             non-discrimination. Request disclosure at:{" "}
             <a
               className="text-blue-600 underline"
-              href="mailto:enquire@reettechit.com"
+              href="mailto:info@reettechit.com"
             >
-              enquire@reettechit.com
+              info@reettechit.com
             </a>
           </li>
         </ul>
@@ -229,10 +229,10 @@ export default function page() {
         <p>
           📧 Email:{" "}
           <a
-            href="mailto:enquire@reettechit.com"
+            href="mailto:info@reettechit.com"
             className="text-blue-600 underline"
           >
-            enquire@reettechit.com
+            info@reettechit.com
           </a>
         </p>
         <p>

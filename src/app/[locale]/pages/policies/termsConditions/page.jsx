@@ -162,10 +162,10 @@ export default function page() {
           <p>
             📧 Email:{" "}
             <a
-              href="mailto:enquire@reettechit.com"
+              href="mailto:info@reettechit.com"
               className="text-blue-600 underline"
             >
-              enquire@reettechit.com
+              info@reettechit.com
             </a>
           </p>
           <p>

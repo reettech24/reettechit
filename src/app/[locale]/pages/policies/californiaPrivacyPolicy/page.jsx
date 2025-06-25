@@ -158,9 +158,9 @@ export default function page() {
             Email:{" "}
             <a
               className="text-blue-600 underline"
-              href="mailto:enquire@reettechit.com"
+              href="mailto:info@reettechit.com"
             >
-              enquire@reettechit.com
+              info@reettechit.com
             </a>
           </li>
           <li>
@@ -226,9 +226,9 @@ export default function page() {
           📧 Email:{" "}
           <a
             className="text-blue-600 underline"
-            href="mailto:enquire@reettechit.com"
+            href="mailto:info@reettechit.com"
           >
-            enquire@reettechit.com
+            info@reettechit.com
           </a>
         </p>
       </section>
