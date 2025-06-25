@@ -246,7 +246,7 @@ export default function ContactPage() {
                 containerClass="!w-full !bg-[#070B2A] !rounded-md !border !border-gray-300 focus-within:!ring-2 focus-within:!ring-[#2244f8]"
                 inputClass="!w-full !h-[52px] !bg-[#070B2A] !text-white !pl-16 !pr-4 !border-none placeholder-white/40"
                 buttonClass=" !border-r !border-gray-600 !px-3"
-                dropdownClass="!bg-[#1E253F] !text-white"
+                dropdownClass=" text-black"
                 placeholder={formPlaceholders[3]}
               />
               {errors.phone && (

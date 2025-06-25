@@ -25,7 +25,7 @@ export default function Page() {
     <>
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center py-60 text-center text-white"
+        className="relative bg-cover bg-center py-52 text-center text-white"
         style={{ backgroundImage: "url('/photos/rm373batch2-04.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/20 backdrop-blur-xs" />
