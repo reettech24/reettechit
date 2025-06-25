@@ -6,21 +6,23 @@ import { Mail, Phone, MapPin, Play } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 export default function ContactPage() {
   const t = useTranslations("contactus");
   const formRef = useRef();
-  const [status, setStatus] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
     firm: "",
     email: "",
-    phone: "", // ✅ Added phone here
+    phone: "",
     subject: "Web Development",
     custom_query: "",
     message: "",
   });
+
+  const [errors, setErrors] = useState({});
 
   const serviceOptions = [
     "Web Development",
@@ -33,44 +35,62 @@ export default function ContactPage() {
     "Other",
   ];
 
+  const validate = () => {
+    const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[6-9]\d{9}$/;
+
+    if (!formData.name.trim()) newErrors.name = "Name is required.";
+    if (!formData.firm.trim()) newErrors.firm = "Firm name is required.";
+    if (!formData.email.trim()) newErrors.email = "Email is required.";
+    else if (!emailRegex.test(formData.email)) newErrors.email = "Invalid email address.";
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
+    else if (!phoneRegex.test(formData.phone)) newErrors.phone = "Invalid phone number.";
+    if (!formData.subject) newErrors.subject = "Please select a subject.";
+    if (formData.subject === "Other" && !formData.custom_query.trim())
+      newErrors.custom_query = "Please specify your custom query.";
+    if (!formData.message.trim()) newErrors.message = "Message cannot be empty.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    if (!validate()) {
+      toast.error("Please fix the errors in the form.");
+      return;
+    }
+
+    toast.loading("Sending...", { id: "contact-toast" });
 
     emailjs
-      .send(
-        "service_mbu89yq",
-        "template_uyjes9m",
-        {
-          ...formData,
-        },
-        "BCW7qT_gn3b4_hP4j"
-      )
-      .then(
-        () => {
-          setStatus("Message sent successfully! ✅");
-          setFormData({
-            name: "",
-            firm: "",
-            email: "",
-            phone: "", // ✅ Reset phone too
-            subject: "Web Development",
-            custom_query: "",
-            message: "",
-          });
-        },
-        () => {
-          setStatus("Failed to send message ❌");
-        }
-      );
+      .send("service_tq10qxx", "template_vz09a9m", { ...formData }, "dS08Hy3gaFiNSD_du")
+      .then(() => {
+        toast.success("Message sent successfully! ✅", { id: "contact-toast" });
+        setFormData({
+          name: "",
+          firm: "",
+          email: "",
+          phone: "",
+          subject: "Web Development",
+          custom_query: "",
+          message: "",
+        });
+        setErrors({});
+      })
+      .catch(() => {
+        toast.error("Failed to send message ❌", { id: "contact-toast" });
+      });
   };
 
   const contactItems = [
@@ -97,6 +117,10 @@ export default function ContactPage() {
     t("journeySteps.2"),
     t("journeySteps.3"),
   ];
+
+  const inputBase =
+    "w-full px-4 py-3 placeholder-white/40 border text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]";
+  const errorStyle = "border-red-500";
 
   return (
     <div>
@@ -156,33 +180,40 @@ export default function ContactPage() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={formPlaceholders[0]}
-                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className={`${inputBase} ${errors.name ? errorStyle : "border-gray-300"}`}
               />
+              {errors.name && <p className="text-red-400 text-sm">{errors.name}</p>}
+
               <input
                 type="text"
                 name="firm"
                 value={formData.firm}
                 onChange={handleChange}
                 placeholder="Firm / Company Name"
-                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className={`${inputBase} ${errors.firm ? errorStyle : "border-gray-300"}`}
               />
+              {errors.firm && <p className="text-red-400 text-sm">{errors.firm}</p>}
+
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={formPlaceholders[1]}
-                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className={`${inputBase} ${errors.email ? errorStyle : "border-gray-300"}`}
               />
-              {/* ✅ Phone Field */}
+              {errors.email && <p className="text-red-400 text-sm">{errors.email}</p>}
+
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="Phone Number"
-                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className={`${inputBase} ${errors.phone ? errorStyle : "border-gray-300"}`}
               />
+              {errors.phone && <p className="text-red-400 text-sm">{errors.phone}</p>}
+
               <select
                 name="subject"
                 value={formData.subject}
@@ -195,31 +226,39 @@ export default function ContactPage() {
                   </option>
                 ))}
               </select>
+
               {formData.subject === "Other" && (
-                <textarea
-                  name="custom_query"
-                  value={formData.custom_query}
-                  onChange={handleChange}
-                  rows={3}
-                  placeholder="Please specify your query"
-                  className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
-                />
+                <>
+                  <textarea
+                    name="custom_query"
+                    value={formData.custom_query}
+                    onChange={handleChange}
+                    rows={3}
+                    placeholder="Please specify your query"
+                    className={`${inputBase} ${errors.custom_query ? errorStyle : "border-gray-300"}`}
+                  />
+                  {errors.custom_query && (
+                    <p className="text-red-400 text-sm">{errors.custom_query}</p>
+                  )}
+                </>
               )}
+
               <textarea
                 rows={5}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder={formPlaceholders[3]}
-                className="w-full px-4 py-3 placeholder-white/40 border text-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+                className={`${inputBase} ${errors.message ? errorStyle : "border-gray-300"}`}
               />
+              {errors.message && <p className="text-red-400 text-sm">{errors.message}</p>}
+
               <button
                 type="submit"
                 className="bg-[#2244f8] text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"
               >
                 {t("ctaBtn")}
               </button>
-              {status && <p className="text-white mt-2">{status}</p>}
             </form>
           </div>
         </div>

@@ -4,11 +4,11 @@ import React, { useRef, useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 export default function ContactUsSection() {
   const t = useTranslations("contact");
   const formRef = useRef();
-  const [status, setStatus] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -19,6 +19,8 @@ export default function ContactUsSection() {
     custom_query: "",
     message: "",
   });
+
+  const [errors, setErrors] = useState({});
 
   const serviceOptions = [
     "Web Development",
@@ -31,43 +33,69 @@ export default function ContactUsSection() {
     "Other",
   ];
 
+  const validate = () => {
+    const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[6-9]\d{9}$/;
+
+    if (!formData.name.trim()) newErrors.name = "Name is required.";
+    if (!formData.firm.trim()) newErrors.firm = "Firm name is required.";
+    if (!formData.email.trim()) newErrors.email = "Email is required.";
+    else if (!emailRegex.test(formData.email)) newErrors.email = "Invalid email address.";
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
+    else if (!phoneRegex.test(formData.phone)) newErrors.phone = "Invalid phone number.";
+    if (!formData.subject) newErrors.subject = "Please select a subject.";
+    if (formData.subject === "Other" && !formData.custom_query.trim())
+      newErrors.custom_query = "Please specify your custom query.";
+    if (!formData.message.trim()) newErrors.message = "Message cannot be empty.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    if (!validate()) {
+      toast.error("Please fix the errors in the form.");
+      return;
+    }
+
+    toast.loading("Sending...", { id: "contact-toast" });
 
     emailjs
       .send(
-        "service_mbu89yq",
-        "template_uyjes9m",
+        "service_tq10qxx",
+        "template_vz09a9m",
         { ...formData },
-        "BCW7qT_gn3b4_hP4j"
+        "dS08Hy3gaFiNSD_du"
       )
-      .then(
-        () => {
-          setStatus("Message sent successfully! ✅");
-          setFormData({
-            name: "",
-            firm: "",
-            email: "",
-            phone: "",
-            subject: "Web Development",
-            custom_query: "",
-            message: "",
-          });
-        },
-        () => {
-          setStatus("Failed to send message ❌");
-        }
-      );
+      .then(() => {
+        toast.success("Message sent successfully! ✅", { id: "contact-toast" });
+        setFormData({
+          name: "",
+          firm: "",
+          email: "",
+          phone: "",
+          subject: "Web Development",
+          custom_query: "",
+          message: "",
+        });
+        setErrors({});
+      })
+      .catch(() => {
+        toast.error("Failed to send message ❌", { id: "contact-toast" });
+      });
   };
+
+  const inputBase =
+    "w-full px-4 py-3 border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#2244f8]";
+  const errorStyle = "border-red-500";
 
   return (
     <section className="py-20 px-6 lg:px-20 bg-[#070B2A] text-white">
@@ -97,32 +125,40 @@ export default function ContactUsSection() {
               value={formData.name}
               onChange={handleChange}
               placeholder={t("full_name")}
-              className="w-full px-4 py-3 border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              className={`${inputBase} ${errors.name ? errorStyle : ""}`}
             />
+            {errors.name && <p className="text-red-400 text-sm">{errors.name}</p>}
+
             <input
               type="text"
               name="firm"
               value={formData.firm}
               onChange={handleChange}
               placeholder={t("firm_name") || "Firm / Company Name"}
-              className="w-full px-4 py-3 border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              className={`${inputBase} ${errors.firm ? errorStyle : ""}`}
             />
+            {errors.firm && <p className="text-red-400 text-sm">{errors.firm}</p>}
+
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               placeholder={t("email_address")}
-              className="w-full px-4 py-3 border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              className={`${inputBase} ${errors.email ? errorStyle : ""}`}
             />
+            {errors.email && <p className="text-red-400 text-sm">{errors.email}</p>}
+
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
               placeholder={t("phone_number") || "Phone Number"}
-              className="w-full px-4 py-3 border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              className={`${inputBase} ${errors.phone ? errorStyle : ""}`}
             />
+            {errors.phone && <p className="text-red-400 text-sm">{errors.phone}</p>}
+
             <select
               name="subject"
               value={formData.subject}
@@ -137,14 +173,19 @@ export default function ContactUsSection() {
             </select>
 
             {formData.subject === "Other" && (
-              <textarea
-                name="custom_query"
-                value={formData.custom_query}
-                onChange={handleChange}
-                rows={3}
-                placeholder="Please specify your query"
-                className="w-full px-4 py-3 border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
-              />
+              <>
+                <textarea
+                  name="custom_query"
+                  value={formData.custom_query}
+                  onChange={handleChange}
+                  rows={3}
+                  placeholder="Please specify your query"
+                  className={`${inputBase} ${errors.custom_query ? errorStyle : ""}`}
+                />
+                {errors.custom_query && (
+                  <p className="text-red-400 text-sm">{errors.custom_query}</p>
+                )}
+              </>
             )}
 
             <textarea
@@ -153,15 +194,16 @@ export default function ContactUsSection() {
               value={formData.message}
               onChange={handleChange}
               placeholder={t("message")}
-              className="w-full px-4 py-3 border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#2244f8]"
+              className={`${inputBase} ${errors.message ? errorStyle : ""}`}
             />
+            {errors.message && <p className="text-red-400 text-sm">{errors.message}</p>}
+
             <button
               type="submit"
               className="bg-yellow-400 text-[#070B2A] px-6 py-3 hover:bg-yellow-500 transition"
             >
               {t("send_message")}
             </button>
-            {status && <p className="text-white mt-2">{status}</p>}
           </form>
         </div>
       </div>
