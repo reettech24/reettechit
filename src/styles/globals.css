@@ -124,3 +124,51 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   }
 }
+
+
+/* ----------------------------- */
+/* ✅ GLASSMORPHISM UTILITIES   */
+/* ----------------------------- */
+
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+/* For darker mode backgrounds */
+.glass-dark {
+  background: rgba(18, 18, 18, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ----------------------------- */
+/* ✅ NEUMORPHISM UTILITIES     */
+/* ----------------------------- */
+
+.neumorphic {
+  background: #e0e0e0;
+  border-radius: 1rem;
+  box-shadow: 
+    8px 8px 16px #bebebe,
+    -8px -8px 16px #ffffff;
+}
+
+.neumorphic-inner {
+  background: #e0e0e0;
+  border-radius: 1rem;
+  box-shadow: 
+    inset 6px 6px 10px #bebebe,
+    inset -6px -6px 10px #ffffff;
+}
+
+/* Optional: Dark mode friendly */
+.neumorphic-dark {
+  background: #1e1e1e;
+  box-shadow:
+    6px 6px 12px #141414,
+    -6px -6px 12px #2a2a2a;
+}

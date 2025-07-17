@@ -2,6 +2,12 @@
 export const dynamic = "force-dynamic";
 
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { Pagination, Autoplay } from "swiper/modules";
+
 import React from "react";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
@@ -20,71 +26,102 @@ const stagger = {
   },
 };
 
+const industries = [
+  { name: "Retail", emoji: "🛒", bg: "/nexusindia/n4.jpg" },
+  { name: "Healthcare", emoji: "🩺", bg: "/bg/healthcare.jpg" },
+  { name: "Education", emoji: "🎓", bg: "/bg/education.jpg" },
+  { name: "Real Estate", emoji: "🏠", bg: "/nexusindia/n4.jpg" },
+  { name: "Consulting", emoji: "💼", bg: "/bg/consulting.jpg" },
+  { name: "Manufacturing", emoji: "🏭", bg: "/bg/manufacturing.jpg" },
+  { name: "Hospitality", emoji: "🏨", bg: "/bg/hospitality.jpg" },
+];
+
 export default function Page() {
   return (
     <>
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center py-52 text-center text-white"
-        style={{ backgroundImage: "url('/photos/rm373batch2-04.jpg')" }}
+        className="relative bg-cover bg-center overflow-hidden py-68 h-screen text-center text-white bg-nexus-primary"
+        // style={{ backgroundImage: "url('/photos/rm373batch2-04.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/20 backdrop-blur-xs" />
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-xs" />
         <div className="relative z-10">
           <motion.h1
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4"
+            className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 uppercase"
           >
             Nexus India
+            <br />
+            <span className=" text-nexus-secondary uppercase">
+              The Caring Market
+            </span>
           </motion.h1>
           <motion.p
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            className="text-white/90 text-xl md:text-2xl max-w-3xl mx-auto font-light"
+            className="text-white/90 uppercase text-xl md:text-2xl max-w-3xl mx-auto font-bold"
           >
-            A Digital Transformation Platform Built for India’s Small & Medium
-            Businesses
+            Big dreams, <span className=" text-nexus-secondary">Small </span>{" "}
+            budget
           </motion.p>
+        </div>
+
+        <div className="absolute -top-20 right-160 opacity-40 w-screen">
+          <img src="/NI.png" alt="Nexus India Logo" className="" />
+        </div>
+        <div className="absolute top-20 left-250 opacity-90 w-screen z-10">
+          <img src="/NI.png" alt="Nexus India Logo" className=" h-80 w-80" />
+        </div>
+        <div className="absolute -bottom-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </section>
 
       {/* What is Nexus */}
       <motion.section
-        className="relative py-24 px-6 max-w-6xl mx-auto text-center"
+        className="relative  mx-auto text-center items-start bg-cover bg-en bg-[#f0f0f0] overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={stagger}
+        // style={{ backgroundImage: "url('/nexusindia/n3.jpg')" }}
       >
-        <div className="absolute inset-0 -z-10 opacity-5 bg-[url('/pattern.svg')] bg-repeat" />
-        <motion.h2
-          variants={fadeInUp}
-          className="text-4xl md:text-5xl font-bold text-blue-900 mb-6"
-        >
-          What is Nexus India?
-        </motion.h2>
-        <motion.p
-          variants={fadeInUp}
-          className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto"
-        >
-          Nexus India is a comprehensive digital platform designed to empower
-          small and medium enterprises (SMEs) across India. From website
-          development to branding, our all-in-one product helps businesses
-          thrive online with affordable, easy-to-use tools.
-        </motion.p>
+        <div className="max-w-6xl py-24 px-6 mx-auto text-center">
+          {/* <div className="absolute inset-0 -z-10 opacity-5 bg-[url('/p1.png')] bg-repeat" /> */}
+          <motion.h2
+            variants={fadeInUp}
+            className="text-4xl md:text-5xl font-bold text-nexus-secondary mb-6"
+          >
+            What is Nexus India?
+          </motion.h2>
+          <motion.p
+            variants={fadeInUp}
+            className="text-black text-lg md:text-xl leading-relaxed max-w-4xl mx-auto"
+          >
+            Nexus India is a comprehensive digital platform designed to empower
+            small and medium enterprises (SMEs) across India. From website
+            development to branding, our all-in-one product helps businesses
+            thrive online with affordable, easy-to-use tools.
+          </motion.p>
+        </div>
+
+        <div className="absolute -bottom-20 -right-0 opacity-40 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </motion.section>
 
       {/* Why Nexus */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-24 px-6">
+      <section className="bg-gradient-to-b from-black to-gray-900 py-24 px-6 overflow-hidden relative">
         <div className="max-w-7xl mx-auto text-center mb-20">
           <motion.h3
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4"
+            className="text-3xl md:text-4xl font-extrabold text-nexus-secondary mb-4"
           >
             Why Nexus India Stands Out
           </motion.h3>
@@ -93,13 +130,17 @@ export default function Page() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-gray-600 text-lg max-w-3xl mx-auto"
+            className="text-white text-lg max-w-3xl mx-auto"
           >
             Our product is more than a service — it's your growth partner.
           </motion.p>
         </div>
+        <div className="absolute -bottom-20 -right-20 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
+
         <motion.div
-          className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 z-10"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
@@ -109,185 +150,207 @@ export default function Page() {
             {
               title: "Affordable Pricing",
               desc: "Pay only for what you need. Perfect for SMEs with limited budgets.",
-              icon: "/icons/affordable.png",
+              icon: "/NI1.jpg",
             },
             {
               title: "Tailored for India",
               desc: "Localized tools, vernacular support, and regional SEO built-in.",
-              icon: "/icons/india.png",
+              icon: "/NI2.jpg",
             },
             {
               title: "Modular & Scalable",
               desc: "Start small and grow as your business expands — no tech headaches.",
-              icon: "/icons/scale.png",
+              icon: "/NI3.jpg",
             },
             {
               title: "Impact-Driven",
               desc: "We measure success not just in revenue but in livelihoods improved.",
-              icon: "/icons/impact.png",
+              icon: "/NI4.jpg",
             },
           ].map((item, idx) => (
             <motion.div
               key={idx}
               variants={fadeInUp}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border-t-4 border-blue-600 hover:scale-[1.02] transition-all duration-300 ease-in-out"
+              className="glassmorphic bg-cover bg-black bg-no-repeat h-80 p-6 rounded-2xl shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff] hover:scale-[1.03] transition-all duration-300 ease-in-out"
+              // style={{ backgroundImage: `url(${item.icon})` }}
             >
-              <img
-                src={item.icon}
-                alt={item.title}
-                className="w-12 h-12 mx-auto mb-4"
-              />
-              <h4 className="text-lg font-semibold text-blue-900 mb-2">
+              <div className="neumorphic-inner w-48 h-44 object-cover flex items-center justify-center mx-auto mb-4">
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-full h-full"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-nexus-secondary mb-2">
                 {item.title}
               </h4>
-              <p className="text-sm text-gray-600">{item.desc}</p>
+              <p className="text-sm text-white">{item.desc}</p>
             </motion.div>
           ))}
         </motion.div>
       </section>
 
-      {/* Industries */}
-      <motion.section
-        className="py-20 px-6 max-w-6xl mx-auto text-center"
-        initial="hidden"
-        whileInView="visible"
-        variants={stagger}
-        viewport={{ once: true }}
-      >
-        <motion.h3 variants={fadeInUp} className="text-3xl font-bold mb-10">
+      {/* Industries Slider */}
+      <section className="bg-gray-900 text-white py-20 relative overflow-hidden">
+        <motion.h3
+          className="text-center text-4xl font-bold mb-10 text-nexus-secondary"
+          variants={fadeInUp}
+        >
           Industries We Serve
         </motion.h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-gray-700">
-          {[
-            "Retail",
-            "Healthcare",
-            "Education",
-            "Real Estate",
-            "Consulting",
-            "Manufacturing",
-            "Hospitality",
-            "Freelancers",
-          ].map((industry, idx) => (
-            <motion.div
-              key={idx}
-              variants={fadeInUp}
-              className="bg-gray-100 py-4 px-6 rounded-lg shadow hover:shadow-md transition"
-            >
-              {industry}
-            </motion.div>
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={20}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 1.5 },
+            1024: { slidesPerView: 3.5 },
+          }}
+          modules={[Autoplay]}
+          className="px-6"
+        >
+          {industries.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="h-72 bg-cover bg-center rounded-xl flex items-center justify-center relative overflow-hidden"
+                style={{ backgroundImage: `url(${item.bg})` }}
+              >
+                <div className="absolute inset-0 bg-black/40 z-0" />
+                <div className="relative z-10 text-center">
+                  <div className="text-4xl mb-2">{item.emoji}</div>
+                  <div className="text-lg font-bold uppercase">{item.name}</div>
+                </div>
+              </div>
+            </SwiperSlide>
           ))}
+        </Swiper>
+        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
-      </motion.section>
+      </section>
 
-      {/* Features */}
+      {/* Key Features */}
       <motion.section
-        className="bg-white py-20 px-6 max-w-6xl mx-auto"
+        className="relative bg-nexus-primary bg-cover bg-center bg-no-repeat overflow-hidden"
         initial="hidden"
         whileInView="visible"
         variants={stagger}
         viewport={{ once: true }}
+        // style={{ backgroundImage: "url('/nexusindia/n2.jpg')" }}
       >
-        <motion.div variants={fadeInUp} className="text-center mb-16">
-          <h3 className="text-3xl font-bold mb-2">Key Features</h3>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Everything your business needs to go digital — in one simple
-            platform.
-          </p>
-        </motion.div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-3xl" />
+        <div className="py-24 px-6 max-w-7xl mx-auto text-center z-50">
+          {/* Optional subtle pattern or tint background */}
+          {/* <div className="absolute inset-0 -z-10 bg-[url('/nexusindia/n1.jpg')] bg-repeat opacity-5 pointer-events-none" /> */}
+
+          <motion.div variants={fadeInUp} className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4 z-20">
+              Key Features
+            </h3>
+            <p className="text-white text-lg max-w-3xl mx-auto">
+              Everything your business needs to go digital — in one simple
+              platform.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Website Builder",
+                desc: "No code. Just drag, drop, and launch.",
+                icon: "/test/ar2.jpeg",
+              },
+              {
+                title: "SEO Tools",
+                desc: "Rank higher locally & nationally.",
+                icon: "/test/ar2.jpeg",
+              },
+              {
+                title: "Digital Business Card",
+                desc: "Your brand, in everyone’s pocket.",
+                icon: "/test/ar2.jpeg",
+              },
+              {
+                title: "Online Storefront",
+                desc: "Sell products or services online easily.",
+                icon: "/test/ar2.jpeg",
+              },
+              {
+                title: "Multi-language Support",
+                desc: "Serve customers in local languages.",
+                icon: "/test/ar2.jpeg",
+              },
+              {
+                title: "CRM & Lead Tracking",
+                desc: "Capture leads and manage clients.",
+                icon: "/test/ar2.jpeg",
+              },
+            ].map((feature, idx) => (
+              <motion.div
+                key={idx}
+                variants={fadeInUp}
+                className="glassmorphic rounded-2xl p-6 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 shadow-md"
+              >
+                <div className="w-16 h-16 bg-white/70 shadow-inner rounded-full flex items-center justify-center mb-4">
+                  <img
+                    src={feature.icon}
+                    alt={feature.title}
+                    className="w-8 h-8"
+                  />
+                </div>
+                <h4 className="text-lg font-extrabold text-white mb-2">
+                  {feature.title}
+                </h4>
+                <p className="text-sm text-white">{feature.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
+      </motion.section>
+
+      {/* Trusted By Logos */}
+      <motion.section
+        className=" relative py-20 px-6 bg-gradient-to-b from-white via-gray-50 to-white text-center overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+          Trusted By Businesses Nationwide
+        </h3>
+        <p className="text-gray-500 mb-10 max-w-2xl mx-auto text-sm md:text-base">
+          Join the growing network of SMEs and startups using Nexus India to
+          power their digital journey.
+        </p>
+
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
           {[
-            {
-              title: "Website Builder",
-              desc: "No code. Just drag, drop, and launch.",
-              icon: "/icons/website.png",
-            },
-            {
-              title: "SEO Tools",
-              desc: "Rank higher locally & nationally.",
-              icon: "/icons/seo.png",
-            },
-            {
-              title: "Digital Business Card",
-              desc: "Your brand, in everyone’s pocket.",
-              icon: "/icons/card.png",
-            },
-            {
-              title: "Online Storefront",
-              desc: "Sell products or services online easily.",
-              icon: "/icons/store.png",
-            },
-            {
-              title: "Multi-language Support",
-              desc: "Serve customers in local languages.",
-              icon: "/icons/language.png",
-            },
-            {
-              title: "CRM & Lead Tracking",
-              desc: "Capture leads and manage clients.",
-              icon: "/icons/crm.png",
-            },
-          ].map((feature, idx) => (
-            <motion.div
+            "client-1.png",
+            "client-2.png",
+            "client-3.png",
+            "client-4.png",
+            "client-6.png",
+          ].map((logo, idx) => (
+            <div
               key={idx}
-              variants={fadeInUp}
-              className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition"
+              className="transition transform hover:scale-105 duration-300 ease-in-out z-10"
             >
               <img
-                src={feature.icon}
-                alt={feature.title}
-                className="w-10 mb-4"
+                src={`/company/${logo}`}
+                alt={`Client ${idx + 1}`}
+                className="h-20 w-auto opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition"
               />
-              <h4 className="text-lg font-semibold mb-2">{feature.title}</h4>
-              <p className="text-sm text-gray-600">{feature.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.section>
 
-      {/* Video Demo */}
-      <motion.section
-        className="py-20 bg-gray-100 text-center px-6"
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeInUp}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-3xl font-bold mb-4">See Nexus India in Action</h3>
-        <p className="text-gray-600 mb-8 text-lg">
-          Watch our quick walkthrough demo and see how easy it is to get
-          started.
-        </p>
-        <div className="max-w-3xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.youtube.com/embed/YOUR_DEMO_VIDEO_ID"
-            title="Nexus India Demo"
-            frameBorder="0"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        </div>
-      </motion.section>
-
-      {/* Logos */}
-      <motion.section
-        className="py-16 bg-white text-center px-6"
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeInUp}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-xl font-bold mb-6">Trusted By</h3>
-        <div className="flex flex-wrap justify-center gap-8 items-center">
-          {["client1.png", "client2.png", "client3.png", "client4.png"].map(
-            (logo, idx) => (
-              <img
-                key={idx}
-                src={`/logos/${logo}`}
-                alt={`Partner ${idx}`}
-                className="h-12 grayscale hover:grayscale-0 transition"
-              />
-            )
-          )}
+        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </motion.section>
 
@@ -323,47 +386,53 @@ export default function Page() {
 
       {/* FAQ */}
       <motion.section
-        className="py-20 px-6 max-w-4xl mx-auto"
+        className="py-20 px-6 bg-[#070B2A] relative overflow-hidden"
         initial="hidden"
         whileInView="visible"
         variants={stagger}
         viewport={{ once: true }}
       >
-        <h3 className="text-3xl font-bold text-center mb-12">
-          Frequently Asked Questions
-        </h3>
-        <div className="space-y-6 text-left text-gray-700">
-          {[
-            {
-              q: "Who is Nexus India built for?",
-              a: "Small and medium businesses across industries looking to grow their online presence affordably.",
-            },
-            {
-              q: "Do I need technical knowledge to use it?",
-              a: "Not at all. It’s designed for non-tech users with easy setup and support.",
-            },
-            {
-              q: "Is there a free trial?",
-              a: "Yes, we offer a 14-day free trial with access to all features.",
-            },
-            {
-              q: "Can I use it in regional languages?",
-              a: "Absolutely. Hindi, Marathi, Tamil, and more supported.",
-            },
-          ].map((item, idx) => (
-            <motion.div key={idx} variants={fadeInUp}>
-              <strong className="block text-lg font-medium mb-1">
-                {item.q}
-              </strong>
-              <p className="text-sm text-gray-600">{item.a}</p>
-            </motion.div>
-          ))}
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold text-center mb-12 text-white">
+            Frequently Asked Questions
+          </h3>
+          <div className="space-y-6 text-left text-white">
+            {[
+              {
+                q: "Who is Nexus India built for?",
+                a: "Small and medium businesses across industries looking to grow their online presence affordably.",
+              },
+              {
+                q: "Do I need technical knowledge to use it?",
+                a: "Not at all. It’s designed for non-tech users with easy setup and support.",
+              },
+              {
+                q: "Is there a free trial?",
+                a: "Yes, we offer a 14-day free trial with access to all features.",
+              },
+              {
+                q: "Can I use it in regional languages?",
+                a: "Absolutely. Hindi, Marathi, Tamil, and more supported.",
+              },
+            ].map((item, idx) => (
+              <motion.div key={idx} variants={fadeInUp}>
+                <strong className="block text-lg font-medium mb-1">
+                  {item.q}
+                </strong>
+                <p className="text-sm text-white/90">{item.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
         </div>
       </motion.section>
 
       {/* CTA */}
       <motion.section
-        className="bg-blue-700 text-white py-20 px-6 text-center"
+        className="bg-[#070B2A] text-white py-20 px-6 text-center relative overflow-hidden"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
@@ -382,6 +451,10 @@ export default function Page() {
         >
           Request a Demo
         </a>
+
+        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
+          <img src="/p1.png" alt="Nexus India Logo" className="" />
+        </div>
       </motion.section>
 
       {/* Testimonials & Contact */}

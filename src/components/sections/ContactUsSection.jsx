@@ -194,8 +194,6 @@
 //   );
 // }
 
-
-
 "use client";
 export const dynamic = "force-dynamic";
 
@@ -210,7 +208,7 @@ import "react-phone-input-2/lib/style.css";
 
 export default function ContactPage() {
   const t = useTranslations("contactus");
-   const c = useTranslations("contact");
+  const c = useTranslations("contact");
   const formRef = useRef();
 
   const [formData, setFormData] = useState({
@@ -310,18 +308,6 @@ export default function ContactPage() {
   return (
     <div className="bg-[#070B2A] min-h-screen text-white">
       {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center text-center py-52"
-        style={{ backgroundImage: "url('/breadcrumb.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-[#070B2A] opacity-70"></div>
-        <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">
-            {t("heroTitle")}
-          </h1>
-          <p className="text-white/70">{t("heroDesc")}</p>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section className="py-20 px-6 lg:px-20">
@@ -460,32 +446,32 @@ export default function ContactPage() {
           </div>
         </div>
 
-         {/* Contact Info Bar */}
-     {/* Contact Info Bar */}
-      <div className="grid lg:grid-cols-3 bg-[#2244f8] text-white p-8 space-y-6 lg:space-y-0">
-        <div>
-          <h4 className="flex items-center gap-2 text-lg font-semibold">
-            <Phone className="w-5 h-5" /> {c("call_us")}
-          </h4>
-          <p className="ml-7 text-xl font-bold mt-1">+91 797-290-5758</p>
+        {/* Contact Info Bar */}
+        {/* Contact Info Bar */}
+        <div className="grid lg:grid-cols-3 bg-[#2244f8] text-white p-8 space-y-6 lg:space-y-0">
+          <div>
+            <h4 className="flex items-center gap-2 text-lg font-semibold">
+              <Phone className="w-5 h-5" /> {c("call_us")}
+            </h4>
+            <p className="ml-7 text-xl font-bold mt-1">+91 797-290-5758</p>
+          </div>
+          <div>
+            <h4 className="flex items-center gap-2 text-lg font-semibold">
+              <Mail className="w-5 h-5" /> {c("make_quote")}
+            </h4>
+            <p className="ml-7 mt-1 font-medium">sales@reettechit.com</p>
+            <p className="ml-7 mt-1 font-medium">reettech24@gmail.com</p>
+          </div>
+          <div>
+            <h4 className="flex items-center gap-2 text-lg font-semibold">
+              <MapPin className="w-5 h-5" /> {c("location")}
+            </h4>
+            <p className="ml-7 mt-1 font-medium">
+              Dattanagar Road, Ambegaon Katraj Pune, Maharashtra 411046
+            </p>
+          </div>
         </div>
-        <div>
-          <h4 className="flex items-center gap-2 text-lg font-semibold">
-            <Mail className="w-5 h-5" /> {c("make_quote")}
-          </h4>
-          <p className="ml-7 mt-1 font-medium">sales@reettechit.com</p>
-          <p className="ml-7 mt-1 font-medium">reettech24@gmail.com</p>
-        </div>
-        <div>
-          <h4 className="flex items-center gap-2 text-lg font-semibold">
-            <MapPin className="w-5 h-5" /> {c("location")}
-          </h4>
-          <p className="ml-7 mt-1 font-medium">
-            Dattanagar Road, Ambegaon Katraj Pune, Maharashtra 411046
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 }
