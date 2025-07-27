@@ -8,11 +8,20 @@ import { useTranslations } from "next-intl";
 
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import VRSection from "@/components/sections/VRSection";
 
 export default function page() {
   const t = useTranslations("arvr");
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Slow down video playback to 0.5x speed
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8;
+    }
+  }, []);
 
   return (
     <>
@@ -33,30 +42,36 @@ export default function page() {
       </section>
 
       {/* Immersive VR Background Effect */}
-      <section className="relative overflow-hidden">
-        {/* <video
+      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
         >
-          <source src="/bg-video.mp4" type="video/mp4" />
-        </video> */}
-        <div className="relative py-24 px-6 lg:px-20 z-10 text-center">
-          <h2 className="text-4xl font-bold text-[#070B2A] mb-6">
+          <source src="/Scene_01.mp4" type="video/mp4" />
+        </video>
+
+        <div className="relative z-10 text-center px-6 lg:px-20">
+          <h2 className="text-4xl font-bold text-white mb-6">
             {t("sectiontitle")}
           </h2>
-          <p className="text-gray-800 text-lg max-w-3xl mx-auto">
+          <p className="text-white/80 text-lg max-w-3xl mx-auto">
             {t("sectiondesc")}
           </p>
         </div>
       </section>
 
       {/* Intro Section */}
-      <section className=" relative bg-[#070B2A] text-white py-24 px-6 lg:px-20">
-        <div className="absolute -top-20 -left-20 ">
-          <img src="/left-shape.png" alt="Nexus India Logo" className=" h-96" />
+      <section className=" relative bg-[#070B2A] text-white py-24 px-6 lg:px-20 overflow-hidden">
+        <div className="absolute -top-0 -left-20 ">
+          <img
+            src="/left-shape.png"
+            alt="Nexus India Logo"
+            className=" h-96 w-[1200px]"
+          />
         </div>
 
         <div className="max-w-6xl mx-auto text-center">
@@ -88,22 +103,27 @@ export default function page() {
             ))}
           </div>
 
-          <div className="absolute -bottom-70 -right-20 opacity-20 w-screen">
+          <div className="absolute -bottom-70 -right-0 opacity-20 w-screen">
             <img src="/p1.png" alt="Nexus India Logo" className="" />
           </div>
         </div>
       </section>
 
       {/* Technology Stack */}
-      <section className="bg-[#070B2A] text-white py-24 px-6 lg:px-20">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-10">
-            {" "}
-            {t("technologiesTitle")}
-          </h2>
+      <section className="relative bg-black text-white py-24 px-6 lg:px-20 overflow-hidden">
+        {/* Oculus Image behind text */}
+        <img
+          src="/VR.png"
+          alt="Oculus Device"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 max-w-[900px] pointer-events-none select-none"
+          style={{ zIndex: 0 }}
+        />
+
+        <div className="max-w-8xl mx-auto text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-10">{t("technologiesTitle")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {t.raw("technologies").map((item, idx) => (
-              <div key={idx} className="bg-[#10163A] p-6 rounded-xl shadow-md">
+              <div key={idx} className="bg-whtie/20 backdrop-blur-xl p-10 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold">{item}</h3>
               </div>
             ))}
@@ -175,6 +195,21 @@ export default function page() {
             </ul>
           </div>
         </div>
+      </section>
+
+         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
+        >
+          <source src="/Scene_12.mp4" type="video/mp4" />
+        </video>
+
+
       </section>
 
       {/* CTA */}

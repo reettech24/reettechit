@@ -302,7 +302,7 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="bg-[#2244f8] text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"
+                className="bg-[#2244f8] text-white px-6 py-3 w-full rounded-md hover:bg-blue-700 transition"
               >
                 {t("ctaBtn")}
               </button>

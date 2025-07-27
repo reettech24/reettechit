@@ -7,6 +7,51 @@ import {
   useGLTF,
   Html,
   ContactShadows,
+  PerspectiveCamera,
+  OrthographicCamera,
+  CubeCamera,
+  MapControls,
+  TrackballControls,
+  ArcballControls,
+  FlyControls,
+  DeviceOrientationControls,
+  PointerLockControls,
+  FirstPersonControls,
+  TransformControls,
+  ScrollControls,
+  PresentationControls,
+  Image,
+  Text,
+  Line,
+  PositionalAudio,
+  Billboard,
+  GizmoHelper,
+  Effects,
+  MeshReflectorMaterial,
+  MeshWobbleMaterial,
+  MeshDistortMaterial,
+  PointMaterial,
+  CurveModifier,
+  useProgress,
+  Loader,
+  useTexture,
+  useFBO,
+  Instances,
+  Merged,
+  AdaptiveDpr,
+  meshBounds,
+  BakeShadows,
+  Sphere,
+  Box,
+  Plane,
+  Torus,
+  Extrude,
+  RoundedBox,
+  Center,
+  Bounds,
+  Sky,
+  Environment,
+  Stage,
 } from "@react-three/drei";
 import { useRef, useState, Suspense, useEffect } from "react";
 import { useTranslations } from "next-intl";
@@ -66,15 +111,9 @@ function ScenarioModel({
     <>
       <primitive object={scene} ref={modelRef} position={position} scale={scale} />
       <Html center position={tooltipPosition}>
-        <div className="text-white text-sm bg-black/70 px-4 py-2 rounded-xl">
-          {tooltip}
-        </div>
+        <div className="text-white text-sm bg-black/70 px-4 py-2 rounded-xl">{tooltip}</div>
       </Html>
-      <ClickableHotspot
-        position={[0.5, 1, 0]}
-        label="Interact"
-        onClick={onHotspotClick}
-      />
+      <ClickableHotspot position={[0.5, 1, 0]} label="Interact" onClick={onHotspotClick} />
     </>
   );
 }
@@ -108,25 +147,26 @@ function ScenarioAudio({ scenario, isPlaying }) {
 function VRModel({ scenario, isRotating, isZoomEnabled, onHotspotClick }) {
   const scenarioConfig = {
     product: {
-      glbPath: "/Vp.glb",
+      glbPath: "/Vr.glb",
       tooltip: "360° Product View",
       autoRotate: isRotating,
-      cameraPos: [3, 3, 3],
+      cameraPos: [12, 16, 3],
+        fov: 55
     },
     training: {
-      glbPath: "/Vp.glb",
+      glbPath: "/Vr.glb",
       tooltip: "Step-by-step Training Module",
       autoRotate: isRotating,
       cameraPos: [2, 3, 2],
     },
     workspace: {
-      glbPath: "/Vp.glb",
+      glbPath: "/Vr.glb",
       tooltip: "Collaborative XR Workspace",
       autoRotate: isRotating,
       cameraPos: [4, 4, 4],
     },
     ar: {
-      glbPath: "/Vp.glb",
+      glbPath: "/Vr.glb",
       tooltip: "AR Overlay in Real Space",
       autoRotate: isRotating,
       position: [0, -1.5, 0],
@@ -138,23 +178,18 @@ function VRModel({ scenario, isRotating, isZoomEnabled, onHotspotClick }) {
   const config = scenarioConfig[scenario];
 
   return (
-    <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10 backdrop-blur-md relative">
-      <Canvas camera={{ position: config.cameraPos }}>
+    <div className="w-full h-[560px] overflow-hidden shadow-3xl ring-1 ring-white/10 backdrop-blur-md relative">
+      <Canvas camera={{ position: config.cameraPos, fov: config.fov || 50 }} shadows>
         <ambientLight intensity={0.4} />
-        <pointLight position={[10, 10, 10]} />
-        <fog attach="fog" args={["#0a0a23", 5, 15]} />
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
+        <fog attach="fog" args={["#0a0a10", 2, 15]} />
+        <Stars radius={80} depth={50} count={10000} factor={4} saturation={50} fade />
 
         <Suspense fallback={null}>
           <ScenarioModel {...config} onHotspotClick={onHotspotClick} />
         </Suspense>
 
         <ContactShadows position={[0, -3, 0]} opacity={0.4} blur={2} />
-        <OrbitControls
-          autoRotate={config.autoRotate}
-          enableZoom={isZoomEnabled}
-          autoRotateSpeed={1.2}
-        />
+        <OrbitControls autoRotate={config.autoRotate} enableZoom={isZoomEnabled} autoRotateSpeed={1.2} />
         <CameraTransition position={config.cameraPos} />
       </Canvas>
 
@@ -179,65 +214,63 @@ export default function VRSection() {
         <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-purple-500 animate-pulse mb-6 tracking-tight">
           {t("vrtitle")}
         </h2>
-        <p className="text-white/70 max-w-2xl mx-auto mb-10 text-lg">
-          {t("vrdesc")}
-        </p>
+        <p className="text-white/70 max-w-2xl mx-auto mb-10 text-lg">{t("vrdesc")}</p>
+      </div>
 
-        <div className="relative mb-10 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-br before:from-cyan-500/10 before:to-purple-500/5 before:blur-2xl before:z-[-1]">
-          <VRModel
-            scenario={scenario}
-            isRotating={isRotating}
-            isZoomEnabled={isZoomEnabled}
-            onHotspotClick={() => setMessage("You clicked the hotspot!")}
-          />
-          <ScenarioAudio scenario={scenario} isPlaying={isPlaying} />
-        </div>
+      <div className="max-w-8xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-[8.5fr_1.5fr] gap-6 items-start">
+          <div className="relative mb-10 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-br before:from-cyan-500/10 before:to-purple-500/5 before:blur-2xl before:z-[-1]">
+            <VRModel
+              scenario={scenario}
+              isRotating={isRotating}
+              isZoomEnabled={isZoomEnabled}
+              onHotspotClick={() => setMessage("You clicked the hotspot!")}
+            />
+            <ScenarioAudio scenario={scenario} isPlaying={isPlaying} />
+          </div>
 
-        {message && <p className="text-green-400 font-semibold mb-4">{message}</p>}
+          <div className="flex flex-col justify-center items-center gap-4">
+            {message && <p className="text-green-400 font-semibold">{message}</p>}
 
-        <div className="flex flex-wrap gap-4 justify-center mt-4">
-          {["product", "training", "workspace", "ar"].map((key) => (
+            {["product", "training", "workspace", "ar"].map((key) => (
+              <button
+                key={key}
+                onClick={() => setScenario(key)}
+                className={`px-4 py-5 w-full ${
+                  scenario === key ? "bg-cyan-600 text-white" : "bg-cyan-700/20 text-cyan-300"
+                } hover:bg-cyan-600 transition`}
+              >
+                {key === "product"
+                  ? "Product Showcase"
+                  : key === "training"
+                  ? "Remote Training"
+                  : key === "workspace"
+                  ? "Virtual Workspace"
+                  : "AR Simulation"}
+              </button>
+            ))}
+
             <button
-              key={key}
-              onClick={() => setScenario(key)}
-              className={`px-4 py-2 rounded-lg ${
-                scenario === key
-                  ? "bg-cyan-600 text-white"
-                  : "bg-cyan-700/20 text-cyan-300"
-              } hover:bg-cyan-600 transition`}
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="bg-purple-600 text-white px-4 py-5  w-full hover:bg-purple-700 transition"
             >
-              {key === "product"
-                ? "Product Showcase"
-                : key === "training"
-                ? "Remote Training"
-                : key === "workspace"
-                ? "Virtual Workspace"
-                : "AR Simulation"}
+              {isPlaying ? "Pause Music" : "Play Music"}
             </button>
-          ))}
-        </div>
 
-        <div className="flex flex-wrap gap-4 justify-center mt-6">
-          <button
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
-          >
-            {isPlaying ? "Pause Music" : "Play Music"}
-          </button>
+            <button
+              onClick={() => setIsRotating(!isRotating)}
+              className="bg-blue-600 text-white px-4 py-5 w-full hover:bg-blue-700 transition"
+            >
+              {isRotating ? "Stop Rotation" : "Start Rotation"}
+            </button>
 
-          <button
-            onClick={() => setIsRotating(!isRotating)}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-          >
-            {isRotating ? "Stop Rotation" : "Start Rotation"}
-          </button>
-
-          <button
-            onClick={() => setIsZoomEnabled(!isZoomEnabled)}
-            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
-          >
-            {isZoomEnabled ? "Disable Zoom" : "Enable Zoom"}
-          </button>
+            <button
+              onClick={() => setIsZoomEnabled(!isZoomEnabled)}
+              className="bg-green-600 text-white px-4 py-5 w-full hover:bg-green-700 transition"
+            >
+              {isZoomEnabled ? "Disable Zoom" : "Enable Zoom"}
+            </button>
+          </div>
         </div>
       </div>
     </section>

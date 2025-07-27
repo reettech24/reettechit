@@ -438,7 +438,7 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="bg-yellow-400 text-[#070B2A] px-6 py-3 rounded-md hover:bg-yellow-500 transition"
+                className="bg-yellow-400 text-[#070B2A] px-6 py-3 mb-5   md:mb-0 w-full rounded-md hover:bg-yellow-500 transition"
               >
                 {t("ctaBtn") || t("send_message")}
               </button>
