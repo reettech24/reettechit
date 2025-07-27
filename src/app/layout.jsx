@@ -2,9 +2,11 @@
 
 import ConsentBanner from "@/components/sections/ConsentBanner";
 import "../styles/globals.css";
-import Analytics from "./analytics";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import TrackingScripts from "@/components/sections/TrackingScripts";
 import { Toaster } from "react-hot-toast";
+import AnalyticsGtag from "./analytics";
 
 export default function RootLayout({ children }) {
   return (
@@ -13,9 +15,11 @@ export default function RootLayout({ children }) {
       <body>
         <Toaster position="bottom-right" reverseOrder={false} />
         <ConsentBanner />
-        <TrackingScripts />
-        <Analytics />
         {children}
+        <TrackingScripts />
+        <AnalyticsGtag />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
