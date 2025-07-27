@@ -170,9 +170,9 @@ export default function page() {
       </section>
 
       {/* Benefits Section with Glassmorphism & 3D Tilt */}
-      <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] px-0 lg:p-0">
+      {/* <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] px-0 lg:p-0">
         <VRSection />
-      </section>
+      </section> */}
 
       {/* Why Us */}
       <section className="bg-white py-24 px-6 lg:px-20">
