@@ -141,162 +141,181 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen max-w-8xl overflow-hidden bg-gradient-to-b from-zinc-900 to-black text-center py-20">
+      <section className="relative h-screen max-w-8xl overflow-hidden bg-gradient-to-b from-zinc-900 to-black text-center py-16">
         <Image
           src="/NI.png"
           alt="Nexus Icon"
           width={300}
           height={80}
-          className="mx-auto mb-4"
+          className="mx-auto"
         />
         <Image
           src="/NEXUS_INDIA.png"
           alt="Nexus Icon"
           width={600}
           height={80}
-          className="mx-auto mb-8"
+          className="mx-auto w-[300px] h-[30px] sm:w-[600px] sm:h-[50px] mb-8"
         />
         <Image
           src="/NEXUS_INDIA_TEXT.png"
           alt="Nexus Icon"
           width={600}
           height={80}
-          className="mx-auto mb-8"
+          className="mx-auto w-[300px] h-[30px] sm:w-[600px] sm:h-[50px]"
         />
         {/* <h1 className="text-4xl font-bold">NEXUS INDIA</h1>
         <p className="text-orange-500 text-lg">Big Dreams, Small Budget</p> */}
 
-        <div className=" absolute top-130 -right-185  border-t-5 border-zinc-500 bg-zinc-900 w-[3000px] h-[3000px] rounded-full animate-glow-blink"></div>
+        <div className=" absolute top-124 -right-324  sm:top-130 sm:-right-185  border-t-5 border-zinc-500 bg-zinc-900 w-[3000px] h-[3000px] rounded-full animate-glow-blink"></div>
       </section>
 
-    <section className="relative bg-gradient-to-b from-zinc-900 to-black py-20 px-4 sm:px-8">
-  <div className="max-w-6xl mx-auto text-xl sm:text-2xl lg:text-3xl mt-6 text-gray-300 mb-24 sm:mb-32">
-    <p className="leading-snug">
-      <span className="text-base sm:text-lg lg:text-xl mr-60 text-orange-500/85 block sm:inline">[ABOUT US]</span>
-      Unlock your business’s full potential with Nexus India {" "}
-      <Image
-        src="/stars.png"
-        alt="Nexus Icon"
-        width={50}
-        height={40}
-        className="inline-block align-middle"
-      /> {" "}
-      where innovation meets affordability {" "}
-      <Image
-        src="/arrow.png"
-        alt="Nexus Icon"
-        width={80}
-        height={50}
-        className="inline-block align-middle"
-      />
-      <br className="block sm:hidden" />
-      We empower SMEs to thrive online with tailor-made websites, SEO
-      magic, and digital marketing that turns clicks into loyal customers.
-    </p>
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-2">
-    {[
-      {
-        title: "Connecting Remote Businesses",
-        desc: "A dedicated marketplace that bridges the gap for small businesses in remote regions. giving them a platform to reach wider audiences with ease",
-      },
-      {
-        title: "Affordable Access, Unlimited Growth",
-        desc: "Empowering small enterprises with cost-effective digital tools and online storefronts to boost sales and visibility without heacy inverstemts.",
-      },
-      {
-        title: "Community Driven Success",
-        desc: "Fostering local economic growth while supporting social causes including women empowerment and animal welfare, creating a marketplace with heart.",
-      },
-    ].map((card, idx) => (
-      <div
-        key={idx}
-        className="bg-zinc-800 p-8 sm:p-10 rounded-2xl shadow-md hover:shadow-orange-500/20"
-      >
-        <div className="flex justify-between mb-4 items-center">
-          <p className="text-orange-500/85 text-lg">0{idx + 1}</p>
-          <PhoneIcon className="w-10 text-orange-500/85" />
+      <section className="relative bg-gradient-to-b from-zinc-900 to-black py-20 px-4 sm:px-8">
+        <div className="max-w-6xl mx-auto text-xl sm:text-2xl lg:text-3xl mt-6 text-gray-300 mb-24 sm:mb-32">
+          <p className="leading-snug">
+            <span className="text-base sm:text-lg lg:text-xl mr-60 text-orange-500/85 block sm:inline">
+              [ABOUT US]
+            </span>
+            Unlock your business’s full potential with Nexus India{" "}
+            <Image
+              src="/stars.png"
+              alt="Nexus Icon"
+              width={50}
+              height={40}
+              className="inline-block align-middle"
+            />{" "}
+            where innovation meets affordability{" "}
+            <Image
+              src="/arrow.png"
+              alt="Nexus Icon"
+              width={80}
+              height={50}
+              className="inline-block align-middle"
+            />
+            <br className="block sm:hidden" />
+            We empower SMEs to thrive online with tailor-made websites, SEO
+            magic, and digital marketing that turns clicks into loyal customers.
+          </p>
         </div>
-        <h3 className="text-white text-lg sm:text-2xl mb-2">{card.title}</h3>
-        <p className="text-base text-gray-400">{card.desc}</p>
-      </div>
-    ))}
-  </div>
-</section>
 
-{/* Key Areas */}
-<section className="bg-orange-500/85 py-16 px-4 sm:px-8">
-  <div className="max-w-6xl mx-auto text-left">
-    <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-8 text-white">KEY AREAS</h2>
-    <p className="text-lg sm:text-xl lg:text-2xl max-w-4xl">
-      Nexus India was dedicated to creating impact through focused support
-      in three key areas: Women Welfare, Animal Welfare, and Startups. Our
-      initiative aims to strengthen local businesses, raise awareness, and
-      foster digitally empowered, stronger communities across India.
-    </p>
-  </div>
-
-  <div className="flex flex-wrap justify-center gap-6 mt-12 max-w-6xl mx-auto">
-    {[
-      {
-        src: "ww.jpeg",
-        title: "Women Welfare",
-        desc: "Empowering women entrepreneurs and leaders with digital tools, training, and mentorship.",
-      },
-      {
-        src: "aw.jpeg",
-        title: "Animal Welfare",
-        desc: "Supporting stray and domestic animal care through health, shelter, and education drives.",
-      },
-      {
-        src: "si.jpeg",
-        title: "Startup Incubation",
-        desc: "Helping local startups scale with digital strategy, visibility, and tech support.",
-      },
-    ].map((item, idx) => (
-      <div
-        key={idx}
-        className="relative group w-full sm:w-[368px] overflow-hidden rounded-2xl shadow-lg"
-      >
-        <Image
-          src={`/${item.src}`}
-          alt={item.title}
-          width={368}
-          height={300}
-          className="object-cover w-full h-80 transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4 flex flex-col justify-center text-white">
-          <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-          <p className="text-sm">{item.desc}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-2">
+          {[
+            {
+              Image: "/Icon1.png",
+              title: "Connecting Remote Businesses",
+              desc: "A dedicated marketplace that bridges the gap for small businesses in remote regions. giving them a platform to reach wider audiences with ease",
+            },
+            {
+              Image: "/Icon2.png",
+              title: "Affordable Access, Unlimited Growth",
+              desc: "Empowering small enterprises with cost-effective digital tools and online storefronts to boost sales and visibility without heacy inverstemts.",
+            },
+            {
+              Image: "/Icon3.png",
+              title: "Community Driven Success",
+              desc: "Fostering local economic growth while supporting social causes including women empowerment and animal welfare, creating a marketplace with heart.",
+            },
+          ].map((card, idx) => (
+            <div
+              key={idx}
+              className="bg-zinc-800 p-8 sm:p-10 rounded-2xl shadow-md hover:shadow-orange-500/20"
+            >
+              <div className="flex justify-between mb-4 items-center">
+                <p className="text-orange-500/85 text-xl">0{idx + 1}</p>
+                <Image
+                  src={card.Image}
+                  alt={card.title}
+                  width={50}
+                  height={50}
+                  className="w-10 h-10 sm:w-16 sm:h-16"
+                />
+                {/* <PhoneIcon className="w-10 text-orange-500/85" /> */}
+              </div>
+              <h3 className="text-white text-lg sm:text-2xl mb-2">
+                {card.title}
+              </h3>
+              <p className="text-base text-gray-400">{card.desc}</p>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
+
+      {/* Key Areas */}
+      <section className=" bg-orange-500/85 sm:bg-zinc-900 hover:bg-orange-500/85 py-16 px-4 sm:px-8">
+        <div className="max-w-6xl mx-auto text-left">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-8 text-white">
+            KEY AREAS
+          </h2>
+          <p className="text-lg sm:text-xl lg:text-2xl max-w-4xl text-white">
+            Nexus India was dedicated to creating impact through focused support
+            in three key areas: Women Welfare, Animal Welfare, and Startups. Our
+            initiative aims to strengthen local businesses, raise awareness, and
+            foster digitally empowered, stronger communities across India.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6 mt-12 max-w-6xl mx-auto">
+          {[
+            {
+              src: "ww3.jpeg",
+              title: "Women Welfare",
+              desc: "Empowering women entrepreneurs and leaders with digital tools, training, and mentorship.",
+            },
+            {
+              src: "aw.jpeg",
+              title: "Animal Welfare",
+              desc: "Supporting stray and domestic animal care through health, shelter, and education drives.",
+            },
+            {
+              src: "si.jpeg",
+              title: "Startup Incubation",
+              desc: "Helping local startups scale with digital strategy, visibility, and tech support.",
+            },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="relative group w-full sm:w-[368px] overflow-hidden rounded-2xl shadow-lg"
+            >
+              <Image
+                src={`/${item.src}`}
+                alt={item.title}
+                width={368}
+                height={300}
+                className="object-cover w-full h-80 transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4 flex flex-col justify-center text-white">
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Why Choose Us */}
-      <section className="bg-[#1f1f1f] ">
-        <div className="max-w-6xl mx-auto px-4 border-l border-e border-gray-600 py-20">
-          <h2 className="text-white text-7xl font-semibold text-center mb-16">
+      <section className="bg-[#1f1f1f]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 border-l border-e border-gray-600 py-16 sm:py-20">
+          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-center mb-10 sm:mb-16">
             Why Choose Us?
           </h2>
 
-          <div className="relative  ">
+          <div className="relative flex flex-col gap-12 sm:gap-16">
             {whyChooseData.map((item, index) => (
               <div
                 key={item.id}
-                className={`mb-16 pl-10 pr-10 relative ${
-                  index % 2 === 1 ? "ml-auto max-w-2xl" : "mr-auto max-w-2xl"
+                className={`relative px-4 sm:px-10 w-full ${
+                  index % 2 === 1
+                    ? "sm:ml-auto sm:max-w-2xl text-left"
+                    : "sm:mr-auto sm:max-w-2xl text-left"
                 }`}
               >
-                {/* <p className="absolute -left-[0.7rem] top-2 w-3 h-3 bg-gray-400 rounded-full" /> */}
-                <div className="bg-[#2f2f2f] text-white rounded-xl p-6 shadow-md">
-                  <h3 className="text-2xl font-semibold text-orange-400 mb-2">
+                <div className="bg-[#2f2f2f] text-white rounded-xl p-6 sm:p-8 shadow-md relative">
+                  <h3 className="text-xl  sm:text-2xl font-semibold text-orange-400 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-gray-300">{item.desc}</p>
-                  <p className="absolute top-4 right-12 text-4xl font-bold text-gray-400 opacity-40">
+                  <p className="text-base sm:text-lg text-gray-300">
+                    {item.desc}
+                  </p>
+                  <p className="absolute top-0 right-1.5 sm:right-12 text-3xl sm:text-4xl font-bold text-gray-400 opacity-40">
                     {item.id}
                   </p>
                 </div>
@@ -306,16 +325,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-white py-20 px-4">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
-          <div className="flex justify-between items-start flex-wrap">
-            <div>
-              <h2 className="text-7xl leading-tight text-black">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-wrap gap-6">
+            <div className="sm:flex-1">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight text-black">
                 REGISTER <br />
-                YOUR <p className="text-orange-500 font-bold">BUSINESS</p>
+                YOUR <span className="text-orange-500 font-bold">BUSINESS</span>
               </h2>
-              <p className="mt-4 text-gray-700 max-w-4xl text-xl">
+              <p className="mt-4 text-gray-700 text-base sm:text-lg md:text-xl max-w-4xl">
                 Become part of a platform that bridges digital access for SMEs
                 and social impact causes. Benefit from tailored support and
                 guidance at every step of your growth journey. Experience
@@ -324,20 +343,24 @@ export default function Page() {
             </div>
 
             {/* Help Button */}
-            <button className="bg-orange-500 text-white px-5 py-2 rounded-md mt-4 sm:mt-0 hover:bg-orange-600 transition">
-              Need Help?
-            </button>
+            <div className="sm:flex-shrink-0">
+              <button className="bg-orange-500 text-white px-5 py-2 rounded-md sm:mt-0 hover:bg-orange-600 transition w-full sm:w-auto">
+                Need Help?
+              </button>
+            </div>
           </div>
 
           {/* Timeline Steps */}
-          <div className="mt-16 relative border-l-4 max-w-2xl mx-auto border-orange-400 pl-6 space-y-16">
+          <div className="mt-16 relative border-l-4 max-w-2xl mx-auto border-orange-400 pl-6 space-y-12">
             {timelineSteps.map((step, index) => (
               <div key={index} className="relative">
-                <p className="absolute -left-10 w-7 h-7 bg-orange-500 rounded-full border-4 border-white z-10" />
-                <h3 className="text-3xl font-semibold text-orange-500">
+                <div className="absolute -left-9.5 top-0 w-6 h-6 bg-orange-500 rounded-full border-4 border-white z-10" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-orange-500">
                   {step.title}
                 </h3>
-                <p className="text-gray-700 text-xl">{step.desc}</p>
+                <p className="text-gray-700 text-base sm:text-lg md:text-xl">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -345,19 +368,24 @@ export default function Page() {
       </section>
 
       {/* Contact Us */}
-      <section className=" bg-black text-white py-20 px-4">
+      <section className="bg-black text-white py-20 px-4">
         <div className="max-w-6xl font-semibold mx-auto mb-6">
-          <h2 className="text-7xl mb-6">Your Next Step Is Simple</h2>
-          <p className="text-orange-500 text-7xl">Contact Us</p>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+            Your Next Step Is Simple
+          </h2>
+          <p className="text-orange-500 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            Contact Us
+          </p>
         </div>
-        <div className="max-w-6xl mx-auto flex mb-10 gap-6">
-          <p className=" w-2/5 text-2xl ">
+
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
+          <p className="text-lg sm:text-xl md:text-2xl lg:w-2/5">
             Complete a short sign up form, and we'll help you begin with
             clarity, confidence and support every step of the way
           </p>
 
           {/* Form */}
-          <form className=" flex flex-col gap-6 w-3/5 mx-auto">
+          <form className="flex flex-col gap-6 w-full lg:w-3/5">
             {/* Name */}
             <div className="flex flex-col">
               <label className="uppercase text-sm mb-1">Your Name</label>
@@ -367,9 +395,10 @@ export default function Page() {
                 className="bg-transparent border-b border-gray-600 py-2 text-sm focus:outline-none"
               />
             </div>
-            <div className=" flex flex-col md:flex-row gap-6">
-              {/* Phone */}
-              <div className="flex flex-col w-1/2">
+
+            {/* Phone + Email */}
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex flex-col w-full md:w-1/2">
                 <label className="uppercase text-sm mb-1">
                   Your Phone Number
                 </label>
@@ -379,8 +408,7 @@ export default function Page() {
                   className="bg-transparent border-b border-gray-600 py-2 text-sm focus:outline-none"
                 />
               </div>
-              {/* Email */}
-              <div className="flex flex-col w-1/2">
+              <div className="flex flex-col w-full md:w-1/2">
                 <label className="uppercase text-sm mb-1">Your Email</label>
                 <input
                   type="email"
@@ -391,7 +419,7 @@ export default function Page() {
             </div>
 
             {/* Message */}
-            <div className="flex flex-col md:col-p-2">
+            <div className="flex flex-col">
               <label className="uppercase text-sm mb-1">Your Message</label>
               <textarea
                 placeholder="Writing your message here..."
@@ -400,7 +428,7 @@ export default function Page() {
             </div>
 
             {/* Submit Button */}
-            <div className="md:col-p-2 mt-6">
+            <div className="mt-6">
               <button
                 type="submit"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 uppercase tracking-wide text-sm"

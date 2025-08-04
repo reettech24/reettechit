@@ -64,14 +64,14 @@ function ScreenshotButton({ gl }) {
 function ScenarioAudio({ scenario, isPlaying }) {
   const audioRef = useRef(null);
   const audioMap = {
-    default: "/audio/default.mp3",
-    city: "/audio/city.mp3",
-    sunset: "/audio/sunset.mp3",
-    dawn: "/audio/dawn.mp3",
-    night: "/audio/night.mp3",
-    warehouse: "/audio/warehouse.mp3",
-    forest: "/audio/forest.mp3",
-    sciFi: "/audio/sci-fi.mp3",
+    default: "/audio/audio1.mp3",
+    city: "/audio/audio2.mp3",
+    sunset: "/audio/audio1.mp3",
+    dawn: "/audio/audio2.mp3",
+    night: "/audio/audio1.mp3",
+    warehouse: "/audio/audio2.mp3",
+    forest: "/audio/audio1.mp3",
+    sciFi: "/audio/audio2.mp3",
   };
 
   useEffect(() => {

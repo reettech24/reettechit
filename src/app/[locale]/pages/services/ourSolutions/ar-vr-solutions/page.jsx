@@ -27,7 +27,18 @@ export default function page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-[url('/vr.jpeg')] bg-cover bg-center py-80 h-screen text-white">
+      <section className="relative  bg-center py-80 h-screen text-white">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
+        >
+          <source src="/Scene_01.mp4" type="video/mp4" />
+        </video>
+
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 to-black/30 z-0"></div>
         <motion.div
           className="relative z-10 text-center px-6"
@@ -43,23 +54,12 @@ export default function page() {
       </section>
 
       {/* Immersive VR Background Effect */}
-      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-100"
-        >
-          <source src="/Scene_01.mp4" type="video/mp4" />
-        </video>
-
+      <section className="relative bg-[url('/vr.jpeg')] h-screen w-full overflow-hidden flex items-center justify-center">
         <div className="relative z-10 text-center px-6 lg:px-20">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-7xl font-bold text-white mb-6">
             {t("sectiontitle")}
           </h2>
-          <p className="text-white/80 text-lg max-w-3xl mx-auto">
+          <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto">
             {t("sectiondesc")}
           </p>
         </div>
@@ -76,10 +76,10 @@ export default function page() {
         </div>
 
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             {t("overviewTitle")}
           </h2>
-          <p className="text-white/80 text-lg">{t("overviewDesc")}</p>
+          <p className="text-white/80 text-lg md:text-lg">{t("overviewDesc")}</p>
         </div>
       </section>
 
