@@ -117,14 +117,14 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   }
   50% {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   }
 }
-
 
 /* ----------------------------- */
 /* ✅ GLASSMORPHISM UTILITIES   */
@@ -152,23 +152,45 @@ body {
 .neumorphic {
   background: #e0e0e0;
   border-radius: 1rem;
-  box-shadow: 
-    8px 8px 16px #bebebe,
-    -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
 }
 
 .neumorphic-inner {
   background: #e0e0e0;
   border-radius: 1rem;
-  box-shadow: 
-    inset 6px 6px 10px #bebebe,
-    inset -6px -6px 10px #ffffff;
+  box-shadow: inset 6px 6px 10px #bebebe, inset -6px -6px 10px #ffffff;
 }
 
 /* Optional: Dark mode friendly */
 .neumorphic-dark {
   background: #1e1e1e;
-  box-shadow:
-    6px 6px 12px #141414,
-    -6px -6px 12px #2a2a2a;
+  box-shadow: 6px 6px 12px #141414, -6px -6px 12px #2a2a2a;
+}
+
+@layer utilities {
+  @keyframes glow-blink {
+    0%,
+    100% {
+      box-shadow: 0 -100px 200px -50px rgba(255, 115, 0, 0.4);
+    }
+    50% {
+      box-shadow: 0 -100px 200px -50px rgba(255, 115, 0, 0.8);
+    }
+  }
+
+   @keyframes glow-blink {
+    0%,
+    100% {
+      box-shadow: 0 -100px 200px -50px rgba(192, 192, 192, 0.907); /* light silver */
+    }
+    50% {
+      box-shadow: 0 -100px 200px -50px rgba(192, 192, 192, 0.278); /* stronger silver */
+    }
+  }
+
+ 
+
+  .animate-glow-blink {
+    animation: glow-blink 4s ease-in-out infinite;
+  }
 }

@@ -109,11 +109,22 @@ function ScenarioModel({
 
   return (
     <>
-      <primitive object={scene} ref={modelRef} position={position} scale={scale} />
+      <primitive
+        object={scene}
+        ref={modelRef}
+        position={position}
+        scale={scale}
+      />
       <Html center position={tooltipPosition}>
-        <div className="text-white text-sm bg-black/70 px-4 py-2 rounded-xl">{tooltip}</div>
+        <div className="text-white text-sm bg-black/70 px-4 py-2 rounded-xl">
+          {tooltip}
+        </div>
       </Html>
-      <ClickableHotspot position={[0.5, 1, 0]} label="Interact" onClick={onHotspotClick} />
+      <ClickableHotspot
+        position={[0.5, 1, 0]}
+        label="Interact"
+        onClick={onHotspotClick}
+      />
     </>
   );
 }
@@ -150,8 +161,10 @@ function VRModel({ scenario, isRotating, isZoomEnabled, onHotspotClick }) {
       glbPath: "/Vr.glb",
       tooltip: "360° Product View",
       autoRotate: isRotating,
-      cameraPos: [12, 16, 3],
-        fov: 55
+      position: [0, -2.5, 0],
+      scale: 20,
+      cameraPos: [10, 8, 30],
+      // fov: 55,
     },
     training: {
       glbPath: "/Vr.glb",
@@ -179,17 +192,31 @@ function VRModel({ scenario, isRotating, isZoomEnabled, onHotspotClick }) {
 
   return (
     <div className="w-full h-[560px] overflow-hidden shadow-3xl ring-1 ring-white/10 backdrop-blur-md relative">
-      <Canvas camera={{ position: config.cameraPos, fov: config.fov || 50 }} shadows>
-        <ambientLight intensity={0.4} />
-        <fog attach="fog" args={["#0a0a10", 2, 15]} />
-        <Stars radius={80} depth={50} count={10000} factor={4} saturation={50} fade />
+      <Canvas
+        camera={{ position: config.cameraPos, fov: config.fov || 50 }}
+        shadows
+      >
+        <ambientLight intensity={50} />
+        <fog attach="fog" args={["#0a0a10", 10, 15]} />
+        <Stars
+          radius={80}
+          depth={50}
+          count={10000}
+          factor={4}
+          saturation={50}
+          fade
+        />
 
         <Suspense fallback={null}>
           <ScenarioModel {...config} onHotspotClick={onHotspotClick} />
         </Suspense>
 
-        <ContactShadows position={[0, -3, 0]} opacity={0.4} blur={2} />
-        <OrbitControls autoRotate={config.autoRotate} enableZoom={isZoomEnabled} autoRotateSpeed={1.2} />
+        <ContactShadows position={[0, -3, 0]} opacity={0.4} blur={5} />
+        <OrbitControls
+          autoRotate={config.autoRotate}
+          enableZoom={isZoomEnabled}
+          autoRotateSpeed={1.2}
+        />
         <CameraTransition position={config.cameraPos} />
       </Canvas>
 
@@ -214,7 +241,9 @@ export default function VRSection() {
         <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-purple-500 animate-pulse mb-6 tracking-tight">
           {t("vrtitle")}
         </h2>
-        <p className="text-white/70 max-w-2xl mx-auto mb-10 text-lg">{t("vrdesc")}</p>
+        <p className="text-white/70 max-w-2xl mx-auto mb-10 text-lg">
+          {t("vrdesc")}
+        </p>
       </div>
 
       <div className="max-w-8xl mx-auto relative z-10">
@@ -230,14 +259,18 @@ export default function VRSection() {
           </div>
 
           <div className="flex flex-col justify-center items-center gap-4">
-            {message && <p className="text-green-400 font-semibold">{message}</p>}
+            {message && (
+              <p className="text-green-400 font-semibold">{message}</p>
+            )}
 
             {["product", "training", "workspace", "ar"].map((key) => (
               <button
                 key={key}
                 onClick={() => setScenario(key)}
                 className={`px-4 py-5 w-full ${
-                  scenario === key ? "bg-cyan-600 text-white" : "bg-cyan-700/20 text-cyan-300"
+                  scenario === key
+                    ? "bg-cyan-600 text-white"
+                    : "bg-cyan-700/20 text-cyan-300"
                 } hover:bg-cyan-600 transition`}
               >
                 {key === "product"

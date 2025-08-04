@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import React, { useEffect, useRef } from "react";
 import VRSection from "@/components/sections/VRSection";
+import VRBox from "@/components/sections/Vrbox";
 
 export default function page() {
   const t = useTranslations("arvr");
@@ -123,7 +124,10 @@ export default function page() {
           <h2 className="text-4xl font-bold mb-10">{t("technologiesTitle")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {t.raw("technologies").map((item, idx) => (
-              <div key={idx} className="bg-whtie/20 backdrop-blur-xl p-10 rounded-xl shadow-md">
+              <div
+                key={idx}
+                className="bg-whtie/20 backdrop-blur-xl p-10 rounded-xl shadow-md"
+              >
                 <h3 className="text-xl font-semibold">{item}</h3>
               </div>
             ))}
@@ -170,9 +174,10 @@ export default function page() {
       </section>
 
       {/* Benefits Section with Glassmorphism & 3D Tilt */}
-      {/* <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] px-0 lg:p-0">
-        <VRSection />
-      </section> */}
+      <section className="bg-gradient-to-br from-[#F0F4FF] to-[#E0EAFF] px-0 lg:p-0">
+        {/* <VRSection /> */}
+        <VRBox />
+      </section>
 
       {/* Why Us */}
       <section className="bg-white py-24 px-6 lg:px-20">
@@ -197,7 +202,7 @@ export default function page() {
         </div>
       </section>
 
-         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
         <video
           ref={videoRef}
           autoPlay
@@ -208,8 +213,6 @@ export default function page() {
         >
           <source src="/Scene_12.mp4" type="video/mp4" />
         </video>
-
-
       </section>
 
       {/* CTA */}

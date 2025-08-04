@@ -1,4 +1,5 @@
 "use client";
+
 export const dynamic = "force-dynamic";
 
 import { motion } from "framer-motion";
@@ -11,6 +12,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 import React from "react";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
+import Image from "next/image";
+import { PhoneIcon } from "@heroicons/react/24/outline";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -36,430 +39,398 @@ const industries = [
   { name: "Hospitality", emoji: "🏨", bg: "/bg/hospitality.jpg" },
 ];
 
+const whyChooseData = [
+  {
+    id: "01",
+    title: "All-in-One Digital Platform",
+    desc: "A dedicated space for Small & Medium Enterprises, Startups, NGOs, and Social Initiatives to thrive online.",
+  },
+  {
+    id: "02",
+    title: "Affordable Marketing Solutions",
+    desc: "Promote your business or cause at nominal charges—because big dreams shouldn’t need big budgets.",
+  },
+  {
+    id: "03",
+    title: "Empowered Women & Youth-Centric",
+    desc: "We uplift women and youth entrepreneurs through accessible tech, skill training, and growth tools.",
+  },
+  {
+    id: "04",
+    title: "Social Impact Driven",
+    desc: "We Care beyond Busines-aciverly supporting animal welfare and social cause with real-time action and connectivity",
+  },
+  {
+    id: "05",
+    title: "Free user Registration",
+    desc: "Join Our platform without any cost and start exploring growth opportunities.",
+  },
+  {
+    id: "06",
+    title: "Dierct Business Connections",
+    desc: "Connect directly with cerified business owners, service providers and social contreibutors.",
+  },
+  {
+    id: "07",
+    title: "Personalized adveritsing options",
+    desc: "Choose form a variety of promotional tools to suit your budget and audience type.",
+  },
+  {
+    id: "08",
+    title: "Simplified Onboarding Process",
+    desc: "Easy online registration, profile setup. and document submission with fast verification.",
+  },
+  {
+    id: "09",
+    title: "Pan india reach with local focus",
+    desc: "Wether you're a local brand or national startup, Nexus India helps amplify your presence.",
+  },
+  {
+    id: "10",
+    title: "Transparent & Trustworthy",
+    desc: "No Hidden costs. No middlemen. Just pure value for every rupee you invest",
+  },
+];
+
+const timelineSteps = [
+  {
+    title: "Visit the Portal",
+    desc: (
+      <>
+        Head to{" "}
+        <a
+          href="https://www.nexusindiaonline.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-black"
+        >
+          www.nexusindiaonline.com
+        </a>{" "}
+        and click the “Register Your Business” option to begin.
+      </>
+    ),
+  },
+  {
+    title: "Complete the Registration Form",
+    desc: "Fill in your business information using our intuitive form—designed to be simple and quick.",
+  },
+  {
+    title: "Upload Documents for Verification",
+    desc: "Fill in your business information using our intuitive form—designed to be simple and quick.",
+  },
+  {
+    title: "Proceed With Secure Payment",
+    desc: "Fill in your business information using our intuitive form—designed to be simple and quick.",
+  },
+  {
+    title: "Receive Confirmation & Access your Dashboard",
+    desc: "Fill in your business information using our intuitive form—designed to be simple and quick.",
+  },
+  {
+    title: "Build Your Business Profile",
+    desc: "Fill in your business information using our intuitive form—designed to be simple and quick.",
+  },
+  {
+    title: "Go Live & Get Discorverd",
+    desc: "Fill in your business information using our intuitive form—designed to be simple and quick.",
+  },
+  // Add more steps here if needed
+];
+
 export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center overflow-hidden py-68 h-screen text-center text-white bg-nexus-primary"
-        // style={{ backgroundImage: "url('/photos/rm373batch2-04.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-xs" />
-        <div className="relative z-10">
-          <motion.h1
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 uppercase"
-          >
-            Nexus India
-            <br />
-            <span className=" text-nexus-secondary uppercase">
-              The Caring Market
-            </span>
-          </motion.h1>
-          <motion.p
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            className="text-white/90 uppercase text-xl md:text-2xl max-w-3xl mx-auto font-bold"
-          >
-            Big dreams, <span className=" text-nexus-secondary">Small </span>{" "}
-            budget
-          </motion.p>
-        </div>
+      <section className="relative h-screen max-w-8xl overflow-hidden bg-gradient-to-b from-zinc-900 to-black text-center py-20">
+        <Image
+          src="/NI.png"
+          alt="Nexus Icon"
+          width={300}
+          height={80}
+          className="mx-auto mb-4"
+        />
+        <Image
+          src="/NEXUS_INDIA.png"
+          alt="Nexus Icon"
+          width={600}
+          height={80}
+          className="mx-auto mb-8"
+        />
+        <Image
+          src="/NEXUS_INDIA_TEXT.png"
+          alt="Nexus Icon"
+          width={600}
+          height={80}
+          className="mx-auto mb-8"
+        />
+        {/* <h1 className="text-4xl font-bold">NEXUS INDIA</h1>
+        <p className="text-orange-500 text-lg">Big Dreams, Small Budget</p> */}
 
-        <div className="absolute -top-20 right-160 opacity-40 w-screen">
-          <img src="/NI.png" alt="Nexus India Logo" className="" />
-        </div>
-        <div className="absolute top-20 left-250 opacity-90 w-screen z-10">
-          <img src="/NI.png" alt="Nexus India Logo" className=" h-80 w-80" />
-        </div>
-        <div className="absolute -bottom-20 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
-        </div>
+        <div className=" absolute top-130 -right-185  border-t-5 border-zinc-500 bg-zinc-900 w-[3000px] h-[3000px] rounded-full animate-glow-blink"></div>
       </section>
 
-      {/* What is Nexus */}
-      <motion.section
-        className="relative  mx-auto text-center items-start bg-cover bg-en bg-[#f0f0f0] overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={stagger}
-        // style={{ backgroundImage: "url('/nexusindia/n3.jpg')" }}
+    <section className="relative bg-gradient-to-b from-zinc-900 to-black py-20 px-4 sm:px-8">
+  <div className="max-w-6xl mx-auto text-xl sm:text-2xl lg:text-3xl mt-6 text-gray-300 mb-24 sm:mb-32">
+    <p className="leading-snug">
+      <span className="text-base sm:text-lg lg:text-xl mr-60 text-orange-500/85 block sm:inline">[ABOUT US]</span>
+      Unlock your business’s full potential with Nexus India {" "}
+      <Image
+        src="/stars.png"
+        alt="Nexus Icon"
+        width={50}
+        height={40}
+        className="inline-block align-middle"
+      /> {" "}
+      where innovation meets affordability {" "}
+      <Image
+        src="/arrow.png"
+        alt="Nexus Icon"
+        width={80}
+        height={50}
+        className="inline-block align-middle"
+      />
+      <br className="block sm:hidden" />
+      We empower SMEs to thrive online with tailor-made websites, SEO
+      magic, and digital marketing that turns clicks into loyal customers.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-2">
+    {[
+      {
+        title: "Connecting Remote Businesses",
+        desc: "A dedicated marketplace that bridges the gap for small businesses in remote regions. giving them a platform to reach wider audiences with ease",
+      },
+      {
+        title: "Affordable Access, Unlimited Growth",
+        desc: "Empowering small enterprises with cost-effective digital tools and online storefronts to boost sales and visibility without heacy inverstemts.",
+      },
+      {
+        title: "Community Driven Success",
+        desc: "Fostering local economic growth while supporting social causes including women empowerment and animal welfare, creating a marketplace with heart.",
+      },
+    ].map((card, idx) => (
+      <div
+        key={idx}
+        className="bg-zinc-800 p-8 sm:p-10 rounded-2xl shadow-md hover:shadow-orange-500/20"
       >
-        <div className="max-w-6xl py-24 px-6 mx-auto text-center">
-          {/* <div className="absolute inset-0 -z-10 opacity-5 bg-[url('/p1.png')] bg-repeat" /> */}
-          <motion.h2
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl font-bold text-nexus-secondary mb-6"
-          >
-            What is Nexus India?
-          </motion.h2>
-          <motion.p
-            variants={fadeInUp}
-            className="text-black text-lg md:text-xl leading-relaxed max-w-4xl mx-auto"
-          >
-            Nexus India is a comprehensive digital platform designed to empower
-            small and medium enterprises (SMEs) across India. From website
-            development to branding, our all-in-one product helps businesses
-            thrive online with affordable, easy-to-use tools.
-          </motion.p>
+        <div className="flex justify-between mb-4 items-center">
+          <p className="text-orange-500/85 text-lg">0{idx + 1}</p>
+          <PhoneIcon className="w-10 text-orange-500/85" />
         </div>
+        <h3 className="text-white text-lg sm:text-2xl mb-2">{card.title}</h3>
+        <p className="text-base text-gray-400">{card.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
-        <div className="absolute -bottom-20 -right-0 opacity-40 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
+{/* Key Areas */}
+<section className="bg-orange-500/85 py-16 px-4 sm:px-8">
+  <div className="max-w-6xl mx-auto text-left">
+    <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-8 text-white">KEY AREAS</h2>
+    <p className="text-lg sm:text-xl lg:text-2xl max-w-4xl">
+      Nexus India was dedicated to creating impact through focused support
+      in three key areas: Women Welfare, Animal Welfare, and Startups. Our
+      initiative aims to strengthen local businesses, raise awareness, and
+      foster digitally empowered, stronger communities across India.
+    </p>
+  </div>
+
+  <div className="flex flex-wrap justify-center gap-6 mt-12 max-w-6xl mx-auto">
+    {[
+      {
+        src: "ww.jpeg",
+        title: "Women Welfare",
+        desc: "Empowering women entrepreneurs and leaders with digital tools, training, and mentorship.",
+      },
+      {
+        src: "aw.jpeg",
+        title: "Animal Welfare",
+        desc: "Supporting stray and domestic animal care through health, shelter, and education drives.",
+      },
+      {
+        src: "si.jpeg",
+        title: "Startup Incubation",
+        desc: "Helping local startups scale with digital strategy, visibility, and tech support.",
+      },
+    ].map((item, idx) => (
+      <div
+        key={idx}
+        className="relative group w-full sm:w-[368px] overflow-hidden rounded-2xl shadow-lg"
+      >
+        <Image
+          src={`/${item.src}`}
+          alt={item.title}
+          width={368}
+          height={300}
+          className="object-cover w-full h-80 transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4 flex flex-col justify-center text-white">
+          <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+          <p className="text-sm">{item.desc}</p>
         </div>
-      </motion.section>
+      </div>
+    ))}
+  </div>
+</section>
 
-      {/* Why Nexus */}
-      <section className="bg-gradient-to-b from-black to-gray-900 py-24 px-6 overflow-hidden relative">
-        <div className="max-w-7xl mx-auto text-center mb-20">
-          <motion.h3
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-extrabold text-nexus-secondary mb-4"
-          >
-            Why Nexus India Stands Out
-          </motion.h3>
-          <motion.p
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-white text-lg max-w-3xl mx-auto"
-          >
-            Our product is more than a service — it's your growth partner.
-          </motion.p>
-        </div>
-        <div className="absolute -bottom-20 -right-20 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
-        </div>
+      {/* Why Choose Us */}
+      <section className="bg-[#1f1f1f] ">
+        <div className="max-w-6xl mx-auto px-4 border-l border-e border-gray-600 py-20">
+          <h2 className="text-white text-7xl font-semibold text-center mb-16">
+            Why Choose Us?
+          </h2>
 
-        <motion.div
-          className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 z-10"
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {[
-            {
-              title: "Affordable Pricing",
-              desc: "Pay only for what you need. Perfect for SMEs with limited budgets.",
-              icon: "/NI1.jpg",
-            },
-            {
-              title: "Tailored for India",
-              desc: "Localized tools, vernacular support, and regional SEO built-in.",
-              icon: "/NI2.jpg",
-            },
-            {
-              title: "Modular & Scalable",
-              desc: "Start small and grow as your business expands — no tech headaches.",
-              icon: "/NI3.jpg",
-            },
-            {
-              title: "Impact-Driven",
-              desc: "We measure success not just in revenue but in livelihoods improved.",
-              icon: "/NI4.jpg",
-            },
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              variants={fadeInUp}
-              className="glassmorphic bg-cover bg-black bg-no-repeat h-80 p-6 rounded-2xl shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff] hover:scale-[1.03] transition-all duration-300 ease-in-out"
-              // style={{ backgroundImage: `url(${item.icon})` }}
-            >
-              <div className="neumorphic-inner w-48 h-44 object-cover flex items-center justify-center mx-auto mb-4">
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-full h-full"
-                />
-              </div>
-              <h4 className="text-lg font-semibold text-nexus-secondary mb-2">
-                {item.title}
-              </h4>
-              <p className="text-sm text-white">{item.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
-      {/* Industries Slider */}
-      <section className="bg-gray-900 text-white py-20 relative overflow-hidden">
-        <motion.h3
-          className="text-center text-4xl font-bold mb-10 text-nexus-secondary"
-          variants={fadeInUp}
-        >
-          Industries We Serve
-        </motion.h3>
-        <Swiper
-          slidesPerView={2}
-          spaceBetween={20}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 1.5 },
-            1024: { slidesPerView: 3.5 },
-          }}
-          modules={[Autoplay]}
-          className="px-6"
-        >
-          {industries.map((item, index) => (
-            <SwiperSlide key={index}>
+          <div className="relative  ">
+            {whyChooseData.map((item, index) => (
               <div
-                className="h-72 bg-cover bg-center rounded-xl flex items-center justify-center relative overflow-hidden"
-                style={{ backgroundImage: `url(${item.bg})` }}
+                key={item.id}
+                className={`mb-16 pl-10 pr-10 relative ${
+                  index % 2 === 1 ? "ml-auto max-w-2xl" : "mr-auto max-w-2xl"
+                }`}
               >
-                <div className="absolute inset-0 bg-black/40 z-0" />
-                <div className="relative z-10 text-center">
-                  <div className="text-4xl mb-2">{item.emoji}</div>
-                  <div className="text-lg font-bold uppercase">{item.name}</div>
+                {/* <p className="absolute -left-[0.7rem] top-2 w-3 h-3 bg-gray-400 rounded-full" /> */}
+                <div className="bg-[#2f2f2f] text-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-2xl font-semibold text-orange-400 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-lg text-gray-300">{item.desc}</p>
+                  <p className="absolute top-4 right-12 text-4xl font-bold text-gray-400 opacity-40">
+                    {item.id}
+                  </p>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <motion.section
-        className="relative bg-nexus-primary bg-cover bg-center bg-no-repeat overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        variants={stagger}
-        viewport={{ once: true }}
-        // style={{ backgroundImage: "url('/nexusindia/n2.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-3xl" />
-        <div className="py-24 px-6 max-w-7xl mx-auto text-center z-50">
-          {/* Optional subtle pattern or tint background */}
-          {/* <div className="absolute inset-0 -z-10 bg-[url('/nexusindia/n1.jpg')] bg-repeat opacity-5 pointer-events-none" /> */}
-
-          <motion.div variants={fadeInUp} className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4 z-20">
-              Key Features
-            </h3>
-            <p className="text-white text-lg max-w-3xl mx-auto">
-              Everything your business needs to go digital — in one simple
-              platform.
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Website Builder",
-                desc: "No code. Just drag, drop, and launch.",
-                icon: "/test/ar2.jpeg",
-              },
-              {
-                title: "SEO Tools",
-                desc: "Rank higher locally & nationally.",
-                icon: "/test/ar2.jpeg",
-              },
-              {
-                title: "Digital Business Card",
-                desc: "Your brand, in everyone’s pocket.",
-                icon: "/test/ar2.jpeg",
-              },
-              {
-                title: "Online Storefront",
-                desc: "Sell products or services online easily.",
-                icon: "/test/ar2.jpeg",
-              },
-              {
-                title: "Multi-language Support",
-                desc: "Serve customers in local languages.",
-                icon: "/test/ar2.jpeg",
-              },
-              {
-                title: "CRM & Lead Tracking",
-                desc: "Capture leads and manage clients.",
-                icon: "/test/ar2.jpeg",
-              },
-            ].map((feature, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeInUp}
-                className="glassmorphic rounded-2xl p-6 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 shadow-md"
-              >
-                <div className="w-16 h-16 bg-white/70 shadow-inner rounded-full flex items-center justify-center mb-4">
-                  <img
-                    src={feature.icon}
-                    alt={feature.title}
-                    className="w-8 h-8"
-                  />
-                </div>
-                <h4 className="text-lg font-extrabold text-white mb-2">
-                  {feature.title}
-                </h4>
-                <p className="text-sm text-white">{feature.desc}</p>
-              </motion.div>
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
+      <section className="bg-white py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Heading */}
+          <div className="flex justify-between items-start flex-wrap">
+            <div>
+              <h2 className="text-7xl leading-tight text-black">
+                REGISTER <br />
+                YOUR <p className="text-orange-500 font-bold">BUSINESS</p>
+              </h2>
+              <p className="mt-4 text-gray-700 max-w-4xl text-xl">
+                Become part of a platform that bridges digital access for SMEs
+                and social impact causes. Benefit from tailored support and
+                guidance at every step of your growth journey. Experience
+                measurable return from affordable, high-ROI digital services.
+              </p>
+            </div>
+
+            {/* Help Button */}
+            <button className="bg-orange-500 text-white px-5 py-2 rounded-md mt-4 sm:mt-0 hover:bg-orange-600 transition">
+              Need Help?
+            </button>
+          </div>
+
+          {/* Timeline Steps */}
+          <div className="mt-16 relative border-l-4 max-w-2xl mx-auto border-orange-400 pl-6 space-y-16">
+            {timelineSteps.map((step, index) => (
+              <div key={index} className="relative">
+                <p className="absolute -left-10 w-7 h-7 bg-orange-500 rounded-full border-4 border-white z-10" />
+                <h3 className="text-3xl font-semibold text-orange-500">
+                  {step.title}
+                </h3>
+                <p className="text-gray-700 text-xl">{step.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </motion.section>
+      </section>
 
-      {/* Trusted By Logos */}
-      <motion.section
-        className=" relative py-20 px-6 bg-gradient-to-b from-white via-gray-50 to-white text-center overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeInUp}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
-          Trusted By Businesses Nationwide
-        </h3>
-        <p className="text-gray-500 mb-10 max-w-2xl mx-auto text-sm md:text-base">
-          Join the growing network of SMEs and startups using Nexus India to
-          power their digital journey.
-        </p>
+      {/* Contact Us */}
+      <section className=" bg-black text-white py-20 px-4">
+        <div className="max-w-6xl font-semibold mx-auto mb-6">
+          <h2 className="text-7xl mb-6">Your Next Step Is Simple</h2>
+          <p className="text-orange-500 text-7xl">Contact Us</p>
+        </div>
+        <div className="max-w-6xl mx-auto flex mb-10 gap-6">
+          <p className=" w-2/5 text-2xl ">
+            Complete a short sign up form, and we'll help you begin with
+            clarity, confidence and support every step of the way
+          </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
-          {[
-            "client-1.png",
-            "client-2.png",
-            "client-3.png",
-            "client-4.png",
-            "client-6.png",
-          ].map((logo, idx) => (
-            <div
-              key={idx}
-              className="transition transform hover:scale-105 duration-300 ease-in-out z-10"
-            >
-              <img
-                src={`/company/${logo}`}
-                alt={`Client ${idx + 1}`}
-                className="h-20 w-auto opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition"
+          {/* Form */}
+          <form className=" flex flex-col gap-6 w-3/5 mx-auto">
+            {/* Name */}
+            <div className="flex flex-col">
+              <label className="uppercase text-sm mb-1">Your Name</label>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                className="bg-transparent border-b border-gray-600 py-2 text-sm focus:outline-none"
               />
             </div>
-          ))}
-        </div>
-
-        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
-        </div>
-      </motion.section>
-
-      {/* Get Started */}
-      <motion.section
-        className="py-20 px-6 bg-blue-50 text-center"
-        initial="hidden"
-        whileInView="visible"
-        variants={stagger}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-3xl font-bold mb-8">How to Get Started</h3>
-        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {[
-            "Sign up on our platform",
-            "Select the services you need",
-            "Launch your digital identity",
-            "Track growth via dashboard",
-          ].map((step, idx) => (
-            <motion.div
-              key={idx}
-              variants={fadeInUp}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <div className="text-blue-600 font-bold text-4xl mb-2">
-                0{idx + 1}
+            <div className=" flex flex-col md:flex-row gap-6">
+              {/* Phone */}
+              <div className="flex flex-col w-1/2">
+                <label className="uppercase text-sm mb-1">
+                  Your Phone Number
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your phone"
+                  className="bg-transparent border-b border-gray-600 py-2 text-sm focus:outline-none"
+                />
               </div>
-              <p className="text-sm text-gray-700">{step}</p>
-            </motion.div>
-          ))}
+              {/* Email */}
+              <div className="flex flex-col w-1/2">
+                <label className="uppercase text-sm mb-1">Your Email</label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-transparent border-b border-gray-600 py-2 text-sm focus:outline-none"
+                />
+              </div>
+            </div>
+
+            {/* Message */}
+            <div className="flex flex-col md:col-p-2">
+              <label className="uppercase text-sm mb-1">Your Message</label>
+              <textarea
+                placeholder="Writing your message here..."
+                className="bg-transparent border-b border-gray-600 py-2 text-sm h-24 resize-none focus:outline-none"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <div className="md:col-p-2 mt-6">
+              <button
+                type="submit"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 uppercase tracking-wide text-sm"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
-      </motion.section>
-
-      {/* FAQ */}
-      <motion.section
-        className="py-20 px-6 bg-[#070B2A] relative overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        variants={stagger}
-        viewport={{ once: true }}
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-center mb-12 text-white">
-            Frequently Asked Questions
-          </h3>
-          <div className="space-y-6 text-left text-white">
-            {[
-              {
-                q: "Who is Nexus India built for?",
-                a: "Small and medium businesses across industries looking to grow their online presence affordably.",
-              },
-              {
-                q: "Do I need technical knowledge to use it?",
-                a: "Not at all. It’s designed for non-tech users with easy setup and support.",
-              },
-              {
-                q: "Is there a free trial?",
-                a: "Yes, we offer a 14-day free trial with access to all features.",
-              },
-              {
-                q: "Can I use it in regional languages?",
-                a: "Absolutely. Hindi, Marathi, Tamil, and more supported.",
-              },
-            ].map((item, idx) => (
-              <motion.div key={idx} variants={fadeInUp}>
-                <strong className="block text-lg font-medium mb-1">
-                  {item.q}
-                </strong>
-                <p className="text-sm text-white/90">{item.a}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
-        </div>
-      </motion.section>
-
-      {/* CTA */}
-      <motion.section
-        className="bg-[#070B2A] text-white py-20 px-6 text-center relative overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeInUp}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-4xl font-bold mb-4">
-          Bring Your Business Online with Nexus India
-        </h3>
-        <p className="mb-6 text-white/90 max-w-2xl mx-auto text-lg">
-          Whether you run a shop, offer services, or build products — Nexus
-          India is built to support your journey.
-        </p>
-        <a
-          href="/contact"
-          className="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded-xl hover:bg-gray-100 transition"
-        >
-          Request a Demo
-        </a>
-
-        <div className="absolute -bottom-20 -right-0 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
-        </div>
-      </motion.section>
-
-      {/* Testimonials & Contact */}
-      <TestimonialSection />
-      <ContactUsSection />
+      </section>
     </>
   );
 }
+
+// @keyframes glow-blink {
+//     0%,
+//     100% {
+//       box-shadow: 0 -100px 200px -50px rgba(255, 115, 0, 0.4);
+//     }
+//     50% {
+//       box-shadow: 0 -100px 200px -50px rgba(255, 115, 0, 0.8);
+//     }
+//   }
+
+// @keyframes glow-blink {
+//   0%,
+//   100% {
+//     box-shadow: 0 -100px 200px -50px rgba(192, 192, 192, 0.729); /* light silver */
+//   }
+//   50% {
+//     box-shadow: 0 -100px 200px -50px rgba(192, 192, 192, 0.56); /* stronger silver */
+//   }
+// }
