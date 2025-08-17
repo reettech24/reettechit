@@ -14,11 +14,6 @@ export default function Page() {
       desc: t("featureItems.0.desc"),
       image: "/work/pankaj.jpg",
     },
-    // {
-    //   title: t("featureItems.1.title"),
-    //   desc: t("featureItems.1.desc"),
-    //   image: "/work/saddaf.jpeg",
-    // },
     {
       title: t("featureItems.1.title"),
       desc: t("featureItems.1.desc"),
