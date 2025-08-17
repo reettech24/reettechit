@@ -152,9 +152,8 @@ export default function AboutPage() {
                       "/work/jai.jpg",
                       "/work/Prashant.jpg",
                       // "/logo3.png",
-                      "/work/Rishabh.jpg",
                       "/work/aswariya.jpg",
-                      "/work/durvesh.jpg",
+                      "/work/prerna.jpg",
                       "/work/himanshu.jpeg",
                       "/work/saurabh.jpg",
                     ][idx]
@@ -176,7 +175,7 @@ export default function AboutPage() {
       <section className="py-20 px-6 relative overflow-hidden text-center bg-black text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-10">{t("techPartnersTitle")}</h2>
-          <div className="grid md:grid-cols-3 gap-10 items-center justify-center">
+          <div className="grid md:grid-cols-4 gap-10 items-center justify-center">
             {t.raw("techPartners").map((partner, idx) => (
               <div key={idx} className="text-center z-10">
                 <img
@@ -188,6 +187,7 @@ export default function AboutPage() {
                       "/partners/client-7.png",
                       "/partners/theblackspade.png",
                       "/partners/Idice.jpg",
+                      "/partners/motherspumpkin.png",
                     ][idx]
                   }
                   alt={partner.name}

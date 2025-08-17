@@ -67,7 +67,7 @@ const whyChooseData = [
   },
   {
     id: "06",
-    title: "Dierct Business Connections",
+    title: "Direct Business Connections",
     desc: "Connect directly with cerified business owners, service providers and social contreibutors.",
   },
   {
@@ -147,26 +147,26 @@ export default function Page() {
           alt="Nexus Icon"
           width={300}
           height={80}
-          className="mx-auto"
+          className="mx-auto my-20 sm:my-4"
         />
         <Image
           src="/NEXUS_INDIA.png"
           alt="Nexus Icon"
           width={600}
           height={80}
-          className="mx-auto w-[300px] h-[30px] sm:w-[600px] sm:h-[50px] mb-8"
+          className="mx-auto w-[400px] h-[30px] sm:w-[700px] sm:h-[50px] mb-8"
         />
         <Image
           src="/NEXUS_INDIA_TEXT.png"
           alt="Nexus Icon"
           width={600}
           height={80}
-          className="mx-auto w-[300px] h-[30px] sm:w-[600px] sm:h-[50px]"
+          className="mx-auto w-[350px] h-[30px] sm:w-[600px] sm:h-[50px]"
         />
         {/* <h1 className="text-4xl font-bold">NEXUS INDIA</h1>
         <p className="text-orange-500 text-lg">Big Dreams, Small Budget</p> */}
 
-        <div className=" absolute top-124 -right-324  sm:top-130 sm:-right-185  border-t-5 border-zinc-500 bg-zinc-900 w-[3000px] h-[3000px] rounded-full animate-glow-blink"></div>
+        <div className=" absolute top-194 -right-72  sm:top-145 sm:-right-432  border-t-5 border-zinc-500 bg-zinc-900 w-[1000px] h-[1000px] lg:w-[5000px] lg:h-[5000px] rounded-full animate-glow-blink"></div>
       </section>
 
       <section className="relative bg-gradient-to-b from-zinc-900 to-black py-20 px-4 sm:px-8">
