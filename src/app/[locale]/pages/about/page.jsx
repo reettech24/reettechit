@@ -150,7 +150,7 @@ export default function AboutPage() {
                       "/work/pankaj.jpg",
                       "/work/jp.png",
                       "/work/Prashant.jpg",
-                      "/work/prerna.jpg",
+                      "/work/prernafatnani.jpg",
                       "/work/himanshu.jpeg",
                       "/work/saurabh.jpg",
                     ][idx]
