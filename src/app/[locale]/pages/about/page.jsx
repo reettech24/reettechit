@@ -144,18 +144,19 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-10">
             {t.raw("leadership").map((person, idx) => (
               <div key={idx} className="text-center z-10">
-                <img
+                <Image
                   src={
                     [
                       "/work/pankaj.jpg",
-                      "/work/jai.jpg",
+                      "/work/jp.png",
                       "/work/Prashant.jpg",
-                      "/work/aswariya.jpg",
                       "/work/prerna.jpg",
                       "/work/himanshu.jpeg",
                       "/work/saurabh.jpg",
                     ][idx]
                   }
+                  width={320}
+                  height={320}
                   alt={person.name}
                   className="w-80 h-80 mx-auto mb-4 object-cover"
                 />

@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import React from "react";
 
 export default function Page() {
@@ -17,7 +18,7 @@ export default function Page() {
     {
       title: t("featureItems.1.title"),
       desc: t("featureItems.1.desc"),
-      image: "/work/jai.jpg",
+      image: "/work/jp.png",
     },
     {
       title: t("featureItems.2.title"),
@@ -27,21 +28,16 @@ export default function Page() {
     {
       title: t("featureItems.3.title"),
       desc: t("featureItems.3.desc"),
-      image: "/work/aswariya.jpg",
+      image: "/work/prerna.jpg",
     },
     {
       title: t("featureItems.4.title"),
       desc: t("featureItems.4.desc"),
-      image: "/work/prerna.jpg",
+      image: "/work/himanshu.jpeg",
     },
     {
       title: t("featureItems.5.title"),
       desc: t("featureItems.5.desc"),
-      image: "/work/himanshu.jpeg",
-    },
-    {
-      title: t("featureItems.6.title"),
-      desc: t("featureItems.6.desc"),
       image: "/work/saurabh.jpg",
     },
   ];
@@ -80,9 +76,11 @@ export default function Page() {
                 key={idx}
                 className="bg-gray-800 shadow p-6 text-center hover:shadow-lg transition"
               >
-                <img
+                <Image
                   src={member.image}
                   alt={member.title}
+                  width={240}
+                  height={240}
                   className="w-60 h-60 mx-auto object-cover mb-4"
                 />
                 <h3 className="text-lg font-semibold text-white">
@@ -113,10 +111,10 @@ export default function Page() {
                 title="Culture photo placeholder"
               />
             ))} */}
-          <img src="/test/31.jpeg" className=" w-full bg-cover h-68" />
-          <img src="/test/17.jpeg" className=" w-full bg-cover h-68" />
-          <img src="/test/24.jpeg" className=" w-full bg-cover h-68" />
-          <img src="/test/26.jpeg" className=" w-full bg-cover h-68" />
+          <Image src="/test/31.jpeg" alt="culture" width={240} height={240} className=" w-full bg-cover h-68" />
+          <Image src="/test/17.jpeg" alt="culture" width={240} height={240} className=" w-full bg-cover h-68" />
+          <Image src="/test/24.jpeg" alt="culture" width={240} height={240} className=" w-full bg-cover h-68" />
+          <Image src="/test/26.jpeg" alt="culture" width={240} height={240} className=" w-full bg-cover h-68" />
         </div>
       </section>
 
