@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import React from "react";
+import Link from "next/link";
 
 export default function Page() {
   const t = useTranslations("jobshiring");
@@ -92,7 +93,7 @@ export default function Page() {
                 </div>
 
                 {/* Urgency Tag */}
-                <div className="mt-4">
+                <div className="my-4">
                   <span
                     className={`inline-block text-xs px-3 py-1 rounded-full font-medium ${
                       item.urgency.toLowerCase().includes("urgent") ||
@@ -104,6 +105,20 @@ export default function Page() {
                     {item.urgency}
                   </span>
                 </div>
+                {/* Job Description */}
+                <p className="text-sm text-gray-300 mb-2 leading-relaxed">
+                  <Link
+                    href="mailto:careers@reettechit.com"
+                    className="text-blue-400 hover:underline hover:text-blue-300 transition"
+                  >
+                    careers@reettechit.com
+                  </Link>
+                </p>
+                <p className="text-xs text-gray-400 leading-relaxed">
+                  Interested candidates can send their updated resume and
+                  portfolio to the above email address. Please mention the
+                  position you’re applying for in the subject line.
+                </p>
               </div>
             ))}
           </div>
