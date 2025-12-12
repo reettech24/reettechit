@@ -1268,23 +1268,78 @@
         "featureItems": [
             {
                 "title": "Frontend Developer",
-                "desc": "Work with React and modern UI frameworks to build world-class web experiences."
+                "desc": "Design and build dynamic, responsive, and high-performing web interfaces using modern JavaScript frameworks.",
+                "jd": [
+                    "Develop pixel-perfect UI using React, Next.js, or similar frameworks.",
+                    "Collaborate with designers to translate wireframes into functional components.",
+                    "Optimize applications for performance, scalability, and accessibility.",
+                    "Integrate RESTful or GraphQL APIs and manage state efficiently.",
+                    "Stay updated with modern frontend technologies and trends."
+                ],
+                "experience": "0-2 years of professional experience in frontend development.",
+                "skills": [
+                    "React.js",
+                    "Next.js",
+                    "JavaScript (ES6+)",
+                    "HTML5 & CSS3",
+                    "Tailwind CSS",
+                    "RESTful APIs",
+                    "Git & Version Control"
+                ],
+                "location": "Pune, India",
+                "employment_type": "Full-time",
+                "urgency": "High — Immediate joiners preferred"
             },
             {
-                "title": "Cloud DevOps Engineer",
-                "desc": "Deploy and manage scalable, secure infrastructure using AWS and CI/CD pipelines."
+                "title": "Backend Developer",
+                "desc": "Build robust and scalable server-side applications that power modern digital platforms.",
+                "jd": [
+                    "Design, develop, and maintain APIs and backend services using Node.js, Express, or Django.",
+                    "Work with relational and NoSQL databases like MySQL, PostgreSQL, and MongoDB.",
+                    "Implement authentication, authorization, and data security measures.",
+                    "Optimize backend performance and troubleshoot production issues.",
+                    "Collaborate with frontend and DevOps teams to ensure smooth deployment."
+                ],
+                "experience": "1-3 years of backend development experience in production environments.",
+                "skills": [
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "PostgreSQL",
+                    "API Design",
+                    "JWT Authentication",
+                    "AWS or Docker"
+                ],
+                "location": "Pune, India",
+                "employment_type": "Full-time",
+                "urgency": "High — Immediate joiners preferred"
             },
             {
-                "title": "Project Manager (Agile)",
-                "desc": "Manage sprints and deliverables while keeping teams aligned and stakeholders informed."
-            },
-            {
-                "title": "Cybersecurity Analyst",
-                "desc": "Monitor and protect infrastructure, perform threat assessments and audits."
-            },
-            {
-                "title": "Business Analyst",
-                "desc": "Support product strategy through market research and stakeholder interviews."
+                "title": "Assistant Business Manager",
+                "desc": "Support business operations, sales growth, strategic planning, and cross-functional coordination to achieve organizational and revenue objectives.",
+                "jd": [
+                    "Assist in business planning, sales strategy, performance tracking, and strategic reporting.",
+                    "Coordinate between sales, marketing, and operations teams to ensure timely execution of key deliverables.",
+                    "Conduct market and competitor analysis to support management and sales decisions.",
+                    "Build and maintain strong client relationships to support business development efforts.",
+                    "Prepare presentations, proposals, and documentation for clients or leadership teams.",
+                    "Support process improvements, sales reviews, and financial forecasting.",
+                    "Work closely with management to monitor KPIs and identify business opportunities."
+                ],
+                "experience": "0-2 years of experience in business management, sales coordination, or consulting.",
+                "skills": [
+                    "Business Analysis",
+                    "Sales Strategy & Coordination",
+                    "Strategic Planning",
+                    "Client Relationship Management",
+                    "Data Analytics (Excel, Power BI)",
+                    "Communication & Negotiation",
+                    "Team Coordination",
+                    "MS Office / Google Workspace"
+                ],
+                "location": "Pune, India",
+                "employment_type": "Full-time",
+                "urgency": "Urgent — Joining within 15 days preferred"
             }
         ],
         "journeyTitle": "Why Work With Us?",

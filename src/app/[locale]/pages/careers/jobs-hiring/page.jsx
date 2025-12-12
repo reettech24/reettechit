@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import React from "react";
+import Link from "next/link";
 
 export default function Page() {
   const t = useTranslations("jobshiring");
@@ -42,16 +43,82 @@ export default function Page() {
             {t.raw("featureItems").map((item, idx) => (
               <div
                 key={idx}
-                className="bg-gray-800 p-6 shadow hover:shadow-xl transition"
+                className="bg-gray-800 p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 border border-gray-700"
               >
-                <h4 className="text-xl font-semibold mb-2 text-white">
+                {/* Job Title */}
+                <h4 className="text-2xl font-semibold mb-3 text-white">
                   {item.title}
                 </h4>
-                <p className="text-sm text-white/80 mb-3">{item.desc}</p>
-                <div className="flex justify-between text-sm text-whaite/60">
-                  {/* <span>{job.location}</span>
-                  <span>{job.type}</span> */}
+
+                {/* Job Description */}
+                <p className="text-sm text-gray-300 mb-4 leading-relaxed">
+                  {item.desc}
+                </p>
+
+                {/* Experience */}
+                <div className="text-sm text-gray-400 mb-3">
+                  <span className="font-semibold text-gray-200">
+                    Experience:
+                  </span>{" "}
+                  {item.experience}
                 </div>
+
+                {/* Skills */}
+                {item.skills && (
+                  <div className="mb-4">
+                    <span className="font-semibold text-gray-200 text-sm block mb-1">
+                      Key Skills:
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {item.skills.map((skill, sIdx) => (
+                        <span
+                          key={sIdx}
+                          className="bg-gray-700 text-gray-200 text-xs px-2 py-1 rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Job Details */}
+                <div className="flex flex-wrap justify-between text-sm text-gray-400 border-t border-gray-700 pt-3 mt-3">
+                  <span>
+                    📍 <strong>Location:</strong> {item.location}
+                  </span>
+                  <span>
+                    💼 <strong>Type:</strong> {item.employment_type}
+                  </span>
+                </div>
+
+                {/* Urgency Tag */}
+                <div className="my-4">
+                  <span
+                    className={`inline-block text-xs px-3 py-1 rounded-full font-medium ${
+                      item.urgency.toLowerCase().includes("urgent") ||
+                      item.urgency.toLowerCase().includes("high")
+                        ? "bg-red-600 text-white"
+                        : "bg-yellow-500 text-black"
+                    }`}
+                  >
+                    {item.urgency}
+                  </span>
+                </div>
+                {/* Job Description */}
+                <p className="text-sm text-gray-300 mb-2 leading-relaxed">
+                  <Link
+                    href="mailto:careers@reettechit.com"
+                    className="text-blue-400 hover:underline hover:text-blue-300 transition"
+                  >
+                    careers@reettechit.com
+                  </Link>
+                </p>
+                <p className="text-xs text-gray-400 leading-relaxed">
+                  Interested candidates can send their updated resume and
+                  portfolio to the above email address. Please mention the
+                  position you’re applying for in the subject line.
+                </p>
               </div>
             ))}
           </div>
@@ -121,7 +188,6 @@ export default function Page() {
             {t("partnersTitle")}
           </h3>
           <div className="grid md:grid-cols-3 gap-10 text-left">
-            
             {t.raw("securityPoints").map((perk, idx) => (
               <div key={idx} className="bg-gray-800 p-6 shadow-sm">
                 <div className="text-3xl mb-3">{perk.icon}</div>
