@@ -84,8 +84,6 @@ export const Footer = () => {
               <strong className="text-xl">Reet Technologies</strong>
             </p>
             <p className="text-lg">
-              {t("address.line1")}
-              <br />
               {t("address.line2")}
             </p>
             <p className="flex items-center gap-2 mt-1">
