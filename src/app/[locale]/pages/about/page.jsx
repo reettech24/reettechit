@@ -148,7 +148,7 @@ export default function AboutPage() {
                   src={
                     [
                       "/work/pankaj.jpg",
-                      "/work/jp.png",
+                      "/work/jai.png",
                       "/work/Prashant.jpg",
                       "/work/prernafatnani.jpg",
                       "/work/himanshu.jpeg",

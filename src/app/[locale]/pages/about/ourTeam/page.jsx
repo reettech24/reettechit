@@ -18,7 +18,7 @@ export default function Page() {
     {
       title: t("featureItems.1.title"),
       desc: t("featureItems.1.desc"),
-      image: "/work/jp.png",
+      image: "/work/jai.png",
     },
     {
       title: t("featureItems.2.title"),

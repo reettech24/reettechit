@@ -467,7 +467,7 @@ export default function ContactPage() {
               <MapPin className="w-5 h-5" /> {c("location")}
             </h4>
             <p className="ml-7 mt-1 font-medium">
-              Dattanagar Road, Ambegaon Katraj Pune, Maharashtra 411046
+              Pune, Maharashtra 411046
             </p>
           </div>
         </div>
