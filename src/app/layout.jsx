@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import TrackingScripts from "@/components/sections/TrackingScripts";
 import { Toaster } from "react-hot-toast";
 import AnalyticsGtag from "./analytics";
+import WhatsAppButton from "@/components/sections/WhatsAppButton";
 
 export default function RootLayout({ children }) {
   return (
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <AnalyticsGtag />
         <Analytics />
         <SpeedInsights />
+        <WhatsAppButton />
       </body>
     </html>
   );
