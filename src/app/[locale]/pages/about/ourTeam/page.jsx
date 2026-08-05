@@ -23,21 +23,26 @@ export default function Page() {
     {
       title: t("featureItems.2.title"),
       desc: t("featureItems.2.desc"),
-      image: "/work/Prashant.jpg",
+      image: "/work/apurva-kalpande.jpg",
     },
     {
       title: t("featureItems.3.title"),
       desc: t("featureItems.3.desc"),
-      image: "/work/prernafatnani.jpg",
+      image: "/work/dipika-raosaheb-pawar.png",
     },
     {
       title: t("featureItems.4.title"),
       desc: t("featureItems.4.desc"),
-      image: "/work/himanshu.jpeg",
+      image: "/work/nilakshi-jain.jpeg",
     },
     {
       title: t("featureItems.5.title"),
       desc: t("featureItems.5.desc"),
+      image: "/work/himanshu.jpeg",
+    },
+    {
+      title: t("featureItems.6.title"),
+      desc: t("featureItems.6.desc"),
       image: "/work/saurabh.jpg",
     },
   ];

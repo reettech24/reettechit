@@ -149,8 +149,9 @@ export default function AboutPage() {
                     [
                       "/work/pankaj.jpg",
                       "/work/jai.png",
-                      "/work/Prashant.jpg",
-                      "/work/prernafatnani.jpg",
+                      "/work/apurva-kalpande.jpg",
+                      "/work/dipika-raosaheb-pawar.png",
+                      "/work/nilakshi-jain.jpeg",
                       "/work/himanshu.jpeg",
                       "/work/saurabh.jpg",
                     ][idx]

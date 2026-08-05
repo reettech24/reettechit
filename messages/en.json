@@ -171,15 +171,19 @@
             },
             {
                 "name": "T Jaiprakash",
-                "role": "Chief Tecnhology Officer (CTO)"
+                "role": "Chief Technology Officer (CTO)"
             },
             {
-                "name": "Prashant Kumbhare",
-                "role": "AI/ML Engineer"
+                "name": "Apurva Kalpande",
+                "role": "Technical Solutions & Project Lead"
             },
             {
-                "name": "Prerna Fatnani",
-                "role": "Design Head"
+                "name": "Dipika Raosaheb Pawar",
+                "role": "Associate Software Developer"
+            },
+            {
+                "name": "Nilakshi Jain",
+                "role": "Asst Business Manager - Technical "
             },
             {
                 "name": "Himanshi Bayas",
@@ -1185,27 +1189,31 @@
         "featureItems": [
             {
                 "title": "Pankaj Deole",
-                "desc": "Founder & CEO — Pankaj shapes the strategic direction of Reet Technologies with visionary leadership and entrepreneurial spirit."
+                "desc": "Founder & CEO — Pankaj defines the strategic vision of Reet Technologies, leading the company with innovation, leadership, and a commitment to delivering impactful technology solutions."
             },
             {
                 "title": "T Jaiprakash",
-                "desc": "Chief Technology Officer (CTO) — Jaiprakash leads technological innovation and architecture across client and internal systems."
+                "desc": "Chief Technology Officer (CTO) — Jaiprakash leads technology strategy, software architecture, and engineering excellence, ensuring scalable and future-ready digital solutions."
             },
             {
-                "title": "Prashant Kumbhare",
-                "desc": "AI/ML Engineer — Prashant brings deep technical expertise and a problem-solving mindset, driving intelligent automation and innovative solutions tailored to client needs."
+                "title": "Apurva Kalpande",
+                "desc": "Technical Solutions & Project Lead — Apurva oversees project execution, technical planning, and solution delivery, ensuring successful outcomes for clients."
             },
             {
-                "title": "Prerna Fatnani",
-                "desc": "Design Head — Prerna leads creative direction, blending aesthetics with usability for impactful digital experiences."
+                "title": "Dipika Raosaheb Pawar",
+                "desc": "Associate Software Developer — Dipika contributes to software development by building reliable, efficient, and user-focused applications while supporting product innovation."
+            },
+            {
+                "title": "Nilakshi Jain",
+                "desc": "Assistant Business Manager – Technical — Nilakshi bridges business and technology by coordinating technical operations, client communication, and project management."
             },
             {
                 "title": "Himanshi Bayas",
-                "desc": "Content Writer — Himanshi crafts clear, engaging content that aligns brand messaging with user intent."
+                "desc": "Content Writer — Himanshi creates engaging, informative, and brand-focused content that effectively communicates ideas across digital platforms."
             },
             {
                 "title": "Saurabh Dhariya",
-                "desc": "Digital Marketing Head — Saurabh drives growth through performance marketing, SEO, and digital brand strategy."
+                "desc": "Digital Marketing Head — Saurabh drives digital growth through strategic marketing, SEO, performance campaigns, and brand visibility initiatives."
             }
         ],
         "cultureTitle": "Our Culture",
