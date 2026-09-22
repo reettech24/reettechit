@@ -30,7 +30,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >
-        <source src="/Reet_Banner_Video.mp4" type="video/mp4" />
+        <source src="/reet_Banner_Video.mp4" type="video/mp4" />
       </video>
 
       {/* VIDEO CONTRAST */}

@@ -181,7 +181,7 @@ const AboutUs = [
 
 const Careers = [
   {
-    name: "Student Courses",
+    name: "Professional Courses",
     href: "/pages/careers/courses",
   },
   // {
@@ -490,7 +490,7 @@ export const Header = () => {
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {/* {t("careers")} <ChevronDownIcon className="h-5 w-5" /> */}
               <Link href="/pages/careers/courses" className="block">
-                Student Courses
+                Professional Courses
               </Link>
             </PopoverButton>
             {/* <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
