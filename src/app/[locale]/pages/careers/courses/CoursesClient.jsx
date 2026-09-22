@@ -134,6 +134,19 @@ export default function CoursesClient() {
     { bg: "bg-[#FCE7F3]", text: "text-[#DB2777]", icon: GraduationCap },
   ];
 
+  const getCourseIcon = (courseTitle = "", idx = 0) => {
+    const titleLower = courseTitle.toLowerCase();
+    if (titleLower.includes("counselling") || titleLower.includes("guidance")) return GraduationCap;
+    if (titleLower.includes("non it")) return Laptop;
+    if (titleLower.includes("management") || titleLower.includes("project")) return FolderGit2;
+    if (titleLower.includes("cloud") || titleLower.includes("devops") || titleLower.includes("aws")) return Server;
+    if (titleLower.includes("react") || titleLower.includes("node") || titleLower.includes("full-stack")) return Code2;
+    if (titleLower.includes("html") || titleLower.includes("css") || titleLower.includes("web")) return Layout;
+    if (titleLower.includes("python")) return Code2;
+    if (titleLower.includes("ai") || titleLower.includes("intelligence")) return Shield;
+    return cardPastelBgs[idx % cardPastelBgs.length].icon;
+  };
+
   const studentCapstones = [
     {
       title: "Foodly — Real-Time Delivery App",
@@ -451,7 +464,7 @@ export default function CoursesClient() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course, idx) => {
               const pastelStyle = cardPastelBgs[idx % cardPastelBgs.length];
-              const IconComp = pastelStyle.icon;
+              const IconComp = getCourseIcon(course.title || "", idx);
 
               return (
                 <div

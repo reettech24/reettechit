@@ -10,6 +10,7 @@ import AwsDigitalSolutionsSection from "@/components/sections/AwsDigitalSolution
 import AwsChooseUsSection from "@/components/sections/AwsChooseUsSection";
 import AwsClientReviewsSection from "@/components/sections/AwsClientReviewsSection";
 import ContactUsSection from "@/components/sections/ContactUsSection";
+import CollaborationNetworkSection from "@/components/sections/CollaborationNetworkSection";
 
 export default function HomePageClient() {
   return (
@@ -21,6 +22,7 @@ export default function HomePageClient() {
       <AwsServicesCardsSection />
       <AwsIntegrationsSection />
       <AwsDigitalSolutionsSection />
+      <CollaborationNetworkSection/>
       <AwsChooseUsSection />
       <AwsClientReviewsSection />
       <ContactUsSection />

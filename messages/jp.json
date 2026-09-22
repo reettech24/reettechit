@@ -2757,21 +2757,146 @@
     "featureItems": [
       {
         "id": "c1",
-        "category": "フルスタック開発",
-        "title": "フルスタックWeb開発 (MERN / Next.js)",
-        "desc": "React、Next.js、Node.js、Express、MongoDB、Tailwind CSSをマスターし、現役エンジニアから直接フィードバックを受講。",
-        "duration": "12週間",
-        "roles": "フルスタックエンジニア、フロントエンド開発者、Node.jsエンジニア",
-        "tags": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind"],
-        "audience": "情報系学生・エンジニアを目指す方",
+        "category": "キャリアガイダンス＆カウンセリング",
+        "title": "Career Counselling & Career Guidance (キャリアカウンセリング)",
+        "desc": "スキル、関心、学歴、目標に基づいて適切なITキャリアパスを選択するための専門的なカウンセリングを受けられます。成長中の技術職種や学習ロードマップを探求します。",
+        "duration": "4週間",
+        "roles": "ITキャリアコンサルタント、技術アソシエイト",
+        "tags": ["Career Counseling", "Skill Mapping", "IT Industry Roadmap"],
+        "audience": "IT分野を目指す学生・卒業生・社会人",
         "syllabus": [
-          "モジュール1: HTML5、CSS3、Flexbox、Tailwind CSS",
-          "モジュール2: JavaScript ES6+、Async/Await、DOM操作",
-          "モジュール3: React 19の基礎、状態管理、Hooks",
-          "モジュール4: Next.js App Router、SSR、Server Actions",
-          "モジュール5: Node.js、Express REST API設計、JWT認証",
-          "モジュール6: MongoDB、Mongooseスキーマ設計",
-          "モジュール7: Git、GitHub PRレビュー、Vercelデプロイ"
+          "モジュール1: IT業界の動向と高需要職種",
+          "モジュール2: 個人のスキル評価・適性マッピング",
+          "モジュール3: キャリアパスの選択と計画",
+          "モジュール4: 技術学習ロードマップと実務機会"
+        ]
+      },
+      {
+        "id": "c2",
+        "category": "Non-IT Background (未経験・異業種)",
+        "title": "Non IT to IT Career Program (未経験からのIT転職)",
+        "desc": "非IT・未経験背景から成功するITキャリアへの転身を支援する体系的なプログラム。基礎技術と職場で必要なスキルを網羅します。",
+        "duration": "12週間",
+        "roles": "ジュニアソフトウェアエンジニア、ITアナリスト",
+        "tags": ["Non-IT Transition", "IT Fundamentals", "Coding Basics"],
+        "audience": "非IT卒業生、IT分野へのキャリアチェンジを目指す方",
+        "syllabus": [
+          "モジュール1: コンピュータシステム・OS・インフラの基礎",
+          "モジュール2: ロジック構築・アルゴリズム・プログラミング基礎",
+          "モジュール3: Web技術の基礎 (HTML, CSS, JS)",
+          "モジュール4: データベースの基礎とSQL入門",
+          "モジュール5: ソフトウェア開発ライフサイクル (SDLC) & アジャイル",
+          "モジュール6: Gitバージョン管理とコラボレーション",
+          "モジュール7: 転職戦略・履歴書作成・模擬面接"
+        ]
+      },
+      {
+        "id": "c3",
+        "category": "Management (プロジェクト管理)",
+        "title": "Project Management for IT (Technical & Non Technical)",
+        "desc": "ITプロジェクト管理、計画、実行、Agile、Scrum、チーム調整、ドキュメント作成を学習。技術職・非技術職の両方に対応したマネジメントスキルを習得します。",
+        "duration": "8週間",
+        "roles": "ITプロジェクトマネージャー、スクラムマスター、アジャイルリード",
+        "tags": ["Project Management", "Agile & Scrum", "JIRA", "Risk Management"],
+        "audience": "技術職・非技術職のプロフェッショナル、マネージャー候補",
+        "syllabus": [
+          "モジュール1: ITプロジェクト管理とSDLCの基礎",
+          "モジュール2: アジャイル手法・スクラムフレームワーク・スプリント計画",
+          "モジュール3: ビジネス要件定義 (BRD/PRD) とユーザーストーリー",
+          "モジュール4: 工数見積もり・予算管理・リソース配分",
+          "モジュール5: 管理ツール (JIRA, Confluence, Trello, Asana)",
+          "モジュール6: リスク管理・ステークホルダーコミュニケーション"
+        ]
+      },
+      {
+        "id": "c4",
+        "category": "クラウド＆DevOps",
+        "title": "Cloud Computing with AWS & DevOps",
+        "desc": "AWS EC2、S3、IAM、ネットワーク、デプロイ、自動化、Docker、クラウドインフラの実務を習得。安全でスケーラブルなアプリ基盤を構築します。",
+        "duration": "10週間",
+        "roles": "AWSクラウドエンジニア、DevOpsスペシャリスト",
+        "tags": ["AWS", "Cloud Computing", "DevOps", "Docker", "EC2 & S3", "CI/CD"],
+        "audience": "IT学生、システム管理者、クラウドエンジニア志望者",
+        "syllabus": [
+          "モジュール1: クラウドコンピューティングの基礎とAWSアーキテクチャ",
+          "モジュール2: コンピューティング (EC2, Auto-Scaling, Load Balancers)",
+          "モジュール3: ストレージとセキュリティ (S3, IAMポリシー)",
+          "モジュール4: VPCネットワーク、サブネット、セキュリティグループ",
+          "モジュール5: Dockerコンテナ化とマイクロサービス入門",
+          "モジュール6: CI/CDパイプラインとモニタリング"
+        ]
+      },
+      {
+        "id": "c5",
+        "category": "フルスタックWeb開発",
+        "title": "React & Node JS",
+        "desc": "ReactとNode.jsを活用してモダンで応答性の高いフルスタックWebアプリを開発。フロントエンド、バックエンドAPI、DB、認証、本番環境へのデプロイを習得します。",
+        "duration": "12週間",
+        "roles": "フルスタックエンジニア、MERN開発者、フロントエンドエンジニア",
+        "tags": ["React", "Node.js", "Express", "REST APIs", "MongoDB", "Full-Stack"],
+        "audience": "情報系学生、Web開発者、フルスタックエンジニア志望者",
+        "syllabus": [
+          "モジュール1: モダンJavaScript ES6+、非同期処理、NPM",
+          "モジュール2: Reactコア概念、コンポーネント、Hooks",
+          "モジュール3: ルーティング・状態管理・UIシステム",
+          "モジュール4: Node.js & Express RESTful API設計",
+          "モジュール5: MongoDB & Mongooseスキーマ設計",
+          "モジュール6: ユーザー認証 (JWT, Password, Cookies)",
+          "モジュール7: フルスタック統合とVercel/Renderデプロイ"
+        ]
+      },
+      {
+        "id": "c6",
+        "category": "Web開発",
+        "title": "HTML, CSS & JavaScript Foundation",
+        "desc": "HTML、CSS、JavaScriptでWeb開発の強固な基礎を構築。レスポンシブでインタラクティブなWebサイトの作成方法をプロジェクトを通じて学びます。",
+        "duration": "6週間",
+        "roles": "フロントエンド開発者、Webデザイナー",
+        "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "DOM"],
+        "audience": "初心者、学生、非技術系の学習者",
+        "syllabus": [
+          "モジュール1: HTML5構造とセマンティック要素",
+          "モジュール2: CSS3スタイル、Flexbox、Grid、レスポンシブ配置",
+          "モジュール3: JavaScript基本構文・変数・関数",
+          "モジュール4: DOM操作とイベントハンドリング",
+          "モジュール5: 非同期JS、Fetch API、JSON連携",
+          "モジュール6: 総合Webサイト制作プロジェクト"
+        ]
+      },
+      {
+        "id": "c7",
+        "category": "Python & バックエンド開発",
+        "title": "Python Development",
+        "desc": "Pythonプログラミングの基礎から応用まで、API、データベース、自動化、バックエンド開発を習得。多様なキャリア機会に対応するスキルを磨きます。",
+        "duration": "8週間",
+        "roles": "Pythonエンジニア、ソフトウェア開発者、バックエンドエンジニア",
+        "tags": ["Python", "OOP", "APIs", "Database", "Automation"],
+        "audience": "学生、プログラマー、自動化に関心のある方",
+        "syllabus": [
+          "モジュール1: Python基本構文・データ型・関数",
+          "モジュール2: オブジェクト指向プログラミング (OOP)",
+          "モジュール3: ファイル操作・例外処理・モジュール",
+          "モジュール4: データベース連携 (SQLite/PostgreSQL)",
+          "モジュール5: FastAPI / FlaskによるWeb API開発",
+          "モジュール6: 自動化スクリプトと実用プロジェクト"
+        ]
+      },
+      {
+        "id": "c8",
+        "category": "人工知能 (AI)",
+        "title": "AI Complete Course",
+        "desc": "AIの基礎から機械学習、生成AI、自動化、AIツールまで実務に役立つ人工知能技術を総合的に習得します。",
+        "duration": "12週間",
+        "roles": "AIエンジニア、機械学習スペシャリスト",
+        "tags": ["AI", "Machine Learning", "Generative AI", "Prompt Engineering"],
+        "audience": "学生、エンジニア、AI活用を目指すビジネスパーソン",
+        "syllabus": [
+          "モジュール1: 人工知能の概要と現代のAIエコシステム",
+          "モジュール2: 機械学習の基礎 (教師あり・教師なし学習)",
+          "モジュール3: AI向けPythonライブラリ (NumPy, Pandas, Scikit-Learn)",
+          "モジュール4: 生成AI・大規模言語モデル (LLM) ・プロンプトエンジニアリング",
+          "モジュール5: 実用AIツール・API・自動化連携",
+          "モジュール6: 実践AIプロジェクト: ビジネス向けAIアシスタント構築"
         ]
       }
     ],

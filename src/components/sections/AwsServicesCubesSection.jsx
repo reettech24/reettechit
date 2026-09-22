@@ -20,7 +20,7 @@ const servicesData = [
     description:
       "Craft pixel-perfect, enterprise-grade websites that convert.",
     icon: Code,
-    link: "/pages/services",
+    link: "/pages/services/ourSolutions/mobile-and-web-application",
   },
   {
     title: "CRM & ERP Solutions",

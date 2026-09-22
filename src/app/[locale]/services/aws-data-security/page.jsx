@@ -1,4 +1,4 @@
-import AwsDataPage from "../../pages/services/cloud-security/page";
+import CloudSolutionsPage from "../../pages/services/aws-data-security/page";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
 
   const meta = messages?.cloudsolutions?.metadata || {};
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reettechit.com";
-  const canonicalUrl = `${baseUrl}/${locale}/services/cloud-solutions`;
+  const canonicalUrl = `${baseUrl}/${locale}/services/aws-data-security`;
 
   const metaTitle = meta.title || "AWS & Cloud Solutions | Cloud Infrastructure & DevOps";
   const metaDesc =
@@ -24,14 +24,14 @@ export async function generateMetadata({ params }) {
     description: metaDesc,
     keywords:
       meta.keywords ||
-      "AWS cloud solutions, cloud infrastructure, DevOps services, server management, AWS migration, cloud security, automated backups, cloud monitoring",
+      "cloud solutions, AWS managed services, cloud infrastructure, cloud migration, EC2 instance management, S3 storage solutions, cloud security, VPS hosting, server management services Pune, DevOps consulting, Reet Technologies cloud",
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        en: `${baseUrl}/en/services/cloud-solutions`,
-        ar: `${baseUrl}/ar/services/cloud-solutions`,
-        jp: `${baseUrl}/jp/services/cloud-solutions`,
-        "x-default": `${baseUrl}/en/services/cloud-solutions`,
+        en: `${baseUrl}/en/services/aws-data-security`,
+        ar: `${baseUrl}/ar/services/aws-data-security`,
+        jp: `${baseUrl}/jp/services/aws-data-security`,
+        "x-default": `${baseUrl}/en/services/aws-data-security`,
       },
     },
     openGraph: {
@@ -43,10 +43,10 @@ export async function generateMetadata({ params }) {
       type: "website",
       images: [
         {
-          url: `${baseUrl}/assets/images/section2-bg-data-management.jpeg`,
+          url: `${baseUrl}/assets/images/bannerimage.jpeg`,
           width: 1200,
           height: 630,
-          alt: "Reet Technologies AWS & Cloud Solutions",
+          alt: "Reet Technologies Enterprise Cloud Solutions & AWS Managed Services",
         },
       ],
     },
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: metaTitle,
       description: metaDesc,
-      images: [`${baseUrl}/assets/images/section2-bg-data-management.jpeg`],
+      images: [`${baseUrl}/assets/images/bannerimage.jpeg`],
     },
     robots: {
       index: true,
@@ -73,50 +73,50 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { locale } = await params;
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reettechit.com";
-  const canonicalUrl = `${baseUrl}/${locale}/services/cloud-solutions`;
+  const canonicalUrl = `${baseUrl}/${locale}/services/aws-data-security`;
 
   const techServiceSchema = {
     "@context": "https://schema.org",
     "@type": "TechService",
     "@id": `${canonicalUrl}#service`,
-    name: "AWS & Data Security Services",
+    name: "Enterprise Cloud Solutions & AWS Managed Services",
     provider: {
       "@type": "Organization",
       name: "Reet Technologies",
       url: baseUrl,
       logo: `${baseUrl}/reetlogo.png`,
     },
-    serviceType: "Data Management & Security Services",
+    serviceType: "Cloud Infrastructure & Managed Server Services",
     areaServed: "Worldwide",
     url: canonicalUrl,
     description:
-      "Data Management Services, automated data backups, storage space management, database optimization, data recovery, and security encryption.",
+      "Scalable cloud infrastructure setup, AWS EC2, S3, Lambda deployments, VPC network isolation, server security hardening, performance monitoring, and 24/7 disaster recovery planning.",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Data Security Services Catalog",
+      name: "Cloud Solutions Catalog",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Data Backup & Recovery",
-            description: "Automated backup pipelines and rapid disaster recovery solutions.",
+            name: "AWS EC2 Instance Deployment & Management",
+            description: "Scalable cloud virtual servers configured for peak performance and auto-scaling.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Database Administration & Optimization",
-            description: "High-performance database management for SQL Server, MySQL, PostgreSQL, MongoDB, and AWS DBs.",
+            name: "Cloud Migration Services",
+            description: "Seamless workload, database, and asset migration to cloud with zero downtime.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Data Security & Encryption",
-            description: "Enterprise-grade data classification, access control, and end-to-end security encryption.",
+            name: "Server Management & Security Hardening",
+            description: "24/7 server health monitoring, security patch management, and SSL integration.",
           },
         },
       ],
@@ -142,7 +142,7 @@ export default async function Page({ params }) {
       {
         "@type": "ListItem",
         position: 3,
-        name: "AWS & Data Security",
+        name: "Cloud Solutions",
         item: canonicalUrl,
       },
     ],
@@ -158,7 +158,7 @@ export default async function Page({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <AwsDataPage />
+      <CloudSolutionsPage />
     </>
   );
 }

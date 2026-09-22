@@ -73,7 +73,7 @@ const CloudInfrastructure = [
   {
     name: "AWS & Data Management",
     description: "Database administration, automated backups & secure data management.",
-    href: "/services/aws-data",
+    href: "/services/aws-data-security",
   },
 ];
 
@@ -337,7 +337,8 @@ export const Header = () => {
                     Cloud &amp; Server Solutions
                   </Link>
                   <Link
-                    href="/services/aws-data"
+
+                    href="/services/aws-data-security"
                     className="block hover:text-blue-300"
                   >
                     AWS &amp; Data Management

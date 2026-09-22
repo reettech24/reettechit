@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import "./CloudDetailsPage.css";
+import "./aws-data-security.css";
 
 const awsHomeBanner = "/assets/images/bannerimage.jpeg";
 const section3BgImage = "/assets/images/secondsection.jpeg";
@@ -747,7 +747,7 @@ const benefitsData = [
   },
 ];
 
-export default function CloudSolutionsPage() {
+export default function Aws_Data_Security() {
   const [activeNode, setActiveNode] = useState("s1");
 
   const [displayedText1, setDisplayedText1] = useState("");
@@ -762,6 +762,16 @@ export default function CloudSolutionsPage() {
   const editorBodyRef2 = useRef(null);
 
   useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 150);
+        return;
+      }
+    }
     window.scrollTo(0, 0);
   }, []);
 

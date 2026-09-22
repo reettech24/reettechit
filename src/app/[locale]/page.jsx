@@ -11,10 +11,10 @@ export async function generateMetadata({ params }) {
   }
 
   const metaTitle =
-    messages?.metadata?.title || "Reet Technologies | Enterprise Web & Mobile App Development Company";
+    messages?.metadata?.title || "Reet Technologies | IT Solutions & Services | Web, Cloud, AWS & Software Development";
   const metaDesc =
     messages?.metadata?.description ||
-    "Reet Technologies is a leading software company specializing in full-stack web development, mobile apps, AWS cloud solutions, AI/ML integration, and digital transformation for businesses worldwide.";
+    "Get professional IT solutions for your business. AWS & cloud services, web & mobile apps, software development, digital transformation and IT consulting.";
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reettechit.com";
   const canonicalUrl = `${baseUrl}/${locale}`;

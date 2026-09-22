@@ -1,7 +1,7 @@
 {
     "metadata": {
-        "title": "Reet Technologies",
-        "description": "where Ideas meet execution."
+        "title": "Reet Technologies | IT Solutions & Services | Web, Cloud, AWS & Software Development",
+        "description": "Get professional IT solutions for your business. AWS & cloud services, web & mobile apps, software development, digital transformation and IT consulting."
     },
     "header": {
         "reet": "Reet",
@@ -1824,6 +1824,10 @@
         "ctaBtn": "Get in Touch"
     },
     "crm": {
+        "metadata": {
+            "title": "CRM & ERP Software Development | Custom Business Solutions",
+            "description": "Get customized CRM & ERP software to manage customers, sales, finance, HR, inventory and operations with smart dashboards and seamless integrations."
+        },
         "heroTitle": "CRM & ERP Solutions",
         "heroDesc": "Streamline your operations and enhance customer engagement with our custom CRM and ERP solutions.",
         "overviewTitle": "Custom CRM, ERP & Inventory Solutions",
@@ -2841,9 +2845,9 @@
     },
     "cloudsolutions": {
         "metadata": {
-            "title": "Enterprise Cloud Solutions & AWS Managed Services | Reet Technologies",
-            "description": "Scalable cloud infrastructure, AWS EC2/S3/Lambda deployments, VPC networking, DevOps automation, cloud migration, server security & 24/7 server management services by Reet Technologies.",
-            "keywords": "cloud solutions, AWS managed services, cloud infrastructure, cloud migration, EC2 instance management, S3 storage solutions, cloud security, VPS hosting, server management services Pune, DevOps consulting, Reet Technologies cloud"
+            "title": "AWS & Cloud Solutions | Cloud Infrastructure & DevOps",
+            "description": "Get reliable AWS and cloud solutions for your business, including cloud infrastructure, server management, AWS migration, security, backups, monitoring and DevOps services.",
+            "keywords": "AWS cloud solutions, cloud infrastructure, DevOps services, server management, AWS migration, cloud security, automated backups, cloud monitoring"
         }
     },
     "studentcourses": {
@@ -2860,93 +2864,146 @@
         "featureItems": [
             {
                 "id": "c1",
-                "category": "Full-Stack Development",
-                "title": "Full-Stack Web Development (MERN / Next.js)",
-                "desc": "Master modern web development with React, Next.js, Node.js, Express, MongoDB, and Tailwind CSS with 1-on-1 code reviews.",
-                "duration": "12 Weeks",
-                "roles": "Full-Stack Developer, Frontend Engineer, Node.js Developer",
-                "tags": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind"],
-                "audience": "Computer Science & IT Students, Aspiring Developers",
+                "category": "Career Guidance & Counseling",
+                "title": "Career Counselling & Career Guidance",
+                "desc": "Get expert career counselling and guidance to choose the right IT career path based on your skills, interests, education and career goals. Explore in-demand technology careers, required skills, learning roadmaps and practical opportunities to confidently plan your future.",
+                "duration": "4 Weeks",
+                "roles": "IT Career Consultant, Tech Associate, Career Specialist",
+                "tags": ["Career Counseling", "Skill Mapping", "IT Industry Roadmap", "Career Transformation"],
+                "audience": "Students, Graduates & Professionals seeking IT path direction",
                 "syllabus": [
-                    "Module 1: Modern HTML5, CSS3, Flexbox & Tailwind CSS",
-                    "Module 2: JavaScript ES6+, Async/Await & DOM Manipulation",
-                    "Module 3: React 19 Fundamentals, State Management & Hooks",
-                    "Module 4: Next.js App Router, SSR, Server Actions & Routing",
-                    "Module 5: Node.js, Express REST API Architecture & JWT Auth",
-                    "Module 6: MongoDB, Mongoose Schema Design & Database Audits",
-                    "Module 7: Git, GitHub Pull Request Audits & Live Vercel Deployment"
+                    "Module 1: IT Industry Landscape & High-Demand Career Specializations",
+                    "Module 2: Personal Skill Assessment, Aptitude & Interest Mapping",
+                    "Module 3: Educational Background Alignment & Career Path Options",
+                    "Module 4: Tech Learning Roadmaps & Industry Internship Opportunities"
                 ]
             },
             {
                 "id": "c2",
-                "category": "Cloud & DevOps",
-                "title": "Cloud Computing & DevOps Engineering",
-                "desc": "Build and manage scalable cloud infrastructure on AWS, master Docker containerization, CI/CD automation, and server security.",
-                "duration": "10 Weeks",
-                "roles": "Cloud Engineer, DevOps Associate, Site Reliability Engineer",
-                "tags": ["AWS", "Docker", "Linux", "CI/CD", "Terraform"],
-                "audience": "IT Students, System Admin Aspirants, Cloud Enthusiasts",
+                "category": "Non-IT Background",
+                "title": "Non IT to IT Career Program",
+                "desc": "Transition from a non-IT background to a successful IT career with our structured Non-IT to IT training program covering essential technology and workplace skills. Learn IT fundamentals, programming basics, project workflows and industry practices with practical training designed for career transformation.",
+                "duration": "12 Weeks",
+                "roles": "Junior Software Developer, IT Analyst, Tech Support Specialist, QA Associate",
+                "tags": ["Non-IT Transition", "IT Fundamentals", "Coding Basics", "Workplace Skills"],
+                "audience": "Non-IT Graduates, Working Professionals switching to IT",
                 "syllabus": [
-                    "Module 1: Linux Fundamentals, Command Line & Bash Scripting",
-                    "Module 2: AWS EC2 Instance Management, Auto-Scaling & Load Balancers",
-                    "Module 3: AWS S3 Object Storage, Security Policies & IAM Roles",
-                    "Module 4: Docker Containerization & Multi-Container Compose",
-                    "Module 5: CI/CD Pipelines with GitHub Actions & Automated Deployment",
-                    "Module 6: VPS Server Hardening, SSL Certificates & Nginx Web Server"
+                    "Module 1: Computer Systems, OS & IT Infrastructure Fundamentals",
+                    "Module 2: Logic Building, Algorithms & Programming Basics",
+                    "Module 3: Web Technologies Fundamentals (HTML, CSS, JS)",
+                    "Module 4: Database Concepts, Data Structures & SQL Essentials",
+                    "Module 5: Software Development Life Cycle (SDLC) & Agile Teams",
+                    "Module 6: Git Version Control, Collaboration & Workplace Tools",
+                    "Module 7: Career Transition Strategy, Resume Building & Mock Interviews"
                 ]
             },
             {
                 "id": "c3",
-                "category": "Mobile Development",
-                "title": "Cross-Platform Mobile App Development",
-                "desc": "Develop high-performance iOS and Android mobile applications using React Native, Expo, and Firebase backend services.",
-                "duration": "10 Weeks",
-                "roles": "React Native Developer, Mobile App Engineer",
-                "tags": ["React Native", "Expo", "Firebase", "iOS", "Android"],
-                "audience": "CS Students, Mobile Development Enthusiasts",
+                "category": "Management",
+                "title": "Project Management for IT (Technical & Non Technical)",
+                "desc": "Learn IT project management, planning, execution, Agile, Scrum, team coordination, documentation and delivery practices for technical and non-technical professionals. Build practical project management skills to manage software projects, teams, timelines, risks, clients and business requirements effectively.",
+                "duration": "8 Weeks",
+                "roles": "IT Project Manager, Scrum Master, Agile Lead, Technical Program Manager",
+                "tags": ["Project Management", "Agile & Scrum", "JIRA", "Risk Management", "Client Delivery"],
+                "audience": "Technical & Non-Technical Professionals, Managers & Project Leads",
                 "syllabus": [
-                    "Module 1: React Native Core Components & Layout Systems",
-                    "Module 2: Navigation & Screen Flows with React Navigation",
-                    "Module 3: Firebase Authentication, Realtime Database & Storage",
-                    "Module 4: Native Device Features (Camera, Location, Push Notifications)",
-                    "Module 5: State Management with Context API / Zustand",
-                    "Module 6: App Store & Google Play Store Publishing Process"
+                    "Module 1: Fundamentals of IT Project Management & SDLC Frameworks",
+                    "Module 2: Agile Methodology, Scrum Framework & Sprint Planning",
+                    "Module 3: Business Requirements Gathering (BRD/PRD) & User Stories",
+                    "Module 4: Timeline Estimation, Budgeting & Resource Allocation",
+                    "Module 5: Project Tools (JIRA, Confluence, Trello, Asana)",
+                    "Module 6: Risk Mitigation, Client Stakeholder Management & Quality Delivery"
                 ]
             },
             {
                 "id": "c4",
-                "category": "AI & Data Science",
-                "title": "AI & Machine Learning Engineering",
-                "desc": "Learn Python for data analysis, data visualization, supervised/unsupervised machine learning models, and LLM API integrations.",
-                "duration": "12 Weeks",
-                "roles": "Data Analyst, AI Developer, ML Engineer",
-                "tags": ["Python", "Pandas", "Scikit-Learn", "OpenAI API", "SQL"],
-                "audience": "Data Enthusiasts, Engineering & Math Students",
+                "category": "Cloud & DevOps",
+                "title": "Cloud Computing with AWS & DevOps",
+                "desc": "Master Cloud Computing with AWS and DevOps through practical learning of EC2, S3, IAM, networking, deployment, automation, Docker and cloud infrastructure. Develop job-ready AWS Cloud and DevOps skills to build, deploy, manage and scale secure applications and IT infrastructure.",
+                "duration": "10 Weeks",
+                "roles": "AWS Cloud Engineer, DevOps Specialist, Cloud Infrastructure Associate",
+                "tags": ["AWS", "Cloud Computing", "DevOps", "Docker", "EC2 & S3", "CI/CD"],
+                "audience": "IT Students, System Admins, Aspiring Cloud Engineers",
                 "syllabus": [
-                    "Module 1: Python Programming for Data Analysis & NumPY",
-                    "Module 2: Data Wrangling & Visualization with Pandas & Seaborn",
-                    "Module 3: Exploratory Data Analysis & Feature Engineering",
-                    "Module 4: Machine Learning with Scikit-Learn (Regression, Classification)",
-                    "Module 5: Generative AI & Prompt Engineering with LLM APIs",
-                    "Module 6: Deploying ML Models as Web APIs using FastAPI"
+                    "Module 1: Cloud Computing Fundamentals & AWS Architecture",
+                    "Module 2: Compute Services (AWS EC2, Auto-Scaling & Load Balancing)",
+                    "Module 3: Storage & IAM Security (S3 Buckets, Policies & IAM Roles)",
+                    "Module 4: VPC Networking, Subnets & Security Groups",
+                    "Module 5: Docker Containerization & Microservices Basics",
+                    "Module 6: CI/CD Pipelines, GitHub Actions & Cloud Monitoring"
                 ]
             },
             {
                 "id": "c5",
-                "category": "Cybersecurity",
-                "title": "Cybersecurity & Ethical Hacking Basics",
-                "desc": "Understand network security fundamentals, vulnerability assessment, OWASP Top 10 web security audits, and penetration testing.",
-                "duration": "8 Weeks",
-                "roles": "Security Analyst, Junior Penetration Tester",
-                "tags": ["Network Security", "OWASP", "Wireshark", "Linux", "Ethical Hacking"],
-                "audience": "IT & Computer Science Students interested in Security",
+                "category": "Full-Stack Web Development",
+                "title": "React & Node JS",
+                "desc": "Learn full-stack web development with React and Node.js to build modern, responsive and scalable web applications using industry-relevant technologies. Gain practical experience in frontend development, backend APIs, databases, authentication and application deployment for real-world projects.",
+                "duration": "12 Weeks",
+                "roles": "Full-Stack Developer, MERN Developer, Frontend Engineer, Node.js Developer",
+                "tags": ["React", "Node.js", "Express", "REST APIs", "MongoDB", "Full-Stack"],
+                "audience": "CS & IT Students, Web Developers, Aspiring Full-Stack Engineers",
                 "syllabus": [
-                    "Module 1: Networking Protocols (TCP/IP, HTTP/S, DNS) & Packet Sniffing",
-                    "Module 2: Linux Administration for Cybersecurity Specialists",
-                    "Module 3: OWASP Top 10 Web Vulnerabilities & Prevention",
-                    "Module 4: Vulnerability Scanning & Security Assessments",
-                    "Module 5: Encryption, Hashing, OAuth2 & JWT Security Protocols",
-                    "Module 6: Security Audit Report Writing & Best Practices"
+                    "Module 1: Modern JavaScript ES6+, Async Code & NPM Ecosystem",
+                    "Module 2: React Core Concepts, Components, State & Custom Hooks",
+                    "Module 3: React Router, State Management & UI Component Systems",
+                    "Module 4: Node.js & Express RESTful API Architecture",
+                    "Module 5: MongoDB & Mongoose Schema Design",
+                    "Module 6: User Authentication (JWT, Passwords & Cookies)",
+                    "Module 7: Full-Stack Integration & Live Deployment (Vercel/Render)"
+                ]
+            },
+            {
+                "id": "c6",
+                "category": "Web Development",
+                "title": "HTML, CSS & JavaScript",
+                "desc": "Build a strong foundation in web development with HTML, CSS and JavaScript and learn how to create responsive, interactive and user-friendly websites. Develop essential frontend development skills through practical projects and prepare yourself for advanced web technologies and IT careers.",
+                "duration": "6 Weeks",
+                "roles": "Frontend Developer, Web Designer, Junior Web Developer",
+                "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "DOM Manipulation"],
+                "audience": "Beginners, High School & College Students, Non-Tech Learners",
+                "syllabus": [
+                    "Module 1: HTML5 Semantic Elements, Forms & Document Structure",
+                    "Module 2: CSS3 Styling, Flexbox, Grid & Responsive Mobile Layouts",
+                    "Module 3: Modern JavaScript Basics, Variables, Loops & Functions",
+                    "Module 4: DOM Manipulation, Event Handling & Dynamic UI",
+                    "Module 5: Asynchronous JS, Fetch API & JSON Data Integration",
+                    "Module 6: Capstone Project: Interactive Multi-Page Web Application"
+                ]
+            },
+            {
+                "id": "c7",
+                "category": "Python & Backend Development",
+                "title": "Python Development",
+                "desc": "Learn Python programming from fundamentals to application development, covering programming concepts, functions, APIs, databases and real-world development practices. Build practical Python development skills for software development, automation, backend applications, data technologies and emerging career opportunities.",
+                "duration": "8 Weeks",
+                "roles": "Python Developer, Software Engineer, Backend Engineer, Automation Developer",
+                "tags": ["Python", "OOP", "APIs", "Database Integration", "Automation", "Backend"],
+                "audience": "Students, Programmers, Automation Enthusiasts",
+                "syllabus": [
+                    "Module 1: Python Basics, Data Types, Control Structures & Functions",
+                    "Module 2: Object-Oriented Programming (OOP) in Python",
+                    "Module 3: File Handling, Exception Handling & Modules",
+                    "Module 4: Database Integration (SQLite/PostgreSQL) with Python",
+                    "Module 5: Building Web APIs with FastAPI / Flask",
+                    "Module 6: Automation Scripts, Data Scraping & Real-World Capstone"
+                ]
+            },
+            {
+                "id": "c8",
+                "category": "Artificial Intelligence",
+                "title": "AI Complete Course",
+                "desc": "Master Artificial Intelligence from fundamentals to practical applications, including AI concepts, machine learning basics, generative AI, automation and real-world AI tools. Develop future-ready AI skills through hands-on projects and learn how businesses use Artificial Intelligence to solve problems and improve productivity.",
+                "duration": "12 Weeks",
+                "roles": "AI Developer, Machine Learning Associate, AI Automation Specialist",
+                "tags": ["Artificial Intelligence", "Machine Learning", "Generative AI", "AI Tools", "Prompt Engineering"],
+                "audience": "Students, Engineers, Tech Enthusiasts, Business Innovators",
+                "syllabus": [
+                    "Module 1: Introduction to Artificial Intelligence & Modern AI Ecosystem",
+                    "Module 2: Machine Learning Fundamentals (Supervised & Unsupervised Learning)",
+                    "Module 3: Python Data Libraries for AI (NumPy, Pandas & Scikit-Learn)",
+                    "Module 4: Generative AI, Large Language Models & Prompt Engineering",
+                    "Module 5: Practical AI Tools, APIs & Automation Integration",
+                    "Module 6: Real-World AI Project: Building an Intelligent Business AI Assistant"
                 ]
             }
         ],

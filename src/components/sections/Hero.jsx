@@ -123,7 +123,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="/pages/about"
+              href="/pages/about/ourProjects"
               className="
                 inline-flex
                 h-12

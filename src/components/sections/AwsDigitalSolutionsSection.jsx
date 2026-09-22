@@ -50,7 +50,8 @@ const solutions = [
       },
     ],
 
-    href: "#learn-more-caring-market",
+    href: "https://nexusindiaonline.com",
+    isExternal: true,
   },
 
   {
@@ -86,7 +87,7 @@ const solutions = [
       },
     ],
 
-    href: "#learn-more-business-software",
+    href: "/pages/services/ourSolutions/crm-erp-solution",
   },
 ];
 
@@ -846,59 +847,97 @@ function ProductCard({ solution }) {
         =================================================== */}
 
         <div className="mt-auto pt-11">
-
-          <Link
-            href={solution.href}
-            className="
-              group/cta
-              inline-flex
-              items-center
-              gap-3
-              rounded-full
-              border
-              border-[#FF7A00]/50
-              bg-[#FF7A00]/[0.09]
-              px-6
-              py-3
-              text-[12px]
-              font-semibold
-              text-white
-              shadow-[0_0_30px_rgba(255,122,0,0.06)]
-              transition-all
-              duration-300
-              hover:border-[#FF8A00]/80
-              hover:bg-[#FF7A00]/[0.16]
-              hover:shadow-[0_0_30px_rgba(255,122,0,0.14)]
-            "
-          >
-
-            <span>
-              Learn More
-            </span>
-
-
-            <span
+          {solution.isExternal ? (
+            <a
+              href={solution.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="
-                flex
-                h-7
-                w-7
+                group/cta
+                inline-flex
                 items-center
-                justify-center
+                gap-3
                 rounded-full
-                bg-[#FF7A00]
-                text-[#120D0A]
-                transition-transform
+                border
+                border-[#FF7A00]/50
+                bg-[#FF7A00]/[0.09]
+                px-6
+                py-3
+                text-[12px]
+                font-semibold
+                text-white
+                shadow-[0_0_30px_rgba(255,122,0,0.06)]
+                transition-all
                 duration-300
-                group-hover/cta:translate-x-1
+                hover:border-[#FF8A00]/80
+                hover:bg-[#FF7A00]/[0.16]
+                hover:shadow-[0_0_30px_rgba(255,122,0,0.14)]
               "
             >
-
-              <ArrowUpRight className="h-4 w-4" />
-
-            </span>
-
-          </Link>
-
+              <span>Learn More</span>
+              <span
+                className="
+                  flex
+                  h-7
+                  w-7
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#FF7A00]
+                  text-[#120D0A]
+                  transition-transform
+                  duration-300
+                  group-hover/cta:translate-x-1
+                "
+              >
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </a>
+          ) : (
+            <Link
+              href={solution.href}
+              className="
+                group/cta
+                inline-flex
+                items-center
+                gap-3
+                rounded-full
+                border
+                border-[#FF7A00]/50
+                bg-[#FF7A00]/[0.09]
+                px-6
+                py-3
+                text-[12px]
+                font-semibold
+                text-white
+                shadow-[0_0_30px_rgba(255,122,0,0.06)]
+                transition-all
+                duration-300
+                hover:border-[#FF8A00]/80
+                hover:bg-[#FF7A00]/[0.16]
+                hover:shadow-[0_0_30px_rgba(255,122,0,0.14)]
+              "
+            >
+              <span>Learn More</span>
+              <span
+                className="
+                  flex
+                  h-7
+                  w-7
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#FF7A00]
+                  text-[#120D0A]
+                  transition-transform
+                  duration-300
+                  group-hover/cta:translate-x-1
+                "
+              >
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </Link>
+          )}
         </div>
 
       </div>

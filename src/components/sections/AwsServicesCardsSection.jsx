@@ -34,7 +34,7 @@ const slides = [
     description:
       "End-to-end AWS and DevOps solutions designed to give your business greater control, security, reliability and performance.",
 
-    route: "/services/cloud-solutions",
+    route: "/services/aws-data-security",
 
     features: [
       {
@@ -66,7 +66,7 @@ const slides = [
     category: "INFRASTRUCTURE",
 
     title: (
-      <>
+    <>
         Server
         <br />
         <span className="text-white">without</span>
@@ -78,7 +78,7 @@ const slides = [
     description:
       "From cloud servers to Linux environments, we build and manage reliable infrastructure that keeps your digital products running smoothly.",
 
-    route: "/services/cloud-solutions",
+    route: "/services/aws-data-security#server-management-section",
 
     features: [
       {
@@ -122,7 +122,7 @@ const slides = [
     description:
       "Smart solutions for data migration, storage, security and cloud environments designed to scale with your business.",
 
-    route: "/services/aws-data",
+    route: "/services/cloud-solutions",
 
     features: [
       {

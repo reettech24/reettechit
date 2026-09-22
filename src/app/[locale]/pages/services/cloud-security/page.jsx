@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import "./AwsData.css";
+import "./cloud-solutions.css";
 
 const section1Bg = "/assets/images/section1backgd.png";
 const section1RightImg = "/assets/images/section1right.png";
@@ -137,7 +137,7 @@ const keyServicesList = [
   },
 ];
 
-export default function AwsDataPage() {
+export default function Cloud_solutions() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);

@@ -8,83 +8,35 @@ import {
   Quote,
   Star,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const reviewsData = [
-  {
-    id: 1,
-    name: "Client Name",
-    role: "Product Designer",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=250",
-    rating: 5,
-    review:
-      "Lorem ipsum dolor sit amet, conect adipiscing elit, sed diam wisienim minim veniam quis nostrud nonum euismod tincidunt laoreet dolore magna.",
-  },
-  {
-    id: 2,
-    name: "Alex Morgan",
-    role: "Tech Lead & Founder",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=250",
-    rating: 5,
-    review:
-      "Outstanding end-to-end IT solutions! Their team brought our digital vision to life with extreme precision, speed, and cutting-edge 3D tech.",
-  },
-  {
-    id: 3,
-    name: "Emily Chen",
-    role: "Marketing Director",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250",
-    rating: 5,
-    review:
-      "Working with them transformed our business workflow completely. Highly recommended for any enterprise scalable digital infrastructure!",
-  },
-  {
-    id: 4,
-    name: "David Miller",
-    role: "CTO, Enterprise Soft",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=250",
-    rating: 5,
-    review:
-      "Top-notch technical consulting and high performance execution! Their 3D interface designs brought a huge leap in our user engagement.",
-  },
-  {
-    id: 5,
-    name: "Sophia Taylor",
-    role: "Operations Head",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250",
-    rating: 5,
-    review:
-      "Incredible attention to detail and seamlessly implemented web services. The smooth UI and responsiveness exceeded all our expectations.",
-  },
-  {
-    id: 6,
-    name: "Robert Wilson",
-    role: "VP of Engineering",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=250",
-    rating: 5,
-    review:
-      "Their team delivered ahead of schedule with flawless execution. The custom architecture solved our scaling issues effortlessly!",
-  },
-  {
-    id: 7,
-    name: "Jessica Alba",
-    role: "Product Manager",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=250",
-    rating: 5,
-    review:
-      "An absolute pleasure to collaborate with. Their 3D visuals and intuitive interface gave our application a major competitive edge.",
-  },
+const partnerImages = {
+  testimonial1: "/partners/dimplechemicals.png",
+  testimonial2: "/partners/logo3.png",
+  testimonial3: "/partners/puneeta.png",
+};
+
+const defaultTestimonialKeys = [
+  "testimonial1",
+  "testimonial2",
+  "testimonial3",
 ];
 
 export default function AwsClientReviewsSection() {
+  const t = useTranslations("testimonials");
   const scrollRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
+
+  const reviewsData = defaultTestimonialKeys.map((key, index) => ({
+    id: index + 1,
+    name: t(`${key}.name`),
+    role: t(`${key}.role`),
+    image:
+      partnerImages[key] ||
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250",
+    rating: 5,
+    review: t(`${key}.text`),
+  }));
 
   useEffect(() => {
     const container = scrollRef.current;
