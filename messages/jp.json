@@ -1216,52 +1216,202 @@
     "cultureDesc": "所有感、包括性、革新性を重視した文化を信じています。私たちのグローバルチームは相互の尊重とシンプルな解決策への情熱で成長しています。"
   },
   "studentcourses": {
-    "heroTitle": "学生向けコース",
+    "heroTitle": "学生キャリアアクセラレーター",
+    "heroSubtext": "学術的理論と実践的なITスキルのギャップを埋める。実践的なプロジェクトと1対1のメンターシップで需要の高いスキルを習得。",
     "heroDesc": "キャリア / 学生向けコース",
+    "badge": "🎓 学生中心の学習プラットフォーム",
     "overviewTitle": "デジタル未来への力を学生に",
     "overviewDesc": "私たちのコースは、学術理論と業界スキルの架け橋です。実務的なカリキュラムで、スタートアップでも大企業でも通用する準備が整います。",
-    "availableCoursesTitle": "Available Courses",
+    "stats": {
+      "students": "500名以上の学生を指導",
+      "practical": "100%の実践的ライブプロジェクト",
+      "mentorship": "1対1のコードレビュー",
+      "placement": "就職・面接サポート"
+    },
+    "availableCoursesTitle": "実践型コースを探索",
+    "availableCoursesSubtitle": "ポートフォリオ構築に最適なプロジェクト主導型プログラム。",
+    "filterAll": "すべてのトラック",
     "featureItems": [
       {
+        "id": "fullstack-web",
+        "category": "Web開発",
         "title": "フルスタックWeb開発",
-        "desc": "HTML、CSS、JavaScript、React、Node.jsを使ってアプリやサイトを構築します。",
-        "duration": "12週間"
+        "desc": "HTML5、CSS3、JavaScript、React、Node.jsを使用してモダンでスケーラブルなWebアプリを構築。",
+        "duration": "12週間",
+        "level": "初級〜上級",
+        "projects": "4つの実践プロジェクト",
+        "tags": ["React", "Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        "syllabus": [
+          "フロントエンドの基礎とレスポンシブUI",
+          "モダンJavaScript(ES6+)とReactコンポーネント",
+          "Node & ExpressによるREST API開発",
+          "データベース統合(MongoDB / PostgreSQL)",
+          "認証、状態管理、デプロイ"
+        ]
       },
       {
+        "id": "cloud-devops",
+        "category": "クラウド & DevOps",
         "title": "AWS & Azureによるクラウドコンピューティング",
-        "desc": "クラウドの展開、スケーリング、管理の基礎を学びます。",
-        "duration": "8週間"
+        "desc": "安全なクラウドインフラの展開、スケーリング、管理の基礎を学びます。",
+        "duration": "8週間",
+        "level": "中級",
+        "projects": "3つのクラウド構築プロジェクト",
+        "tags": ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Linux"],
+        "syllabus": [
+          "クラウドの基礎とEC2/S3の活用",
+          "ネットワーク、セキュリティグループ、IAM",
+          "Dockerによるコンテナ化とオーケストレーション",
+          "自動デプロイとCI/CDパイプライン",
+          "コスト最適化とクラウド監視"
+        ]
       },
       {
+        "id": "data-ml",
+        "category": "データ & AI",
         "title": "データサイエンス & 機械学習",
-        "desc": "Python、pandas、scikit-learnを使用してデータ分析と予測モデルを作成します。",
-        "duration": "10週間"
+        "desc": "Python、pandas、scikit-learnを使用して実データを分析し予測モデルを作成。",
+        "duration": "10週間",
+        "level": "初級〜中級",
+        "projects": "3つの機械学習プロジェクト",
+        "tags": ["Python", "Pandas", "Scikit-Learn", "NumPy", "SQL", "Data Viz"],
+        "syllabus": [
+          "データサイエンスのためのPythonと探索的分析",
+          "データクリーニングと特徴量エンジニアリング",
+          "教師あり・教師なし機械学習モデル",
+          "モデル評価とチューニング",
+          "Web APIとしてのMLモデルデプロイ"
+        ]
       },
       {
+        "id": "cybersecurity",
+        "category": "サイバーセキュリティ",
         "title": "サイバーセキュリティ基礎",
-        "desc": "脅威、暗号化、防御戦略を理解します。",
-        "duration": "6週間"
+        "desc": "脅威、倫理的ハッキング、暗号化、防御戦略を包括的に理解します。",
+        "duration": "6週間",
+        "level": "初級",
+        "projects": "2つのセキュリティ監査ラボ",
+        "tags": ["Ethical Hacking", "Network Security", "Cryptography", "OWASP Top 10", "Wireshark"],
+        "syllabus": [
+          "ネットワーク構成と脆弱性スキャン",
+          "WebアプリのセキュリティとOWASP標準",
+          "暗号化とデータ保護",
+          "インシデント対応と防御戦略",
+          "ペネトレーションテストのハンズオン"
+        ]
       },
       {
-        "title": "アジャイルプロジェクト管理",
-        "desc": "JiraやScrumなどのツールと手法を習得します。",
-        "duration": "4週間"
+        "id": "agile-pm",
+        "category": "マネジメント",
+        "title": "アジャイル & プロダクトマネジメント",
+        "desc": "JiraワークフローやScrum手法をマスターし、チームを牽引する力を習得。",
+        "duration": "4週間",
+        "level": "全レベル対象",
+        "projects": "1つのロードマップ＆スプリント計画",
+        "tags": ["Agile", "Scrum", "Jira", "Product Design", "User Stories"],
+        "syllabus": [
+          "Agile原則とScrumフレームワーク",
+          "ユーザーストーリーと受入条件の作成",
+          "Jiraバックログ管理とスプリント計画",
+          "ステークホルダーコミュニケーションとリリース管理",
+          "プロダクトアナリティクスと指標"
+        ]
       },
       {
-        "title": "UI/UXデザイン",
-        "desc": "Figmaとデザインシステムを活用してユーザー中心のUIを設計します。",
-        "duration": "6週間"
+        "id": "ui-ux",
+        "category": "UI/UXデザイン",
+        "title": "UI/UXデザイン & プロトタイピング",
+        "desc": "Figmaとデザインシステムを活用して直感的なユーザー体験を設計。",
+        "duration": "6週間",
+        "level": "初級",
+        "projects": "2つの完全リデザインプロジェクト",
+        "tags": ["Figma", "Wireframing", "User Research", "Prototyping", "Design Systems"],
+        "syllabus": [
+          "UXリサーチとペルソナ設計",
+          "情報アーキテクチャとワイヤーフレーム",
+          "視覚的UIデザインシステムとタイポグラフィ",
+          "インタラクティブプロトタイプとマイクロアニメーション",
+          "ユーザビリティテストとハンドオフ"
+        ]
       }
     ],
-    "journeyTitle": "なぜ私たちを選ぶ？",
+    "journeyTitle": "学生から即戦力エンジニアへのロードマップ",
+    "journeySubtitle": "基礎からキャリア採用まで導く4ステップのフレームワーク。",
     "journeySteps": [
-      "マンツーマンの指導",
-      "業界認定資格",
-      "実践的なプロジェクト"
+      {
+        "step": "01",
+        "title": "インタラクティブなライブ学習",
+        "desc": "講師によるライブセッション、リアルタイムのコードレビュー、課題で基礎をマスター。"
+      },
+      {
+        "step": "02",
+        "title": "実践ポートフォリオの構築",
+        "desc": "実務レベルのキャップストーンやGitHub公開プロジェクトを制作。"
+      },
+      {
+        "step": "03",
+        "title": "1対1メンターシップ & コード診断",
+        "desc": "シニアエンジニアからの直接フィードバックでコード品質と履歴書を洗練。"
+      },
+      {
+        "step": "04",
+        "title": "キャリア準備 & 採用マッチング",
+        "desc": "模擬面接、スキルコーチング、提携企業への直接推薦サポート。"
+      }
     ],
-    "partnersTitle": "学びの旅を始めましょう！",
-    "securityTitle": "今日申し込んで、成功する技術キャリアへの一歩を踏み出そう。",
-    "ctaBtn": "今すぐ申し込む"
+    "perksTitle": "Reet Techで学びが加速する理由",
+    "perksSubtitle": "自信を深め、実務経験を積み、面接で際立つためのすべてを提供。",
+    "perksItems": [
+      {
+        "title": "実世界のプロジェクト",
+        "desc": "ダミー課題ではありません。実際の企業で使用されるアーキテクチャを扱います。"
+      },
+      {
+        "title": "メンターへのダイレクトアクセス",
+        "desc": "疑問をいつでも質問し、1対1でベストプラクティスを指導受けられます。"
+      },
+      {
+        "title": "認定証明書",
+        "desc": "LinkedInや履歴書に掲載可能な検証リンク付きの修了証明書を発行。"
+      },
+      {
+        "title": "柔軟なスケジュール",
+        "desc": "大学の授業と両立しやすい週末・夜間バッチをご用意。"
+      }
+    ],
+    "faqTitle": "学生からのよくある質問",
+    "faqSubtitle": "受講前に知っておきたいポイント。",
+    "faqs": [
+      {
+        "q": "誰が応募できますか？",
+        "a": "大学生、新卒生、キャリアチェンジを目指す方が対象です。初級コースでは事前プログラミング経験は不要です。"
+      },
+      {
+        "q": "授業はどのように行われますか？",
+        "a": "オンラインのインタラクティブなライブセッションで行われ、録画アーカイブも視聴可能です。"
+      },
+      {
+        "q": "就職サポートはありますか？",
+        "a": "はい！履歴書レビュー、GitHub添削、技術模擬面接、パートナー企業への推薦を行っています。"
+      },
+      {
+        "q": "修了証明書は発行されますか？",
+        "a": "はい、規定のプロジェクトと評価を完了した全受講生にReet Tech認定修了証を発行します。"
+      }
+    ],
+    "partnersTitle": "ITキャリアへの第一歩を踏み出しませんか？",
+    "securityTitle": "実践的なスキルとポートフォリオを構築する多くの学生と共に学ぼう。",
+    "ctaBtn": "学生バッチに応募する",
+    "syllabusModal": {
+      "title": "カリキュラム＆コース詳細",
+      "level": "レベル",
+      "duration": "期間",
+      "projects": "プロジェクト",
+      "modules": "習得モジュール",
+      "skills": "使用ツール・技術",
+      "apply": "このコースに申し込む",
+      "close": "プレビューを閉じる"
+    }
   },
   "jobshiring": {
     "heroTitle": "チームに参加する",
@@ -2576,5 +2726,82 @@
     "ctaTitle": "時代の先を行くために、今すぐ行動を",
     "ctaDesc": "変化の激しい市場において、成功するのはすぐに適応できる者だけです。当社のコンサルティングは、アジャイルでデータ駆動・テクノロジー対応のビジネス構築を支援します。",
     "ctaBtn": "無料戦略セッションを予約する"
+  },
+  "ourprojects": {
+    "heroTitle": "プロジェクトとプロダクト実績",
+    "heroSubtext": "複雑な課題を解決し、測定可能なビジネス成長をもたらすソフトウェアアプリケーションを構築します。",
+    "badge": "カスタムソフトウェア • 実運用証明 • 情熱を込めて開発",
+    "filterAll": "すべてのプロジェクト",
+    "manifestoTitle": "開発思想とエンジニアリングマニフェスト",
+    "ctaBannerTitle": "カスタムプロジェクトのご相談はこちら",
+    "ctaBannerDesc": "当社のエンジニアリングチームに直接相談し、次のデジタルプロダクトを構築しましょう。"
+  },
+  "cloudsolutions": {
+    "metadata": {
+      "title": "エンタープライズクラウドソリューション＆AWSマネージドサービス | Reet Technologies",
+      "description": "スケーラブルなクラウドインフラ、AWS EC2/S3/Lambdaの導入、VPCネットワーク、DevOps自動化、クラウド移行、24時間365日のサーバー管理サービス。",
+      "keywords": "クラウドソリューション, AWSマネージドサービス, クラウドインフラ, クラウド移行, EC2構築, S3ストレージ, サーバーセキュリティ, DevOpsコンサルティング, Reet Technologies"
+    }
+  },
+  "studentcourses": {
+    "metadata": {
+      "title": "実務直結型プログラミング＆ITキャリア育成コース | Reet Technologies",
+      "description": "フルスタックWeb開発、クラウドコンピューティング、モバイルアプリ、サイバーセキュリティ、AI/MLの理論と実践プロジェクト、1対1メンターコードレビュー付き学生向けITコース。",
+      "keywords": "プログラミングスクール, 学生向けITコース, フルスタック開発, クラウド構築, インターンシップ, Web開発ブートキャンプ, Reet Technologies アカデミー"
+    },
+    "heroSubtext": "Reet Techの現役ソフトウェアエンジニアから直接学び、4つ以上の実用に耐える成果物を作成。1対1のコードレビューと面接対策を実施。",
+    "nextBatch": "次回開講日：毎月1日・15日 | 平日夜間＆週末コース対応",
+    "overviewDesc": "大学の理論学習だけでなく、実際の開発現場で使える実践的知識を100%提供します。",
+    "filterAll": "すべてのコース",
+    "faqTitle": "よくあるご質問",
+    "featureItems": [
+      {
+        "id": "c1",
+        "category": "フルスタック開発",
+        "title": "フルスタックWeb開発 (MERN / Next.js)",
+        "desc": "React、Next.js、Node.js、Express、MongoDB、Tailwind CSSをマスターし、現役エンジニアから直接フィードバックを受講。",
+        "duration": "12週間",
+        "roles": "フルスタックエンジニア、フロントエンド開発者、Node.jsエンジニア",
+        "tags": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind"],
+        "audience": "情報系学生・エンジニアを目指す方",
+        "syllabus": [
+          "モジュール1: HTML5、CSS3、Flexbox、Tailwind CSS",
+          "モジュール2: JavaScript ES6+、Async/Await、DOM操作",
+          "モジュール3: React 19の基礎、状態管理、Hooks",
+          "モジュール4: Next.js App Router、SSR、Server Actions",
+          "モジュール5: Node.js、Express REST API設計、JWT認証",
+          "モジュール6: MongoDB、Mongooseスキーマ設計",
+          "モジュール7: Git、GitHub PRレビュー、Vercelデプロイ"
+        ]
+      }
+    ],
+    "journeySteps": [
+      {
+        "step": "01",
+        "title": "基礎構文と環境構築",
+        "desc": "開発環境のセットアップ、Gitワークフロー、基本構文を習得。"
+      },
+      {
+        "step": "02",
+        "title": "実践型プロジェクト開発",
+        "desc": "シニアエンジニアの指導の下、4つ以上の本番仕様アプリを開発。"
+      },
+      {
+        "step": "03",
+        "title": "1対1のコードレビュー",
+        "desc": "GitHubでプルリクエストを作成し、コード品質のフィードバックを受講。"
+      },
+      {
+        "step": "04",
+        "title": "キャリア・面接対策",
+        "desc": "技術職向け履歴書添削、模擬面接、提携企業への推薦支援。"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "未経験の学生でも受講可能ですか？",
+        "a": "はい！基礎から丁寧に指導し、最終的には本番レベルのアプリ開発を目指します。"
+      }
+    ]
   }
 }

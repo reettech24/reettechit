@@ -1,115 +1,249 @@
-"use client";
-export const dynamic = "force-dynamic";
+import CoursesClient from "./CoursesClient";
 
-import { useTranslations } from "next-intl";
-import ContactUsSection from "@/components/sections/ContactUsSection";
-import TestimonialSection from "@/components/sections/TestimonialSection";
-import React from "react";
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
 
-export default function Page() {
-  const t = useTranslations("studentcourses");
+  let messages;
+  try {
+    messages = (await import(`../../../../../../messages/${locale}.json`)).default;
+  } catch (e) {
+    messages = (await import(`../../../../../../messages/en.json`)).default;
+  }
 
-  const journeyImages = [
-    "/test/16.jpeg",
-    "/test/18.jpeg",
-    "/test/20.jpeg",
-  ];
+  const meta = messages?.studentcourses?.metadata || {};
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reettechit.com";
+  const canonicalUrl = `${baseUrl}/${locale}/pages/careers/courses`;
+
+  return {
+    title: meta.title || "Industry-Ready Student Courses & Tech Internships | Reet Technologies",
+    description:
+      meta.description ||
+      "Comprehensive hands-on courses in Full-Stack Web Development, Cloud Computing, Mobile Apps, Cybersecurity, and AI/ML with live projects, 1-on-1 mentor reviews, and career placement support at Reet Technologies.",
+    keywords:
+      meta.keywords ||
+      "student courses, IT training Pune, full stack developer course, cloud computing training, software internship, web development bootcamps, Reet Technologies academy, live project training, tech career accelerator",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${baseUrl}/en/pages/careers/courses`,
+        ar: `${baseUrl}/ar/pages/careers/courses`,
+        jp: `${baseUrl}/jp/pages/careers/courses`,
+        "x-default": `${baseUrl}/en/pages/careers/courses`,
+      },
+    },
+    openGraph: {
+      title: meta.title || "Industry-Ready Student Courses & Tech Internships | Reet Technologies",
+      description:
+        meta.description ||
+        "Comprehensive hands-on courses in Full-Stack Web Development, Cloud Computing, Mobile Apps, Cybersecurity, and AI/ML with live projects, 1-on-1 mentor reviews, and career placement support at Reet Technologies.",
+      url: canonicalUrl,
+      siteName: "Reet Technologies",
+      locale: locale,
+      type: "website",
+      images: [
+        {
+          url: `${baseUrl}/assets/images/bannerimage.jpeg`,
+          width: 1200,
+          height: 630,
+          alt: "Reet Technologies Industry-Ready Student Courses & Tech Internships",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title || "Industry-Ready Student Courses & Tech Internships | Reet Technologies",
+      description:
+        meta.description ||
+        "Comprehensive hands-on courses in Full-Stack Web Development, Cloud Computing, Mobile Apps, Cybersecurity, and AI/ML with live projects, 1-on-1 mentor reviews, and career placement support at Reet Technologies.",
+      images: [`${baseUrl}/assets/images/bannerimage.jpeg`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
+}
+
+export default async function Page({ params }) {
+  const { locale } = await params;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reettechit.com";
+  const canonicalUrl = `${baseUrl}/${locale}/pages/careers/courses`;
+
+  const coursesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${canonicalUrl}#coursesList`,
+    name: "Reet Technologies Industry-Ready Student Courses",
+    description: "Curated, project-driven software development programs designed to build real skills and verified job portfolios.",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Course",
+          name: "Full-Stack Web Development",
+          description: "Master React, Next.js, Node.js, Express, and MongoDB. Build live web applications with 1-on-1 mentor PR reviews.",
+          provider: {
+            "@type": "Organization",
+            name: "Reet Technologies",
+            url: baseUrl,
+          },
+          courseMode: "Blended / Live Mentorship",
+          educationalCredentialAwarded: "Full-Stack Web Developer Certificate",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Course",
+          name: "Cloud & DevOps Engineering",
+          description: "Learn AWS EC2, S3, Docker, CI/CD pipelines, and infrastructure monitoring with real production deployments.",
+          provider: {
+            "@type": "Organization",
+            name: "Reet Technologies",
+            url: baseUrl,
+          },
+          courseMode: "Blended / Live Mentorship",
+          educationalCredentialAwarded: "Cloud & DevOps Specialist Certificate",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Course",
+          name: "Mobile App Development",
+          description: "Build cross-platform iOS and Android apps using React Native, Expo, and Firebase backend services.",
+          provider: {
+            "@type": "Organization",
+            name: "Reet Technologies",
+            url: baseUrl,
+          },
+          courseMode: "Blended / Live Mentorship",
+          educationalCredentialAwarded: "Mobile App Developer Certificate",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Course",
+          name: "AI & Machine Learning Foundations",
+          description: "Hands-on Python, Pandas, Scikit-Learn, and LLM integrations for intelligent software automation.",
+          provider: {
+            "@type": "Organization",
+            name: "Reet Technologies",
+            url: baseUrl,
+          },
+          courseMode: "Blended / Live Mentorship",
+          educationalCredentialAwarded: "AI & Machine Learning Certificate",
+        },
+      },
+    ],
+  };
+
+  const programSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOccupationalProgram",
+    name: "Reet Technologies Student Academy & Tech Career Accelerator",
+    description: "A 4-stage hands-on career accelerator pathway to transition students from beginner concepts to hired software engineers.",
+    provider: {
+      "@type": "Organization",
+      name: "Reet Technologies",
+      url: baseUrl,
+    },
+    educationalCredentialAwarded: "Industry-Ready Student Software Certificate",
+    offers: {
+      "@type": "Offer",
+      category: "IT Education & Technical Training",
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${baseUrl}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Careers",
+        item: `${baseUrl}/${locale}/pages/careers`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Student Courses",
+        item: canonicalUrl,
+      },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Are these courses suitable for beginners?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, our programs start from core fundamentals and progressively move into live capstone projects with 1-on-1 mentor guidance.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Will I get live code reviews from active developers?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, every module includes pull request audits conducted by active software engineers at Reet Technologies.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer placement support for students?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We provide portfolio reviews, resume building, mock technical interviews, and direct referral opportunities for top capstone performers.",
+        },
+      },
+    ],
+  };
 
   return (
     <>
-      {/* Hero Section */}
-      <section
-        className="bg-[#0C1E3C] text-white py-52 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/breadcrumb.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-[#0C1E3C] opacity-80" />
-        <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
-            {t("heroTitle")}
-          </h1>
-          <p className="text-white/70"> {t("heroDesc")}</p>
-        </div>
-      </section>
-
-      {/* Intro Section */}
-      <section className="py-16 px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">{t("overviewTitle")}</h2>
-        <p className="text-gray-700">{t("overviewDesc")}</p>
-      </section>
-
-      {/* Courses Grid */}
-      <section className=" relative bg-[#070B2A] text-white py-20 px-6">
-        <div className="absolute -top-0 -right-0">
-          <img src="/mask-shape.png" alt="Nexus India Logo" className=" h-96" />
-        </div>
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-12 text-white">
-            {t("availableCoursesTitle")}
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t.raw("featureItems").map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-gray-800 p-6 shadow hover:shadow-xl transition text-center"
-              >
-                <h4 className="text-xl font-semibold mb-2 text-white">
-                  {item.title}
-                </h4>
-                <p className="text-sm mb-3 text-white/80">{item.desc}</p>
-                <span className="inline-block px-3 py-1 text-sm text-blue-400 rounded-full">
-                  Duration: {item.duration}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className=" relative py-20 bg-[#070B2A] text-white px-6 ">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white">
-              {t("journeyTitle")}
-            </h3>
-            <p className="text-white/80 max-w-3xl mx-auto mt-2">
-              {/* {t("featureTitle")} */}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            {t.raw("journeySteps").map((item, idx) => (
-              <div key={idx} className="text-center">
-                <img
-                  src={journeyImages[idx]}
-                  className="w-60 h-60 object-cover mx-auto mb-3 shadow-md"
-                  alt={`Journey Step ${idx + 1}`}
-                />
-                <h4 className="font-semibold text-white text-lg">{item}</h4>
-                <p className="text-sm text-white/80 mt-2">
-                  Work on real-world use cases and build a portfolio.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="absolute -bottom-75 -right-0 opacity-20 w-screen">
-          <img src="/p1.png" alt="Nexus India Logo" className="" />
-        </div>
-      </section>
-
-      {/* Call-to-Action Section */}
-      <section className="bg-black text-white py-20 px-6 text-center">
-        <h3 className="text-3xl font-bold mb-4">{t("partnersTitle")}</h3>
-        <p className="mb-6 text-white/90">{t("securityTitle")}</p>
-        <a
-          href="/pages/contact"
-          className="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition"
-        >
-          {t("ctaBtn")}
-        </a>
-      </section>
-
-      <ContactUsSection />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(programSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <CoursesClient />
     </>
   );
 }

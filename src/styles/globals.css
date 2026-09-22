@@ -17,6 +17,21 @@
   --color-nexus-primary: #2a525e; /* New Primary */
   --color-nexus-secondary: #f27b2a; /* New Secondary */
 
+  /* 💙 Signature Electric Blue Glass Palette */
+  --primary-color: #0F62FE;        /* Primary: Electric Royal Blue */
+  --primary-glow: #38BDF8;         /* Primary Glow: Neon Ice Cyan */
+  --primary-dark: #070B2A;         /* Primary Background: Deep Space Dark */
+
+  --secondary-color: #1E40AF;      /* Secondary: Deep Cobalt Blue */
+  --secondary-glow: #60A5FA;       /* Secondary Accent: Radiant Sky Blue */
+
+  --tertiary-color: #030712;       /* Tertiary: Midnight Obsidian */
+  --tertiary-accent: #7DD3FC;      /* Tertiary Highlight: Soft Ice Blue */
+
+  --glass-bg-blue: rgba(15, 30, 66, 0.55);
+  --glass-border-blue: rgba(56, 189, 248, 0.25);
+  --glass-glow-blue: 0 20px 50px rgba(15, 98, 254, 0.4);
+
   /* Fonts */
   --font-sans: "Geist", "Inter", "Poppins", "DM Sans", "Space Grotesk",
     "Helvetica Neue", "Segoe UI", "Open Sans", "Work Sans", "Manrope", "Ubuntu",
@@ -49,6 +64,14 @@
 
   --color-nexus-primary: var(--color-nexus-primary);
   --color-nexus-secondary: var(--color-nexus-secondary);
+
+  --color-primary-main: var(--primary-color);
+  --color-primary-glow: var(--primary-glow);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary-main: var(--secondary-color);
+  --color-secondary-glow: var(--secondary-glow);
+  --color-tertiary-main: var(--tertiary-color);
+  --color-tertiary-accent: var(--tertiary-accent);
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);

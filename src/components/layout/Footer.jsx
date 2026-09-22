@@ -2,58 +2,108 @@
 
 import React from "react";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  ArrowUpRight,
+} from "lucide-react";
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+} from "@heroicons/react/20/solid";
 import { useTranslations } from "next-intl";
 
 export const Footer = () => {
   const t = useTranslations("footer");
 
   return (
-    <footer className="bg-[#0C0C0C] text-white py-10 px-6">
-      <div className="max-w-7xl mx-auto space-y-10">
-        {/* Top Row */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
-          {/* Logo & Tagline */}
-          <div className="space-y-2">
+    <footer className="relative overflow-hidden bg-[#030303] text-white">
+      {/* Subtle ambient glow */}
+      <div className="pointer-events-none absolute -left-40 top-0 h-[300px] w-[300px] rounded-full bg-[#38BDF8]/[0.035] blur-[120px]" />
+
+      <div className="pointer-events-none absolute -right-40 bottom-0 h-[300px] w-[300px] rounded-full bg-[#070B2A]/40 blur-[120px]" />
+
+      <div className="relative mx-auto max-w-[1440px] px-6 py-12 sm:px-10 lg:px-16 xl:px-20">
+
+        {/* =====================================================
+            MAIN FOOTER
+        ===================================================== */}
+
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.5fr_0.8fr_0.8fr_1.2fr] lg:gap-16">
+
+          {/* Brand */}
+          <div>
             <div className="flex items-center gap-3">
               <Image
                 src="/reetlogo.png"
-                alt="Reet Technologies Logo"
-                width={120}
-                height={80}
-                className="w-32 h-auto"
+                alt="Reet Technologies"
+                width={90}
+                height={60}
+                className="h-auto w-[72px] object-contain"
               />
-              <span className="text-white font-semibold text-3xl uppercase leading-tight">
-                Reet <br /> Technologies
-              </span>
+
+              <div>
+                <p className="text-lg font-semibold leading-tight tracking-[-0.02em]">
+                  Reet
+                </p>
+
+                <p className="text-lg font-semibold leading-tight tracking-[-0.02em] text-white/80">
+                  Technologies
+                </p>
+              </div>
             </div>
-            <p className="text-lg font-semibold text-white capitalize">
+
+            <p className="mt-5 max-w-[300px] text-sm leading-6 text-white/45">
               {t("tagline")}
             </p>
+
+            <div className="mt-5 flex items-center gap-2 text-xs text-white/35">
+              <span className="h-px w-6 bg-[#38BDF8]/60" />
+              Technology. Strategy. Growth.
+            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-2">
-            <h4 className="font-semibold text-xl">{t("quickLinks")}</h4>
-            <ul className="flex flex-col gap-2 text-white/70 text-md">
+          <div>
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#7DD3FC]">
+              {t("quickLinks")}
+            </h3>
+
+            <ul className="space-y-3 text-sm text-white/55">
               <li>
-                <a href="/pages/about" className="hover:text-white">
+                <a
+                  href="/pages/about"
+                  className="transition-colors hover:text-white"
+                >
                   {t("about")}
                 </a>
               </li>
+
               <li>
-                <a href="/pages/careers" className="hover:text-white">
-                  {t("careers")}
-                </a>
-              </li>
-              <li>
-                <a href="/pages/services" className="hover:text-white">
+                <a
+                  href="/pages/services"
+                  className="transition-colors hover:text-white"
+                >
                   {t("services")}
                 </a>
               </li>
+
               <li>
-                <a href="/pages/contact" className="hover:text-white">
+                <a
+                  href="/pages/careers"
+                  className="transition-colors hover:text-white"
+                >
+                  {t("careers")}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="/pages/contact"
+                  className="transition-colors hover:text-white"
+                >
                   {t("contact")}
                 </a>
               </li>
@@ -61,115 +111,165 @@ export const Footer = () => {
           </div>
 
           {/* Products */}
-          <div className="space-y-2">
-            <h4 className="font-semibold text-xl">{t("products")}</h4>
-            <ul className="gap-4 text-blue-500 font-medium text-md">
+          <div>
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#7DD3FC]">
+              {t("products")}
+            </h3>
+
+            <ul className="space-y-3 text-sm text-white/55">
               <li>
-                <a href="#">{t("nexusIndia")}</a>
+                <a
+                  href="#"
+                  className="group inline-flex items-center gap-1 transition-colors hover:text-white"
+                >
+                  {t("nexusIndia")}
+                  <ArrowUpRight className="h-3 w-3 opacity-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
+                </a>
               </li>
+
               <li>
-                <a href="#">{t("nexusOnline")}</a>
+                <a
+                  href="#"
+                  className="group inline-flex items-center gap-1 transition-colors hover:text-white"
+                >
+                  {t("nexusOnline")}
+                  <ArrowUpRight className="h-3 w-3 opacity-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
+                </a>
               </li>
             </ul>
           </div>
-        </div>
 
-        <hr className="border-white/20" />
-
-        {/* Addresses + Follow Us */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+          {/* Contact */}
           <div>
-            <p className="flex items-center gap-2 mb-1">
-              <span className="text-2xl">🇮🇳</span>{" "}
-              <strong className="text-xl">Reet Technologies</strong>
-            </p>
-            <p className="text-lg">
-              {t("address.line2")}
-            </p>
-            <p className="flex items-center gap-2 mt-1">
-              <PhoneIcon className="w-4 h-4" /> +91 797-290-5758
-            </p>
-          </div>
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#7DD3FC]">
+              Contact
+            </h3>
 
-          <div className="space-y-2 md:col-span-2 md:col-start-4">
-            <h4 className="font-semibold text-xl">{t("followUs")}</h4>
-            <div className="flex space-x-4">
-              {/* <a href="#" className="text-blue-500"><Twitter size={30} /></a> */}
+            <div className="space-y-3 text-sm text-white/55">
+
+              <p className="leading-6">
+                {t("address.line2")}
+              </p>
+
               <a
-                href="https://www.facebook.com/profile.php?id=61563815199946"
-                className="text-blue-500"
+                href="tel:+917972905758"
+                className="flex items-center gap-2 transition-colors hover:text-white"
               >
-                <Facebook size={30} />
+                <PhoneIcon className="h-3.5 w-3.5 text-[#7DD3FC]" />
+                +91 797-290-5758
               </a>
+
               <a
-                href="https://www.instagram.com/reettechnologies/"
-                className="text-blue-500"
+                href="mailto:sales@reettechit.com"
+                className="flex items-center gap-2 transition-colors hover:text-white"
               >
-                <Instagram size={30} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/reet-technologies/posts/?feedView=all"
-                className="text-blue-500"
-              >
-                <Linkedin size={30} />
-              </a>
-              <a
-                href="https://www.youtube.com/@ReetTechnologies"
-                className="text-blue-500"
-              >
-                <Youtube size={30} />
+                <EnvelopeIcon className="h-3.5 w-3.5 text-[#7DD3FC]" />
+                sales@reettechit.com
               </a>
             </div>
-            <p className="flex items-center gap-2 text-xl">
-              <EnvelopeIcon className="w-4 h-4" /> sales@reettechit.com
-            </p>
+
+            {/* Socials */}
+            <div className="mt-6 flex items-center gap-2">
+              <a
+                href="https://www.facebook.com/profile.php?id=61563815199946"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.08] text-white/45 transition-all duration-300 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/[0.08] hover:text-[#7DD3FC]"
+              >
+                <Facebook className="h-3.5 w-3.5" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/reettechnologies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.08] text-white/45 transition-all duration-300 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/[0.08] hover:text-[#7DD3FC]"
+              >
+                <Instagram className="h-3.5 w-3.5" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/reet-technologies/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.08] text-white/45 transition-all duration-300 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/[0.08] hover:text-[#7DD3FC]"
+              >
+                <Linkedin className="h-3.5 w-3.5" />
+              </a>
+
+              <a
+                href="https://www.youtube.com/@ReetTechnologies"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.08] text-white/45 transition-all duration-300 hover:border-[#38BDF8]/30 hover:bg-[#38BDF8]/[0.08] hover:text-[#7DD3FC]"
+              >
+                <Youtube className="h-3.5 w-3.5" />
+              </a>
+            </div>
           </div>
         </div>
 
-        <hr className="border-white/20" />
+        {/* =====================================================
+            DIVIDER
+        ===================================================== */}
 
-        {/* Bottom Row */}
-        <div className="flex flex-col md:flex-row justify-between text-md text-white/70 gap-2">
+        <div className="my-9 h-px bg-white/[0.08]" />
+
+        {/* =====================================================
+            BOTTOM
+        ===================================================== */}
+
+        <div className="flex flex-col gap-4 text-xs text-white/35 md:flex-row md:items-center md:justify-between">
+
           <p>
-            © {new Date().getFullYear()} Reet Technologies. {t("rights")}
+            © {new Date().getFullYear()} Reet Technologies.{" "}
+            {t("rights")}
           </p>
-          <div className="flex flex-wrap gap-3">
-            <a href="/pages/about" className="hover:text-white">
+
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <a
+              href="/pages/about"
+              className="transition-colors hover:text-white"
+            >
               {t("about")}
             </a>
-            <span>|</span>
+
+            <span className="text-white/15">•</span>
+
             <a
               href="/pages/policies/termsConditions"
-              className="hover:text-white"
+              className="transition-colors hover:text-white"
             >
               {t("terms")}
             </a>
-            <span>|</span>
+
+            <span className="text-white/15">•</span>
+
             <a
               href="/pages/policies/privacyPolicy"
-              className="hover:text-white"
+              className="transition-colors hover:text-white"
             >
               {t("privacy")}
             </a>
-            {/* <span>|</span>
-            <a
-              href="/pages/policies/privacyPolicy"
-              className="hover:text-white"
-            >
-              {t("refund")}
-            </a> */}
 
-            <span>|</span>
+            <span className="text-white/15">•</span>
+
             <a
               href="/pages/policies/californiaPrivacyPolicy"
-              className="hover:text-white"
+              className="transition-colors hover:text-white"
             >
               {t("california")}
             </a>
-            <span>|</span>
+
+            <span className="text-white/15">•</span>
+
             <a
               href="/pages/policies/privacyPolicy"
-              className="hover:text-white"
+              className="transition-colors hover:text-white"
             >
               {t("shipping")}
             </a>

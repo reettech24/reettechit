@@ -1220,52 +1220,280 @@
         "cultureDesc": "We believe in a culture of ownership, inclusion, and innovation. Our global team thrives on mutual respect and a shared passion for solving complex problems with simple, effective solutions."
     },
     "studentcourses": {
-        "heroTitle": "Student Courses",
+        "heroTitle": "Launch Your Tech Career with Hands-On Industry Training",
+        "heroSubtext": "Learn directly from senior software engineers at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews.",
         "heroDesc": "Career / Courses for Students",
-        "overviewTitle": "Empowering Students for the Digital Future",
-        "overviewDesc": "Our curated courses bridge academic theory with industry-ready skills. Designed by professionals, these hands-on programs prepare you for the tech world — whether you're launching a startup or joining a global company.",
-        "availableCoursesTitle": "Available Courses",
-        "featureItems": [
+        "badge": "🎓 Reet Tech Student Academy • Practical Skill Building",
+        "nextBatch": "Next Cohort Starts: 1st & 15th of Every Month | Flexible Weekend & Evening Batches",
+        "overviewTitle": "Bridging Academic Theory with Real Industry Execution",
+        "overviewDesc": "Traditional college degrees focus heavily on theoretical concepts. Our student programs are designed by active software developers to give you 100% practical exposure — helping you build real software, master modern tech stacks, and crack technical interviews.",
+        "stats": {
+            "students": "500+ Students Trained",
+            "practical": "100% Practical & Live Projects",
+            "mentorship": "1-on-1 Developer Code Audits",
+            "placement": "Resume & Mock Interview Support"
+        },
+        "comparisonTitle": "College Curriculum vs. Reet Tech Academy",
+        "comparisonSub": "See why hundreds of engineering students choose Reet Tech to become job-ready.",
+        "comparisonRows": [
             {
-                "title": "Full-Stack Web Development",
-                "desc": "Build complete websites and apps using HTML, CSS, JavaScript, React, and Node.js.",
-                "duration": "12 weeks"
+                "feature": "Learning Approach",
+                "college": "80% Theory & Written Exams",
+                "academy": "100% Hands-on Live Coding & Capstones"
             },
             {
-                "title": "Cloud Computing with AWS & Azure",
-                "desc": "Learn the essentials of deploying, scaling, and managing cloud infrastructure.",
-                "duration": "8 weeks"
+                "feature": "Technology Stack",
+                "college": "Outdated Syllabi & Legacy Concepts",
+                "academy": "Modern Tech (React, Node, AWS, Python, Figma)"
             },
             {
-                "title": "Data Science & Machine Learning",
-                "desc": "Analyze data and create predictive models using Python, pandas, and scikit-learn.",
-                "duration": "10 weeks"
+                "feature": "Code Quality & Reviews",
+                "college": "Minimal Code Inspection",
+                "academy": "1-on-1 Senior Engineer Pull Request Audits"
             },
             {
-                "title": "Cybersecurity Fundamentals",
-                "desc": "Understand threats, encryption, and defense strategies in modern IT environments.",
-                "duration": "6 weeks"
-            },
-            {
-                "title": "Agile Project Management",
-                "desc": "Master tools like Jira and methodologies like Scrum to manage software teams.",
-                "duration": "4 weeks"
-            },
-            {
-                "title": "UI/UX Design",
-                "desc": "Design user-centric interfaces using Figma, wireframes, and design systems.",
-                "duration": "6 weeks"
+                "feature": "Career Outcome",
+                "college": "Generic Degree Certificate",
+                "academy": "Verified GitHub Portfolio + Hiring Referrals"
             }
         ],
-        "journeyTitle": "Why Learn With Us?",
-        "journeySteps": [
-            "1-on-1 Mentorship",
-            "Industry Certification",
-            "Real Projects"
+        "availableCoursesTitle": "Explore Industry-Ready Student Courses",
+        "availableCoursesSubtitle": "Curated, project-driven programs designed to build real skills and job-ready portfolios.",
+        "filterAll": "All Courses",
+        "featureItems": [
+            {
+                "id": "fullstack-web",
+                "category": "Web Dev",
+                "title": "Full-Stack Web Development",
+                "desc": "Master modern front-end and back-end development. Build production-ready web applications with HTML5, CSS3, JavaScript, React, Node.js, and MongoDB.",
+                "duration": "12 Weeks (6 hrs/wk)",
+                "level": "Beginner to Advanced",
+                "audience": "Engineering Students, CS Graduates, Career Switchers",
+                "roles": "Full-Stack Developer, Frontend Engineer, React Dev",
+                "projects": "4 Capstone Web Apps",
+                "tags": [
+                    "React",
+                    "Next.js",
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "Tailwind CSS"
+                ],
+                "syllabus": [
+                    "Module 1: HTML5, CSS3, Flexbox & Responsive Layouts",
+                    "Module 2: Modern JavaScript (ES6+), DOM & Async Operations",
+                    "Module 3: React.js Components, State Management & Hooks",
+                    "Module 4: Node.js & Express RESTful API Architecture",
+                    "Module 5: MongoDB Schema Design, Auth & Cloud Deployment"
+                ]
+            },
+            {
+                "id": "cloud-devops",
+                "category": "Cloud & DevOps",
+                "title": "Cloud Infrastructure with AWS & Azure",
+                "desc": "Learn how modern tech companies deploy, scale, and secure applications in the cloud using AWS, Azure, Docker, and CI/CD pipelines.",
+                "duration": "8 Weeks (5 hrs/wk)",
+                "level": "Intermediate",
+                "audience": "IT Students, System Admin Aspirants, Developers",
+                "roles": "Cloud Engineer, DevOps Associate, Cloud Administrator",
+                "projects": "3 Cloud Deployments",
+                "tags": [
+                    "AWS",
+                    "Azure",
+                    "Docker",
+                    "Kubernetes",
+                    "CI/CD",
+                    "Linux"
+                ],
+                "syllabus": [
+                    "Module 1: Cloud Computing Fundamentals & EC2/S3 Essentials",
+                    "Module 2: Virtual Private Clouds (VPC), Networking & IAM Security",
+                    "Module 3: Containerization with Docker & Image Management",
+                    "Module 4: Automated CI/CD Pipelines with GitHub Actions",
+                    "Module 5: Serverless Architecture & Cloud Monitoring"
+                ]
+            },
+            {
+                "id": "data-ml",
+                "category": "Data & AI",
+                "title": "Data Science & Machine Learning",
+                "desc": "Transform raw data into predictive insights. Learn Python data analysis, machine learning algorithms, and how to deploy ML models into production.",
+                "duration": "10 Weeks (6 hrs/wk)",
+                "level": "Beginner to Intermediate",
+                "audience": "Math & CS Students, Analysts, AI Enthusiasts",
+                "roles": "Data Scientist, ML Engineer, Data Analyst",
+                "projects": "3 Machine Learning Capstones",
+                "tags": [
+                    "Python",
+                    "Pandas",
+                    "Scikit-Learn",
+                    "NumPy",
+                    "SQL",
+                    "Data Viz"
+                ],
+                "syllabus": [
+                    "Module 1: Python Programming for Data Science & NumPy",
+                    "Module 2: Data Cleaning, Wrangling & Visualization with Pandas",
+                    "Module 3: Exploratory Data Analysis & Statistical Modeling",
+                    "Module 4: Supervised & Unsupervised Machine Learning Algorithms",
+                    "Module 5: Model Evaluation & Deploying Models via REST API"
+                ]
+            },
+            {
+                "id": "cybersecurity",
+                "category": "Cyber Security",
+                "title": "Cybersecurity & Ethical Hacking",
+                "desc": "Learn network security, vulnerability assessment, web application security (OWASP Top 10), and ethical hacking defense strategies.",
+                "duration": "6 Weeks (5 hrs/wk)",
+                "level": "Beginner",
+                "audience": "CS & IT Students, Security Enthusiasts",
+                "roles": "Cybersecurity Analyst, Junior Pen Tester, SOC Analyst",
+                "projects": "2 Security Audit Labs",
+                "tags": [
+                    "Ethical Hacking",
+                    "Network Security",
+                    "Cryptography",
+                    "OWASP Top 10",
+                    "Wireshark"
+                ],
+                "syllabus": [
+                    "Module 1: Computer Networking & Packet Sniffing with Wireshark",
+                    "Module 2: Vulnerability Scanning & Port Scanning Techniques",
+                    "Module 3: Web Application Vulnerabilities & OWASP Mitigation",
+                    "Module 4: Cryptography, Encryption Standards & SSL/TLS",
+                    "Module 5: Hands-on Penetration Testing & Defensive Strategies"
+                ]
+            },
+            {
+                "id": "agile-pm",
+                "category": "Management",
+                "title": "Agile Product Management & Scrum",
+                "desc": "Master software delivery lifecycles, Jira workflows, Scrum ceremonies, and product roadmaps to lead modern tech teams efficiently.",
+                "duration": "4 Weeks (4 hrs/wk)",
+                "level": "All Levels",
+                "audience": "Engineering Students, MBA Aspirants, Team Leads",
+                "roles": "Associate Product Manager, Scrum Master, Project Coordinator",
+                "projects": "1 Product Roadmap & Sprint",
+                "tags": [
+                    "Agile",
+                    "Scrum",
+                    "Jira",
+                    "Product Design",
+                    "User Stories"
+                ],
+                "syllabus": [
+                    "Module 1: Agile Principles & Scrum Framework",
+                    "Module 2: Writing User Stories & Acceptance Criteria",
+                    "Module 3: Jira Backlog Management & Sprint Planning",
+                    "Module 4: Release Management & Product Metrics"
+                ]
+            },
+            {
+                "id": "ui-ux",
+                "category": "UI/UX Design",
+                "title": "UI/UX Design & Figma Prototyping",
+                "desc": "Design intuitive, beautiful user interfaces and interactive prototypes using Figma. Learn wireframing, user research, and design systems.",
+                "duration": "6 Weeks (5 hrs/wk)",
+                "level": "Beginner",
+                "audience": "Design Aspirants, Front-End Developers, Students",
+                "roles": "UI/UX Designer, Product Designer, Interaction Designer",
+                "projects": "2 Complete App Redesigns",
+                "tags": [
+                    "Figma",
+                    "Wireframing",
+                    "User Research",
+                    "Prototyping",
+                    "Design Systems"
+                ],
+                "syllabus": [
+                    "Module 1: User Research, Persona Mapping & Journey Maps",
+                    "Module 2: Information Architecture & Wireframing in Figma",
+                    "Module 3: Design Systems, Color Theory & Typography",
+                    "Module 4: Interactive Micro-animations & Developer Handoff"
+                ]
+            }
         ],
-        "partnersTitle": "Ready to Start Your Learning Journey?",
-        "securityTitle": "Apply today and join hundreds of students building successful tech careers with us.",
-        "ctaBtn": "Apply Now"
+        "journeyTitle": "Our 4-Stage Career Accelerator Pathway",
+        "journeySubtitle": "A proven step-by-step roadmap designed to guide you from beginner concepts to a hired software professional.",
+        "journeySteps": [
+            {
+                "step": "01",
+                "title": "Interactive Live Instruction",
+                "desc": "Attend live online coding sessions led by working software engineers with real-time Q&A."
+            },
+            {
+                "step": "02",
+                "title": "Production Capstone Projects",
+                "desc": "Build real, production-grade applications and publish your source code on GitHub for employers to review."
+            },
+            {
+                "step": "03",
+                "title": "1-on-1 Code Audits & Mentorship",
+                "desc": "Get personalized pull request reviews from senior developers to refine your code quality and architecture."
+            },
+            {
+                "step": "04",
+                "title": "Resume & Technical Interview Prep",
+                "desc": "Undergo mock technical interviews, refine your LinkedIn profile, and get direct referrals to our hiring network."
+            }
+        ],
+        "perksTitle": "Why Engineering Students Choose Reet Tech",
+        "perksSubtitle": "Everything you need to gain confidence, build real experience, and stand out in job interviews.",
+        "perksItems": [
+            {
+                "title": "100% Practical Building",
+                "desc": "No fake exercises or theory overload. You build real software architecture used by actual companies."
+            },
+            {
+                "title": "Direct Developer Mentors",
+                "desc": "Ask doubts anytime, get 1-on-1 guidance, and learn production best practices directly from engineers."
+            },
+            {
+                "title": "Verified Certification",
+                "desc": "Earn a shareable, verified Reet Tech Certificate of Completion with verifiable credentials for LinkedIn."
+            },
+            {
+                "title": "Flexible Batch Timings",
+                "desc": "Weekend and evening batches specifically structured to fit into student college schedules seamlessly."
+            }
+        ],
+        "faqTitle": "Frequently Asked Student Questions",
+        "faqSubtitle": "Everything you need to know about enrolling, batch timings, certificates, and career support.",
+        "faqs": [
+            {
+                "q": "Who is eligible to join these courses?",
+                "a": "Our programs are open to college students (B.Tech, BCA, MCA, B.Sc), recent graduates, and career switchers looking to build practical software engineering skills. Beginners are welcome for foundational tracks."
+            },
+            {
+                "q": "How are live classes and doubt clearing conducted?",
+                "a": "Classes are conducted live online with interactive coding demonstrations. Recorded backups are provided after every session. Doubts can be asked in real-time or resolved during 1-on-1 mentor code review sessions."
+            },
+            {
+                "q": "Do you provide job placement and interview assistance?",
+                "a": "Yes! We assist students with resume optimization, GitHub portfolio reviews, mock technical interviews, and direct job/internship referrals to our corporate partner network upon completing capstones."
+            },
+            {
+                "q": "Will I receive a course completion certificate?",
+                "a": "Yes, every student who successfully completes the required capstone projects and assessments receives a verified Reet Tech Certificate of Completion."
+            },
+            {
+                "q": "Can I manage these courses along with my college classes?",
+                "a": "Absolutely. Batches are held during evenings and weekends (4 to 6 hours per week) so you can easily manage your college attendance and exams alongside."
+            }
+        ],
+        "partnersTitle": "Ready to Build Your Tech Career?",
+        "securityTitle": "Join hundreds of students currently building practical skills, capstone projects, and successful tech careers with Reet Tech.",
+        "ctaBtn": "Apply for Upcoming Batch",
+        "syllabusModal": {
+            "title": "Course Curriculum & Details",
+            "level": "Level",
+            "duration": "Duration",
+            "projects": "Projects",
+            "modules": "Curriculum Modules",
+            "skills": "Technologies Covered",
+            "apply": "Enroll in this Course",
+            "close": "Close Preview"
+        }
     },
     "jobshiring": {
         "heroTitle": "Join Our Team",
@@ -2601,5 +2829,166 @@
         "ctaTitle": "Stay Ahead of the Curve with Us",
         "ctaDesc": "In an ever-evolving marketplace, success belongs to those who adapt quickly. Our consulting framework helps you build an agile, data-powered, and tech-enabled business.",
         "ctaBtn": "Schedule a Free Strategy Session Today!"
+    },
+    "ourprojects": {
+        "heroTitle": "Our Portfolio Showcase",
+        "heroSubtext": "We build software applications that solve complex real-world problems and deliver measurable business growth.",
+        "badge": "HANDCRAFTED SOFTWARE • PRODUCTION PROOF • SHIPPED WITH PASSION",
+        "filterAll": "All Projects",
+        "manifestoTitle": "Our Technical Philosophy & Engineering Manifesto",
+        "ctaBannerTitle": "Have a custom project in mind? Let's build it together!",
+        "ctaBannerDesc": "Talk directly to our engineering team to estimate, architect, and ship your next digital product."
+    },
+    "cloudsolutions": {
+        "metadata": {
+            "title": "Enterprise Cloud Solutions & AWS Managed Services | Reet Technologies",
+            "description": "Scalable cloud infrastructure, AWS EC2/S3/Lambda deployments, VPC networking, DevOps automation, cloud migration, server security & 24/7 server management services by Reet Technologies.",
+            "keywords": "cloud solutions, AWS managed services, cloud infrastructure, cloud migration, EC2 instance management, S3 storage solutions, cloud security, VPS hosting, server management services Pune, DevOps consulting, Reet Technologies cloud"
+        }
+    },
+    "studentcourses": {
+        "metadata": {
+            "title": "Industry-Ready Student Courses & Tech Internships | Reet Technologies",
+            "description": "Comprehensive hands-on courses in Full-Stack Web Development, Cloud Computing, Mobile Apps, Cybersecurity, and AI/ML with live projects, 1-on-1 mentor reviews, and career placement support at Reet Technologies.",
+            "keywords": "student courses, IT training Pune, full stack developer course, cloud computing training, software internship, web development bootcamps, Reet Technologies academy, live project training, tech career accelerator"
+        },
+        "heroSubtext": "Learn directly from active software engineers at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews.",
+        "nextBatch": "Next Cohort Starts: 1st & 15th of Every Month | Flexible Evening & Weekend Batches",
+        "overviewDesc": "Traditional college degrees focus heavily on theoretical concepts. Our student programs are designed by active software developers to give you 100% practical exposure — helping you build real software, master modern tech stacks, and crack technical interviews.",
+        "filterAll": "All Courses",
+        "faqTitle": "Frequently Asked Student Questions",
+        "featureItems": [
+            {
+                "id": "c1",
+                "category": "Full-Stack Development",
+                "title": "Full-Stack Web Development (MERN / Next.js)",
+                "desc": "Master modern web development with React, Next.js, Node.js, Express, MongoDB, and Tailwind CSS with 1-on-1 code reviews.",
+                "duration": "12 Weeks",
+                "roles": "Full-Stack Developer, Frontend Engineer, Node.js Developer",
+                "tags": ["React", "Next.js", "Node.js", "MongoDB", "Tailwind"],
+                "audience": "Computer Science & IT Students, Aspiring Developers",
+                "syllabus": [
+                    "Module 1: Modern HTML5, CSS3, Flexbox & Tailwind CSS",
+                    "Module 2: JavaScript ES6+, Async/Await & DOM Manipulation",
+                    "Module 3: React 19 Fundamentals, State Management & Hooks",
+                    "Module 4: Next.js App Router, SSR, Server Actions & Routing",
+                    "Module 5: Node.js, Express REST API Architecture & JWT Auth",
+                    "Module 6: MongoDB, Mongoose Schema Design & Database Audits",
+                    "Module 7: Git, GitHub Pull Request Audits & Live Vercel Deployment"
+                ]
+            },
+            {
+                "id": "c2",
+                "category": "Cloud & DevOps",
+                "title": "Cloud Computing & DevOps Engineering",
+                "desc": "Build and manage scalable cloud infrastructure on AWS, master Docker containerization, CI/CD automation, and server security.",
+                "duration": "10 Weeks",
+                "roles": "Cloud Engineer, DevOps Associate, Site Reliability Engineer",
+                "tags": ["AWS", "Docker", "Linux", "CI/CD", "Terraform"],
+                "audience": "IT Students, System Admin Aspirants, Cloud Enthusiasts",
+                "syllabus": [
+                    "Module 1: Linux Fundamentals, Command Line & Bash Scripting",
+                    "Module 2: AWS EC2 Instance Management, Auto-Scaling & Load Balancers",
+                    "Module 3: AWS S3 Object Storage, Security Policies & IAM Roles",
+                    "Module 4: Docker Containerization & Multi-Container Compose",
+                    "Module 5: CI/CD Pipelines with GitHub Actions & Automated Deployment",
+                    "Module 6: VPS Server Hardening, SSL Certificates & Nginx Web Server"
+                ]
+            },
+            {
+                "id": "c3",
+                "category": "Mobile Development",
+                "title": "Cross-Platform Mobile App Development",
+                "desc": "Develop high-performance iOS and Android mobile applications using React Native, Expo, and Firebase backend services.",
+                "duration": "10 Weeks",
+                "roles": "React Native Developer, Mobile App Engineer",
+                "tags": ["React Native", "Expo", "Firebase", "iOS", "Android"],
+                "audience": "CS Students, Mobile Development Enthusiasts",
+                "syllabus": [
+                    "Module 1: React Native Core Components & Layout Systems",
+                    "Module 2: Navigation & Screen Flows with React Navigation",
+                    "Module 3: Firebase Authentication, Realtime Database & Storage",
+                    "Module 4: Native Device Features (Camera, Location, Push Notifications)",
+                    "Module 5: State Management with Context API / Zustand",
+                    "Module 6: App Store & Google Play Store Publishing Process"
+                ]
+            },
+            {
+                "id": "c4",
+                "category": "AI & Data Science",
+                "title": "AI & Machine Learning Engineering",
+                "desc": "Learn Python for data analysis, data visualization, supervised/unsupervised machine learning models, and LLM API integrations.",
+                "duration": "12 Weeks",
+                "roles": "Data Analyst, AI Developer, ML Engineer",
+                "tags": ["Python", "Pandas", "Scikit-Learn", "OpenAI API", "SQL"],
+                "audience": "Data Enthusiasts, Engineering & Math Students",
+                "syllabus": [
+                    "Module 1: Python Programming for Data Analysis & NumPY",
+                    "Module 2: Data Wrangling & Visualization with Pandas & Seaborn",
+                    "Module 3: Exploratory Data Analysis & Feature Engineering",
+                    "Module 4: Machine Learning with Scikit-Learn (Regression, Classification)",
+                    "Module 5: Generative AI & Prompt Engineering with LLM APIs",
+                    "Module 6: Deploying ML Models as Web APIs using FastAPI"
+                ]
+            },
+            {
+                "id": "c5",
+                "category": "Cybersecurity",
+                "title": "Cybersecurity & Ethical Hacking Basics",
+                "desc": "Understand network security fundamentals, vulnerability assessment, OWASP Top 10 web security audits, and penetration testing.",
+                "duration": "8 Weeks",
+                "roles": "Security Analyst, Junior Penetration Tester",
+                "tags": ["Network Security", "OWASP", "Wireshark", "Linux", "Ethical Hacking"],
+                "audience": "IT & Computer Science Students interested in Security",
+                "syllabus": [
+                    "Module 1: Networking Protocols (TCP/IP, HTTP/S, DNS) & Packet Sniffing",
+                    "Module 2: Linux Administration for Cybersecurity Specialists",
+                    "Module 3: OWASP Top 10 Web Vulnerabilities & Prevention",
+                    "Module 4: Vulnerability Scanning & Security Assessments",
+                    "Module 5: Encryption, Hashing, OAuth2 & JWT Security Protocols",
+                    "Module 6: Security Audit Report Writing & Best Practices"
+                ]
+            }
+        ],
+        "journeySteps": [
+            {
+                "step": "01",
+                "title": "Core Fundamentals & Stack Orientation",
+                "desc": "Master baseline syntax, software design patterns, git workflows, and development environment setup."
+            },
+            {
+                "step": "02",
+                "title": "Hands-On Capstone Building",
+                "desc": "Build 4+ production-ready software applications under the direct guidance of senior engineers."
+            },
+            {
+                "step": "03",
+                "title": "1-on-1 Code Audits & PR Reviews",
+                "desc": "Push your code to GitHub and receive line-by-line pull request audits to improve code quality."
+            },
+            {
+                "step": "04",
+                "title": "Career Placement & Interview Prep",
+                "desc": "Optimize your technical resume, practice mock coding interviews, and get referred to hiring tech partners."
+            }
+        ],
+        "faqs": [
+            {
+                "q": "Are these courses suitable for college students with zero programming background?",
+                "a": "Yes! Our curriculum starts from foundational principles and progresses step-by-step into advanced production building with 1-on-1 mentor support."
+            },
+            {
+                "q": "What is the format of the live classes?",
+                "a": "We offer flexible evening and weekend batches with 100% interactive live code sessions, recording archives, and active Discord mentor assistance."
+            },
+            {
+                "q": "Do I get a verified course completion certificate?",
+                "a": "Yes, upon successfully building and defending your capstone projects, you will receive an industry-recognized certificate from Reet Technologies."
+            },
+            {
+                "q": "How do code reviews work during the course?",
+                "a": "Every student submits weekly assignments via GitHub pull requests. Active developers from Reet Tech audit your PRs and provide line-by-line feedback."
+            }
+        ]
     }
 }

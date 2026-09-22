@@ -64,6 +64,19 @@ const Enterprise = [
   },
 ];
 
+const CloudInfrastructure = [
+  {
+    name: "Cloud & Server Solutions",
+    description: "AWS cloud architecture, server setup, administration & DevOps.",
+    href: "/services/cloud-solutions",
+  },
+  {
+    name: "AWS & Data Management",
+    description: "Database administration, automated backups & secure data management.",
+    href: "/services/aws-data",
+  },
+];
+
 const Solutions = [
   {
     name: "Digital Transformation",
@@ -93,22 +106,12 @@ const Solutions = [
     description: "Performance-driven SEO, social, and ad strategies.",
     href: "/pages/services/ourSolutions/digital-marketing",
   },
-  // {
-  //   name: "High End Website Development",
-  //   description: "Bespoke, high-performance websites with modern UX/UI.",
-  //   href: "/pages/services/high-end-web",
-  // },
   {
     name: "AR & VR Solutions",
     description:
       "Immersive augmented and virtual reality solutions for enterprises.",
     href: "/pages/services/ourSolutions/ar-vr-solutions",
   },
-  // {
-  //   name: "Cyber Security",
-  //   description: "Comprehensive security audits and cyber defense systems.",
-  //   href: "/pages/services/cyber-security",
-  // },
 ];
 
 const Industries = [
@@ -170,6 +173,10 @@ const AboutUs = [
     name: "Our Team",
     href: "/pages/about/ourTeam",
   },
+  {
+    name: "Our Projects",
+    href: "/pages/about/ourProjects",
+  },
 ];
 
 const Careers = [
@@ -177,10 +184,10 @@ const Careers = [
     name: "Student Courses",
     href: "/pages/careers/courses",
   },
-  {
-    name: "Jobs & Hiring",
-    href: "/pages/careers/jobs-hiring",
-  },
+  // {
+  //   name: "Jobs & Hiring",
+  //   href: "/pages/careers/jobs-hiring",
+  // },
 ];
 
 export const Header = () => {
@@ -189,6 +196,7 @@ export const Header = () => {
   const [showServices, setShowServices] = useState(false);
   const [mobileIndustriesopen, setMobileIndustriesopen] = useState(false);
   const [showExpertise, setShowExpertise] = useState(false);
+  const [showCloud, setShowCloud] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [mobileProductopen, setMobileProductopen] = useState(false);
   const [mobileAboutUsopen, setMobileAboutUsopen] = useState(false);
@@ -207,18 +215,18 @@ export const Header = () => {
         aria-label="Global"
       >
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/reetlogo.png"
             alt="Reet Technologies Logo"
             width={40}
             height={40}
-            className="w-16 h-auto"
+            className="w-16 h-auto transition-transform duration-300 group-hover:scale-105"
           />
           <span className="text-white font-semibold text-xl uppercase leading-tight">
             {t("reet")} <br /> {t("technologies")}
           </span>
-        </div>
+        </Link>
 
         {/* Mobile Toggle */}
         <div className="lg:hidden">
@@ -233,9 +241,8 @@ export const Header = () => {
                     key={code}
                     href={pathname}
                     locale={code}
-                    className={`block w-full text-left hover:text-blue-300 ${
-                      currentLocale === code ? "font-bold" : ""
-                    }`}
+                    className={`block w-full text-left hover:text-blue-300 ${currentLocale === code ? "font-bold" : ""
+                      }`}
                   >
                     {label}
                   </Link>
@@ -259,11 +266,6 @@ export const Header = () => {
 
         {/* Desktop Menu */}
         <PopoverGroup className="hidden lg:flex gap-x-8 text-white font-medium text-lg">
-          {/* Home */}
-          <Link href="/" className="hover:text-blue-300 transition">
-            {t("home")}
-          </Link>
-
           <Popover className="relative group">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
               {t("services")}
@@ -279,45 +281,66 @@ export const Header = () => {
                 <div className="absolute left-full -top-4 z-40 ml-4 w-72 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-white/90 invisible opacity-0 group-hover/exp:visible group-hover/exp:opacity-100 transition-all duration-300">
                   <Link
                     href="/pages/services/ourEnterprise/nextgenconsulting"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Next Generation Consulting
                   </Link>
                   <Link
                     href="/pages/services/ourEnterprise/brandPortfolioManagement"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Brand Portfolio Management
                   </Link>
                   <Link
                     href="/pages/services/ourEnterprise/researchAndDevelopment"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Research & Development
                   </Link>
                   <Link
                     href="/pages/services/ourEnterprise/businessEstablishment"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Business Establishment
                   </Link>
                   <Link
                     href="/pages/services/ourEnterprise/projectManagement"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Project Management
                   </Link>
                   <Link
                     href="/pages/services/ourEnterprise/businessAndItConsulting"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Business & IT Consulting
                   </Link>
                   <Link
                     href="/pages/services/ourEnterprise/softwareDevelopment"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Software Development
+                  </Link>
+                </div>
+              </div>
+
+              {/* Cloud & Infrastructure Category */}
+              <div className="relative group/cloud">
+                <div className="w-full text-left font-semibold text-white hover:text-blue-300 flex justify-between items-center cursor-pointer">
+                  Cloud &amp; Infrastructure <ChevronRightIcon className="w-4 h-4" />
+                </div>
+                <div className="absolute left-full -top-10 z-40 ml-4 w-72 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-white/90 invisible opacity-0 group-hover/cloud:visible group-hover/cloud:opacity-100 transition-all duration-300">
+                  <Link
+                    href="/services/cloud-solutions"
+                    className="block hover:text-blue-300"
+                  >
+                    Cloud &amp; Server Solutions
+                  </Link>
+                  <Link
+                    href="/services/aws-data"
+                    className="block hover:text-blue-300"
+                  >
+                    AWS &amp; Data Management
                   </Link>
                 </div>
               </div>
@@ -327,61 +350,49 @@ export const Header = () => {
                 <div className="w-full text-left font-semibold text-white hover:text-blue-300 flex justify-between items-center cursor-pointer">
                   Our Solutions <ChevronRightIcon className="w-4 h-4" />
                 </div>
-                <div className="absolute left-full -top-13 z-40 ml-4 w-72 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-white/90 invisible opacity-0 group-hover/sol:visible group-hover/sol:opacity-100 transition-all duration-300">
+                <div className="absolute left-full -top-16 z-40 ml-4 w-72 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-white/90 invisible opacity-0 group-hover/sol:visible group-hover/sol:opacity-100 transition-all duration-300">
                   <Link
                     href="/pages/services/ourSolutions/digital-transformation"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Digital Transformation
                   </Link>
                   <Link
                     href="/pages/services/ourSolutions/crm-erp-solution"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     CRM & ERP Solutions
                   </Link>
                   <Link
                     href="/pages/services/ourSolutions/mobile-and-web-application"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Mobile & Web Applications
                   </Link>
                   <Link
                     href="/pages/services/ourSolutions/ai-ml"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     AI & ML
                   </Link>
                   <Link
                     href="/pages/services/ourSolutions/digital-marketing"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     Digital Marketing
                   </Link>
-                  {/* <Link
-                    href="/pages/services/ourSolutions/high-end-website-development"
-                    className="block"
-                  >
-                    High End Website Development
-                  </Link> */}
                   <Link
                     href="/pages/services/ourSolutions/ar-vr-solutions"
-                    className="block"
+                    className="block hover:text-blue-300"
                   >
                     AR & VR Solutions
                   </Link>
-                  {/* <Link
-                    href="/pages/services/ourSolutions/cyber-security"
-                    className="block"
-                  >
-                    Cyber Security
-                  </Link> */}
                 </div>
               </div>
 
               <Link
                 href="/pages/services"
-                className="block font-semibold text-white"
+                className="block font-semibold text-white hover:text-blue-300"
               >
                 Our Services & Solutions
               </Link>
@@ -464,22 +475,29 @@ export const Header = () => {
               >
                 Our Team
               </Link>
+              <Link
+                href="/pages/about/ourProjects"
+                className="block hover:text-blue-300"
+              >
+                Our Projects
+              </Link>
             </PopoverPanel>
           </Popover>
 
           {/* Career Courses */}
           <Popover className="relative group">
             <PopoverButton className="flex items-center gap-1 hover:text-blue-300 transition focus:outline-none">
-              {t("careers")} <ChevronDownIcon className="h-5 w-5" />
-            </PopoverButton>
-            <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
+              {/* {t("careers")} <ChevronDownIcon className="h-5 w-5" /> */}
               <Link href="/pages/careers/courses" className="block">
                 Student Courses
               </Link>
+            </PopoverButton>
+            {/* <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
+            
               <Link href="/pages/careers/jobs-hiring" className="block">
                 Jobs & Hiring
               </Link>
-            </PopoverPanel>
+            </PopoverPanel> */}
           </Popover>
 
           {/* Contact */}
@@ -501,9 +519,8 @@ export const Header = () => {
                   key={code}
                   href={pathname}
                   locale={code}
-                  className={`block w-full text-left hover:text-blue-300 ${
-                    currentLocale === code ? "font-bold" : ""
-                  }`}
+                  className={`block w-full text-left hover:text-blue-300 ${currentLocale === code ? "font-bold" : ""
+                    }`}
                 >
                   {label}
                 </Link>
@@ -515,13 +532,12 @@ export const Header = () => {
 
       {/* Mobile Nav placeholder */}
       <div
-        className={`off-canvas fixed inset-0 bg-black z-50 h-lvh transform transition-transform duration-300 ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`off-canvas fixed inset-0 bg-black z-50 h-lvh transform transition-transform duration-300 ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="off-canvas__inner py-2 px-5 bg-black border-b-2 border-[#683e2a]">
           <div className="flex justify-between">
-            <div className="flex items-center gap-3 py-2">
+            <Link href="/" onClick={toggleMobileMenu} className="flex items-center gap-3 py-2 cursor-pointer">
               <Image
                 src="/reetlogo.png"
                 alt="Reet Technologies Logo"
@@ -532,7 +548,7 @@ export const Header = () => {
               <span className="text-white font-semibold text-xl uppercase leading-tight">
                 {t("reet")} <br /> {t("technologies")}
               </span>
-            </div>
+            </Link>
 
             <button onClick={toggleMobileMenu} aria-label="Close menu">
               <XMarkIcon className="h-8 w-8 text-white" />
@@ -542,15 +558,13 @@ export const Header = () => {
         <div className="off-canvas__inner py-5 px-7">
           <nav className="off-canvas__nav">
             <PopoverGroup className=" lg:gap-x-12 text-lg font-medium text-white capitalizeg">
-              <Link href="/" className="transition" onClick={toggleMobileMenu}>
-                {t("home")}
-              </Link>
 
               {/* Services Toggle */}
               <button
                 onClick={() => {
                   setShowServices(!showServices);
                   setShowExpertise(false);
+                  setShowCloud(false);
                   setShowSolutions(false);
                   setMobileIndustriesopen(false);
                 }}
@@ -558,9 +572,8 @@ export const Header = () => {
               >
                 Services
                 <ChevronDownIcon
-                  className={`h-5 w-5 transition ${
-                    showServices ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 transition ${showServices ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -579,15 +592,15 @@ export const Header = () => {
                   <button
                     onClick={() => {
                       setShowExpertise(!showExpertise);
+                      setShowCloud(false);
                       setShowSolutions(false);
                     }}
                     className="flex justify-between items-center w-full"
                   >
                     <span>Our Expertise</span>
                     <ChevronDownIcon
-                      className={`w-5 h-5 transition ${
-                        showExpertise ? "rotate-180" : ""
-                      }`}
+                      className={`w-5 h-5 transition ${showExpertise ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                   {showExpertise && (
@@ -605,19 +618,49 @@ export const Header = () => {
                     </div>
                   )}
 
+                  {/* Cloud & Infrastructure */}
+                  <button
+                    onClick={() => {
+                      setShowCloud(!showCloud);
+                      setShowExpertise(false);
+                      setShowSolutions(false);
+                    }}
+                    className="flex justify-between items-center w-full"
+                  >
+                    <span>Cloud &amp; Infrastructure</span>
+                    <ChevronDownIcon
+                      className={`w-5 h-5 transition ${showCloud ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+                  {showCloud && (
+                    <div className="ml-4 space-y-1">
+                      {CloudInfrastructure.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          onClick={toggleMobileMenu}
+                          className="block hover:text-blue-300"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
                   {/* Our Solutions */}
                   <button
                     onClick={() => {
                       setShowSolutions(!showSolutions);
                       setShowExpertise(false);
+                      setShowCloud(false);
                     }}
                     className="flex justify-between items-center w-full"
                   >
                     <span>Our Solutions</span>
                     <ChevronDownIcon
-                      className={`w-5 h-5 transition ${
-                        showSolutions ? "rotate-180" : ""
-                      }`}
+                      className={`w-5 h-5 transition ${showSolutions ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                   {showSolutions && (
@@ -644,9 +687,8 @@ export const Header = () => {
               >
                 Industries
                 <ChevronDownIcon
-                  className={`h-5 w-5 transition ${
-                    mobileIndustriesopen ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 transition ${mobileIndustriesopen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -672,9 +714,8 @@ export const Header = () => {
               >
                 Our Products
                 <ChevronDownIcon
-                  className={`h-5 w-5 transition ${
-                    mobileProductopen ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 transition ${mobileProductopen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -700,9 +741,8 @@ export const Header = () => {
               >
                 About Us
                 <ChevronDownIcon
-                  className={`h-5 w-5 transition ${
-                    mobileAboutUsopen ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 transition ${mobileAboutUsopen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -726,11 +766,10 @@ export const Header = () => {
                 onClick={() => setMobileCareersopen(!mobileCareersopen)}
                 className="flex items-center capitalize justify-between w-full gap-x-1 text-white hover:text-[#eed3b8] focus:outline-none"
               >
-                Careers
+                Student Courses
                 <ChevronDownIcon
-                  className={`h-5 w-5 transition ${
-                    mobileCareersopen ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 transition ${mobileCareersopen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
