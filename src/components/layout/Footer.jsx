@@ -35,7 +35,7 @@ export const Footer = () => {
 
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
+            <div dir="ltr" className="flex flex-row items-center gap-3 dir-ltr">
               <Image
                 src="/reetlogo.png"
                 alt="Reet Technologies"

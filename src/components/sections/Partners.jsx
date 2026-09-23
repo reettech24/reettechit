@@ -27,7 +27,7 @@ const Partners = () => {
                 alt={partner.name}
                 width={120}
                 height={60}
-                className="object-contain grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+                className="object-contain transition duration-300 ease-in-out"
               />
             </div>
           ))}

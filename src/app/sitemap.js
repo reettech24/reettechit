@@ -3,13 +3,19 @@ export default function sitemap() {
   const locales = ["en", "ar", "jp"];
 
   const routes = [
-    // Core Navigation Pages
+    // Core Navigation & Service Pages
     { path: "", priority: 1.0, changeFrequency: "daily" },
     { path: "/services/cloud-solutions", priority: 0.9, changeFrequency: "weekly" },
-    { path: "/pages/services/cloud-solutions", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/services/aws-data-security", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/pages/services/aws-data-security", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/pages/services/ourSolutions/crm-erp-solution", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/pages/services/ourSolutions/mobile-and-web-application", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/pages/services/ourSolutions/digital-transformation", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/pages/services/ourSolutions/ai-ml", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/pages/services/ourSolutions/digital-marketing", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/pages/services/ourSolutions/ar-vr-solutions", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/pages/services/ourSolutions/cyber-security", priority: 0.85, changeFrequency: "weekly" },
     { path: "/pages/careers/courses", priority: 0.9, changeFrequency: "weekly" },
-    { path: "/services/aws-data", priority: 0.8, changeFrequency: "weekly" },
-    { path: "/pages/services/aws-data", priority: 0.8, changeFrequency: "weekly" },
     { path: "/pages/services", priority: 0.85, changeFrequency: "weekly" },
     { path: "/pages/services/ourEnterprise", priority: 0.8, changeFrequency: "weekly" },
     { path: "/pages/services/ourSolutions", priority: 0.8, changeFrequency: "weekly" },

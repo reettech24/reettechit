@@ -2,6 +2,8 @@
 
 import React, { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 import ContactUsSection from "@/components/sections/ContactUsSection";
 import {
   GraduationCap,
@@ -122,7 +124,42 @@ export default function CoursesClient() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    toast.loading("Submitting application...", { id: "course-app-toast" });
+
+    const templateParams = {
+      name: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      subject: `Professional Course Application: ${formData.course || enrollingCourseTitle || "General Track"}`,
+      firm: formData.college || "Candidate / Student",
+      message: `Selected Course: ${formData.course || enrollingCourseTitle}\nCollege / Year / Experience: ${formData.college}\nMessage: ${formData.message}`,
+      to_email: "careers@reettechit.com",
+      recipient_email: "careers@reettechit.com",
+      send_to: "careers@reettechit.com",
+      target_email: "careers@reettechit.com",
+      careers_email: "careers@reettechit.com",
+      to_name: "Reettech IT Careers Team",
+    };
+
+    emailjs
+      .send(
+        "service_tq10qxx",
+        "template_vz09a9m",
+        templateParams,
+        "dS08Hy3gaFiNSD_du"
+      )
+      .then(() => {
+        toast.success("Application submitted successfully to careers@reettechit.com! ✅", {
+          id: "course-app-toast",
+        });
+        setFormSubmitted(true);
+      })
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        toast.error("Failed to submit application. Please try again.", {
+          id: "course-app-toast",
+        });
+      });
   };
 
   const cardPastelBgs = [
@@ -236,13 +273,13 @@ export default function CoursesClient() {
             </div>
 
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 text-sm font-semibold shadow-2xs">
-              <span className="font-handwritten text-[#FF3B70] text-base font-bold">★ Student Academy</span>
+              <span className="font-handwritten text-[#FF3B70] text-base font-bold">★ Professional &amp; Student Courses</span>
               <span className="text-slate-300">•</span>
-              <span>Hi, Future Developers</span>
+              <span className="text-[#FF3B70] font-bold">5+ Years Experience Mentors</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#1E1B4B] tracking-tight leading-[1.15]">
-              Industry-Ready Student Courses &amp;{" "}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E1B4B] tracking-tight leading-[1.15]">
+              Professional &amp; Industry-Ready Courses &amp;{" "}
               <span className="text-[#FF3B70] relative inline-block">
                 Tech Career Accelerator
                 <svg
@@ -257,7 +294,7 @@ export default function CoursesClient() {
 
             <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-2xl font-normal">
               {t("heroSubtext") ||
-                "Learn directly from active software engineers at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews."}
+                "Learn directly from senior software engineers with 5+ years of real-world experience at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews."}
             </p>
 
             <div className="inline-flex items-center gap-2 bg-[#E6F9F0] border border-emerald-300 text-emerald-800 px-4 py-2 rounded-2xl text-xs sm:text-sm font-bold shadow-2xs">
@@ -394,7 +431,7 @@ export default function CoursesClient() {
                 <div className="w-10 h-10 rounded-xl bg-[#FFE4EC] text-[#FF3B70] flex items-center justify-center mx-auto mb-2 font-bold">
                   <Star className="w-5 h-5" />
                 </div>
-                <div className="text-xl font-extrabold text-[#1E1B4B]">3+ Years</div>
+                <div className="text-xl font-extrabold text-[#1E1B4B]">5+ Years</div>
                 <div className="text-xs text-slate-500 font-medium">Academy Legacy</div>
               </div>
 
@@ -1044,17 +1081,47 @@ export default function CoursesClient() {
                   <div className="grid grid-cols-2 gap-3">
                     <div>
                       <label className="block text-xs font-bold text-slate-700 mb-1">
-                        Course Preference
+                        Course Preference *
                       </label>
-                      <input
-                        type="text"
+                      <select
+                        required
                         value={formData.course}
                         onChange={(e) =>
                           setFormData({ ...formData, course: e.target.value })
                         }
-                        placeholder="e.g. Full-Stack Web Development"
-                        className="w-full px-4 py-2.5 bg-[#FAF7F5] border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-[#FF3B70] transition-colors"
-                      />
+                        className="w-full px-4 py-2.5 bg-[#FAF7F5] border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:border-[#FF3B70] transition-colors cursor-pointer"
+                      >
+                        <option value="">Select a Course Track...</option>
+                        {formData.course &&
+                          ![
+                            "Full-Stack Web Development",
+                            "Non IT to IT Career Program",
+                            "Career Counselling & Career Guidance",
+                            "Project Management for IT (Technical & Non-Technical)",
+                            "AWS & Cloud Solutions / DevOps",
+                            "Cyber Security & Defense",
+                            "AI & Machine Learning Engineering",
+                            "Digital Marketing & Growth Strategy",
+                            "AR & VR Solutions Development",
+                            "CRM & ERP Software Solutions",
+                            "Other / Custom Tech Track",
+                          ].includes(formData.course) && (
+                            <option value={formData.course}>
+                              {formData.course}
+                            </option>
+                          )}
+                        <option value="Full-Stack Web Development">Full-Stack Web Development</option>
+                        <option value="Non IT to IT Career Program">Non IT to IT Career Program</option>
+                        <option value="Career Counselling & Career Guidance">Career Counselling &amp; Career Guidance</option>
+                        <option value="Project Management for IT (Technical & Non-Technical)">Project Management for IT (Technical &amp; Non-Technical)</option>
+                        <option value="AWS & Cloud Solutions / DevOps">AWS &amp; Cloud Solutions / DevOps</option>
+                        <option value="Cyber Security & Defense">Cyber Security &amp; Defense</option>
+                        <option value="AI & Machine Learning Engineering">AI &amp; Machine Learning Engineering</option>
+                        <option value="Digital Marketing & Growth Strategy">Digital Marketing &amp; Growth Strategy</option>
+                        <option value="AR & VR Solutions Development">AR &amp; VR Solutions Development</option>
+                        <option value="CRM & ERP Software Solutions">CRM &amp; ERP Software Solutions</option>
+                        <option value="Other / Custom Tech Track">Other / Custom Tech Track</option>
+                      </select>
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-slate-700 mb-1">
@@ -1094,6 +1161,12 @@ export default function CoursesClient() {
                     <Send className="w-4 h-4" />
                     <span>Submit Application</span>
                   </button>
+                  <p className="text-center text-xs text-slate-500 pt-2">
+                    Applications are sent directly to{" "}
+                    <span className="text-[#FF3B70] font-bold">
+                      careers@reettechit.com
+                    </span>
+                  </p>
                 </form>
               </div>
             )}

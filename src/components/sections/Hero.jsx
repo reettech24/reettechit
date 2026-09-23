@@ -67,15 +67,15 @@ const Hero = () => {
                 }}
                 className="
                   max-w-5xl
-                  text-4xl
+                  text-3xl
                   font-semibold
-                  leading-[0.98]
-                  tracking-[-0.055em]
+                  leading-[1.02]
+                  tracking-[-0.045em]
                   text-white
-                  sm:text-6xl
-                  md:text-7xl
-                  lg:text-[64px]
-                  xl:text-[76px]
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-[52px]
+                  xl:text-[64px]
                 "
               >
                 {t(keys[index])}

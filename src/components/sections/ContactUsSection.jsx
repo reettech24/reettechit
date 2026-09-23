@@ -29,9 +29,11 @@ export default function ContactPage() {
     subject: "Web Development",
     custom_query: "",
     message: "",
+    website_trap: "", // Honeypot field for bot detection
   });
 
   const [errors, setErrors] = useState({});
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
   const serviceOptions = [
     "Web Development",
@@ -45,54 +47,123 @@ export default function ContactPage() {
   ];
 
   // ============================================================
-  // FORM LOGIC — UNCHANGED
+  // SECURITY & SANITIZATION HELPERS
+  // ============================================================
+
+  // Anti-XSS and HTML Sanitizer
+  const sanitizeInput = (str) => {
+    if (typeof str !== "string") return "";
+    return str
+      .trim()
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#x27;")
+      .replace(/\//g, "&#x2F;");
+  };
+
+  // Malicious Code / Script Injection Pattern Checker
+  const containsSuspiciousPattern = (str) => {
+    if (!str) return false;
+    const suspiciousPatterns = [
+      /<script/i,
+      /javascript:/i,
+      /vbscript:/i,
+      /data:/i,
+      /onload\s*=/i,
+      /onerror\s*=/i,
+      /onclick\s*=/i,
+      /<iframe/i,
+      /<embed/i,
+      /<object/i,
+      /SELECT\s+.*\s+FROM/i,
+      /INSERT\s+INTO/i,
+      /UPDATE\s+.*\s+SET/i,
+      /DELETE\s+FROM/i,
+      /DROP\s+TABLE/i,
+      /UNION\s+SELECT/i,
+    ];
+    return suspiciousPatterns.some((pattern) => pattern.test(str));
+  };
+
+  // ============================================================
+  // FORM VALIDATION LOGIC
   // ============================================================
 
   const validate = () => {
     const newErrors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^\+?[1-9]\d{6,14}$/;
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required.";
+    // Strict Regex Rules
+    const nameRegex = /^[a-zA-Z\s'.-]{2,60}$/;
+    const firmRegex = /^[a-zA-Z0-9\s&.,'-]{2,80}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneDigitsOnly = formData.phone.replace(/\D/g, "");
+
+    // Name Validation
+    const cleanName = formData.name.trim();
+    if (!cleanName) {
+      newErrors.name = "Full name is required.";
+    } else if (!nameRegex.test(cleanName)) {
+      newErrors.name = "Name must be 2-60 alphabetic characters only.";
+    } else if (containsSuspiciousPattern(cleanName)) {
+      newErrors.name = "Invalid characters detected in name.";
     }
 
-    if (!formData.firm.trim()) {
-      newErrors.firm = "Firm name is required.";
+    // Firm / Company Validation
+    const cleanFirm = formData.firm.trim();
+    if (!cleanFirm) {
+      newErrors.firm = "Company/Firm name is required.";
+    } else if (!firmRegex.test(cleanFirm)) {
+      newErrors.firm = "Company name must be 2-80 valid characters.";
+    } else if (containsSuspiciousPattern(cleanFirm)) {
+      newErrors.firm = "Invalid characters detected in company name.";
     }
 
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required.";
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Invalid email address.";
+    // Email Validation
+    const cleanEmail = formData.email.trim();
+    if (!cleanEmail) {
+      newErrors.email = "Email address is required.";
+    } else if (!emailRegex.test(cleanEmail)) {
+      newErrors.email = "Please enter a valid email address (e.g. john@example.com).";
+    } else if (containsSuspiciousPattern(cleanEmail)) {
+      newErrors.email = "Invalid characters detected in email.";
     }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required.";
-    } else if (
-      !phoneRegex.test(formData.phone.replace(/\D/g, ""))
-    ) {
-      newErrors.phone = "Invalid phone number.";
+    // Phone Validation
+    if (!formData.phone || phoneDigitsOnly.length < 7 || phoneDigitsOnly.length > 15) {
+      newErrors.phone = "Please enter a valid phone number (7-15 digits).";
     }
 
+    // Subject Validation
     if (!formData.subject) {
-      newErrors.subject = "Please select a subject.";
+      newErrors.subject = "Please select a service option.";
     }
 
-    if (
-      formData.subject === "Other" &&
-      !formData.custom_query.trim()
-    ) {
-      newErrors.custom_query =
-        "Please specify your custom query.";
+    // Custom Query Validation (if 'Other' is selected)
+    if (formData.subject === "Other") {
+      const cleanQuery = formData.custom_query.trim();
+      if (!cleanQuery) {
+        newErrors.custom_query = "Please specify your custom query.";
+      } else if (cleanQuery.length < 3 || cleanQuery.length > 150) {
+        newErrors.custom_query = "Custom query must be between 3 and 150 characters.";
+      } else if (containsSuspiciousPattern(cleanQuery)) {
+        newErrors.custom_query = "Potential security risk detected in query.";
+      }
     }
 
-    if (!formData.message.trim()) {
+    // Message Validation
+    const cleanMessage = formData.message.trim();
+    if (!cleanMessage) {
       newErrors.message = "Message cannot be empty.";
+    } else if (cleanMessage.length < 10) {
+      newErrors.message = "Message must be at least 10 characters long.";
+    } else if (cleanMessage.length > 2000) {
+      newErrors.message = "Message cannot exceed 2000 characters.";
+    } else if (containsSuspiciousPattern(cleanMessage)) {
+      newErrors.message = "Potential security risk or script tags detected in message.";
     }
 
     setErrors(newErrors);
-
     return Object.keys(newErrors).length === 0;
   };
 
@@ -113,20 +184,58 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!validate()) {
-      toast.error("Please fix the errors in the form.");
+    // 1. Honeypot check (Silent rejection for bots)
+    if (formData.website_trap) {
+      console.warn("Bot submission detected via honeypot field.");
+      toast.success("Message sent successfully! ✅", { id: "contact-toast" });
       return;
     }
 
-    toast.loading("Sending...", {
+    // 2. Rate Limiting Check (10-second cooldown)
+    const now = Date.now();
+    if (now - lastSubmitTime < 10000) {
+      toast.error("Please wait a few seconds before sending another message.", {
+        id: "contact-toast",
+      });
+      return;
+    }
+
+    // 3. Validation Check
+    if (!validate()) {
+      toast.error("Please fix the errors in the form.", {
+        id: "contact-toast",
+      });
+      return;
+    }
+
+    // 4. Input Sanitization before dispatching email
+    const sanitizedParams = {
+      name: sanitizeInput(formData.name),
+      firm: sanitizeInput(formData.firm),
+      email: sanitizeInput(formData.email),
+      phone: sanitizeInput(formData.phone),
+      subject: sanitizeInput(formData.subject),
+      custom_query: sanitizeInput(formData.custom_query),
+      message: sanitizeInput(formData.message),
+      to_email: "info@reettechit.com",
+      recipient_email: "info@reettechit.com",
+      send_to: "info@reettechit.com",
+      target_email: "info@reettechit.com",
+      info_email: "info@reettechit.com",
+      to_name: "Reettech IT Team",
+    };
+
+    toast.loading("Sending message securely...", {
       id: "contact-toast",
     });
+
+    setLastSubmitTime(now);
 
     emailjs
       .send(
         "service_tq10qxx",
         "template_vz09a9m",
-        { ...formData },
+        sanitizedParams,
         "dS08Hy3gaFiNSD_du"
       )
       .then(() => {
@@ -142,12 +251,14 @@ export default function ContactPage() {
           subject: "Web Development",
           custom_query: "",
           message: "",
+          website_trap: "",
         });
 
         setErrors({});
       })
-      .catch(() => {
-        toast.error("Failed to send message ❌", {
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        toast.error("Failed to send message. Please try again later. ❌", {
           id: "contact-toast",
         });
       });
@@ -715,6 +826,18 @@ export default function ContactPage() {
                   onSubmit={handleSubmit}
                   className="space-y-4"
                 >
+                  {/* Anti-Bot Honeypot Field */}
+                  <input
+                    type="text"
+                    name="website_trap"
+                    value={formData.website_trap}
+                    onChange={handleChange}
+                    tabIndex="-1"
+                    aria-hidden="true"
+                    autoComplete="off"
+                    className="hidden opacity-0 pointer-events-none absolute -z-50 h-0 w-0"
+                  />
+
                   {/* Name / Firm */}
 
                   <div className="grid gap-4 sm:grid-cols-2">

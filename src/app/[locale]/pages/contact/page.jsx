@@ -37,24 +37,71 @@ export default function ContactPage() {
     "Other",
   ];
 
+  const sanitizeInput = (str) => {
+    if (typeof str !== "string") return "";
+    return str
+      .trim()
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#x27;")
+      .replace(/\//g, "&#x2F;");
+  };
+
+  const containsSuspiciousPattern = (str) => {
+    if (!str) return false;
+    const suspiciousPatterns = [
+      /<script/i,
+      /javascript:/i,
+      /vbscript:/i,
+      /data:/i,
+      /onload\s*=/i,
+      /onerror\s*=/i,
+      /<iframe/i,
+      /SELECT\s+.*\s+FROM/i,
+      /DROP\s+TABLE/i,
+    ];
+    return suspiciousPatterns.some((pattern) => pattern.test(str));
+  };
+
   const validate = () => {
     const newErrors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^\+?[1-9]\d{6,14}$/; // E.164 format
+    const nameRegex = /^[a-zA-Z\s'.-]{2,60}$/;
+    const firmRegex = /^[a-zA-Z0-9\s&.,'-]{2,80}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneDigitsOnly = formData.phone ? formData.phone.replace(/\D/g, "") : "";
 
-    if (!formData.name.trim()) newErrors.name = "Name is required.";
-    if (!formData.firm.trim()) newErrors.firm = "Firm name is required.";
-    if (!formData.email.trim()) newErrors.email = "Email is required.";
-    else if (!emailRegex.test(formData.email))
-      newErrors.email = "Invalid email address.";
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
-    else if (!phoneRegex.test(formData.phone.replace(/\s+/g, "")))
-      newErrors.phone = "Invalid phone number.";
+    const cleanName = formData.name.trim();
+    if (!cleanName) newErrors.name = "Full Name is required.";
+    else if (!nameRegex.test(cleanName)) newErrors.name = "Name must be 2-60 alphabetic characters.";
+    else if (containsSuspiciousPattern(cleanName)) newErrors.name = "Invalid characters detected.";
+
+    const cleanFirm = formData.firm.trim();
+    if (!cleanFirm) newErrors.firm = "Firm/Company name is required.";
+    else if (!firmRegex.test(cleanFirm)) newErrors.firm = "Company name must be 2-80 valid characters.";
+    else if (containsSuspiciousPattern(cleanFirm)) newErrors.firm = "Invalid characters detected.";
+
+    const cleanEmail = formData.email.trim();
+    if (!cleanEmail) newErrors.email = "Email is required.";
+    else if (!emailRegex.test(cleanEmail)) newErrors.email = "Please enter a valid email address.";
+    else if (containsSuspiciousPattern(cleanEmail)) newErrors.email = "Invalid characters detected.";
+
+    if (!formData.phone || phoneDigitsOnly.length < 7 || phoneDigitsOnly.length > 15) {
+      newErrors.phone = "Please enter a valid phone number (7-15 digits).";
+    }
+
     if (!formData.subject) newErrors.subject = "Please select a subject.";
-    if (formData.subject === "Other" && !formData.custom_query.trim())
-      newErrors.custom_query = "Please specify your custom query.";
-    if (!formData.message.trim())
-      newErrors.message = "Message cannot be empty.";
+
+    if (formData.subject === "Other") {
+      const cleanQuery = formData.custom_query.trim();
+      if (!cleanQuery) newErrors.custom_query = "Please specify your query.";
+      else if (containsSuspiciousPattern(cleanQuery)) newErrors.custom_query = "Invalid content detected.";
+    }
+
+    const cleanMessage = formData.message.trim();
+    if (!cleanMessage) newErrors.message = "Message cannot be empty.";
+    else if (cleanMessage.length < 10) newErrors.message = "Message must be at least 10 characters.";
+    else if (containsSuspiciousPattern(cleanMessage)) newErrors.message = "Potential security risk detected.";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -72,17 +119,33 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) {
-      toast.error("Please fix the errors in the form.");
+      toast.error("Please fix the errors in the form.", { id: "contact-toast" });
       return;
     }
 
-    toast.loading("Sending...", { id: "contact-toast" });
+    const sanitizedParams = {
+      name: sanitizeInput(formData.name),
+      firm: sanitizeInput(formData.firm),
+      email: sanitizeInput(formData.email),
+      phone: sanitizeInput(formData.phone),
+      subject: sanitizeInput(formData.subject),
+      custom_query: sanitizeInput(formData.custom_query),
+      message: sanitizeInput(formData.message),
+      to_email: "info@reettechit.com",
+      recipient_email: "info@reettechit.com",
+      send_to: "info@reettechit.com",
+      target_email: "info@reettechit.com",
+      info_email: "info@reettechit.com",
+      to_name: "Reettech IT Support Team",
+    };
+
+    toast.loading("Sending message securely...", { id: "contact-toast" });
 
     emailjs
       .send(
         "service_tq10qxx",
         "template_vz09a9m",
-        { ...formData },
+        sanitizedParams,
         "dS08Hy3gaFiNSD_du"
       )
       .then(() => {
@@ -98,8 +161,9 @@ export default function ContactPage() {
         });
         setErrors({});
       })
-      .catch(() => {
-        toast.error("Failed to send message ❌", { id: "contact-toast" });
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        toast.error("Failed to send message. Please try again ❌", { id: "contact-toast" });
       });
   };
 

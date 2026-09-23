@@ -14,12 +14,16 @@ const partnerImages = {
   testimonial1: "/partners/dimplechemicals.png",
   testimonial2: "/partners/logo3.png",
   testimonial3: "/partners/puneeta.png",
+  testimonial4: "/Client/Texcarp.png",
+  testimonial5: "/Client/beyond6senses.jpeg",
 };
 
 const defaultTestimonialKeys = [
   "testimonial1",
   "testimonial2",
   "testimonial3",
+  "testimonial4",
+  "testimonial5",
 ];
 
 export default function AwsClientReviewsSection() {
@@ -523,11 +527,11 @@ function ReviewCard({ client }) {
                   h-full
                   w-full
                   rounded-full
-                  object-cover
-                  grayscale-[15%]
+                  object-contain
+                  bg-white/10
+                  p-0.5
                   transition-all
                   duration-500
-                  group-hover:grayscale-0
                 "
               />
             </div>

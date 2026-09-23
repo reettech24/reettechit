@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   }
 
   const metaTitle =
-    messages?.metadata?.title || "Reet Technologies | IT Solutions & Services | Web, Cloud, AWS & Software Development";
+    messages?.metadata?.title || "Reet Technologies | IT Solutions & Services";
   const metaDesc =
     messages?.metadata?.description ||
     "Get professional IT solutions for your business. AWS & cloud services, web & mobile apps, software development, digital transformation and IT consulting.";

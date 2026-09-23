@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 import './AwsGetInTouchSection.css';
 
 export default function AwsGetInTouchSection() {
@@ -95,7 +97,45 @@ export default function AwsGetInTouchSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
+    toast.loading('Sending message...', { id: 'aws-contact-toast' });
+
+    const templateParams = {
+      name: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      firm: formData.firmName,
+      subject: formData.service,
+      message: formData.message,
+      to_email: "info@reettechit.com",
+      recipient_email: "info@reettechit.com",
+      send_to: "info@reettechit.com",
+      target_email: "info@reettechit.com",
+      info_email: "info@reettechit.com",
+      to_name: "Reettech IT Team",
+    };
+
+    emailjs
+      .send(
+        'service_tq10qxx',
+        'template_vz09a9m',
+        templateParams,
+        'dS08Hy3gaFiNSD_du'
+      )
+      .then(() => {
+        toast.success('Message sent successfully! ✅', { id: 'aws-contact-toast' });
+        setFormData({
+          fullName: '',
+          firmName: '',
+          email: '',
+          phone: '',
+          service: 'Web Development',
+          message: ''
+        });
+      })
+      .catch((err) => {
+        console.error('EmailJS Error:', err);
+        toast.error('Failed to send message. Please try again.', { id: 'aws-contact-toast' });
+      });
   };
 
   return (

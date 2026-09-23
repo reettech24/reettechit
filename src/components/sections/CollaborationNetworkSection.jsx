@@ -308,16 +308,12 @@ export default function CollaborationNetworkSection() {
                       max-w-[75%]
                       object-contain
                       object-left
-                      opacity-65
-                      grayscale
-                      brightness-[1.2]
+                      opacity-90
                       transition-all
                       duration-500
 
                       group-hover:scale-[1.03]
                       group-hover:opacity-100
-                      group-hover:grayscale-0
-                      group-hover:brightness-100
                     "
                   />
                 </div>

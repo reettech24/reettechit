@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter, Link } from "@/i18n/navigation";
@@ -203,19 +203,38 @@ export const Header = () => {
   const [mobileCareersopen, setMobileCareersopen] = useState(false);
   const pathname = usePathname();
   const currentLocale = useLocale();
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 80 && currentScrollY > lastScrollY) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
+    <header className={`fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10 transition-transform duration-300 ${
+      showHeader ? "translate-y-0" : "-translate-y-full"
+    }`}>
       <nav
         className="mx-auto max-w-full flex items-center justify-between px-6 py-4 lg:px-12"
         aria-label="Global"
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" dir="ltr" className="flex flex-row items-center gap-3 group dir-ltr">
           <Image
             src="/reetlogo.png"
             alt="Reet Technologies Logo"
@@ -223,7 +242,7 @@ export const Header = () => {
             height={40}
             className="w-16 h-auto transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="text-white font-semibold text-xl uppercase leading-tight">
+          <span className="text-white font-semibold text-xl uppercase leading-tight text-left">
             {t("reet")} <br /> {t("technologies")}
           </span>
         </Link>
@@ -538,7 +557,7 @@ export const Header = () => {
       >
         <div className="off-canvas__inner py-2 px-5 bg-black border-b-2 border-[#683e2a]">
           <div className="flex justify-between">
-            <Link href="/" onClick={toggleMobileMenu} className="flex items-center gap-3 py-2 cursor-pointer">
+            <Link href="/" dir="ltr" onClick={toggleMobileMenu} className="flex flex-row items-center gap-3 py-2 cursor-pointer dir-ltr">
               <Image
                 src="/reetlogo.png"
                 alt="Reet Technologies Logo"
@@ -546,7 +565,7 @@ export const Header = () => {
                 height={40}
                 className="w-16 h-auto"
               />
-              <span className="text-white font-semibold text-xl uppercase leading-tight">
+              <span className="text-white font-semibold text-xl uppercase leading-tight text-left">
                 {t("reet")} <br /> {t("technologies")}
               </span>
             </Link>

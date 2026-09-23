@@ -21,6 +21,14 @@ const testimonialsData = [
     key: "testimonial3",
     avatar: "/partners/puneeta.png",
   },
+  {
+    key: "testimonial4",
+    avatar: "/Client/Texcarp.png",
+  },
+  {
+    key: "testimonial5",
+    avatar: "/Client/beyond6senses.jpeg",
+  },
 ];
 
 export default function TestimonialSection() {
@@ -44,8 +52,8 @@ export default function TestimonialSection() {
               <div className="group">
                 <div className="bg-yellow-600 group-hover:bg-transparent group-hover:text-white transition-colors duration-300 text-center shadow-lg p-8 lg:p-6 max-w-2xl mx-auto">
                   <div className="relative w-24 h-24 mb-4 mx-auto">
-                    <div className="w-24 h-24 rounded-full bg-[#070B2A] group-hover:bg-white shadow-xl flex items-center justify-center text-teal-500 text-4xl transition-colors duration-300">
-                      &ldquo;
+                    <div className="w-24 h-24 rounded-full bg-white shadow-xl flex items-center justify-center transition-colors duration-300 overflow-hidden p-2">
+                      <img src={item.avatar} alt={t(`${item.key}.name`)} className="w-full h-full object-contain rounded-full" />
                     </div>
                   </div>
                   <h3 className="text-[#070B2A] text-lg font-semibold uppercase tracking-widest group-hover:text-white transition-colors">

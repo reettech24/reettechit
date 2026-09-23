@@ -165,15 +165,11 @@ const LogoCard = ({ logo }) => (
           w-full
           object-contain
           object-center
-          opacity-65
-          grayscale
-          brightness-[1.25]
+          opacity-90
           transition-all
           duration-500
           group-hover:scale-[1.04]
           group-hover:opacity-100
-          group-hover:grayscale-0
-          group-hover:brightness-100
         "
       />
     </div>

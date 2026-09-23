@@ -55,7 +55,7 @@ export default function CompanyCollaborationSection() {
             <img
               src={partner.logo}
               alt={`${partner.name} logo`}
-              className="max-h-28 object-contain grayscale hover:grayscale-0 transition duration-300"
+              className="max-h-28 object-contain transition duration-300"
             />
           </motion.div>
         ))}

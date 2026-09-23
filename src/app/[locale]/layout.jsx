@@ -7,6 +7,8 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
+import { Toaster } from "react-hot-toast";
+
 // ✅ Static rendering support for all locales
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -19,10 +21,10 @@ export async function generateMetadata({ params }) {
   const messages = (await import(`../../../messages/${locale}.json`)).default;
 
   return {
-    title: messages?.metadata?.title || "Reet Technologies",
+    title: messages?.metadata?.title || "Reet Technologies | IT Solutions & Services",
     description:
       messages?.metadata?.description ||
-      "Reet Technologies is a modern software company building future-ready applications.",
+      "Get professional IT solutions for your business. AWS & cloud services, web & mobile apps, software development, digital transformation and IT consulting.",
     icons: {
       icon: "/reetlogo.png",
       shortcut: "/reetlogo.png",
@@ -42,6 +44,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <Header />
+      <Toaster position="bottom-right" />
       {children}
       <Footer />
     </NextIntlClientProvider>

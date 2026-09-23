@@ -1,7 +1,19 @@
 {
     "metadata": {
-        "title": "Reet Technologies | IT Solutions & Services | Web, Cloud, AWS & Software Development",
+        "title": "Reet Technologies | IT Solutions & Services",
         "description": "Get professional IT solutions for your business. AWS & cloud services, web & mobile apps, software development, digital transformation and IT consulting."
+    },
+    "cloudsolutions": {
+        "metadata": {
+            "title": "AWS & Cloud Solutions | Cloud Infrastructure & DevOps",
+            "description": "Get reliable AWS and cloud solutions for your business, including cloud infrastructure, server management, AWS migration, security, backups, monitoring and DevOps services."
+        }
+    },
+    "crm": {
+        "metadata": {
+            "title": "CRM & ERP Software Development | Custom Business Solutions",
+            "description": "Get customized CRM & ERP software to manage customers, sales, finance, HR, inventory and operations with smart dashboards and seamless integrations."
+        }
     },
     "header": {
         "reet": "Reet",
@@ -302,6 +314,16 @@
             "name": "Puneeta Ranjan",
             "role": "Artist",
             "text": "Reet Technologies brought my vision to life with a beautiful and artistic website that showcases my paintings perfectly. Their design sense, attention to detail, and smooth communication made the whole process enjoyable and stress-free."
+        },
+        "testimonial4": {
+            "name": "Team Texcarp",
+            "role": "Client",
+            "text": "We are very happy with the software developed for Texcarp. It is user-friendly, efficient, and customized to suit our carpet business requirements. The team understood our needs well and delivered a professional solution that has made our business operations more organized and efficient. Excellent work and highly recommended!"
+        },
+        "testimonial5": {
+            "name": "Ashwini Patil",
+            "role": "Owner, Beyond Six Senses",
+            "text": "We are very happy with the software developed by the team. They understood our requirements clearly and delivered a user-friendly, professional, and customized solution. The entire development process was smooth, responsive, and well managed. Highly recommended for businesses looking for reliable and customized software solutions."
         }
     },
     "collaborationSection": {
@@ -1220,9 +1242,9 @@
         "cultureDesc": "We believe in a culture of ownership, inclusion, and innovation. Our global team thrives on mutual respect and a shared passion for solving complex problems with simple, effective solutions."
     },
     "studentcourses": {
-        "heroTitle": "Launch Your Tech Career with Hands-On Industry Training",
-        "heroSubtext": "Learn directly from senior software engineers at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews.",
-        "heroDesc": "Career / Courses for Students",
+        "heroTitle": "Launch Your Tech Career with Professional & Hands-On Industry Training",
+        "heroSubtext": "Learn directly from senior software engineers with 5+ years of real-world experience at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews.",
+        "heroDesc": "Professional Courses – 5+ Years Experience",
         "badge": "🎓 Reet Tech Student Academy • Practical Skill Building",
         "nextBatch": "Next Cohort Starts: 1st & 15th of Every Month | Flexible Weekend & Evening Batches",
         "overviewTitle": "Bridging Academic Theory with Real Industry Execution",
@@ -2856,7 +2878,7 @@
             "description": "Comprehensive hands-on courses in Full-Stack Web Development, Cloud Computing, Mobile Apps, Cybersecurity, and AI/ML with live projects, 1-on-1 mentor reviews, and career placement support at Reet Technologies.",
             "keywords": "student courses, IT training Pune, full stack developer course, cloud computing training, software internship, web development bootcamps, Reet Technologies academy, live project training, tech career accelerator"
         },
-        "heroSubtext": "Learn directly from active software engineers at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews.",
+        "heroSubtext": "Learn directly from senior software engineers with 5+ years of real-world experience at Reet Tech. Build 4+ production-ready capstone projects, receive 1-on-1 code reviews, and prepare for tech job interviews.",
         "nextBatch": "Next Cohort Starts: 1st & 15th of Every Month | Flexible Evening & Weekend Batches",
         "overviewDesc": "Traditional college degrees focus heavily on theoretical concepts. Our student programs are designed by active software developers to give you 100% practical exposure — helping you build real software, master modern tech stacks, and crack technical interviews.",
         "filterAll": "All Courses",

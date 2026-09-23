@@ -32,6 +32,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "A specialized ERP solution designed for formula-based chemical manufacturing, lot traceability, regulatory compliance, special zoning, and automated hazard labeling.",
           industry: "Chemical Manufacturing and Corporate ERP",
           projectType: "Web Application",
+          liveUrl: "https://chemical-erp.vercel.app",
           gallery: Array.from({ length: 25 }, (_, i) => ({
             title: `Dashboard View ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -49,6 +50,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "A professional business platform providing innovative solutions and services designed to help businesses grow, connect with customers, and build a strong digital presence.",
           industry: "Ecommerce",
           projectType: "Software",
+          liveUrl: "https://nexusindiaonline.com",
           gallery: Array.from({ length: 25 }, (_, i) => ({
             title: `Nexus Screen ${i + 1}`,
             image: `/assets/images/nexus-${i + 1}.png`,
@@ -66,6 +68,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "A transformational wellness and counselling web portal designed to inspire mindfulness, session scheduling, and personal evolution.",
           industry: "Wellness & Health",
           projectType: "Website",
+          liveUrl: "https://beyondsixsenses.com",
           gallery: Array.from({ length: 15 }, (_, i) => ({
             title: `Beyond Six Senses Screen ${i + 1}`,
             image: `/assets/images/${(i % 12) + 1}.jpg`,
@@ -83,6 +86,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "A digital bespoke tailoring solution simplifying custom measurements, fabric selection, order tracking, and fitting management.",
           industry: "Apparel & Retail",
           projectType: "Web Application",
+          liveUrl: "https://smarttailoring.vercel.app",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Tailoring Screen ${i + 1}`,
             image: `/assets/images/sonali-creation-${i + 1}.png`,
@@ -100,6 +104,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Luxury hospitality web portal designed for venue bookings, resort showcases, and fine dining reservations.",
           industry: "Hospitality & Events",
           projectType: "Website",
+          liveUrl: "https://marigold.vercel.app",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Marigold Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -117,6 +122,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Corporate auditing and legal tax consulting portal built to streamline client document uploads and statutory compliance.",
           industry: "Finance & Advisory",
           projectType: "Website",
+          liveUrl: "https://cajnk.vercel.app",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `CAJNK Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -134,6 +140,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Corporate legal advisory web presence showcasing dispute resolution, contract archives, and client consultations.",
           industry: "Legal Services",
           projectType: "Website",
+          liveUrl: "https://lpcconsulting.vercel.app",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `LPC Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -151,6 +158,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Experiential tourism and adventure travel portal featuring dynamic trip itineraries and online reservation checkout.",
           industry: "Travel & Adventure",
           projectType: "Website",
+          liveUrl: "https://civikexperiences.vercel.app",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Civik Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -168,6 +176,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Luxury artisan jewelry digital gallery showcasing hand-crafted collections with progressive high-res imagery.",
           industry: "Jewelry & Luxury",
           projectType: "Website",
+          liveUrl: "https://vaachi.vercel.app",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Vaachi Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -186,6 +195,7 @@ export default function DynamicProjectPage({ params }) {
           desc: project?.desc || "Industrial textile manufacturing and loom telemetry management portal.",
           industry: "Textile Manufacturing",
           projectType: "Web Application",
+          liveUrl: "https://texcarp.vercel.app",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -280,6 +290,32 @@ export default function DynamicProjectPage({ params }) {
                 <span className="meta-value">{assets.projectType}</span>
               </div>
             </div>
+
+            {assets.liveUrl && (
+              <div className="mt-8">
+                <a
+                  href={assets.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#38bdf8] text-[#070b2a] font-extrabold rounded-xl hover:bg-sky-300 transition-all shadow-lg shadow-sky-500/25 text-sm group"
+                >
+                  <span>Visit Live Project</span>
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
+            )}
           </div>
 
           <div className="project-hero-right">
@@ -328,56 +364,58 @@ export default function DynamicProjectPage({ params }) {
         </div>
       </section>
 
-      {/* SECTION 3: PROJECT GALLERY */}
-      <section
-        className="project-photos-section"
-        style={{ backgroundImage: `url(${assets.techBg})` }}
-      >
-        <div className="project-photos-outer-wrapper">
-          <div className="project-photos-container">
-            <div className="project-photos-left">
-              <div className="project-photos-number-label-group">
-                <div className="project-photos-label-line-wrap">
-                  <span className="project-photos-line"></span>
-                  <span className="project-photos-label">PROJECT GALLERY</span>
+      {/* SECTION 3: PROJECT GALLERY - Display only for Ecommerce & Software / Web Applications */}
+      {assets.projectType !== "Website" && (
+        <section
+          className="project-photos-section"
+          style={{ backgroundImage: `url(${assets.techBg})` }}
+        >
+          <div className="project-photos-outer-wrapper">
+            <div className="project-photos-container">
+              <div className="project-photos-left">
+                <div className="project-photos-number-label-group">
+                  <div className="project-photos-label-line-wrap">
+                    <span className="project-photos-line"></span>
+                    <span className="project-photos-label">PROJECT GALLERY</span>
+                  </div>
                 </div>
+
+                <h2 className="project-photos-title">
+                  Project <br />
+                  <span className="highlight-electric">Gallery</span>
+                </h2>
+
+                <p className="project-photos-desc">
+                  Here are some glimpses of the project, showcasing the design and
+                  functionality.
+                </p>
               </div>
 
-              <h2 className="project-photos-title">
-                Project <br />
-                <span className="highlight-electric">Gallery</span>
-              </h2>
-
-              <p className="project-photos-desc">
-                Here are some glimpses of the project, showcasing the design and
-                functionality.
-              </p>
+              <div className="project-photos-right">
+                <div className="project-gallery-wrapper">
+                  <div className="project-large-screenshot">
+                    <img src={activeImage} alt={`${assets.title} Active Gallery`} />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="project-photos-right">
-              <div className="project-gallery-wrapper">
-                <div className="project-large-screenshot">
-                  <img src={activeImage} alt={`${assets.title} Active Gallery`} />
-                </div>
+            <div className="project-scroller-wrapper">
+              <div className="project-scroller-track">
+                {assets.gallery.concat(assets.gallery).map((item, index) => (
+                  <div
+                    className="project-small-screenshot-card"
+                    key={index}
+                    onClick={() => setActiveImage(item.image)}
+                  >
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-
-          <div className="project-scroller-wrapper">
-            <div className="project-scroller-track">
-              {assets.gallery.concat(assets.gallery).map((item, index) => (
-                <div
-                  className="project-small-screenshot-card"
-                  key={index}
-                  onClick={() => setActiveImage(item.image)}
-                >
-                  <img src={item.image} alt={item.title} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* SECTION 4: PREVIOUS / NEXT PROJECT SWITCHER */}
       <section className="max-w-[1600px] mx-auto px-8 py-10 border-t border-slate-800/80">

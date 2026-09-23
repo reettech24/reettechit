@@ -128,25 +128,21 @@ export default function AwsServicesCubesSection() {
                   min-w-[calc(66.666667vw-20px)]
                   snap-start flex-col overflow-hidden
                   rounded-[32px]
-                  border border-[#292929]/20
-                  bg-gradient-to-br
-                  from-[#292929]/30
-                  via-[#292929]/15
-                  to-[#292929]/[0.08]
+                  border border-slate-200/80
+                  bg-slate-50/90
                   p-7
-                  shadow-[0_18px_50px_rgba(7,11,42,0.08)]
-                  backdrop-blur-2xl
-                  transition-all duration-500
+                  shadow-[0_10px_30px_rgba(7,11,42,0.06)]
+                  transform-gpu [backface-visibility:hidden] [will-change:transform]
+                  transition-all duration-300
                   hover:-translate-y-1
-                  hover:border-[#292929]/40
-                  hover:shadow-[0_25px_70px_rgba(56,189,248,0.16)]
+                  hover:border-[#38BDF8]/50
+                  hover:bg-white
+                  hover:shadow-[0_20px_50px_rgba(56,189,248,0.15)]
                   sm:min-w-0
                   sm:snap-none
                   sm:p-8
                 "
               >
-
-
 
                 {/* ICON */}
                 <div
@@ -154,13 +150,13 @@ export default function AwsServicesCubesSection() {
                     relative z-10
                     flex h-12 w-12 items-center justify-center
                     rounded-2xl
-                    border border-white/50
-                    bg-white/35
+                    border border-slate-200
+                    bg-white
                     text-[#070B2A]
-                    shadow-[inset_0_1px_1px_rgba(255,255,255,0.7)]
-                    backdrop-blur-xl
-                    transition-all duration-500
-                    group-hover:bg-white/50
+                    shadow-xs
+                    transition-all duration-300
+                    group-hover:border-[#38BDF8]/40
+                    group-hover:bg-[#E6F9F0]
                   "
                 >
                   <Icon
@@ -186,15 +182,15 @@ export default function AwsServicesCubesSection() {
                     className="
                       flex h-10 w-10 items-center justify-center
                       rounded-full
-                      border border-white/50
-                      bg-white/35
+                      border border-slate-200
+                      bg-white
                       text-[#070B2A]
-                      shadow-[inset_0_1px_1px_rgba(255,255,255,0.7)]
-                      backdrop-blur-xl
-                      transition-all duration-500
-                      group-hover:-translate-y-1
-                      group-hover:translate-x-1
-                      group-hover:bg-white/60
+                      shadow-xs
+                      transition-all duration-300
+                      group-hover:-translate-y-0.5
+                      group-hover:translate-x-0.5
+                      group-hover:bg-[#070B2A]
+                      group-hover:text-white
                     "
                   >
                     <ArrowUpRight
