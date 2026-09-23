@@ -20,7 +20,7 @@ const collaborators = [
   },
   {
     number: "03",
-    name: "Beyond 6 Senses",
+    name: "Beyond Six Senses",
     role: "Creative Collaboration",
     logo: "/Client/beyondsixsenseslogo1.png",
     url: "https://beyondsixsenses.com/",

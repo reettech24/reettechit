@@ -40,7 +40,7 @@ const logos = [
   },
   {
     name: "Marigold Banquets",
-    src: "/Client/Texcarp.png",
+    src: "/Client/marigold.png",
   },
 ];
 
