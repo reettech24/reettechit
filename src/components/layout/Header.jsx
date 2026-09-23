@@ -66,12 +66,12 @@ const Enterprise = [
 
 const CloudInfrastructure = [
   {
-    name: "Cloud & Server Solutions",
+    name: "Data Management Services",
     description: "AWS cloud architecture, server setup, administration & DevOps.",
-    href: "/services/cloud-solutions",
+    href: "/services/data-management-services",
   },
   {
-    name: "AWS & Data Management",
+    name: "AWS & Data Security",
     description: "Database administration, automated backups & secure data management.",
     href: "/services/aws-data-security",
   },
@@ -350,17 +350,17 @@ export const Header = () => {
                 </div>
                 <div className="absolute left-full -top-10 z-40 ml-4 w-72 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-white/90 invisible opacity-0 group-hover/cloud:visible group-hover/cloud:opacity-100 transition-all duration-300">
                   <Link
-                    href="/services/cloud-solutions"
+                    href="/services/data-management-services"
                     className="block hover:text-blue-300"
                   >
-                    Cloud &amp; Server Solutions
+                    Data Management Services
                   </Link>
                   <Link
 
                     href="/services/aws-data-security"
                     className="block hover:text-blue-300"
                   >
-                    AWS &amp; Data Management
+                    AWS &amp; Data Security
                   </Link>
                 </div>
               </div>

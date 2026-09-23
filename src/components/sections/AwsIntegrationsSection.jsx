@@ -8,7 +8,7 @@ const BACKGROUND_IMAGE = "/aboutheroimage2.jpg";
 const logos = [
   {
     name: "Beyond 6 Senses",
-    src: "/Client/beyond6senses.jpeg",
+    src: "/Client/beyondsixsenseslogo1.png",
   },
   {
     name: "Civik",
@@ -36,6 +36,10 @@ const logos = [
   },
   {
     name: "Texcarp",
+    src: "/Client/Texcarp.png",
+  },
+  {
+    name: "Marigold Banquets",
     src: "/Client/Texcarp.png",
   },
 ];
@@ -119,7 +123,7 @@ const LogoCard = ({ logo }) => (
         h-px
         bg-gradient-to-r
         from-transparent
-        via-white/[0.14]
+        via-white/15
         to-transparent
       "
     />
@@ -132,9 +136,9 @@ const LogoCard = ({ logo }) => (
         inset-0
         rounded-[inherit]
         bg-gradient-to-br
-        from-white/[0.025]
+        from-white/5
         via-transparent
-        to-[#f6a821]/[0.02]
+        to-[#f6a821]/5
         opacity-80
       "
     />
@@ -253,13 +257,13 @@ export default function AwsIntegrationsSection() {
             inset-0
             bg-gradient-to-r
             from-[#050505]
-            via-[#050505]/[0.94]
+            via-[#050505]/95
             via-[55%]
-            to-[#050505]/[0.35]
+            to-[#050505]/35
             max-md:bg-gradient-to-b
             max-md:from-[#050505]
-            max-md:via-[#050505]/[0.88]
-            max-md:to-[#050505]/[0.45]
+            max-md:via-[#050505]/90
+            max-md:to-[#050505]/45
           "
         />
 

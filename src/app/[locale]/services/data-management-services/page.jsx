@@ -1,4 +1,4 @@
-import AwsDataPage from "../../pages/services/cloud-security/page";
+import AwsDataPage from "../../pages/services/data-management-services/page";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -12,26 +12,26 @@ export async function generateMetadata({ params }) {
 
   const meta = messages?.cloudsolutions?.metadata || {};
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reettechit.com";
-  const canonicalUrl = `${baseUrl}/${locale}/services/cloud-solutions`;
+  const canonicalUrl = `${baseUrl}/${locale}/services/data-management-services`;
 
-  const metaTitle = meta.title || "AWS & Cloud Solutions | Cloud Infrastructure & DevOps";
+  const metaTitle = meta.title || "Data Management Services | Enterprise Database & Data Security";
   const metaDesc =
     meta.description ||
-    "Get reliable AWS and cloud solutions for your business, including cloud infrastructure, server management, AWS migration, security, backups, monitoring and DevOps services.";
+    "Professional Data Management Services for enterprise businesses, including automated data backups, database optimization, cloud data migration, data security and encryption.";
 
   return {
     title: metaTitle,
     description: metaDesc,
     keywords:
       meta.keywords ||
-      "AWS cloud solutions, cloud infrastructure, DevOps services, server management, AWS migration, cloud security, automated backups, cloud monitoring",
+      "Data Management Services, enterprise data management, database administration, data security, automated backups, database optimization, data encryption",
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        en: `${baseUrl}/en/services/cloud-solutions`,
-        ar: `${baseUrl}/ar/services/cloud-solutions`,
-        jp: `${baseUrl}/jp/services/cloud-solutions`,
-        "x-default": `${baseUrl}/en/services/cloud-solutions`,
+        en: `${baseUrl}/en/services/data-management-services`,
+        ar: `${baseUrl}/ar/services/data-management-services`,
+        jp: `${baseUrl}/jp/services/data-management-services`,
+        "x-default": `${baseUrl}/en/services/data-management-services`,
       },
     },
     openGraph: {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
           url: `${baseUrl}/assets/images/section2-bg-data-management.jpeg`,
           width: 1200,
           height: 630,
-          alt: "Reet Technologies AWS & Cloud Solutions",
+          alt: "Reet Technologies Data Management Services",
         },
       ],
     },
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { locale } = await params;
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reettechit.com";
-  const canonicalUrl = `${baseUrl}/${locale}/services/cloud-solutions`;
+  const canonicalUrl = `${baseUrl}/${locale}/services/data-management-services`;
 
   const techServiceSchema = {
     "@context": "https://schema.org",

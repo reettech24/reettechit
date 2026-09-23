@@ -122,7 +122,7 @@ const slides = [
     description:
       "Smart solutions for data migration, storage, security and cloud environments designed to scale with your business.",
 
-    route: "/services/cloud-solutions",
+    route: "/services/data-management-services",
 
     features: [
       {

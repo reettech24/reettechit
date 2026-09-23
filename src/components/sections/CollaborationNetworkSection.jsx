@@ -22,7 +22,7 @@ const collaborators = [
     number: "03",
     name: "Beyond 6 Senses",
     role: "Creative Collaboration",
-    logo: "/Client/beyond6senses.jpeg",
+    logo: "/Client/beyondsixsenseslogo1.png",
     url: "https://beyondsixsenses.com/",
   },
 ];
@@ -358,7 +358,7 @@ export default function CollaborationNetworkSection() {
                     h-px
                     bg-gradient-to-r
                     from-transparent
-                    via-white/[0.08]
+                    via-white/10
                     to-transparent
                     transition-all
                     duration-500

@@ -5,7 +5,7 @@ export default function sitemap() {
   const routes = [
     // Core Navigation & Service Pages
     { path: "", priority: 1.0, changeFrequency: "daily" },
-    { path: "/services/cloud-solutions", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/services/data-management-services", priority: 0.9, changeFrequency: "weekly" },
     { path: "/services/aws-data-security", priority: 0.9, changeFrequency: "weekly" },
     { path: "/pages/services/aws-data-security", priority: 0.9, changeFrequency: "weekly" },
     { path: "/pages/services/ourSolutions/crm-erp-solution", priority: 0.9, changeFrequency: "weekly" },

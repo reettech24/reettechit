@@ -87,7 +87,7 @@ const solutions = [
       },
     ],
 
-    href: "/pages/services/ourSolutions/crm-erp-solution",
+    href: "//pages/about/ourProjects/chemical-erp",
   },
 ];
 

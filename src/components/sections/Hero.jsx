@@ -84,7 +84,7 @@ const Hero = () => {
           </div>
 
           {/* DESCRIPTION */}
-          <p className="mt-5 max-w-2xl text-sm leading-6 text-white/70 sm:mt-6 sm:text-base sm:leading-7 lg:text-lg">
+          <p className="max-w-2xl text-sm leading-6 text-white/70 sm:mt-6 sm:text-base sm:leading-7 lg:text-lg">
             {t("subtext")}
           </p>
 

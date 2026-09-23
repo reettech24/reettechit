@@ -49,7 +49,7 @@ const servicesData = [
     description:
       "Protect your assets with comprehensive cyber defense solutions.",
     icon: ShieldCheck,
-    link: "/services/cloud-solutions",
+    link: "/services/data-management-services",
   },
 
   {
@@ -124,23 +124,22 @@ export default function AwsServicesCubesSection() {
                 key={service.title}
                 href={service.link}
                 className="
-                  group relative flex min-h-[330px]
-                  min-w-[calc(66.666667vw-20px)]
-                  snap-start flex-col overflow-hidden
-                  rounded-[32px]
-                  border border-slate-200/80
-                  bg-slate-50/90
-                  p-7
-                  shadow-[0_10px_30px_rgba(7,11,42,0.06)]
-                  transform-gpu [backface-visibility:hidden] [will-change:transform]
-                  transition-all duration-300
-                  hover:-translate-y-1
-                  hover:border-[#38BDF8]/50
-                  hover:bg-white
-                  hover:shadow-[0_20px_50px_rgba(56,189,248,0.15)]
-                  sm:min-w-0
-                  sm:snap-none
-                  sm:p-8
+                group relative flex min-h-[330px]
+                min-w-[calc(66.666667vw-20px)]
+                snap-start flex-col overflow-hidden
+                rounded-[32px]
+                border border-slate-200/80
+                bg-gradient-to-br from-[#D9DDE2] via-[#E8EBEE] to-white
+                p-7
+                shadow-[0_10px_30px_rgba(7,11,42,0.06)]
+                transform-gpu [backface-visibility:hidden] [will-change:transform]
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:border-[#38BDF8]/50
+                hover:shadow-[0_20px_50px_rgba(56,189,248,0.15)]
+                sm:min-w-0
+                sm:snap-none
+                sm:p-8
                 "
               >
 

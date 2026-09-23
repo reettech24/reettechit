@@ -86,7 +86,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "A digital bespoke tailoring solution simplifying custom measurements, fabric selection, order tracking, and fitting management.",
           industry: "Apparel & Retail",
           projectType: "Web Application",
-          liveUrl: "https://smarttailoring.vercel.app",
+          liveUrl: "https://sonali-tailoring-app.vercel.app/",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Tailoring Screen ${i + 1}`,
             image: `/assets/images/sonali-creation-${i + 1}.png`,
@@ -104,7 +104,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Luxury hospitality web portal designed for venue bookings, resort showcases, and fine dining reservations.",
           industry: "Hospitality & Events",
           projectType: "Website",
-          liveUrl: "https://marigold.vercel.app",
+          liveUrl: "https://www.marigoldbanquets.com/",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Marigold Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -122,7 +122,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Corporate auditing and legal tax consulting portal built to streamline client document uploads and statutory compliance.",
           industry: "Finance & Advisory",
           projectType: "Website",
-          liveUrl: "https://cajnk.vercel.app",
+          liveUrl: "https://cajnk.in/",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `CAJNK Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -140,7 +140,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Corporate legal advisory web presence showcasing dispute resolution, contract archives, and client consultations.",
           industry: "Legal Services",
           projectType: "Website",
-          liveUrl: "https://lpcconsulting.vercel.app",
+          liveUrl: "https://lpcfacility.in/",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `LPC Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -158,7 +158,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Experiential tourism and adventure travel portal featuring dynamic trip itineraries and online reservation checkout.",
           industry: "Travel & Adventure",
           projectType: "Website",
-          liveUrl: "https://civikexperiences.vercel.app",
+          liveUrl: "https://www.civikexperiences.com/",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Civik Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -176,7 +176,7 @@ export default function DynamicProjectPage({ params }) {
           desc: "Luxury artisan jewelry digital gallery showcasing hand-crafted collections with progressive high-res imagery.",
           industry: "Jewelry & Luxury",
           projectType: "Website",
-          liveUrl: "https://vaachi.vercel.app",
+          liveUrl: "https://www.vaachi.org/",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Vaachi Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
@@ -195,7 +195,7 @@ export default function DynamicProjectPage({ params }) {
           desc: project?.desc || "Industrial textile manufacturing and loom telemetry management portal.",
           industry: "Textile Manufacturing",
           projectType: "Web Application",
-          liveUrl: "https://texcarp.vercel.app",
+          liveUrl: "https://texcarp.vercel.app/",
           gallery: Array.from({ length: 10 }, (_, i) => ({
             title: `Screen ${i + 1}`,
             image: `/assets/images/${i + 1}.jpg`,
