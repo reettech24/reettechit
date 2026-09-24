@@ -18,44 +18,42 @@ const servicesData = [
   {
     title: "High-End Website Development",
     description:
-      "Craft pixel-perfect, enterprise-grade websites that convert.",
+      "Custom, high-performance website development for modern businesses.",
     icon: Code,
     link: "/pages/about/ourProjects",
   },
   {
     title: "CRM & ERP Solutions",
     description:
-      "Streamline operations with custom CRM and ERP platforms.",
+      "Custom CRM and ERP solutions to streamline business operations and growth.",
     icon: Cog,
     link: "/pages/services/ourSolutions/crm-erp-solution",
   },
   {
     title: "Mobile & Web Applications",
     description:
-      "Engaging, high-performance mobile and web app development.",
+      "Scalable mobile and web application development for modern businesses.",
     icon: Smartphone,
     link: "/pages/services/ourSolutions/mobile-and-web-application",
   },
-
   {
     title: "Digital Transformation",
     description:
-      "Accelerate your business with innovative digital solutions.",
+      "Digital transformation solutions to improve efficiency, automation and growth.",
     icon: Sparkles,
     link: "/pages/services/ourSolutions/digital-transformation",
   },
   {
     title: "Cyber Security",
     description:
-      "Protect your assets with comprehensive cyber defense solutions.",
+      "Secure your business with reliable cyber security and data protection solutions.",
     icon: ShieldCheck,
     link: "/services/data-management-services",
   },
-
   {
     title: "AI & Machine Learning",
     description:
-      "Unlock intelligent automation with cutting-edge AI/ML.",
+      "AI and machine learning solutions for automation, insights and business growth.",
     icon: Brain,
     link: "/pages/services/ourSolutions/ai-ml",
   },
