@@ -151,7 +151,7 @@ const Industries = [
 
 const Products = [
   {
-    name: "Nexus India App",
+    name: "Nexus India Application",
     href: "/pages/products/nexus-india",
   },
   {
@@ -236,15 +236,22 @@ export const Header = () => {
         {/* Logo */}
         <Link href="/" dir="ltr" className="flex flex-row items-center gap-3 group dir-ltr">
           <Image
-            src="/reetlogo.png"
+            src="/logos/reetlogo1.svg"
             alt="Reet Technologies Logo"
             width={40}
             height={40}
-            className="w-16 h-auto transition-transform duration-300 group-hover:scale-105"
+            className="w-16 h-auto transition-transform duration-300"
           />
-          <span className="text-white font-semibold text-xl uppercase leading-tight text-left">
+          <Image
+            src="/logos/reetlogo2.svg"
+            alt="Reet Technologies Logo"
+            width={40}
+            height={40}
+            className="w-36 h-auto transition-transform duration-300"
+          />
+          {/* <span className="text-white font-bold text-xl uppercase leading-tight text-left">
             {t("reet")} <br /> {t("technologies")}
-          </span>
+          </span> */}
         </Link>
 
         {/* Mobile Toggle */}
@@ -463,7 +470,7 @@ export const Header = () => {
             </PopoverButton>
             <PopoverPanel className="absolute top-15 left-0 z-30 w-64 bg-[#070B2A] backdrop-blur-xl p-4 space-y-2 text-sm text-white/90 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300">
               <Link href="/pages/products/nexus-india" className="block">
-                Nexus India Applicaion
+                Nexus India Application
               </Link>
               <Link
                 href="/pages/products/nexus-online-management"
