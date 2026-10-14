@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function AwsItSolutionsSection() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#050505] text-white">
+    <section className="relative flex h-[100dvh] min-h-[600px] w-full flex-col overflow-hidden bg-[#050505] text-white">
 
       {/* RIGHT IMAGE */}
       <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65%]">
@@ -68,7 +68,7 @@ export default function AwsItSolutionsSection() {
           z-10
           mx-auto
           flex
-          min-h-screen
+          h-full w-full flex-1
           max-w-[1500px]
           items-center
           px-6
@@ -78,7 +78,7 @@ export default function AwsItSolutionsSection() {
         "
       >
 
-        <div className="w-full max-w-[620px]">
+        <div className="w-full max-w-full">
 
           {/* MICRO LABEL */}
           <motion.div
