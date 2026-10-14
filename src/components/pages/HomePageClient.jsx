@@ -25,7 +25,7 @@ export default function HomePageClient() {
       <AwsDigitalSolutionsSection />
       <CollaborationNetworkSection/>
       <AwsChooseUsSection />
-      <WebsitePlansSection/>
+      {/* <WebsitePlansSection/> */}
       <AwsClientReviewsSection />
       <ContactUsSection />
     </main>
